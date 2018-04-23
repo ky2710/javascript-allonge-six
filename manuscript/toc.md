@@ -20,7 +20,7 @@ frontmatter:
 
 mainmatter:
 
-    markdown/0.numbers.md
+    [A Rich Aroma:Basic Numbers](markdown/0.numbers.md)
 
     markdown/0.Functions/title.md
 
