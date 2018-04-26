@@ -25,7 +25,7 @@ Combinators and Function Decorators
 Building Blocks   
 Magic Names   
 Summary   
-[Recipes with Basic Functions](markdown/main_0r_functions.md)   
+#### [Recipes with Basic Functions](markdown/main_0r_functions.md)   
 Partial Application   
 Unary   
 Tap   
@@ -45,8 +45,7 @@ Copy on Write
 Tortoises, Hares, and Teleporting Turtles   
 Functional Iterators   
 Making Data Out Of Functions   
-
-#### [Recipes with Data](markdown/main_1r_Composing.md)   
+##### [Recipes with Data](markdown/main_1r_Composing.md)   
 mapWith   
 Flip   
 Object.assign   
