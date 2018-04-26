@@ -34,17 +34,17 @@
 	Left-Variadic Functions   
 	Compose and Pipeline   
 ### [Composing and Decomposing Data](markdown/main_1_Composing.md)   
-> Arrays and Destructuring Arguments   
-> Self-Similarity   
-> Tail Calls (and Default Arguments)   
-> Garbage, Garbage Everywhere   
-Plain Old JavaScript Objects   
-Mutation   
-Reassignment   
-Copy on Write   
-Tortoises, Hares, and Teleporting Turtles   
-Functional Iterators   
-Making Data Out Of Functions   
+	> Arrays and Destructuring Arguments   
+	> Self-Similarity   
+	> Tail Calls (and Default Arguments)   
+	> Garbage, Garbage Everywhere   
+	Plain Old JavaScript Objects   
+	Mutation   
+	Reassignment   
+	Copy on Write   
+	Tortoises, Hares, and Teleporting Turtles   
+	Functional Iterators   
+	Making Data Out Of Functions   
 ##### [Recipes with Data](markdown/main_1r_Composing.md)   
 mapWith   
 Flip   
