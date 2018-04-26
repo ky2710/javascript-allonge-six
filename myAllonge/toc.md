@@ -4,7 +4,7 @@ About JavaScript Allongé
 What JavaScript Allongé is. And isn’t.   
 Foreword to the “Six” edition   
 Forewords to the First Edition   
-## [Prelude: Values and Expressions over Coffee](markdown/)   
+## [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
 values are expressions   
 values and identity   
 ## [A Rich Aroma: Basic Numbers](markdown/)   
@@ -102,8 +102,8 @@ After Method Advice
 Before Method Advice   
 Provided and Unless   
 Method Advice   
-## [Closing Time at the Coffeeshop: Final Remarks](markdown/)   
-## [The Golden Crema: Appendices and Afterwords](markdown/)   
+## [Closing Time at the Coffeeshop: Final Remarks](markdown/book_3_closing-time.md)   
+## [The Golden Crema: Appendices and Afterwords](markdown/book_4_appendices.md)   
 How to run the examples   
 Thanks!   
 Reading JavaScript Allongé on Kindle   
