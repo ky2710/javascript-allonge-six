@@ -6,8 +6,8 @@
     Foreword to the “Six” edition   
     Forewords to the First Edition
 ### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
-&nbsp;&nbsp;values are expressions   
-&nbsp;&nbsp;values and identity   
+    values are expressions   
+    values and identity   
 * [A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
 * [Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)  
 * [A Warm Cup: Basic Strings and Quasi-Literals](markdown/sub_2_strings.md)  
@@ -16,7 +16,6 @@
 * [Decaffeinated: Impostors](markdown/sub_5_impostors.md)  
 * [Colourful Mugs: Symmetry, Colour, and Charm](markdown/sub_6_colours.md) 
 ### [The first sip: Basic Functions](markdown/main_0_functions.md)   
-```
 As Little As Possible About Functions, But No Less   
 Ah. I’d Like to Have an Argument, Please.   
 Closures and Scope   
@@ -26,7 +25,6 @@ Combinators and Function Decorators
 Building Blocks   
 Magic Names   
 Summary   
-```
 [Recipes with Basic Functions](markdown/main_0r_functions.md)   
 Partial Application   
 Unary   
