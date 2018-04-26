@@ -1,10 +1,10 @@
 Table of Contents
-A Pull of the Lever: Prefaces
-...About JavaScript Allongé
-...What JavaScript Allongé is. And isn’t.
+## A Pull of the Lever: Prefaces
+⋅⋅⋅About JavaScript Allongé
+What JavaScript Allongé is. And isn’t.
 Foreword to the “Six” edition
 Forewords to the First Edition
-Prelude: Values and Expressions over Coffee
+## Prelude: Values and Expressions over Coffee
 values are expressions
 values and identity
 A Rich Aroma: Basic Numbers
