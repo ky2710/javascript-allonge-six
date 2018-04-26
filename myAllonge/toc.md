@@ -1,125 +1,111 @@
-frontmatter:
-
-  markdown/Prefaces/title.md
-
-  markdown/Prefaces/about.md
-
-  markdown/Prefaces/isnt.md
-
-  markdown/Prefaces/foreword.md
-
-  markdown/Prefaces/first-edition.md
-
-  # markdown/Prefaces/recipes.md
-
-  # markdown/Prefaces/legend.md
-
-  markdown/Sample/about.md
-
-  markdown/prelude.md
-
-mainmatter:
-
-    [A Rich Aroma:Basic Numbers](markdown/0.numbers.md)
-
-    markdown/0.Functions/title.md
-
-      markdown/0.Functions/little.md
-
-      markdown/0.Functions/args.md
-
-      markdown/0.Functions/closures.md
-
-      markdown/0.Functions/const.md
-
-      markdown/0.Functions/names.md
-
-      markdown/0.Functions/combinators.md
-
-      markdown/0.Functions/buildingblocks.md
-
-      markdown/0.Functions/magic-names.md
-
-      markdown/0.Functions/summary.md
-
-    markdown/0.Functions/recipes/title.md
-
-      markdown/0.Functions/recipes/partial.md
-
-      markdown/0.Functions/recipes/unary.md
-
-      markdown/0.Functions/recipes/tap.md
-
-      markdown/0.Functions/recipes/maybe.md
-
-      markdown/0.Functions/recipes/once.md
-
-      markdown/0.Functions/recipes/left-variadic.md
-
-    markdown/1.choice.md
-
-    markdown/1.ComposingData/title.md
-
-      markdown/1.ComposingData/destructuring.md
-
-      markdown/1.ComposingData/linear-recursion.md
-
-      markdown/1.ComposingData/tail.md
-
-      markdown/1.ComposingData/garbage.md
-
-      markdown/1.ComposingData/pojos.md
-
-      markdown/1.ComposingData/mutation.md
-
-      markdown/1.ComposingData/reassignment.md
-
-      markdown/1.ComposingData/copy-on-write.md
-
-      markdown/1.ComposingData/turtles.md
-
-      markdown/1.ComposingData/functional-iterators.md
-
-      markdown/1.ComposingData/data-out-of-functions.md
-
-     markdown/1.ComposingData/recipes/title.md
-
-       markdown/1.ComposingData/recipes/map-with.md
-
-       markdown/1.ComposingData/recipes/flip.md
-
-       markdown/1.ComposingData/recipes/assign.md
-
-       markdown/1.ComposingData/recipes/y.md
-
-   markdown/2.strings.md
-
-   markdown/3.Collections/title.md
-
-     markdown/3.Collections/1.iterables.md
-
-     markdown/3.Collections/2.generating-iterables.md
-
-     markdown/3.Collections/3.collections.md
-
-     markdown/3.Collections/4.drunken.md
-
-     markdown/3.Collections/5.more-mapping.md
-
-     markdown/3.Collections/6.interactive-generators.md
-
-     markdown/3.Collections/7.operations.md
-
-backmatter:
-
-  markdown/Appendices/title.md
-
-    markdown/Appendices/examples.md
-
-    markdown/Appendices/thanks.md
-
-    markdown/Appendices/copyright.md
-
-    markdown/Appendices/image_copyrights.md
-
-    markdown/Appendices/reg.md
+Table of Contents
+A Pull of the Lever: Prefaces
+...About JavaScript Allongé
+...What JavaScript Allongé is. And isn’t.
+Foreword to the “Six” edition
+Forewords to the First Edition
+Prelude: Values and Expressions over Coffee
+values are expressions
+values and identity
+A Rich Aroma: Basic Numbers
+The first sip: Basic Functions
+As Little As Possible About Functions, But No Less
+Ah. I’d Like to Have an Argument, Please.
+Closures and Scope
+That Constant Coffee Craving
+Naming Functions
+Combinators and Function Decorators
+Building Blocks
+Magic Names
+Summary
+Recipes with Basic Functions
+Partial Application
+Unary
+Tap
+Maybe
+Once
+Left-Variadic Functions
+Compose and Pipeline
+Picking the Bean: Choice and Truthiness
+Composing and Decomposing Data
+Arrays and Destructuring Arguments
+Self-Similarity
+Tail Calls (and Default Arguments)
+Garbage, Garbage Everywhere
+Plain Old JavaScript Objects
+Mutation
+Reassignment
+Copy on Write
+Tortoises, Hares, and Teleporting Turtles
+Functional Iterators
+Making Data Out Of Functions
+Recipes with Data
+mapWith
+Flip
+Object.assign
+Why?
+A Warm Cup: Basic Strings and Quasi-Literals
+Stir the Allongé: Objects and State
+Encapsulating State with Closures
+Composition and Extension
+This and That
+What Context Applies When We Call a Function?
+Method Decorators
+Summary
+Recipes with Objects, Mutations, and State
+Memoize
+getWith
+pluckWith
+Deep Mapping
+The Coffee Factory: “Object-Oriented Programming”
+Served by the Pot: Collections
+Iteration and Iterables
+Generating Iterables
+Lazy and Eager Collections
+Interlude: The Carpenter Interviews for a Job
+Interactive Generators
+Basic Operations on Iterables
+A Coffeehouse: Symbols
+Life on the Plantation: Metaobjects
+Why Metaobjects?
+Mixins, Forwarding, and Delegation
+Later Binding
+Delegation via Prototypes
+Shared Prototypes
+Decaffeinated: Impostors
+Finish the Cup: Constructors and Classes
+Constructors and new
+Why Classes in JavaScript?
+Classes with class
+Object Methods
+Why Not Classes?
+Summary
+Recipes with Constructors and Classes
+Bound
+Send
+Invoke
+Fluent
+Colourful Mugs: Symmetry, Colour, and Charm
+Con Panna: Composing Class Behaviour
+Extending Classes with Mixins
+Functional Mixins
+Emulating Multiple Inheritance
+Preventing Property Conflicts
+Reducing Coupling
+More Decorators
+Stateful Method Decorators
+Class Decorators beyond ES6/ECMAScript 2015
+Method Decorators beyond ES6/ECMAScript 2015
+Lightweight Traits
+More Decorator Recipes
+After Method Advice
+Before Method Advice
+Provided and Unless
+Method Advice
+Closing Time at the Coffeeshop: Final Remarks
+The Golden Crema: Appendices and Afterwords
+How to run the examples
+Thanks!
+Reading JavaScript Allongé on Kindle
+Copyright Notice
+About The Author
