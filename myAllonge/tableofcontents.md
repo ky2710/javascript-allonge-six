@@ -6,8 +6,8 @@
 > Foreword to the “Six” edition   
 > Forewords to the First Edition   
 ### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
-values are expressions   
-values and identity   
+  values are expressions   
+  values and identity   
 * [A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
 * [Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)  
 * [A Warm Cup: Basic Strings and Quasi-Literals](markdown/sub_2_strings.md)  
