@@ -16,28 +16,28 @@
 * [Decaffeinated: Impostors](markdown/sub_5_impostors.md)  
 * [Colourful Mugs: Symmetry, Colour, and Charm](markdown/sub_6_colours.md) 
 ### [The first sip: Basic Functions](markdown/main_0_functions.md)   
-As Little As Possible About Functions, But No Less   
-Ah. I’d Like to Have an Argument, Please.   
-Closures and Scope   
-That Constant Coffee Craving   
-Naming Functions   
-Combinators and Function Decorators   
-Building Blocks   
-Magic Names   
-Summary   
-####[Recipes with Basic Functions](markdown/main_0r_functions.md)   
-Partial Application   
-Unary   
-Tap   
-Maybe   
-Once   
-Left-Variadic Functions   
-Compose and Pipeline   
+	As Little As Possible About Functions, But No Less   
+	Ah. I’d Like to Have an Argument, Please.   
+	Closures and Scope   
+	That Constant Coffee Craving   
+	Naming Functions   
+	Combinators and Function Decorators   
+	Building Blocks   
+	Magic Names   
+	Summary   
+#### [Recipes with Basic Functions](markdown/main_0r_functions.md)   
+	Partial Application   
+	Unary   
+	Tap   
+	Maybe   
+	Once   
+	Left-Variadic Functions   
+	Compose and Pipeline   
 ### [Composing and Decomposing Data](markdown/main_1_Composing.md)   
-Arrays and Destructuring Arguments   
-Self-Similarity   
-Tail Calls (and Default Arguments)   
-Garbage, Garbage Everywhere   
+> Arrays and Destructuring Arguments   
+> Self-Similarity   
+> Tail Calls (and Default Arguments)   
+> Garbage, Garbage Everywhere   
 Plain Old JavaScript Objects   
 Mutation   
 Reassignment   
