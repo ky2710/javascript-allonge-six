@@ -7,6 +7,7 @@ Forewords to the First Edition
 ### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
 values are expressions   
 values and identity   
+
 [A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
 ### [The first sip: Basic Functions](markdown/main_0_functions.md)   
 As Little As Possible About Functions, But No Less   
