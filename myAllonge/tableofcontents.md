@@ -45,7 +45,7 @@
 	Tortoises, Hares, and Teleporting Turtles   
 	Functional Iterators   
 	Making Data Out Of Functions   
-##### [Recipes with Data](markdown/main_1r_Composing.md)   
+##### > [Recipes with Data](markdown/main_1r_Composing.md)   
 	mapWith   
 	Flip   
 	Object.assign   
@@ -57,7 +57,7 @@
 	What Context Applies When We Call a Function?   
 	Method Decorators   
 	Summary   
-#### [Recipes with Objects, Mutations, and State](markdown/main_2r_objects.md)   
+##### > [Recipes with Objects, Mutations, and State](markdown/main_2r_objects.md)   
 	Memoize   
 	getWith   
 	pluckWith   
@@ -82,7 +82,7 @@
 	Object Methods   
 	Why Not Classes?   
 	Summary   
-#### [Recipes with Constructors and Classes](markdown/main_5r_constructors.md)   
+##### > [Recipes with Constructors and Classes](markdown/main_5r_constructors.md)   
 	Bound   
 	Send   
 	Invoke   
@@ -98,7 +98,7 @@
 	Class Decorators beyond ES6/ECMAScript 2015   
 	Method Decorators beyond ES6/ECMAScript 2015   
 	Lightweight Traits   
-#### [More Decorator Recipes](markdown/main_7r_dedorators.md)   
+##### > [More Decorator Recipes](markdown/main_7r_dedorators.md)   
 	After Method Advice   
 	Before Method Advice   
 	Provided and Unless   
