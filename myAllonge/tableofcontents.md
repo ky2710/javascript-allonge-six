@@ -9,6 +9,14 @@ values are expressions
 values and identity   
 
 [A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
+[Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)  
+[A Warm Cup: Basic Strings and Quasi-Literals](markdown/sub_2_strings.md)  
+[The Coffee Factory: “Object-Oriented Programming”](markdown/sub_3_oop.md)  
+[A Coffeehouse: Symbols](markdown/sub_4_symbols.md)  
+[Decaffeinated: Impostors](markdown/sub_5_impostors.md)  
+[Colourful Mugs: Symmetry, Colour, and Charm](markdown/sub_6_colours.md) 
+
+
 ### [The first sip: Basic Functions](markdown/main_0_functions.md)   
 As Little As Possible About Functions, But No Less   
 Ah. I’d Like to Have an Argument, Please.   
@@ -28,7 +36,6 @@ Once
 Left-Variadic Functions   
 Compose and Pipeline   
 
-[Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)   
 ### [Composing and Decomposing Data](markdown/main_1_Composing.md)   
 Arrays and Destructuring Arguments   
 Self-Similarity   
@@ -47,8 +54,6 @@ mapWith
 Flip   
 Object.assign   
 Why?   
-
-[A Warm Cup: Basic Strings and Quasi-Literals](markdown/sub_2_strings.md)   
 ### [Stir the Allongé: Objects and State](markdown/main_2_objects.md)   
 Encapsulating State with Closures   
 Composition and Extension   
@@ -62,8 +67,6 @@ Memoize
 getWith   
 pluckWith   
 Deep Mapping   
-
-[The Coffee Factory: “Object-Oriented Programming”](markdown/sub_3_oop.md)   
 ### [Served by the Pot: Collections](markdown/main_3_collections.md)   
 Iteration and Iterables   
 Generating Iterables   
@@ -71,8 +74,6 @@ Lazy and Eager Collections
 Interlude: The Carpenter Interviews for a Job   
 Interactive Generators   
 Basic Operations on Iterables   
-
-[A Coffeehouse: Symbols](markdown/sub_4_symbols.md)   
 ### [Life on the Plantation: Metaobjects](markdown/main_4_metaobjects.md)   
 Why Metaobjects?   
 Mixins, Forwarding, and Delegation      
@@ -80,7 +81,6 @@ Later Binding
 Delegation via Prototypes   
 Shared Prototypes   
 
-[Decaffeinated: Impostors](markdown/sub_5_impostors.md)   
 ### [Finish the Cup: Constructors and Classes](markdown/main_5_constructors.md)   
 Constructors and new   
 Why Classes in JavaScript?   
@@ -94,8 +94,6 @@ Bound
 Send   
 Invoke   
 Fluent   
-
-[Colourful Mugs: Symmetry, Colour, and Charm](markdown/sub_6_colours.md)   
 ### [Con Panna: Composing Class Behaviour](markdown/main_6_classes.md)   
 Extending Classes with Mixins   
 Functional Mixins   
