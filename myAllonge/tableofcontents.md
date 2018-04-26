@@ -1,11 +1,11 @@
 ## [JavaScript Allongé, the "Six" Edition](https://github.com/raganwald/javascript-allonge-six) 
 *[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - [By Reg Braithwaite](https://github.com/raganwald)*
-### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
+#### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
 	About JavaScript Allongé   
 	What JavaScript Allongé is. And isn’t.   
 	Foreword to the “Six” edition   
 	Forewords to the First Edition
-### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
+#### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
 	values are expressions   
 	values and identity   
 * [A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
