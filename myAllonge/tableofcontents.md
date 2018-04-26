@@ -1,5 +1,5 @@
 Table of Contents   
-### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
+[A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
 About JavaScript Allongé   
 What JavaScript Allongé is. And isn’t.   
 Foreword to the “Six” edition   
@@ -7,7 +7,7 @@ Forewords to the First Edition
 ### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
 values are expressions   
 values and identity   
-### [A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
+[A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
 ### [The first sip: Basic Functions](markdown/main_0_functions.md)   
 As Little As Possible About Functions, But No Less   
 Ah. I’d Like to Have an Argument, Please.   
@@ -18,7 +18,7 @@ Combinators and Function Decorators
 Building Blocks   
 Magic Names   
 Summary   
-### [Recipes with Basic Functions](markdown/main_0r_functions.md)   
+[Recipes with Basic Functions](markdown/main_0r_functions.md)   
 Partial Application   
 Unary   
 Tap   
