@@ -1,4 +1,4 @@
-# [JavaScript Allongé, the "Six" Edition](https://github.com/raganwald/javascript-allonge-six) 
+## [JavaScript Allongé, the "Six" Edition](https://github.com/raganwald/javascript-allonge-six) 
 *[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - [By Reg Braithwaite](https://github.com/raganwald)*
 ### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
 About JavaScript Allongé   
