@@ -1,5 +1,5 @@
 Table of Contents   
-[A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
+### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
 About JavaScript Allongé   
 What JavaScript Allongé is. And isn’t.   
 Foreword to the “Six” edition   
@@ -27,7 +27,8 @@ Maybe
 Once   
 Left-Variadic Functions   
 Compose and Pipeline   
-### [Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)   
+
+[Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)   
 ### [Composing and Decomposing Data](markdown/main_1_Composing.md)   
 Arrays and Destructuring Arguments   
 Self-Similarity   
@@ -40,12 +41,14 @@ Copy on Write
 Tortoises, Hares, and Teleporting Turtles   
 Functional Iterators   
 Making Data Out Of Functions   
-### [Recipes with Data](markdown/main_1r_Composing.md)   
+
+[Recipes with Data](markdown/main_1r_Composing.md)   
 mapWith   
 Flip   
 Object.assign   
 Why?   
-### [A Warm Cup: Basic Strings and Quasi-Literals](markdown/sub_2_strings.md)   
+
+[A Warm Cup: Basic Strings and Quasi-Literals](markdown/sub_2_strings.md)   
 ### [Stir the Allongé: Objects and State](markdown/main_2_objects.md)   
 Encapsulating State with Closures   
 Composition and Extension   
@@ -53,12 +56,14 @@ This and That
 What Context Applies When We Call a Function?   
 Method Decorators   
 Summary   
-### [Recipes with Objects, Mutations, and State](markdown/main_2r_objects.md)   
+
+[Recipes with Objects, Mutations, and State](markdown/main_2r_objects.md)   
 Memoize   
 getWith   
 pluckWith   
 Deep Mapping   
-### [The Coffee Factory: “Object-Oriented Programming”](markdown/sub_3_oop.md)   
+
+[The Coffee Factory: “Object-Oriented Programming”](markdown/sub_3_oop.md)   
 ### [Served by the Pot: Collections](markdown/main_3_collections.md)   
 Iteration and Iterables   
 Generating Iterables   
@@ -66,14 +71,16 @@ Lazy and Eager Collections
 Interlude: The Carpenter Interviews for a Job   
 Interactive Generators   
 Basic Operations on Iterables   
-### [A Coffeehouse: Symbols](markdown/sub_4_symbols.md)   
+
+[A Coffeehouse: Symbols](markdown/sub_4_symbols.md)   
 ### [Life on the Plantation: Metaobjects](markdown/main_4_metaobjects.md)   
 Why Metaobjects?   
 Mixins, Forwarding, and Delegation      
 Later Binding    
 Delegation via Prototypes   
 Shared Prototypes   
-### [Decaffeinated: Impostors](markdown/sub_5_impostors.md)   
+
+[Decaffeinated: Impostors](markdown/sub_5_impostors.md)   
 ### [Finish the Cup: Constructors and Classes](markdown/main_5_constructors.md)   
 Constructors and new   
 Why Classes in JavaScript?   
@@ -81,12 +88,14 @@ Classes with class
 Object Methods   
 Why Not Classes?   
 Summary   
-### [Recipes with Constructors and Classes](markdown/main_5r_constructors.md)   
+
+[Recipes with Constructors and Classes](markdown/main_5r_constructors.md)   
 Bound   
 Send   
 Invoke   
 Fluent   
-### [Colourful Mugs: Symmetry, Colour, and Charm](markdown/sub_6_colours.md)   
+
+[Colourful Mugs: Symmetry, Colour, and Charm](markdown/sub_6_colours.md)   
 ### [Con Panna: Composing Class Behaviour](markdown/main_6_classes.md)   
 Extending Classes with Mixins   
 Functional Mixins   
@@ -98,7 +107,8 @@ Stateful Method Decorators
 Class Decorators beyond ES6/ECMAScript 2015   
 Method Decorators beyond ES6/ECMAScript 2015   
 Lightweight Traits   
-### [More Decorator Recipes](markdown/main_7r_dedorators.md)   
+
+[More Decorator Recipes](markdown/main_7r_dedorators.md)   
 After Method Advice   
 Before Method Advice   
 Provided and Unless   
