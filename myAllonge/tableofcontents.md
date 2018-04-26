@@ -25,7 +25,7 @@
 	Building Blocks   
 	Magic Names   
 	Summary   
-#### [Recipes with Basic Functions](markdown/main_0r_functions.md)   
+#### >[Recipes with Basic Functions](markdown/main_0r_functions.md)   
 	Partial Application   
 	Unary   
 	Tap   
