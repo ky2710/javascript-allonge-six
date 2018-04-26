@@ -25,6 +25,7 @@ Combinators and Function Decorators
 Building Blocks   
 Magic Names   
 Summary   
+
 [Recipes with Basic Functions](markdown/main_0r_functions.md)   
 Partial Application   
 Unary   
@@ -33,7 +34,6 @@ Maybe
 Once   
 Left-Variadic Functions   
 Compose and Pipeline   
-
 ### [Composing and Decomposing Data](markdown/main_1_Composing.md)   
 Arrays and Destructuring Arguments   
 Self-Similarity   
@@ -78,7 +78,6 @@ Mixins, Forwarding, and Delegation
 Later Binding    
 Delegation via Prototypes   
 Shared Prototypes   
-
 ### [Finish the Cup: Constructors and Classes](markdown/main_5_constructors.md)   
 Constructors and new   
 Why Classes in JavaScript?   
