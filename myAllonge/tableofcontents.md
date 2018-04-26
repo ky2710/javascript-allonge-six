@@ -15,7 +15,7 @@
 * [A Coffeehouse: Symbols](markdown/sub_4_symbols.md)  
 * [Decaffeinated: Impostors](markdown/sub_5_impostors.md)  
 * [Colourful Mugs: Symmetry, Colour, and Charm](markdown/sub_6_colours.md) 
-### [The first sip: Basic Functions](markdown/main_0_functions.md)   
+#### [The first sip: Basic Functions](markdown/main_0_functions.md)   
 	As Little As Possible About Functions, But No Less   
 	Ah. I’d Like to Have an Argument, Please.   
 	Closures and Scope   
@@ -33,7 +33,7 @@
 	Once   
 	Left-Variadic Functions   
 	Compose and Pipeline   
-### [Composing and Decomposing Data](markdown/main_1_Composing.md)   
+#### [Composing and Decomposing Data](markdown/main_1_Composing.md)   
 	Arrays and Destructuring Arguments   
 	Self-Similarity   
 	Tail Calls (and Default Arguments)   
@@ -50,7 +50,7 @@
 	Flip   
 	Object.assign   
 	Why?   
-### [Stir the Allongé: Objects and State](markdown/main_2_objects.md)   
+#### [Stir the Allongé: Objects and State](markdown/main_2_objects.md)   
 	Encapsulating State with Closures   
 	Composition and Extension   
 	This and That   
@@ -62,20 +62,20 @@
 	getWith   
 	pluckWith   
 	Deep Mapping   
-### [Served by the Pot: Collections](markdown/main_3_collections.md)   
+#### [Served by the Pot: Collections](markdown/main_3_collections.md)   
 	Iteration and Iterables   
 	Generating Iterables   
 	Lazy and Eager Collections   
 	Interlude: The Carpenter Interviews for a Job   
 	Interactive Generators   
 	Basic Operations on Iterables   
-### [Life on the Plantation: Metaobjects](markdown/main_4_metaobjects.md)   
+#### [Life on the Plantation: Metaobjects](markdown/main_4_metaobjects.md)   
 	Why Metaobjects?   
 	Mixins, Forwarding, and Delegation      
 	Later Binding    
 	Delegation via Prototypes   
 	Shared Prototypes   
-### [Finish the Cup: Constructors and Classes](markdown/main_5_constructors.md)   
+#### [Finish the Cup: Constructors and Classes](markdown/main_5_constructors.md)   
 	Constructors and new   
 	Why Classes in JavaScript?   
 	Classes with class   
@@ -87,13 +87,13 @@
 	Send   
 	Invoke   
 	Fluent   
-### [Con Panna: Composing Class Behaviour](markdown/main_6_classes.md)   
+#### [Con Panna: Composing Class Behaviour](markdown/main_6_classes.md)   
 	Extending Classes with Mixins   
 	Functional Mixins   
 	Emulating Multiple Inheritance   
 	Preventing Property Conflicts   
 	Reducing Coupling   
-### [More Decorators](markdown/main_7_dedorators.md)   
+#### [More Decorators](markdown/main_7_dedorators.md)   
 	Stateful Method Decorators   
 	Class Decorators beyond ES6/ECMAScript 2015   
 	Method Decorators beyond ES6/ECMAScript 2015   
@@ -103,8 +103,8 @@
 	Before Method Advice   
 	Provided and Unless   
 	Method Advice   
-### [Closing Time at the Coffeeshop: Final Remarks](markdown/book_3_closing-time.md)   
-### [The Golden Crema: Appendices and Afterwords](markdown/book_4_appendices.md)   
+#### [Closing Time at the Coffeeshop: Final Remarks](markdown/book_3_closing-time.md)   
+#### [The Golden Crema: Appendices and Afterwords](markdown/book_4_appendices.md)   
 	How to run the examples   
 	Thanks!   
 	Reading JavaScript Allongé on Kindle   
