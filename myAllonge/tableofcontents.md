@@ -47,7 +47,7 @@ Tortoises, Hares, and Teleporting Turtles
 Functional Iterators   
 Making Data Out Of Functions   
 
-[Recipes with Data](markdown/main_1r_Composing.md)   
+##### [Recipes with Data](markdown/main_1r_Composing.md)   
 mapWith   
 Flip   
 Object.assign   
