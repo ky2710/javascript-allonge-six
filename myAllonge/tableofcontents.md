@@ -53,12 +53,12 @@ Flip
 Object.assign   
 Why?   
 ### [Stir the Allongé: Objects and State](markdown/main_2_objects.md)   
-Encapsulating State with Closures   
-Composition and Extension   
-This and That   
-What Context Applies When We Call a Function?   
-Method Decorators   
-Summary   
+	Encapsulating State with Closures   
+	Composition and Extension   
+	This and That   
+	What Context Applies When We Call a Function?   
+	Method Decorators   
+	Summary   
 
 [Recipes with Objects, Mutations, and State](markdown/main_2r_objects.md)   
 Memoize   
