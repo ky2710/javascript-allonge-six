@@ -5,12 +5,12 @@
 
 In JavaScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation. Let's start with the second simplest possible function.[^simplest] In JavaScript, it looks like this:
 ```js
-    () => 0
+() => 0
 ```    
 This is a function that is applied to no values and returns `0`. Let's verify that our function is a value like all others:
 ```js
-    (() => 0)
-      //=> [Function]
+(() => 0)
+  //=> [Function]
 ```       
 What!? Why didn't it type back `() => 0` for us? This *seems* to break our rule that if an expression is also a value, JavaScript will give the same value back to us. What's going on? The simplest and easiest answer is that although the JavaScript interpreter does indeed return that value, displaying it on the screen is a slightly different matter. `[Function]` is a choice made by the people who wrote Node.js, the JavaScript environment that hosts the JavaScript REPL. If you try the same thing in a browser, you may see something else.
 
@@ -52,14 +52,16 @@ Right now, we only know about one such expression: `() => 0`, so let's use it. W
 ### functions that return values and evaluate expressions
 
 We've seen `() => 0`. We know that `(() => 0)()` returns `0`, and this is unsurprising. Likewise, the following all ought to be obvious:
+
 ```javascript
-    (() => 1)()
-      //=> 1
-    (() => "Hello, JavaScript")()
-      //=> "Hello, JavaScript"
-    (() => Infinity)()
-      //=> Infinity
+(() => 1)()
+  //=> 1
+(() => "Hello, JavaScript")()
+  //=> "Hello, JavaScript"
+(() => Infinity)()
+  //=> Infinity
 ```
+
 Well, the last one's a doozy, but still, the general idea is this: We can make a function that returns a value by putting the value to the right of the arrow.
 
 In the prelude, we looked at expressions. Values like `0` are expressions, as are things like `40 + 2`. Can we put an expression to the right of the arrow?
