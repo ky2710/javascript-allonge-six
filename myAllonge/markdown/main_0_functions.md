@@ -1410,23 +1410,21 @@ The magic names `this` and `arguments` have a different behaviour when you invok
 
 For example, when this expression's inner function is defined with `function`, `arguments[0]` refers to its only argument, `"inner"`:
 
-{:lang="js"}
-~~~~~~~~
+```js
 (function () {
   return (function () { return arguments[0]; })('inner');
 })('outer')
   //=> "inner"
-~~~~~~~~
+```
 
 But if we use a fat arrow, `arguments` will be defined in the outer environment, the one defined with `function`. And thus `arguments[0]` will refer to `"outer"`, not to `"inner"`:
 
-{:lang="js"}
-~~~~~~~~
+```js
 (function () {
   return (() => arguments[0])('inner');
 })('outer')
   //=> "outer"
-~~~~~~~~
+```
 
 Although it seems quixotic for the two syntaxes to have different semantics, it makes sense when you consider the design goal: Fat arrow functions are designed to be very lightweight and are often used with constructs like mapping or callbacks to emulate syntax.
 
@@ -1434,8 +1432,7 @@ To give a contrived example, this function takes a number and returns an array r
 
 [^mapWith]: We can also write the following: `const mapWith = (fn) => array => array.map(fn);`, and trust that it works even though we haven't discussed methods yet.
 
-{:lang="js"}
-~~~~~~~~
+```js
 const row = function () {
   return mapWith((column) => column * arguments[0])(
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -1444,12 +1441,11 @@ const row = function () {
 
 row(3)
   //=> [3,6,9,12,15,18,21,24,27,30,33,36
-~~~~~~~~
+```
 
 This works just fine, because `arguments[0]` refers to the `3` we passed to the function `row`. Our "fat arrow" function `(column) => column * arguments[0]` doesn't bind `arguments` when it's invoked. But if we rewrite `row` to use the `function` keyword, it stops working:
 
-{:lang="js"}
-~~~~~~~~
+```js
 const row = function () {
   return mapWith(function (column) { return column * arguments[0] })(
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -1458,7 +1454,7 @@ const row = function () {
 
 row(3)
   //=> [1,4,9,16,25,36,49,64,81,100,121,144]
-~~~~~~~~
+```
 
 Now our inner function binds `arguments[0]` every time it is invoked, so we get the same result as if we'd written
 `function (column) { return column * column }`.
