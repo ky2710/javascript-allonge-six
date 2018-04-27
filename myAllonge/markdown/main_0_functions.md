@@ -330,17 +330,17 @@ You won't be surprised to see how to write and apply a function to two arguments
     ((room, board) => room + board)(800, 150)
       //=> 950
 
-T> ### a quick summary of functions and bodies
-T>
-T> How arguments are used in a body's expression is probably perfectly obvious to you from the examples, especially if you've used any programming language (except for the dialect of BASIC--which I recall from my secondary school--that didn't allow parameters when you called a procedure).
-T>
-T> Expressions consist either of representations of values (like `3.14159265`, `true`, and `undefined`), operators that combine expressions (like `3 + 2`), some special forms like `[1, 2, 3]` for creating arrays out of expressions, or `function (`*arguments*`) {`*body-statements*`}` for creating functions.
-T>
-T> One of the important possible statements is a return statement. A return statement accepts any valid JavaScript expression.
-T>
-T> This loose definition is recursive, so we can intuit (or use our experience with other languages) that since a function can contain a return statement with an expression, we can write a function that returns a function, or an array that contains another array expression. Or a function that returns an array, an array of functions, a function that returns an array of functions, and so forth:
-T>
-T> <<(code/f1.js)
+> ### a quick summary of functions and bodies
+>
+> How arguments are used in a body's expression is probably perfectly obvious to you from the examples, especially if you've used any programming language (except for the dialect of BASIC--which I recall from my secondary school--that didn't allow parameters when you called a procedure).
+>
+> Expressions consist either of representations of values (like `3.14159265`, `true`, and `undefined`), operators that combine expressions (like `3 + 2`), some special forms like `[1, 2, 3]` for creating arrays out of expressions, or `function (`*arguments*`) {`*body-statements*`}` for creating functions.
+>
+> One of the important possible statements is a return statement. A return statement accepts any valid JavaScript expression.
+>
+> This loose definition is recursive, so we can intuit (or use our experience with other languages) that since a function can contain a return statement with an expression, we can write a function that returns a function, or an array that contains another array expression. Or a function that returns an array, an array of functions, a function that returns an array of functions, and so forth:
+>
+> <<(code/f1.js)
 
 ### call by value {#call-by-value}
 
