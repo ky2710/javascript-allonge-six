@@ -1,10 +1,12 @@
 ## [JavaScript Allongé, the "Six" Edition](https://github.com/raganwald/javascript-allonge-six) 
 *[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*
 #### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
-	About JavaScript Allongé   
+```js
+About JavaScript Allongé   
 	What JavaScript Allongé is. And isn’t.   
 	Foreword to the “Six” edition   
 	Forewords to the First Edition
+```
 > [A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
 > [Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)  
 > [A Warm Cup: Basic Strings and Quasi-Literals](markdown/sub_2_strings.md)  
