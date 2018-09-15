@@ -9,8 +9,7 @@
     * Closures and Scope -- That Constant Coffee Craving -- Naming Functions
     * Combinators and Function Decorators -- Building Blocks -- Magic Names -- Summary   
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
-   * Partial Application -- Unary -- Tap -- Maybe   
-   * Once -- Left-Variadic Functions -- Compose and Pipeline   
+   * Partial Application -- Unary -- Tap -- Maybe -- Once -- Left-Variadic Functions -- Compose and Pipeline   
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments -- Self-Similarity -- Tail Calls (and Default Arguments)
