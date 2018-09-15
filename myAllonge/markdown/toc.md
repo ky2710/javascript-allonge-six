@@ -1,14 +1,15 @@
 ### [*You Dont Konw JS*](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md) -- [*Functional Light Javascript*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md) -- JavaScript Allongé 
 ## [JavaScript Allongé-6th]()
-*[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*
-#### [Prefaces: A Pull of the Lever](markdown/book_1_preface.md)      
+*[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*    
+#### [Prefaces: A Pull of the Lever](markdown/book_1_preface.md)            
     * About JavaScript Allongé   
     * What JavaScript Allongé is. And isn’t.   
     * Foreword to the “Six” edition   
     * Forewords to the First Edition   
-#### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)      
+#### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)        
     * values are expressions   
-    * values and identity   
+    * values and identity  
+    
 * [Sub 0: A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
 * [Main 0: The first sip: Basic Functions](markdown/main_0_functions.md)   
     * As Little As Possible About Functions, But No Less   
