@@ -21,7 +21,7 @@
     * Building Blocks   
     * Magic Names   
     * Summary   
-* [Main 0r: Recipes with Basic Functions](markdown/main_0r_functions.md)   
+* [Reci 0: Recipes with Basic Functions](markdown/main_0r_functions.md)   
    * Partial Application   
    * Unary   
    * Tap   
@@ -42,7 +42,7 @@
    * Tortoises, Hares, and Teleporting Turtles   
    * Functional Iterators   
    * Making Data Out Of Functions   
-* [Main 1r: Recipes with Data](markdown/main_1r_Composing.md)   
+* [Reci 1: Recipes with Data](markdown/main_1r_Composing.md)   
    * mapWith   
    * Flip   
    * Object.assign   
@@ -55,7 +55,7 @@
    * What Context Applies When We Call a Function?   
    * Method Decorators   
    * Summary   
-* [Main 2r: Recipes with Objects, Mutations, and State](markdown/main_2r_objects.md)   
+* [Reci 2: Recipes with Objects, Mutations, and State](markdown/main_2r_objects.md)   
    * Memoize   
    * getWith   
    * pluckWith   
