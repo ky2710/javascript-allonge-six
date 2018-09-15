@@ -11,7 +11,7 @@
     * values and identity  
     
 * [*Sub 0: A Rich Aroma: Basic Numbers*](markdown/sub_0_numbers.md)   
-* [Main 0: The first sip: Basic Functions](markdown/main_0_functions.md)   
+* [**Main 0: The first sip: Basic Functions**](markdown/main_0_functions.md)   
     * As Little As Possible About Functions, But No Less   
     * Ah. I’d Like to Have an Argument, Please.   
     * Closures and Scope   
@@ -108,7 +108,7 @@
 #### [> Final Remarks: Closing Time at the Coffeeshop](markdown/book_3_closing-time.md)   
 #### [> Appendices and Afterwords: The Golden Crema](markdown/book_4_appendices.md)   
     * How to run the examples   
-    * [Thanks!]()   
+    * Thanks!   
     * Reading JavaScript Allongé on Kindle   
     * Copyright Notice   
     * About The Author   
