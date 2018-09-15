@@ -1,5 +1,5 @@
 ### Functional Javascript ⇒ [*Functional-Light JavaScript*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md)
-## [JavaScript Allongé, the "Six" Edition](https://github.com/raganwald/javascript-allonge-six) 
+## JavaScript Allongé, the "Six" Edition - [*Outlined*]()
 *[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*
 ### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
 About JavaScript Allongé   
