@@ -5,20 +5,17 @@
 		* values are expressions   				* values and identity  
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md)   
 * [**Main-0: Basic Functions**](main_0_functions.md)   
-    * As Little As Possible About Functions, But No Less -- Ah. I’d Like to Have an Argument, Please. -- Closures and Scope   
-    * That Constant Coffee Craving -- Naming Functions -- Combinators and Function Decorators   
-    * Building Blocks -- Magic Names -- Summary   
+    * As Little As Possible About Functions, But No Less -- Ah. I’d Like to Have an Argument, Please.
+    * Closures and Scope -- That Constant Coffee Craving -- Naming Functions
+    * Combinators and Function Decorators -- Building Blocks -- Magic Names -- Summary   
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
    * Partial Application -- Unary -- Tap -- Maybe   
    * Once -- Left-Variadic Functions -- Compose and Pipeline   
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments -- Self-Similarity -- Tail Calls (and Default Arguments)
-   * Garbage, Garbage Everywhere -- Plain Old JavaScript Objects -- Mutation -- Reassignment   
-   * Copy on Write   
-   * Tortoises, Hares, and Teleporting Turtles   
-   * Functional Iterators   
-   * Making Data Out Of Functions   
+   * Garbage, Garbage Everywhere -- Plain Old JavaScript Objects -- Mutation -- Reassignment -- Copy on Write   
+   * Tortoises, Hares, and Teleporting Turtles -- Functional Iterators -- Making Data Out Of Functions   
 * [Recipe-1: Data](main_1r_Composing.md)   
    * mapWith -- Flip -- Object.assign -- Why?   
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
