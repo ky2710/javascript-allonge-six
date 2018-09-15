@@ -1,7 +1,7 @@
 ### [*You Dont Konw JS*](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md) -- [*Functional Light Javascript*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md) -- JavaScript Allongé 
 ## [JavaScript Allongé-6th]()
 *[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*
-#### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
+##### [Prefaces: A Pull of the Lever](markdown/book_1_preface.md)   
     * About JavaScript Allongé   
     * What JavaScript Allongé is. And isn’t.   
     * Foreword to the “Six” edition   
@@ -104,8 +104,8 @@
    * Before Method Advice   
    * Provided and Unless   
    * Method Advice   
-###### [Closing Time at the Coffeeshop: Final Remarks](markdown/book_3_closing-time.md)   
-####### [The Golden Crema: Appendices and Afterwords](markdown/book_4_appendices.md)   
+##### [Final Remarks: Closing Time at the Coffeeshop](markdown/book_3_closing-time.md)   
+##### [Appendices and Afterwords: The Golden Crema](markdown/book_4_appendices.md)   
    * How to run the examples   
    * Thanks!   
    * Reading JavaScript Allongé on Kindle   
