@@ -6,7 +6,7 @@
     * What JavaScript Allongé is. And isn’t.   
     * Foreword to the “Six” edition   
     * Forewords to the First Edition   
-* [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
+#### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
     * values are expressions   
     * values and identity   
 * [Sub 0: A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
