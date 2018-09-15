@@ -82,7 +82,7 @@
    * Object Methods   
    * Why Not Classes?   
    * Summary   
-* [Main 5r: Recipes with Constructors and Classes](markdown/main_5r_constructors.md)   
+* [Reci 5: Recipes with Constructors and Classes](markdown/main_5r_constructors.md)   
    * Bound   
    * Send   
    * Invoke   
@@ -99,13 +99,13 @@
    * Class Decorators beyond ES6/ECMAScript 2015   
    * Method Decorators beyond ES6/ECMAScript 2015   
    * Lightweight Traits   
-* [Main 7r: More Decorator Recipes](markdown/main_7r_dedorators.md)   
+* [Reci 7: More Decorator Recipes](markdown/main_7r_dedorators.md)   
    * After Method Advice   
    * Before Method Advice   
    * Provided and Unless   
    * Method Advice   
-##### [Final Remarks: Closing Time at the Coffeeshop](markdown/book_3_closing-time.md)   
-##### [Appendices and Afterwords: The Golden Crema](markdown/book_4_appendices.md)   
+#### [Final Remarks: Closing Time at the Coffeeshop](markdown/book_3_closing-time.md)   
+#### [Appendices and Afterwords: The Golden Crema](markdown/book_4_appendices.md)   
    * How to run the examples   
    * Thanks!   
    * Reading JavaScript Allongé on Kindle   
