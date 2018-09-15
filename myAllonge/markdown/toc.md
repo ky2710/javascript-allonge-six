@@ -103,8 +103,5 @@
    * Method Advice   
 #### [> Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
 #### [> Appendices and Afterwords: The Golden Crema](book_4_appendices.md)   
-		* How to run the examples   
-		* Thanks!   
-		* Reading JavaScript Allongé on Kindle   
-		* Copyright Notice   
-		* About The Author   
+		* How to run the examples   		* Thanks!		* Reading JavaScript Allongé on Kindle 
+		* Copyright Notice			* About The Author   
