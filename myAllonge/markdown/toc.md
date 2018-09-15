@@ -1,5 +1,5 @@
-### [*You Dont Konw JS*](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md)[(detailed)]() -- [*Functional Light Javascript*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md)[(detailed)]() -- JavaScript Allongé 
-## [JavaScript Allongé-6th](tocd.md)[(detailed)]()
+### [*You Dont Konw JS*](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md)[*(detailed)*]() -- [*Functional Light Javascript*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md)[*(detailed)*]() -- [*JavaScript Allongé*]()[*(detailed)*]() 
+## [JavaScript Allongé-6th](tocd.md)
 *[Prefaces](book_1_preface.md) / [Appendices](book_4_appendices.md) / - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)* 
 #### [> Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
 		* values are expressions   				* values and identity  
