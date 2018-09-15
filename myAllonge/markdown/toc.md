@@ -2,10 +2,8 @@
 ## [JavaScript Allongé-6th]()
 *[Prefaces](book_1_preface.md) / [Appendices](book_4_appendices.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*    
 #### [> Prefaces: A Pull of the Lever](book_1_preface.md)            
-		* About JavaScript Allongé   
-		* What JavaScript Allongé is. And isn’t.   
-		* Foreword to the “Six” edition   
-		* Forewords to the First Edition   
+		* About JavaScript Allongé						* What JavaScript Allongé is. And isn’t.   
+		* Foreword to the “Six” edition   				* Forewords to the First Edition   
 #### [> Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
 		* values are expressions   
 		* values and identity  
@@ -106,8 +104,8 @@
    * Method Advice   
 #### [> Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
 #### [> Appendices and Afterwords: The Golden Crema](book_4_appendices.md)   
-	* How to run the examples   
-	* Thanks!   
-	* Reading JavaScript Allongé on Kindle   
-	* Copyright Notice   
-	* About The Author   
+		* How to run the examples   
+		* Thanks!   
+		* Reading JavaScript Allongé on Kindle   
+		* Copyright Notice   
+		* About The Author   
