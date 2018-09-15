@@ -1,25 +1,25 @@
 ### [*You Dont Konw JS*](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md) -- [*Functional Light Javascript*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md) -- JavaScript Allongé 
 ## [JavaScript Allongé-6th]()
 *[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*
-### [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
-About JavaScript Allongé   
-What JavaScript Allongé is. And isn’t.   
-Foreword to the “Six” edition   
-Forewords to the First Edition   
-### [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
-values are expressions   
-values and identity   
-#### [Sub 0: A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
-### [Main 0: The first sip: Basic Functions](markdown/main_0_functions.md)   
-As Little As Possible About Functions, But No Less   
-Ah. I’d Like to Have an Argument, Please.   
-Closures and Scope   
-That Constant Coffee Craving   
-Naming Functions   
-Combinators and Function Decorators   
-Building Blocks   
-Magic Names   
-Summary   
+* [A Pull of the Lever: Prefaces](markdown/book_1_preface.md)   
+    * About JavaScript Allongé   
+    * What JavaScript Allongé is. And isn’t.   
+    * Foreword to the “Six” edition   
+    * Forewords to the First Edition   
+* [Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)   
+    * values are expressions   
+    * values and identity   
+* [Sub 0: A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
+* [Main 0: The first sip: Basic Functions](markdown/main_0_functions.md)   
+    * As Little As Possible About Functions, But No Less   
+    * Ah. I’d Like to Have an Argument, Please.   
+    * Closures and Scope   
+    * That Constant Coffee Craving   
+    * Naming Functions   
+    * Combinators and Function Decorators   
+    * Building Blocks   
+    * Magic Names   
+    * Summary   
 ### [Main 0r: Recipes with Basic Functions](markdown/main_0r_functions.md)   
 Partial Application   
 Unary   
