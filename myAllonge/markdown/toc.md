@@ -2,13 +2,13 @@
 ## [JavaScript Allongé-6th]()
 *[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017 [By Reg Braithwaite](https://github.com/raganwald)*    
 #### [> Prefaces: A Pull of the Lever](markdown/book_1_preface.md)            
-* About JavaScript Allongé   
-* What JavaScript Allongé is. And isn’t.   
-* Foreword to the “Six” edition   
-* Forewords to the First Edition   
+    * About JavaScript Allongé   
+    * What JavaScript Allongé is. And isn’t.   
+    * Foreword to the “Six” edition   
+    * Forewords to the First Edition   
 #### [> Prelude: Values and Expressions over Coffee](markdown/book_2_prelude.md)        
-* values are expressions   
-* values and identity  
+    * values are expressions   
+    * values and identity  
     
 * [Sub 0: A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
 * [Main 0: The first sip: Basic Functions](markdown/main_0_functions.md)   
@@ -62,12 +62,12 @@
    * Deep Mapping   
 * [Sub 3: The Coffee Factory: “Object-Oriented Programming”](markdown/sub_3_oop.md)   
 * [Main 3: Served by the Pot: Collections](markdown/main_3_collections.md)   
-   * Iteration and Iterables   
-   * Generating Iterables   
-   * Lazy and Eager Collections   
-   * Interlude: The Carpenter Interviews for a Job   
-   * Interactive Generators   
-   * Basic Operations on Iterables   
+    * Iteration and Iterables   
+    * Generating Iterables   
+    * Lazy and Eager Collections   
+    * Interlude: The Carpenter Interviews for a Job   
+    * Interactive Generators   
+    * Basic Operations on Iterables   
 * [Sub 4: A Coffeehouse: Symbols](markdown/sub_4_symbols.md)   
 * [Main 4: Life on the Plantation: Metaobjects](markdown/main_4_metaobjects.md)   
    * Why Metaobjects?   
