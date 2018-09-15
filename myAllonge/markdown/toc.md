@@ -10,7 +10,7 @@
     * values are expressions   
     * values and identity  
     
-* [Sub 0: A Rich Aroma: Basic Numbers](markdown/sub_0_numbers.md)   
+* [*Sub 0: A Rich Aroma: Basic Numbers*](markdown/sub_0_numbers.md)   
 * [Main 0: The first sip: Basic Functions](markdown/main_0_functions.md)   
     * As Little As Possible About Functions, But No Less   
     * Ah. I’d Like to Have an Argument, Please.   
@@ -29,7 +29,7 @@
    * Once   
    * Left-Variadic Functions   
    * Compose and Pipeline   
-* [Sub 1: Picking the Bean: Choice and Truthiness](markdown/sub_1_choice.md)   
+* [*Sub 1: Picking the Bean: Choice and Truthiness*](markdown/sub_1_choice.md)   
 * [Main 1: Composing and Decomposing Data](markdown/main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
    * Self-Similarity   
