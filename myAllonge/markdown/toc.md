@@ -10,6 +10,7 @@
     * Combinators and Function Decorators -- Building Blocks -- Magic Names -- Summary   
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
    * Partial Application -- Unary -- Tap -- Maybe -- Once -- Left-Variadic Functions -- Compose and Pipeline   
+
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments -- Self-Similarity -- Tail Calls (and Default Arguments)
@@ -17,6 +18,7 @@
    * Tortoises, Hares, and Teleporting Turtles -- Functional Iterators -- Making Data Out Of Functions   
 * [Recipe-1: Data](main_1r_Composing.md)   
    * mapWith -- Flip -- Object.assign -- Why?   
+
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**Main-2: Objects and State**](main_2_objects.md)   
    * Encapsulating State with Closures -- Composition and Extension -- This and That   
