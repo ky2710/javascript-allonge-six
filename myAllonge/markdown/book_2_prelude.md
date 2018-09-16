@@ -50,10 +50,11 @@ In JavaScript, we test whether two values are identical with the `===` operator,
 		
 	'hello' !== 'goodbye'
 		//=> true
-```		
+```
+
 How does `===` work, exactly? Imagine that you're shown a cup of coffee. And then you're shown another cup of coffee. Are the two cups "identical?" In JavaScript, there are four possibilities:
 
-First, sometimes, the cups are of different kinds. One is a demitasse, the other a mug. **This corresponds to comparing two things in JavaScript that have different *types***. For example, the string `"2"` is not the same thing as the number `2`. Strings and numbers are different types, so strings and numbers are never identical:
+First, sometimes, the cups are of different kinds. One is a demitasse, the other a mug. This corresponds to comparing two things in JavaScript that have different *types*. For example, the string `"2"` is not the same thing as the number `2`. Strings and numbers are different types, so strings and numbers are never identical:
 ```javascript
     2 === '2'
       //=> false
@@ -61,7 +62,7 @@ First, sometimes, the cups are of different kinds. One is a demitasse, the other
     true !== 'true'
       //=> true
 ```
-Second, sometimes, the cups are of the same type--perhaps two espresso cups--but they have different contents. One holds a single, one a double. **This corresponds to comparing two JavaScript values that have the same type but different "content."** For example, the number `5` is not the same thing as the number `2`.
+Second, sometimes, the cups are of the same type--perhaps two espresso cups--but they have different contents. One holds a single, one a double. This corresponds to comparing two JavaScript values that have the same type but different "content." For example, the number `5` is not the same thing as the number `2`.
 ```javascript
 	true === false
 		//=> false
