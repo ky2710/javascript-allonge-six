@@ -63,14 +63,12 @@ First, sometimes, the cups are of different kinds. One is a demitasse, the other
 ```
 Second, sometimes, the cups are of the same type--perhaps two espresso cups--but they have different contents. One holds a single, one a double. This corresponds to comparing two JavaScript values that have the same type but different "content." For example, the number `5` is not the same thing as the number `2`.
 ```javascript
-    true === false
-      //=> false
-      
-    2 !== 5
-      //=> true
-      
-    'two' === 'five'
-      //=> false
+	true === false
+		//=> false
+	2 !== 5
+		//=> true
+	'two' === 'five'
+		//=> false
 ```
 What if the cups are of the same type *and* the contents are the same? Well, JavaScript's third and fourth possibilities cover that.
 
@@ -78,11 +76,10 @@ What if the cups are of the same type *and* the contents are the same? Well, Jav
 
 Third, some types of cups have no distinguishing marks on them. If they are the same kind of cup, and they hold the same contents, we have no way to tell the difference between them. This is the case with the strings, numbers, and booleans we have seen so far.
 ```javascript
-    2 + 2 === 4
-      //=> true
-      
-    (2 + 2 === 4) === (2 !== 5)
-      //=> true
+	2 + 2 === 4
+		//=> true
+	(2 + 2 === 4) === (2 !== 5)
+		//=> true
 ```      
 Note well what is happening with these examples: Even when we obtain a string, number, or boolean as the result of evaluating an expression, it is identical to another value of the same type with the same "content." Strings, numbers, and booleans are examples of what JavaScript calls "value" or "primitive" types. We'll use both terms interchangeably.
 
