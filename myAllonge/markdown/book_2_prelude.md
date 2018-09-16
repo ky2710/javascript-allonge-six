@@ -19,12 +19,12 @@ Let's try this with something the computer understands easily:
 ```
 Is this an expression? A value? Neither? Or both?
 
-The answer is, this is both an expression *and* a value.[^representation] The way you can tell that it's both is very easy: When you type it into JavaScript, you get the same thing back, just like our café Cubano:
+The answer is, this is both an expression *and* a value.:speech_balloon: The way you can tell that it's both is very easy: When you type it into JavaScript, you get the same thing back, just like our café Cubano:
 ```javascript
     42
       //=> 42
 ```
->[^representation]: Technically, it's a *representation* of a value using Base10 notation, but we needn't worry about that in this book. You and I both understand that this means "42," and so does the computer.
+>:speech_balloon: Technically, it's a *representation* of a value using Base10 notation, but we needn't worry about that in this book. You and I both understand that this means "42," and so does the computer.
 
 All values are expressions. That's easy! Are there any other kinds of expressions? Sure! let's go back to the coffee shop. Instead of handing over the finished coffee, we can hand over the ingredients. Let's hand over some ground coffee plus some boiling water.
 
