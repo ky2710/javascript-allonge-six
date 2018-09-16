@@ -1,9 +1,6 @@
 #### [*You Dont Konw JS*](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) [*(detailed)*](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) - [*Functional Light JS*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) [*(detailed)*](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) - [*Understanding ES6*](https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) [*(detailed)*](https://github.com/kiyounglee/understandinges6/blob/master/manuscript/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) - [*JS Allongé*](https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) [*(detailed)*](https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed) 
 ## [JavaScript Allongé-6th](toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allong%C3%A9-detailed) *(detailed)*
-*[Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
-#### [> Prefaces: A Pull of the Lever](book_1_preface.md)            
-		* About JavaScript Allongé				* What JavaScript Allongé is. And isn’t.   
-		* Foreword to the “Six” edition   			* Forewords to the First Edition   
+*[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### [> Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
 		* values are expressions   				* values and identity  
 * [*Sub-0: A Rich Aroma: Basic Numbers*](sub_0_numbers.md)   
@@ -102,6 +99,3 @@
    * Provided and Unless   
    * Method Advice   
 #### [> Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
-#### [> Appendices and Afterwords: The Golden Crema](book_4_appendices.md)   
-		* How to run the examples   		* Thanks!		* Reading JavaScript Allongé on Kindle 
-		* Copyright Notice			* About The Author   
