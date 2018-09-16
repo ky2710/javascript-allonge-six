@@ -9,7 +9,7 @@ You express your order at one end of their counter, the folks behind the counter
 [expression]: https://en.wikipedia.org/wiki/Expression_(computer_science)
 [value]: https://en.wikipedia.org/wiki/Value_(computer_science)
 
-## values are expressions (evaluate Expression => Value)
+## values are expressions : [evaluate Expression by Computer => Value]()
 
 All values are expressions. Say you hand the barista a café Cubano. Yup, you hand over a cup with some coffee infused through partially caramelized sugar. You say, "I want one of these." The barista is no fool, she gives it straight back to you, and you get exactly what you want. Thus, a café Cubano is an expression (you can use it to place an order) and a value (you get it back from the barista).
 
