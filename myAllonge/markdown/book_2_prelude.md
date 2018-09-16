@@ -14,9 +14,9 @@ You express your order at one end of their counter, the folks behind the counter
 All values are expressions. Say you hand the barista a café Cubano. Yup, you hand over a cup with some coffee infused through partially caramelized sugar. You say, "I want one of these." The barista is no fool, she gives it straight back to you, and you get exactly what you want. Thus, a café Cubano is an expression (you can use it to place an order) and a value (you get it back from the barista).
 
 Let's try this with something the computer understands easily:
-
+```javascript
     42
-
+```
 Is this an expression? A value? Neither? Or both?
 
 The answer is, this is both an expression *and* a value.[^representation] The way you can tell that it's both is very easy: When you type it into JavaScript, you get the same thing back, just like our café Cubano:
