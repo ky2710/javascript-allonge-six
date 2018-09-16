@@ -73,7 +73,7 @@ Second, sometimes, the cups are of the same type--perhaps two espresso cups--but
 ```
 What if the cups are of the same type *and* the contents are the same? Well, JavaScript's third and fourth possibilities cover that.
 
-### value types
+### value types(= Primitive types)
 
 Third, some types of cups have no distinguishing marks on them. If they are the same kind of cup, and they hold the same contents, we have no way to tell the difference between them. This is the case with the strings, numbers, and booleans we have seen so far.
 ```javascript
