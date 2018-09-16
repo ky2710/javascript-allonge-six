@@ -30,9 +30,9 @@ All values are expressions. That's easy! Are there any other kinds of expression
 
 > Astute readers will realize we're omitting something. Congratulations! Take a sip of espresso. We'll get to that in a moment.
 
-Now the barista gives us back an espresso. And if we hand over the espresso, we get the espresso right back. So, boiling water plus ground coffee is an expression, but it isn't a value.[^homoiconicity] Boiling water is a value. Ground coffee is a value. Espresso is a value. Boiling water plus ground coffee is an expression.
+Now the barista gives us back an espresso. And if we hand over the espresso, we get the espresso right back. So, boiling water plus ground coffee is an expression, but it isn't a value. :exclamation: Boiling water is a value. Ground coffee is a value. Espresso is a value. Boiling water plus ground coffee is an expression.
 
->[^homoiconicity]: In some languages, expressions are a kind of value unto themselves and can be manipulated. The grandfather of such languages is Lisp. JavaScript is not such a language, expressions in and of themselves are not values.
+>:exclamation: In some languages, expressions are a kind of value unto themselves and can be manipulated. The grandfather of such languages is Lisp. JavaScript is not such a language, expressions in and of themselves are not values.
 
 Let's try this as well with something else the computer understands easily:
 ```javascript
