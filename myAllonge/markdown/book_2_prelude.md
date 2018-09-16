@@ -24,7 +24,7 @@ The answer is, this is both an expression *and* a value.[^representation] The wa
     42
       //=> 42
 ```
-[^representation]: Technically, it's a *representation* of a value using Base10 notation, but we needn't worry about that in this book. You and I both understand that this means "42," and so does the computer.
+>[^representation]: Technically, it's a *representation* of a value using Base10 notation, but we needn't worry about that in this book. You and I both understand that this means "42," and so does the computer.
 
 All values are expressions. That's easy! Are there any other kinds of expressions? Sure! let's go back to the coffee shop. Instead of handing over the finished coffee, we can hand over the ingredients. Let's hand over some ground coffee plus some boiling water.
 
@@ -32,7 +32,7 @@ All values are expressions. That's easy! Are there any other kinds of expression
 
 Now the barista gives us back an espresso. And if we hand over the espresso, we get the espresso right back. So, boiling water plus ground coffee is an expression, but it isn't a value.[^homoiconicity] Boiling water is a value. Ground coffee is a value. Espresso is a value. Boiling water plus ground coffee is an expression.
 
-[^homoiconicity]: In some languages, expressions are a kind of value unto themselves and can be manipulated. The grandfather of such languages is Lisp. JavaScript is not such a language, expressions in and of themselves are not values.
+>[^homoiconicity]: In some languages, expressions are a kind of value unto themselves and can be manipulated. The grandfather of such languages is Lisp. JavaScript is not such a language, expressions in and of themselves are not values.
 
 Let's try this as well with something else the computer understands easily:
 ```javascript
