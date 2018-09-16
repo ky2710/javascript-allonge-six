@@ -39,7 +39,7 @@ Let's try this as well with something else the computer understands easily:
     "JavaScript" + " " + "Allonge"
       //=> "JavaScript Allonge"
 ```
-Now we see that "strings" are values, and you can make an expression out of strings and an operator `+`. Since strings are values, they are also expressions by themselves. But strings with operators are not values, they are expressions. Now we know what was missing with our "coffee grounds plus hot water" example. **The coffee grounds were a value, the boiling hot water was a value, and the "plus" operator between them made the whole thing an expression that was not a value.**
+Now we see that "strings" are values, and you can make an expression out of strings and an operator `+`. **Since strings are values, they are also expressions by themselves. But strings with operators are not values, they are expressions.** Now we know what was missing with our "coffee grounds plus hot water" example. The coffee grounds were a value, the boiling hot water was a value, and the "plus" operator between them made the whole thing an expression that was not a value.
 
 ## values and identity
 
