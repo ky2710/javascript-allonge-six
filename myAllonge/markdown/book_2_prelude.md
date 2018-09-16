@@ -45,11 +45,11 @@ Now we see that "strings" are values, and you can make an expression out of stri
 
 In JavaScript, we test whether two values are identical with the `===` operator, and whether they are not identical with the `!==` operator:
 ```javascript
-		2 === 2
-			//=> true
-			
-		'hello' !== 'goodbye'
-			//=> true
+	2 === 2
+		//=> true
+		
+	'hello' !== 'goodbye'
+		//=> true
 ```			
 How does `===` work, exactly? Imagine that you're shown a cup of coffee. And then you're shown another cup of coffee. Are the two cups "identical?" In JavaScript, there are four possibilities:
 
