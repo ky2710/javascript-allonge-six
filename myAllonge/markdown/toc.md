@@ -1,11 +1,11 @@
-#### *[You Dont Konw JS] [_detail_YDK] - [Functional Light JS]  [_detail_Func] - [Understanding ES6][_detail_ES6] - [JS Allongé][_detail_Alg]*
+#### *[You Dont Konw JS] [(detail)] - [Functional Light JS] [(detail)] - [Understanding ES6][_detail_ES6] - [JS Allongé][_detail_Alg]*
 
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed 
 [Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
 [JS Allongé]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
-[_detail_YDK]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
-[_detail_Func]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
+[(detail)]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
+[(detail)]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
 [_detail_ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
 [_detail_Alg]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/tocd.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
 
