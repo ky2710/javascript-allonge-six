@@ -1,4 +1,4 @@
-***[You Dont Konw JS]** [-detail] - **[Functional Light JS]** [-detail] - **[Understanding ES6]**[_detail] - **[JS Allongé]**[_detail]*
+***[You Dont Konw JS]**[_detail] - **[Functional Light JS]**[_detail] - **[Understanding ES6]**[_detail] - **[JS Allongé]**[_detail]*
 
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allongé-detailed 
