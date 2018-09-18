@@ -1247,12 +1247,11 @@ Code that uses a lot of combinators tends to name the verbs and adverbs (like `d
 
 ### function decorators
 
-A *function decorator* is a higher-order function that takes one function as an argument, returns another function, and the returned function is a variation of the argument function. Here's a ridiculously simple  decorator:`[1]`
+**A *function decorator* is a higher-order function that takes one function as an argument, returns another function, and the returned function is a variation of the argument function.** Here's a ridiculously simple  decorator:`[1]`
+>`[1]` We'll see later why an even more useful version would be written `(fn) => (...args) => !fn(...args)`
 ```javascript
     const not = (fn) => (x) => !fn(x)
 ```
->`[1]` We'll see later why an even more useful version would be written `(fn) => (...args) => !fn(...args)`
-
 So instead of writing `!someFunction(42)`, we can write `not(someFunction)(42)`. Hardly progress. But like `compose`, we could write either:
 ```javascript
     const something = (x) => x != null;
