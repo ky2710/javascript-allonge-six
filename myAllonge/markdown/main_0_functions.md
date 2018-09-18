@@ -35,13 +35,13 @@ Here's how we apply a function to some values in JavaScript: Let's say that *fn_
 
   *fn_expr*`(`*args*`)`
     
-Right now, we only know about one such expression: `() => 0`, so let's use it. We'll put it in parentheses`^1` to keep the parser happy, like we did above: `(() => 0)`. Since we aren't giving it any arguments, we'll simply write `()` after the expression. So we write:
+Right now, we only know about one such expression: `() => 0`, so let's use it. We'll put it in parentheses`[1]` to keep the parser happy, like we did above: `(() => 0)`. Since we aren't giving it any arguments, we'll simply write `()` after the expression. So we write:
 ```javascript
     (() => 0)()
       //=> 0
 ```
 
->`^1` If you're used to other programming languages, you've probably internalized the idea that sometimes parentheses are used to group operations in an expression like math, and sometimes to apply a function to arguments. If not... Welcome to the [ALGOL] family of programming languages!
+>`[1]` If you're used to other programming languages, you've probably internalized the idea that sometimes parentheses are used to group operations in an expression like math, and sometimes to apply a function to arguments. If not... Welcome to the [ALGOL] family of programming languages!
 
 [ALGOL]: https://en.wikipedia.org/wiki/ALGOL
 
@@ -117,9 +117,9 @@ Or even:
 ```
 ### the simplest possible block
 
-There's another thing we can put to the right of an arrow, a *block*. A block has zero or more *statements*, separated by semicolons.`^1`
+There's another thing we can put to the right of an arrow, a *block*. A block has zero or more *statements*, separated by semicolons.`[1]`
 
->`^1` Sometimes, you will find JavaScript that has statements that are separated by newlines without semi-colons. This works because JavaScript has a feature that can infer where the semi-colons should be most of the time. We will not take advantage of this feature, but it's helpful to know it exists.
+>`[1]` Sometimes, you will find JavaScript that has statements that are separated by newlines without semi-colons. This works because JavaScript has a feature that can infer where the semi-colons should be most of the time. We will not take advantage of this feature, but it's helpful to know it exists.
 
 So, this is a valid function:
 ```javascript
@@ -168,13 +168,13 @@ There's a **third way**, with JavaScript's `void` operator. Behold:
     void (2 + 2)
       //=> undefined
 ```     
-`void` is an operator that takes any value and evaluates to `undefined`, always. So, when we deliberately want an undefined value, should we use the first, second, or third form?`^1` The answer is, use `void`. By convention, use `void 0`.
+`void` is an operator that takes any value and evaluates to `undefined`, always. So, when we deliberately want an undefined value, should we use the first, second, or third form?`[1]` The answer is, use `void`. By convention, use `void 0`.
 
->`^1` Experienced JavaScript programmers are aware that there's a **fourth way**, using a function argument. This was actually the preferred mechanism until `void` became commonplace.
+>`[1]` Experienced JavaScript programmers are aware that there's a **fourth way**, using a function argument. This was actually the preferred mechanism until `void` became commonplace.
 
-The first form works but it's cumbersome. The second form works most of the time, but it is possible to break it by reassigning `undefined` to a different value, something we'll discuss in [Reassignment and Mutation](main_1_Composing.md#reassignment). The third form is guaranteed to always work, so that's what we will use.`^1`
+The first form works but it's cumbersome. The second form works most of the time, but it is possible to break it by reassigning `undefined` to a different value, something we'll discuss in [Reassignment and Mutation](main_1_Composing.md#reassignment). The third form is guaranteed to always work, so that's what we will use.`[1]`
 
->`^1` As an exercise for the reader, we suggest you ask your friendly neighbourhood programming language designer or human factors subject-matter expert to explain why a keyword called `void` is used to generate an `undefined` value, instead of calling them both `void` or both `undefined`. We have no idea.
+>`[1]` As an exercise for the reader, we suggest you ask your friendly neighbourhood programming language designer or human factors subject-matter expert to explain why a keyword called `void` is used to generate an `undefined` value, instead of calling them both `void` or both `undefined`. We have no idea.
 
 ### back on the block
 
@@ -183,9 +183,9 @@ Back to our function. We evaluated this:
     (() => {})()
       //=> undefined
 ```
-We said that the function returns the result of evaluating a *block*, and we said that a block is a (possibly empty) list of JavaScript *statements* separated by semicolons.`^1`
+We said that the function returns the result of evaluating a *block*, and we said that a block is a (possibly empty) list of JavaScript *statements* separated by semicolons.`[1]`
 
->`^1` You can also separate statements with line breaks. Readers who follow internet flame-fests may be aware of something called [automatic semi-colon insertion](http://lucumr.pocoo.org/2011/2/6/automatic-semicolon-insertion/). Basically, there's a step where JavaScript looks at your code and follows some rules to guess where you meant to put semicolons in should you leave them out. This feature was originally created as a kind of helpful error-correction. Some programmers argue that since it's part of the language's definition, it's fair game to write code that exploits it, so they deliberately omit any semicolon that JavaScript will insert for them.
+>`[1]` You can also separate statements with line breaks. Readers who follow internet flame-fests may be aware of something called [automatic semi-colon insertion](http://lucumr.pocoo.org/2011/2/6/automatic-semicolon-insertion/). Basically, there's a step where JavaScript looks at your code and follows some rules to guess where you meant to put semicolons in should you leave them out. This feature was originally created as a kind of helpful error-correction. Some programmers argue that since it's part of the language's definition, it's fair game to write code that exploits it, so they deliberately omit any semicolon that JavaScript will insert for them.
 
 Something like: { statement^1; statement^2; statement^3; ... ; statement^n }
 
@@ -351,9 +351,9 @@ So when you write:
     ((diameter) => diameter * 3.14159265)(1 + 1)
       //=> 6.2831853
 ```
-What happened internally is that the expression `1 + 1` was evaluated first, resulting in `2`. Then our circumference function was applied to `2`.`^1`
+What happened internally is that the expression `1 + 1` was evaluated first, resulting in `2`. Then our circumference function was applied to `2`.`[1]`
 
->`^1` We said that you can't apply a function to an expression. You *can* apply a function to one or more functions. Functions are values! This has interesting applications, and they will be explored much more thoroughly in [Functions That Are Applied to Functions](#consumers).
+>`[1]` We said that you can't apply a function to an expression. You *can* apply a function to one or more functions. Functions are values! This has interesting applications, and they will be explored much more thoroughly in [Functions That Are Applied to Functions](#consumers).
 
 We'll see [below](#call-by-sharing) that while JavaScript always calls by value, the notion of a "value" has additional subtlety. But before we do, let's look at variables.
 
@@ -405,12 +405,12 @@ What about reference types? JavaScript does not place copies of reference values
 
 Because many references can share the same value, and because JavaScript passes references as arguments, JavaScript can be said to implement "call by sharing" semantics. Call by sharing is generally understood to be a specialization of call by value, and it explains why some values are known as value types and other values are known as reference types.
 
-And with that, we're ready to look at *closures*. When we combine our knowledge of value types, reference types, arguments, and closures, we'll understand why this function always evaluates to `true` no matter what argument `^1` you apply it to:
+And with that, we're ready to look at *closures*. When we combine our knowledge of value types, reference types, arguments, and closures, we'll understand why this function always evaluates to `true` no matter what argument `[1]` you apply it to:
 ```javascript
     (value) =>
       ((ref1, ref2) => ref1 === ref2)(value, value)
 ```
-`^1` > Unless the argument is `NaN`, which isn't equal to anything, *including itself*. `NaN` in JavaScript behaves a lot like `NULL` in SQL.
+>`[1]` Unless the argument is `NaN`, which isn't equal to anything, *including itself*. `NaN` in JavaScript behaves a lot like `NULL` in SQL.
 ## Closures and Scope
 
 It's time to see how a function within a function works:
