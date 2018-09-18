@@ -150,7 +150,7 @@ Like numbers, booleans and strings, JavaScript can print out the value `undefine
     (() => {})() === undefined
       //=> true
 ```      
-No matter how you evaluate `undefined`, you get an identical value back. `undefined` is a value that means "I don't have a value." But it's still a value :-)
+No matter how you evaluate `undefined`, you get an identical value back. **`undefined` is a value that means "I don't have a value." But it's still a value :smile:**
       
 > You might think that `undefined` in JavaScript is equivalent to `NULL` in SQL. No. In SQL, two things that are `NULL` are not equal to nor share the same identity, because two unknowns can't be equal. In JavaScript, every `undefined` is identical to every other `undefined`.
 
