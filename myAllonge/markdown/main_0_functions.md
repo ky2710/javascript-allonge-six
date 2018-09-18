@@ -161,7 +161,7 @@ We've seen that JavaScript represents an undefined value by typing `undefined`, 
 1. By evaluating a function that doesn't return a value `(() => {})()`, and;
 2. By writing `undefined` ourselves.
 
-There's a third way, with JavaScript's `void` operator. Behold:
+There's a **third way**, with JavaScript's `void` operator. Behold:
 ```javascript
     void 0
       //=> undefined
@@ -172,7 +172,7 @@ There's a third way, with JavaScript's `void` operator. Behold:
 ```     
 `void` is an operator that takes any value and evaluates to `undefined`, always. So, when we deliberately want an undefined value, should we use the first, second, or third form?:zzz: The answer is, use `void`. By convention, use `void 0`.
 
->:zzz: Experienced JavaScript programmers are aware that there's a fourth way, using a function argument. This was actually the preferred mechanism until `void` became commonplace.
+>:zzz: Experienced JavaScript programmers are aware that there's a **fourth way**, using a function argument. This was actually the preferred mechanism until `void` became commonplace.
 
 The first form works but it's cumbersome. The second form works most of the time, but it is possible to break it by reassigning `undefined` to a different value, something we'll discuss in [Reassignment and Mutation](main_1_Composing.md#reassignment-reassignment). The third form is guaranteed to always work, so that's what we will use.:zzz:
 
