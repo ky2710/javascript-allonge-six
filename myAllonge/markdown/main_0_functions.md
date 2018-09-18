@@ -37,13 +37,13 @@ Here's how we apply a function to some values in JavaScript: Let's say that *fn_
 
   *fn_expr*`(`*args*`)`
     
-Right now, we only know about one such expression: `() => 0`, so let's use it. We'll put it in parentheses[^ambiguous] to keep the parser happy, like we did above: `(() => 0)`. Since we aren't giving it any arguments, we'll simply write `()` after the expression. So we write:
+Right now, we only know about one such expression: `() => 0`, so let's use it. We'll put it in parentheses:zzz: to keep the parser happy, like we did above: `(() => 0)`. Since we aren't giving it any arguments, we'll simply write `()` after the expression. So we write:
 ```javascript
     (() => 0)()
       //=> 0
 ```
 
-[^ambiguous]: If you're used to other programming languages, you've probably internalized the idea that sometimes parentheses are used to group operations in an expression like math, and sometimes to apply a function to arguments. If not... Welcome to the [ALGOL] family of programming languages!
+>:zzz: If you're used to other programming languages, you've probably internalized the idea that sometimes parentheses are used to group operations in an expression like math, and sometimes to apply a function to arguments. If not... Welcome to the [ALGOL] family of programming languages!
 
 [ALGOL]: https://en.wikipedia.org/wiki/ALGOL
 
