@@ -14,7 +14,7 @@
 * [**Main-0: The first sip: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions)   
     * [As Little As Possible About Functions, But No Less](main_0_functions.md#as-little-as-possible-about-functions-but-no-less)   
     * [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
-    * Closures and Scope   
+    * [Closures and Scope](main_0_functions.md#closures-and-scope)   
     * That Constant Coffee Craving   
     * Naming Functions   
     * Combinators and Function Decorators   
