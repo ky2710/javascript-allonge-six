@@ -991,7 +991,7 @@ The line `n = n - 2;` *rebinds* a new value to the name `n`. We will discuss thi
 JavaScript does not permit us to rebind a name that has been bound with `const`. We can *shadow* it by using `const` to declare a new binding with a new function or block scope, but we cannot rebind a name that was bound with `const` in an existing scope.
 
 This is valuable, as it greatly simplifies the analysis of programs to see at a glance that when something is bound with `const`, we need never worry that its value may change.
-## Naming Functions {#named-function-expressions}
+## Naming Functions
 
 Let's get right to it. This code does *not* name a function:
 ```javascript
@@ -1020,18 +1020,18 @@ Let's look at the obvious differences:
 1. We always use a block, we cannot write `function (str) str + str`. This means that if we want our functions to return a value, we always need to use the `return` keyword
 
 If we leave out the "something optional" that comes after the `function` keyword, we can translate all of the fat arrow functions that we've seen into `function` keyword functions, e.g.
-```javascript
+```js
     (n) => (1.618**n - -1.618**-n) / 2.236
 ```
 Can be written as:
-```javascript
+```js
     function (n) {
       return (1.618**n - -1.618**-n) / 2.236;
     }
 ```
-This still does not *name* a function, but as we noted above, functions written with the `function` keyword have an optional "something else." Could that "something else" name a function? Yes, of course.[^ofcourse]
+This still does not *name* a function, but as we noted above, functions written with the `function` keyword have an optional "something else." Could that "something else" name a function? Yes, of course.`[1]`
 
-[^ofcourse]: "Yes of course?" Well, in chapter of a book dedicated to naming functions, it is not surprising that feature we mention has something to do with naming functions.
+>`[1]` "Yes of course?" Well, in chapter of a book dedicated to naming functions, it is not surprising that feature we mention has something to do with naming functions.
 
 Here are our example functions written with names:
 ```javascript
@@ -1048,7 +1048,7 @@ Placing a name between the `function` keyword and the argument list names the fu
     const double = function repeat (str) {
       return str + str;
     }
-
+```
 In this expression, `double` is the name in the environment, but `repeat` is the function's actual name. This is a *named function expression*. That may seem confusing, but think of the binding names as properties of the environment, not of the function. While the name of the function is a property of the function, not of the environment.
 
 And indeed the name *is* a property:
@@ -1099,7 +1099,7 @@ Clearly, the name `even` is bound to the function *within the function's body*. 
 ```
 `even` is bound within the function itself, but not outside it. This is useful for making recursive functions as we see above, and it speaks to the principle of least privilege: If you don't *need* to name it anywhere else, you needn't.
 
-### function declarations {#function-declarations}
+### function declarations
 
 There is another syntax for naming and/or defining a function. It's called a *function declaration statement*, and it looks a lot like a named function expression, only we use it as a statement:
 ```javascript
@@ -1149,7 +1149,9 @@ Although `fizzbuzz` is declared later in the function, JavaScript behaves as if 
 ```
 The definition of the `fizzbuzz` is "hoisted" to the top of its enclosing scope (an IIFE in this case). This behaviour is intentional on the part of JavaScript's design to facilitate a certain style of programming where you put the main logic up front, and the "helper functions" at the bottom. It is not necessary to declare functions in this way in JavaScript, but understanding the syntax and its behaviour (especially the way it differs from `const`) is essential for working with production code.
 
-### function declaration caveats[^caveats]
+### function declaration caveats`[1]`
+
+>`[1]` A number of the caveats discussed here were described in Jyrly Zaytsev's excellent article [Named function expressions demystified](http://kangax.github.com/nfe/).
 
 Function declarations are formally only supposed to be made at what we might call the "top level" of a function. Although some JavaScript environments permit the following code, this example is technically illegal and definitely a bad idea:
 ```javascript
@@ -1181,9 +1183,7 @@ But this is not:
 ```
 The parentheses make this an expression, not a function declaration.
 
-[^caveats]: A number of the caveats discussed here were described in Jyrly Zaytsev's excellent article [Named function expressions demystified](http://kangax.github.com/nfe/).
-## Combinators and Function Decorators {#combinators}
-
+## Combinators and Function Decorators
 ### higher-order functions
 
 As we've seen, JavaScript functions take values as arguments and return values. JavaScript functions are values, so JavaScript functions can take functions as arguments, return functions, or both. Generally speaking, a function that either takes functions as arguments, or returns a function, or both, is referred to as a "higher-order" function.
@@ -1245,13 +1245,13 @@ This is, of course, just one example of many. You'll find lots more perusing the
 
 Code that uses a lot of combinators tends to name the verbs and adverbs (like `doubleOf`, `addOne`, and `compose`) while avoiding language keywords and the names of nouns (like `number`). So one perspective is that combinators are useful when you want to emphasize what you're doing and how it fits together, and more explicit code is useful when you want to emphasize what you're working with.
 
-### function decorators {#decorators}
+### function decorators
 
-A *function decorator* is a higher-order function that takes one function as an argument, returns another function, and the returned function is a variation of the argument function. Here's a ridiculously simple  decorator:[^variadic]
+A *function decorator* is a higher-order function that takes one function as an argument, returns another function, and the returned function is a variation of the argument function. Here's a ridiculously simple  decorator:`[1]`
 ```javascript
     const not = (fn) => (x) => !fn(x)
 ```
-[^variadic]: We'll see later why an even more useful version would be written `(fn) => (...args) => !fn(...args)`
+>`[1]` We'll see later why an even more useful version would be written `(fn) => (...args) => !fn(...args)`
 
 So instead of writing `!someFunction(42)`, we can write `not(someFunction)(42)`. Hardly progress. But like `compose`, we could write either:
 ```javascript
@@ -1304,9 +1304,9 @@ Code is easier than words for this. The [Underscore] library provides a higher-o
     _.map([1, 2, 3], (n) => n * n)
       //=> [1, 4, 9]
 ```
-We don't want to fool around writing `_.`, so we can use it by writing:[^_map]
+We don't want to fool around writing `_.`, so we can use it by writing:`[1]`
 
-[^_map]: If we don't want to sort out [Underscore], we can also write the following: `const map = (a, fn) => a.map(fn);`, and trust that it works even though we haven't discussed methods yet.
+>`[1]` If we don't want to sort out [Underscore], we can also write the following: `const map = (a, fn) => a.map(fn);`, and trust that it works even though we haven't discussed methods yet.
 ```javascript
     const map = _.map;
 ```      
@@ -1340,9 +1340,9 @@ We generalized composition with the `compose` combinator. Partial application al
 [Underscore]: http://underscorejs.org
 ## Magic Names {#magic-names}
 
-When a function is applied to arguments (or "called"), JavaScript binds the values of arguments to the function's argument names in an environment created for the function's execution. What we haven't discussed so far is that JavaScript also binds values to some "magic" names in addition to any you put in the argument list.[^read-only]
+When a function is applied to arguments (or "called"), JavaScript binds the values of arguments to the function's argument names in an environment created for the function's execution. What we haven't discussed so far is that JavaScript also binds values to some "magic" names in addition to any you put in the argument list.`[1]`
 
-[^read-only]: You should never attempt to define your own bindings against "magic" names that JavaScript binds for you. It is wise to treat them as read-only at all times.
+>`[1]` You should never attempt to define your own bindings against "magic" names that JavaScript binds for you. It is wise to treat them as read-only at all times.
 
 ### the function keyword
 
@@ -1430,9 +1430,9 @@ But if we use a fat arrow, `arguments` will be defined in the outer environment,
 
 Although it seems quixotic for the two syntaxes to have different semantics, it makes sense when you consider the design goal: Fat arrow functions are designed to be very lightweight and are often used with constructs like mapping or callbacks to emulate syntax.
 
-To give a contrived example, this function takes a number and returns an array representing a row in a hypothetical multiplication table. It uses `mapWith`, which we discussed in [Building Blocks](#buildingblocks).[^mapWith] We'll use `arguments` just to show the difference between using a fat arrow and the function keyword:
+To give a contrived example, this function takes a number and returns an array representing a row in a hypothetical multiplication table. It uses `mapWith`, which we discussed in [Building Blocks](#buildingblocks).`[1]` We'll use `arguments` just to show the difference between using a fat arrow and the function keyword:
 
-[^mapWith]: We can also write the following: `const mapWith = (fn) => array => array.map(fn);`, and trust that it works even though we haven't discussed methods yet.
+>`[1]` We can also write the following: `const mapWith = (fn) => array => array.map(fn);`, and trust that it works even though we haven't discussed methods yet.
 
 ```js
 const row = function () {
