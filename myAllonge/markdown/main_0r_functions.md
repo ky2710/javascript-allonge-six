@@ -1,7 +1,5 @@
 # Recipes with Basic Functions
 
-![Before combining ingredients, begin with implements so clean, they gleam.](images/mirage.jpg)
-
 Having looked at basic pure functions and closures, we're going to see some practical recipes that focus on the premise of functions that return functions.
 
 ### Disclaimer
@@ -91,7 +89,7 @@ And now we can write:
       //=> [1, 2, 3]
       
 Presto!
-## Tap {#tap}
+## Tap
 
 One of the most basic combinators is the "K Combinator," nicknamed the "Kestrel:"
 
@@ -161,7 +159,7 @@ And if we wish it to do nothing at all, We can write either `tap('espresso')()` 
 p.s. `tap` can do more than just act as a debugging aid. It's also useful for working with [object and instance methods](#tap-methods).
 
 [Underscore]: http://underscorejs.org
-## Maybe {#maybe}
+## Maybe
 
 A common problem in programming is checking for `null` or `undefined` (hereafter called "nothing," while all other values including `0`, `[]` and `false` will be called "something"). Languages like JavaScript do not strongly enforce the notion that a particular variable or particular property be something, so programs are often written to account for values that may be nothing.
 
