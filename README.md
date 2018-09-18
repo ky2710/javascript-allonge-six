@@ -1,7 +1,7 @@
 # javascript-allonge-six
-[TOP LINE][#top]
 
-This is the markdown and image source for [JavaScript Allongé, the "Six" Edition][js]. Although the source is open to be read, the book is not free-as-in-beer or free-as-in-speech; copyright 2014-2015 Reginald Braithwaite (except as indicated), all rights reserved.
+
+This is the ###### markdown and image source for [JavaScript Allongé, the "Six" Edition][js]. Although the source is open to be read, the book is not free-as-in-beer or free-as-in-speech; copyright 2014-2015 Reginald Braithwaite (except as indicated), all rights reserved.
 
 [js]: https://leanpub.com/javascriptallongesix
 
