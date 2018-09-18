@@ -18,7 +18,8 @@
     * [Closures and Scope](main_0_functions.md#closures-and-scope)   
     * const and lexical scope: [That Constant Coffee Craving](main_0_functions.md#that-constant-coffee-craving)   
     * [Naming Functions](main_0_functions.md#naming-functions)     
-    * [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)     
+    * [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
+         * higher-order functions -- combinators -- a balanced statement about combinators -- function decorators
     * [Building Blocks]()     
     * [Magic Names]()     
     * [Summary]()     
