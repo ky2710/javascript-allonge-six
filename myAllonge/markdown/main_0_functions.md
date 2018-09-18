@@ -435,10 +435,13 @@ So now we have a value representing that function. Then we're going to take the 
 So we seem to get a new environment `{y: 2, ...}`. How is the expression `x` going to be evaluated in that function's environment? There is no `x` in its environment, it must come from somewhere else.
 
 A> This, by the way, is one of the great defining characteristics of JavaScript and languages in the same family: Whether they allow things like functions to nest inside each other, and if so, how they handle variables from "outside" of a function that are referenced inside a function. For example, here's the equivalent code in Ruby:
-A>
-A> <<(code/k.rb)
-A>
-A> Now let's enjoy a relaxed Allongé before we continue!
+>
+> lambda { |x|
+>   lambda { |y| x }
+> }[1][2]
+>   #=> 1
+>
+> Now let's enjoy a relaxed Allongé before we continue!
 
 ### if functions without free variables are pure, are closures impure?
 
