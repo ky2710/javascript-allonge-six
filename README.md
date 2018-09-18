@@ -8,7 +8,21 @@ dasfadsf
 
 ##### javascript <a name="here">allonge-six </a>
 
+Take me where     
+dsfgsdfg     
+dasfadsf     
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:50px;">I am big</p>
 
+Take me where     
+dsfgsdfg     
+dasfadsf     
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:50px;">I am big</p>
 
 Although the source is open to be read, the book is not free-as-in-beer or free-as-in-speech; copyright 2014-2015 Reginald Braithwaite 
 
