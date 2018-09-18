@@ -1297,13 +1297,13 @@ Of course, you needn't use combinators to implement either of these ideas, you c
 
 Another basic building block is *partial application*. When a function takes multiple arguments, we "apply" the function to the arguments by evaluating it with all of the arguments, producing a value. But what if we only supply some of the arguments? In that case, we can't get the final value, but we can get a function that represents *part* of our application.
 
-Code is easier than words for this. The [Underscore] library provides a higher-order function called *map*.[^headache] It applies another function to each element of an array, like this:
+Code is easier than words for this. The [Underscore] library provides a higher-order function called *map*.`[1]` It applies another function to each element of an array, like this:
+>`[1] Modern JavaScript implementations provide a map method for arrays, but Underscore’s implementation also works with older browsers if you are working with that headache.
 ```javascript
     _.map([1, 2, 3], (n) => n * n)
       //=> [1, 4, 9]
 ```
 We don't want to fool around writing `_.`, so we can use it by writing:`[1]`
-
 >`[1]` If we don't want to sort out [Underscore], we can also write the following: `const map = (a, fn) => a.map(fn);`, and trust that it works even though we haven't discussed methods yet.
 ```javascript
     const map = _.map;
