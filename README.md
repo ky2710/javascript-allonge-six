@@ -15,16 +15,27 @@ This is the markdown and image source for [JavaScript Allongé, the "Six" Editio
 
 
 sdfasd
+
 asdf
+ 
 sadf
+
 sad
+
 fads
+
 f
+
 asd
+
 fas
+
 df
+
 adsf
+
 asd
+
 f
 asdf
 asd
