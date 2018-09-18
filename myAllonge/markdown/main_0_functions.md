@@ -52,12 +52,12 @@ Right now, we only know about one such expression: `() => 0`, so let's use it. W
 We've seen `() => 0`. We know that `(() => 0)()` returns `0`, and this is unsurprising. Likewise, the following all ought to be obvious:
 
 ```javascript
-(() => 1)()
-  //=> 1
-(() => "Hello, JavaScript")()
-  //=> "Hello, JavaScript"
-(() => Infinity)()
-  //=> Infinity
+  (() => 1)()
+    //=> 1
+  (() => "Hello, JavaScript")()
+    //=> "Hello, JavaScript"
+  (() => Infinity)()
+    //=> Infinity
 ```
 
 Well, the last one's a doozy, but still, the general idea is this: We can make a function that returns a value by putting the value to the right of the arrow.
