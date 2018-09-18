@@ -1331,8 +1331,6 @@ We'll discuss `mapWith` again. The important thing to see is that partial applic
 ```
 We generalized composition with the `compose` combinator. Partial application also has a combinator, which we'll see in the [partial](#partial) recipe.
 
-[^bind]: Modern JavaScript provides a limited form of partial application through the `Function.prototype.bind` method. This will be discussed in greater length when we look at function contexts.
-
 ## Magic Names
 
 When a function is applied to arguments (or "called"), JavaScript binds the values of arguments to the function's argument names in an environment created for the function's execution. What we haven't discussed so far is that JavaScript also binds values to some "magic" names in addition to any you put in the argument list.`[1]`
