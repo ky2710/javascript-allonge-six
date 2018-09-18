@@ -16,12 +16,12 @@
     * [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
          * call by value -- variables and bindings -- call by sharing
     * [Closures and Scope](main_0_functions.md#closures-and-scope)   
-    * That Constant Coffee Craving   
-    * Naming Functions   
-    * Combinators and Function Decorators   
-    * Building Blocks   
-    * Magic Names   
-    * Summary   
+    * [That Constant Coffee Craving](main_0_functions.md#that-constant-coffee-craving)   
+    * [Naming Functions]()     
+    * [Combinators and Function Decorators]()     
+    * [Building Blocks]()     
+    * [Magic Names]()     
+    * [Summary]()     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
    * Partial Application   
    * Unary   
