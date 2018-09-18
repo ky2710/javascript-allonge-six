@@ -291,7 +291,9 @@ But we generally don't.
 ---
 
 Well. We've been very clever, but so far this all seems very abstract. Diffraction of a crystal is beautiful and interesting in its own right, but you can't blame us for wanting to be shown a practical use for it, like being able to determine the composition of a star millions of light years away. So... In the next chapter, "[I'd Like to Have an Argument, Please](#fargs)," we'll see how to make functions practical.
+
 ## Ah. I'd Like to Have an Argument, Please.
+
  Up to now, we've looked at functions without arguments. We haven't even said what an argument *is*, only that our functions don't have any.
 
 > Most programmers are perfectly familiar with arguments (often called "parameters"). Secondary school mathematics discusses this. So you know what they are, and I know that you know what they are, but please be patient with the explanation!
@@ -310,7 +312,7 @@ I'm sure you are perfectly comfortable with the idea that this function has two 
 ```
 It's a function for calculating the circumference of a circle given the diameter. I read that aloud as "When applied to a value representing the diameter, this function *returns* the diameter times 3.14159265."
 
-Remember that to apply a function with no arguments, we wrote `(() => {})()`. To apply a function with an argument (or arguments), we put the argument (or arguments) within the parentheses, like this:
+Remember that to **apply a function with no arguments**, we wrote `(() => {})()`. To **apply a function with an argument (or arguments)**, we put the argument (or arguments) within the parentheses, like this:
 ```javascript
     ((diameter) => diameter * 3.14159265)(2)
       //=> 6.2831853
