@@ -291,13 +291,10 @@ But we generally don't.
 ---
 
 Well. We've been very clever, but so far this all seems very abstract. Diffraction of a crystal is beautiful and interesting in its own right, but you can't blame us for wanting to be shown a practical use for it, like being able to determine the composition of a star millions of light years away. So... In the next chapter, "[I'd Like to Have an Argument, Please](#fargs)," we'll see how to make functions practical.
-## Ah. I'd Like to Have an Argument, Please.:zzz: [#fargs]
+## Ah. I'd Like to Have an Argument, Please.
+ Up to now, we've looked at functions without arguments. We haven't even said what an argument *is*, only that our functions don't have any.
 
->:zzz: [The Argument Sketch](http://www.mindspring.com/~mfpatton/sketch.htm) from "Monty Python's Previous Record" and "Monty Python's Instant Record Collection"
-
-[#fargs] Up to now, we've looked at functions without arguments. We haven't even said what an argument *is*, only that our functions don't have any.
-
-A> Most programmers are perfectly familiar with arguments (often called "parameters"). Secondary school mathematics discusses this. So you know what they are, and I know that you know what they are, but please be patient with the explanation!
+> Most programmers are perfectly familiar with arguments (often called "parameters"). Secondary school mathematics discusses this. So you know what they are, and I know that you know what they are, but please be patient with the explanation!
 
 Let's make a function with an argument:
 ```javascript
