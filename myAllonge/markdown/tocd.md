@@ -8,7 +8,7 @@
 
 ## [JavaScript Allongé-6th](toc.md#----) *(detailed)*
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
-#### [> Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
+#### [:black_small_square: Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
 		* values are expressions   				* values and identity  
 * [*Sub-0: A Rich Aroma: Basic Numbers*](sub_0_numbers.md)   
 * [**Main-0: The first sip: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions)   
@@ -105,4 +105,4 @@
    * Before Method Advice   
    * Provided and Unless   
    * Method Advice   
-#### [> Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
+#### [:black_small_square: Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
