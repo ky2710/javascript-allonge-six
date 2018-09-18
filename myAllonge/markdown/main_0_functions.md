@@ -1,7 +1,7 @@
 # The first sip: Basic Functions
 ## As Little As Possible About Functions, But No Less
 
-In JavaScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation. Let's start with the second simplest possible function.`^1` In JavaScript, it looks like this:
+In JavaScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation. Let's start with the second simplest possible function.`[1]` In JavaScript, it looks like this:
 ```js
 () => 0
 ```    
@@ -12,7 +12,7 @@ This is a function that is applied to no values and returns `0`. Let's verify th
 ```       
 What!? Why didn't it type back `() => 0` for us? This *seems* to break our rule that if an expression is also a value, JavaScript will give the same value back to us. What's going on? The simplest and easiest answer is that although the JavaScript interpreter does indeed return that value, displaying it on the screen is a slightly different matter. `[Function]` is a choice made by the people who wrote Node.js, the JavaScript environment that hosts the JavaScript REPL. If you try the same thing in a browser, you may see something else.
 
->`^1` The simplest possible function is `() => {}`, we'll see that later.
+>`[1]` The simplest possible function is `() => {}`, we'll see that later.
 
 > I'd prefer something else, but I must accept that what gets typed back to us on the screen is arbitrary, and all that really counts is that it is somewhat useful for a human to read. But we must understand that whether we see `[Function]` or `() => 0`, internally JavaScript has a full and proper function.
 
