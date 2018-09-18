@@ -20,9 +20,9 @@
     * [Naming Functions](main_0_functions.md#naming-functions)     
     * [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
          * higher-order functions -- combinators -- a balanced statement about combinators -- function decorators
-    * [Building Blocks]()     
-    * [Magic Names]()     
-    * [Summary]()     
+    * [Building Blocks](main_0_functions.md#building-blocks)     
+    * [Magic Names](main_0_functions.md#magic-names)     
+    * [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
    * Partial Application   
    * Unary   
