@@ -293,7 +293,7 @@ But we generally don't.
 ---
 
 Well. We've been very clever, but so far this all seems very abstract. Diffraction of a crystal is beautiful and interesting in its own right, but you can't blame us for wanting to be shown a practical use for it, like being able to determine the composition of a star millions of light years away. So... In the next chapter, "[I'd Like to Have an Argument, Please](#fargs)," we'll see how to make functions practical.
-## Ah. I'd Like to Have an Argument, Please.:zzz: {#fargs}
+## Ah. I'd Like to Have an Argument, Please.:zzz: [#fargs]
 
 >:zzz: [The Argument Sketch](http://www.mindspring.com/~mfpatton/sketch.htm) from "Monty Python's Previous Record" and "Monty Python's Instant Record Collection"
 
