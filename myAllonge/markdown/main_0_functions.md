@@ -16,9 +16,7 @@ What!? Why didn't it type back `() => 0` for us? This *seems* to break our rule 
 
 >:zzz: The simplest possible function is `() => {}`, we'll see that later.
 
-{pagebreak}
-
-A> I'd prefer something else, but I must accept that what gets typed back to us on the screen is arbitrary, and all that really counts is that it is somewhat useful for a human to read. But we must understand that whether we see `[Function]` or `() => 0`, internally JavaScript has a full and proper function.
+> I'd prefer something else, but I must accept that what gets typed back to us on the screen is arbitrary, and all that really counts is that it is somewhat useful for a human to read. But we must understand that whether we see `[Function]` or `() => 0`, internally JavaScript has a full and proper function.
 
 ### functions and identities
 
