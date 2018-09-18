@@ -436,18 +436,18 @@ So we seem to get a new environment `{y: 2, ...}`. How is the expression `x` goi
 
 > This, by the way, is one of the great defining characteristics of JavaScript and languages in the same family: Whether they allow things like functions to nest inside each other, and if so, how they handle variables from "outside" of a function that are referenced inside a function. For example, here's the equivalent code in Ruby:
 >
-> lambda { |x|    
->   lambda { |y| x }    
-> }[1][2]    
->   #=> 1    
+>   lambda { |x|    
+>       lambda { |y| x }    
+>   }[1][2]    
+>       #=> 1    
 >
 > Now let's enjoy a relaxed Allongé before we continue!
 
 ### if functions without free variables are pure, are closures impure?
 
-The function `(y) => x` is interesting. It contains a *free variable*, `x`.[^nonlocal] A free variable is one that is not bound within the function. Up to now, we've only seen one way to "bind" a variable, namely by passing in an argument with the same name. Since the function `(y) => x` doesn't have an argument named `x`, the variable `x` isn't bound in this function, which makes it "free."
+The function `(y) => x` is interesting. It contains a *free variable*, `x`.`[1]` A free variable is one that is not bound within the function. Up to now, we've only seen one way to "bind" a variable, namely by passing in an argument with the same name. Since the function `(y) => x` doesn't have an argument named `x`, the variable `x` isn't bound in this function, which makes it "free."
 
-[^nonlocal]: You may also hear the term "non-local variable." [Both are correct.](https://en.wikipedia.org/wiki/Free_variables_and_bound_variables) 
+>`[1]` You may also hear the term "non-local variable." [Both are correct.](https://en.wikipedia.org/wiki/Free_variables_and_bound_variables) 
 
 Now that we know that variables used in a function are either bound or free, we can bifurcate functions into those with free variables and those without:
 
@@ -455,7 +455,7 @@ Now that we know that variables used in a function are either bound or free, we 
   * Functions containing one or more free variables are called *closures*.
   
 Pure functions are easiest to understand. They always mean the same thing wherever you use them. Here are some pure functions we've already seen:
-```javascript
+```js
     () => {}
     (x) => x
     (x) => (y) => x
