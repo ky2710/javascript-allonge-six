@@ -29,7 +29,6 @@
    * Once   
    * Left-Variadic Functions   
    * Compose and Pipeline   
----
 * [*Sub-1: Picking the Bean: Choice and Truthiness*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
@@ -76,8 +75,7 @@
    * Later Binding    
    * Delegation via Prototypes   
    * Shared Prototypes   
-   
-* [*Sub-5: Decaffeinated: Impostors*](sub_5_impostors.md)   
+  [*Sub-5: Decaffeinated: Impostors*](sub_5_impostors.md)   
 * [**Main-5: Finish the Cup: Constructors and Classes**](main_5_constructors.md)   
    * Constructors and new   
    * Why Classes in JavaScript?   
@@ -90,7 +88,6 @@
    * Send   
    * Invoke   
    * Fluent   
-   
 * [*Sub-6: Colourful Mugs: Symmetry, Colour, and Charm*](sub_6_colours.md)   
 * [**Main-6: Con Panna: Composing Class Behaviour**](main_6_classes.md)   
    * Extending Classes with Mixins   
@@ -98,7 +95,6 @@
    * Emulating Multiple Inheritance   
    * Preventing Property Conflicts   
    * Reducing Coupling   
-   
 * [**Main-7: More Decorators**](main_7_dedorators.md)   
    * Stateful Method Decorators   
    * Class Decorators beyond ES6/ECMAScript 2015   
@@ -109,5 +105,4 @@
    * Before Method Advice   
    * Provided and Unless   
    * Method Advice   
-   
 #### :black_medium_square:[ Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
