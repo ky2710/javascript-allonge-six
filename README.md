@@ -9,3 +9,27 @@ This is the markdown and image source for [JavaScript Allongé, the "Six" Editio
 [jso]: https://leanpub.com/javascript-allonge
 [license]: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 [jsos]: https://github.com/raganwald/javascript-allonge
+
+
+
+
+
+sdfasd
+asdf
+sadf
+sad
+fads
+f
+asd
+fas
+df
+adsf
+asd
+f
+asdf
+asd
+fas
+df
+asdf
+[goto](jso)
+
