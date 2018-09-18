@@ -31,5 +31,5 @@ asd
 fas
 df
 asdf
-[goto](jso)
+[goto](top)
 
