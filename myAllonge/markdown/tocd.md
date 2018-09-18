@@ -6,7 +6,7 @@
 [Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#----
 [JS Allongé]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#----
 
-## [JavaScript Allongé-6th](toc.md#you-dont-konw-js-detailed---functional-light-js-detailed---understanding-es6-detailed---js-allong%C3%A9-detailed) *(detailed)*
+## [JavaScript Allongé-6th](toc.md#----) *(detailed)*
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### [> Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
 		* values are expressions   				* values and identity  
