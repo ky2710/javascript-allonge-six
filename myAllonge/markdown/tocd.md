@@ -11,7 +11,7 @@
 #### [> Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
 		* values are expressions   				* values and identity  
 * [*Sub-0: A Rich Aroma: Basic Numbers*](sub_0_numbers.md)   
-* [**Main-0: The first sip: Basic Functions**](main_0_functions.md)   
+* [**Main-0: The first sip: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions)   
     * As Little As Possible About Functions, But No Less   
     * Ah. I’d Like to Have an Argument, Please.   
     * Closures and Scope   
