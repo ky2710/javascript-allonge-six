@@ -1,7 +1,7 @@
 # javascript-allonge-six
 
 
-###### This is the markdown and image source for[aa] 
+###### [This is the markdown and image source for][aa] 
 Although the source is open to be read, the book is not free-as-in-beer or free-as-in-speech; copyright 2014-2015 Reginald Braithwaite (except as indicated), all rights reserved.
 
 [js]: https://leanpub.com/javascriptallongesix
