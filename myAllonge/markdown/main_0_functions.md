@@ -119,9 +119,9 @@ Or even:
 ```
 ### the simplest possible block
 
-There's another thing we can put to the right of an arrow, a *block*. A block has zero or more *statements*, separated by semicolons.[^asi]
+There's another thing we can put to the right of an arrow, a *block*. A block has zero or more *statements*, separated by semicolons.:zzz:
 
-[^asi]: Sometimes, you will find JavaScript that has statements that are separated by newlines without semi-colons. This works because JavaScript has a feature that can infer where the semi-colons should be most of the time. We will not take advantage of this feature, but it's helpful to know it exists.
+>:zzz: Sometimes, you will find JavaScript that has statements that are separated by newlines without semi-colons. This works because JavaScript has a feature that can infer where the semi-colons should be most of the time. We will not take advantage of this feature, but it's helpful to know it exists.
 
 So, this is a valid function:
 ```javascript
@@ -152,7 +152,7 @@ Like numbers, booleans and strings, JavaScript can print out the value `undefine
 ```      
 No matter how you evaluate `undefined`, you get an identical value back. `undefined` is a value that means "I don't have a value." But it's still a value :-)
       
-A> You might think that `undefined` in JavaScript is equivalent to `NULL` in SQL. No. In SQL, two things that are `NULL` are not equal to nor share the same identity, because two unknowns can't be equal. In JavaScript, every `undefined` is identical to every other `undefined`.
+> You might think that `undefined` in JavaScript is equivalent to `NULL` in SQL. No. In SQL, two things that are `NULL` are not equal to nor share the same identity, because two unknowns can't be equal. In JavaScript, every `undefined` is identical to every other `undefined`.
 
 ### void
 
@@ -170,13 +170,13 @@ There's a third way, with JavaScript's `void` operator. Behold:
     void (2 + 2)
       //=> undefined
 ```     
-`void` is an operator that takes any value and evaluates to `undefined`, always. So, when we deliberately want an undefined value, should we use the first, second, or third form?[^fourth] The answer is, use `void`. By convention, use `void 0`.
+`void` is an operator that takes any value and evaluates to `undefined`, always. So, when we deliberately want an undefined value, should we use the first, second, or third form?:zzz: The answer is, use `void`. By convention, use `void 0`.
 
-The first form works but it's cumbersome. The second form works most of the time, but it is possible to break it by reassigning `undefined` to a different value, something we'll discuss in [Reassignment and Mutation](#reassignment). The third form is guaranteed to always work, so that's what we will use.[^void]
+>:zzz: Experienced JavaScript programmers are aware that there's a fourth way, using a function argument. This was actually the preferred mechanism until `void` became commonplace.
 
-[^fourth]: Experienced JavaScript programmers are aware that there's a fourth way, using a function argument. This was actually the preferred mechanism until `void` became commonplace.
+The first form works but it's cumbersome. The second form works most of the time, but it is possible to break it by reassigning `undefined` to a different value, something we'll discuss in [Reassignment and Mutation](#reassignment). The third form is guaranteed to always work, so that's what we will use.:zzz:
 
-[^void]: As an exercise for the reader, we suggest you ask your friendly neighbourhood programming language designer or human factors subject-matter expert to explain why a keyword called `void` is used to generate an `undefined` value, instead of calling them both `void` or both `undefined`. We have no idea.
+>:zzz: As an exercise for the reader, we suggest you ask your friendly neighbourhood programming language designer or human factors subject-matter expert to explain why a keyword called `void` is used to generate an `undefined` value, instead of calling them both `void` or both `undefined`. We have no idea.
 
 ### back on the block
 
@@ -185,9 +185,9 @@ Back to our function. We evaluated this:
     (() => {})()
       //=> undefined
 ```
-We said that the function returns the result of evaluating a *block*, and we said that a block is a (possibly empty) list of JavaScript *statements* separated by semicolons.[^break]
+We said that the function returns the result of evaluating a *block*, and we said that a block is a (possibly empty) list of JavaScript *statements* separated by semicolons.:zzz:
 
-[^break]: You can also separate statements with line breaks. Readers who follow internet flame-fests may be aware of something called [automatic semi-colon insertion](http://lucumr.pocoo.org/2011/2/6/automatic-semicolon-insertion/). Basically, there's a step where JavaScript looks at your code and follows some rules to guess where you meant to put semicolons in should you leave them out. This feature was originally created as a kind of helpful error-correction. Some programmers argue that since it's part of the language's definition, it's fair game to write code that exploits it, so they deliberately omit any semicolon that JavaScript will insert for them.
+>:zzz: You can also separate statements with line breaks. Readers who follow internet flame-fests may be aware of something called [automatic semi-colon insertion](http://lucumr.pocoo.org/2011/2/6/automatic-semicolon-insertion/). Basically, there's a step where JavaScript looks at your code and follows some rules to guess where you meant to put semicolons in should you leave them out. This feature was originally created as a kind of helpful error-correction. Some programmers argue that since it's part of the language's definition, it's fair game to write code that exploits it, so they deliberately omit any semicolon that JavaScript will insert for them.
 
 Something like: `{` statement^1^`;` statement^2^`;` statement^3^`; ... ;` statement^n^ `}`
 
@@ -293,9 +293,9 @@ But we generally don't.
 ---
 
 Well. We've been very clever, but so far this all seems very abstract. Diffraction of a crystal is beautiful and interesting in its own right, but you can't blame us for wanting to be shown a practical use for it, like being able to determine the composition of a star millions of light years away. So... In the next chapter, "[I'd Like to Have an Argument, Please](#fargs)," we'll see how to make functions practical.
-## Ah. I'd Like to Have an Argument, Please.[^mp] {#fargs}
+## Ah. I'd Like to Have an Argument, Please.:zzz: {#fargs}
 
-[^mp]: [The Argument Sketch](http://www.mindspring.com/~mfpatton/sketch.htm) from "Monty Python's Previous Record" and "Monty Python's Instant Record Collection"
+>:zzz: [The Argument Sketch](http://www.mindspring.com/~mfpatton/sketch.htm) from "Monty Python's Previous Record" and "Monty Python's Instant Record Collection"
 
 Up to now, we've looked at functions without arguments. We haven't even said what an argument *is*, only that our functions don't have any.
 
