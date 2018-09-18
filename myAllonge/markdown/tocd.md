@@ -29,7 +29,7 @@
    * Once   
    * Left-Variadic Functions   
    * Compose and Pipeline   
-   
+----
 * [*Sub-1: Picking the Bean: Choice and Truthiness*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
@@ -48,7 +48,6 @@
    * Flip   
    * Object.assign   
    * Why?   
-   
 * [*Sub-2: A Warm Cup: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**Main-2: Stir the Allongé: Objects and State**](main_2_objects.md)   
    * Encapsulating State with Closures   
@@ -62,7 +61,6 @@
    * getWith   
    * pluckWith   
    * Deep Mapping   
-   
 * [*Sub-3: The Coffee Factory: “Object-Oriented Programming”*](sub_3_oop.md)   
 * [**Main-3: Served by the Pot: Collections**](main_3_collections.md)   
     * Iteration and Iterables   
@@ -71,7 +69,6 @@
     * Interlude: The Carpenter Interviews for a Job   
     * Interactive Generators   
     * Basic Operations on Iterables   
-    
 * [*Sub-4: A Coffeehouse: Symbols*](sub_4_symbols.md)   
 * [**Main-4: Life on the Plantation: Metaobjects**](main_4_metaobjects.md)   
    * Why Metaobjects?   
