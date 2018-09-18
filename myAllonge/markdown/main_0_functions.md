@@ -1351,7 +1351,8 @@ The first magic name is  `this`, and it is bound to something called the functio
   plus(2,3)
     //=> 5
 ```
-Although `arguments` looks like an array, it isn't an array: It's more like an object[^pojo] that happens to bind some values to properties with names that look like integers starting with zero:
+Although `arguments` looks like an array, it isn't an array: It's more like an object`[1]` that happens to bind some values to properties with names that look like integers starting with zero:
+>`[1]` We'll look at [arrays](#arrays) and [plain old javascript objects](#pojos) in depth later.
 ```javascript
   const args = function (a, b) {
     return arguments;
@@ -1384,8 +1385,6 @@ When discussing objects, we'll discuss properties in more depth. Here's somethin
     //=> 4
 ```
 The most common use of the `arguments` binding is to build functions that can take a variable number of arguments. We'll see it used in many of the recipes, starting off with [partial application](#simple-partial) and [ellipses](#ellipses).
-
-[^pojo]: We'll look at [arrays](#arrays) and [plain old javascript objects](#pojos) in depth later.
 
 ### magic names and fat arrows
 
