@@ -376,7 +376,7 @@ How does the value get put in the environment? Well for arguments, that is very 
     ((x) => x)(2)
       //=> 2
 ```
-What happens is this:
+:heart:What happens is this:heart:
 
 1. JavaScript parses this whole thing as an expression made up of several sub-expressions.
 1. It then starts evaluating the expression, including evaluating sub-expressions
