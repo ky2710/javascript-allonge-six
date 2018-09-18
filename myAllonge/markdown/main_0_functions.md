@@ -791,9 +791,11 @@ It's more than a bit convoluted, but it binds `((PI) => (diameter) => diameter *
     )
       //=> 6.2831853
 ```      
-We know this from the chapter on [closures](#closures), but even though `PI` is not bound when we invoke `diameter_fn` by evaluating `diameter_fn(2)`, `PI` *is* bound when we evaluated `(diameter) => diameter * PI`, and thus the expression `diameter * PI` is able to access values for `PI` and `diameter` when we evaluate `diameter_fn`.
+We know this from the chapter on [closures](#closures-and-scope), but even though `PI` is not bound when we invoke `diameter_fn` by evaluating `diameter_fn(2)`, `PI` *is* bound when we evaluated `(diameter) => diameter * PI`, and thus the expression `diameter * PI` is able to access values for `PI` and `diameter` when we evaluate `diameter_fn`.
 
 This is called [lexical scoping], because we can discover where a name is bound by looking at the source code for the program. We can see that `PI` is bound in an environment surrounding `(diameter) => diameter * PI`, we don't need to know where `diameter_fn` is invoked.
+
+[lexical scoping]: https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope
 
 We can test this by deliberately creating a "conflict:"
 ```javascript
@@ -826,8 +828,6 @@ That much we can carefully work out from the way closures work. Does `const` wor
       //=> 6.2831853
 ```
 Yes. Binding values to names with `const` works just like binding values to names with parameter invocations, it uses lexical scope.
-
-[lexical scoping]: https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope
 
 ### are consts also from a shadowy planet?
 
