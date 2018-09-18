@@ -174,7 +174,7 @@ There's a **third way**, with JavaScript's `void` operator. Behold:
 
 >:zzz: Experienced JavaScript programmers are aware that there's a **fourth way**, using a function argument. This was actually the preferred mechanism until `void` became commonplace.
 
-The first form works but it's cumbersome. The second form works most of the time, but it is possible to break it by reassigning `undefined` to a different value, something we'll discuss in [Reassignment and Mutation](main_1_Composing.md#reassignment-reassignment). The third form is guaranteed to always work, so that's what we will use.:zzz:
+The first form works but it's cumbersome. The second form works most of the time, but it is possible to break it by reassigning `undefined` to a different value, something we'll discuss in [Reassignment and Mutation](main_1_Composing.md#reassignment). The third form is guaranteed to always work, so that's what we will use.:zzz:
 
 >:zzz: As an exercise for the reader, we suggest you ask your friendly neighbourhood programming language designer or human factors subject-matter expert to explain why a keyword called `void` is used to generate an `undefined` value, instead of calling them both `void` or both `undefined`. We have no idea.
 
