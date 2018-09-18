@@ -189,11 +189,9 @@ We said that the function returns the result of evaluating a *block*, and we sai
 
 >:zzz: You can also separate statements with line breaks. Readers who follow internet flame-fests may be aware of something called [automatic semi-colon insertion](http://lucumr.pocoo.org/2011/2/6/automatic-semicolon-insertion/). Basically, there's a step where JavaScript looks at your code and follows some rules to guess where you meant to put semicolons in should you leave them out. This feature was originally created as a kind of helpful error-correction. Some programmers argue that since it's part of the language's definition, it's fair game to write code that exploits it, so they deliberately omit any semicolon that JavaScript will insert for them.
 
-Something like: `{` statement^1^`;` statement^2^`;` statement^3^`; ... ;` statement^n^ `}`
+Something like: `{` statement^1`;` statement^2`;` statement^3`; ... ;` statement^n `}`
 
 We haven't discussed these *statements*. What's a statement?
-
-[^todonamed]: TODO: Named functions, probably discussed in a whole new section when we discuss `var` hoisting.
 
 There are many kinds of JavaScript statements, but the first kind is one we've already met. An expression is a JavaScript statement. Although they aren't very practical, these are valid JavaScript functions, and they return `undefined` when applied:
 ```javascript
