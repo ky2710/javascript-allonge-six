@@ -464,7 +464,7 @@ The first function doesn't have any variables, therefore doesn't have any free v
 
 From this, we learn something: A pure function can contain a closure.
 
-X> If pure functions can contain closures, can a closure contain a pure function? Using only what we've learned so far, attempt to compose a closure that contains a pure function. If you can't, give your reasoning for why it's impossible.
+> If pure functions can contain closures, can a closure contain a pure function? Using only what we've learned so far, attempt to compose a closure that contains a pure function. If you can't, give your reasoning for why it's impossible.
 
 Pure functions always mean the same thing because all of their "inputs" are fully defined by their arguments. Not so with a closure. If I present to you this pure function `(x, y) => x + y`, we know exactly what it does with `(2, 2)`. But what about this closure: `(y) => x + y`? We can't say what it will do with argument `(2)` without understanding the magic for evaluating the free variable `x`.
 
@@ -476,7 +476,7 @@ The environment for `((y) => x)(2)` is *actually* `{y: 2, '..': {x: 1, ...}}`. `
 
 And now you can guess how we evaluate `((y) => x)(2)` in the environment `{y: 2, '..': {x: 1, ...}}`. The variable `x` isn't in `(y) => ...`'s immediate environment, but it is in its parent's environment, so it evaluates to `1` and that's what `((y) => x)(2)` returns even though it ended up ignoring its own argument.
 
-A> `(x) => x` is called the I Combinator, or the *Identity Function*. `(x) => (y) => x` is called the K Combinator, or *Kestrel*. Some people get so excited by this that they write entire books about them, some are [great][mock], some--how shall I put this--are [interesting][interesting] if you use Ruby.
+> `(x) => x` is called the I Combinator, or the *Identity Function*. `(x) => (y) => x` is called the K Combinator, or *Kestrel*. Some people get so excited by this that they write entire books about them, some are [great][mock], some--how shall I put this--are [interesting][interesting] if you use Ruby.
 
 [mock]: http://www.amzn.com/0192801422?tag=raganwald001-20
 [interesting]: https://leanpub.com/combinators "Kestrels, Quirky Birds, and Hopeless Egocentricity"
@@ -494,7 +494,7 @@ This function does much the same thing as:
 Only you call it with `(1)(2)(3)` instead of `(1, 2, 3)`. The other big difference is that you can call it with `(1)` and get a function back that you can later call with `(2)(3)`.
 
 
-A> The first function is the result of [currying] the second function. Calling a curried function with only some of its arguments is sometimes called [partial application]. Some programming languages automatically curry and partially evaluate functions without the need to manually nest them.
+> The first function is the result of [currying] the second function. Calling a curried function with only some of its arguments is sometimes called [partial application]. Some programming languages automatically curry and partially evaluate functions without the need to manually nest them.
 
 [currying]: https://en.wikipedia.org/wiki/Currying
 [partial application]: https://en.wikipedia.org/wiki/Partial_application
