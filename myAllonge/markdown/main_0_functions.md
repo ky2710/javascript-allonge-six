@@ -436,10 +436,10 @@ So we seem to get a new environment `{y: 2, ...}`. How is the expression `x` goi
 
 > This, by the way, is one of the great defining characteristics of JavaScript and languages in the same family: Whether they allow things like functions to nest inside each other, and if so, how they handle variables from "outside" of a function that are referenced inside a function. For example, here's the equivalent code in Ruby:
 >
->   lambda { |x|    
->       lambda { |y| x }    
->   }[1][2]    
->       #=> 1    
+>   lambda { |x|        
+>        lambda { |y| x }         
+>   }[1][2]     
+>         #=> 1         
 >
 > Now let's enjoy a relaxed Allongé before we continue!
 
@@ -537,7 +537,8 @@ Sometimes, programmers wish to avoid this. If you don't want your code to operat
     // bottom of the file
 ```
 The effect is to insert a new, empty environment in between the global environment and your own functions: `{x: 1, '..': {'..': `*global environment*`}}`. As we'll see when we discuss mutable state, this helps to prevent programmers from accidentally changing the global state that is shared by all code in the program.
-## That Constant Coffee Craving {#const}
+
+## That Constant Coffee Craving
 
 Up to now, all we've really seen are *anonymous functions*, functions that don't have a name. This feels very different from programming in most other languages, where the focus is on naming functions, methods, and procedures. Naming things is a critical part of programming, but all we've seen so far is how to name arguments.
 
