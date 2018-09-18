@@ -1264,7 +1264,7 @@ Or we could write:
 ```javascript
     const nothing = not(something);
 ```
-`not` is a function decorator because it modifies a function while remaining strongly related to the original function's semantics. You'll see other function decorators in the recipes, like [once](#once) and [maybe](#maybe). Function decorators aren't strict about being pure functions, so there's more latitude for making decorators than combinators.
+`not` is a function decorator because it modifies a function while remaining strongly related to the original function's semantics. You'll see other function decorators in the recipes, like [once](main_0r_functions.md#once) and [maybe](main_0r_functions.md#maybe). Function decorators aren't strict about being pure functions, so there's more latitude for making decorators than combinators.
 
 ## Building Blocks
 
