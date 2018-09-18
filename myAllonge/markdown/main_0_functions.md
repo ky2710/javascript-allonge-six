@@ -991,6 +991,7 @@ The line `n = n - 2;` *rebinds* a new value to the name `n`. We will discuss thi
 JavaScript does not permit us to rebind a name that has been bound with `const`. We can *shadow* it by using `const` to declare a new binding with a new function or block scope, but we cannot rebind a name that was bound with `const` in an existing scope.
 
 This is valuable, as it greatly simplifies the analysis of programs to see at a glance that when something is bound with `const`, we need never worry that its value may change.
+
 ## Naming Functions
 
 Let's get right to it. This code does *not* name a function:
@@ -1014,7 +1015,7 @@ And here's (almost) the exact same function written using the `function` keyword
 Let's look at the obvious differences:
 
 1. We introduce a function with the `function` keyword.
-1. Something else we're about to discuss is optional.
+1. **Something else(name)** we're about to discuss is optional.
 1. We have arguments in parentheses, just like fat arrow functions.
 1. We do not have a fat arrow, we go directly to the body.
 1. We always use a block, we cannot write `function (str) str + str`. This means that if we want our functions to return a value, we always need to use the `return` keyword
