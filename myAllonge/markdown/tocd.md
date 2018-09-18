@@ -12,11 +12,11 @@
     * values are expressions     * values and identity  
 * [*Sub-0: A Rich Aroma: Basic Numbers*](sub_0_numbers.md)   
 * [**Main-0: The first sip: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions)   
-    * [As Little As Possible About Functions, But No Less](main_0_functions.md#as-little-as-possible-about-functions-but-no-less)   
-    * argument : [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
+    * function :[As Little As Possible About Functions, But No Less](main_0_functions.md#as-little-as-possible-about-functions-but-no-less)   
+    * argument :[Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
          * call by value -- variables and bindings -- call by sharing
     * [Closures and Scope](main_0_functions.md#closures-and-scope)   
-    * const and lexical scope : [That Constant Coffee Craving](main_0_functions.md#that-constant-coffee-craving)   
+    * const and lexical scope :[That Constant Coffee Craving](main_0_functions.md#that-constant-coffee-craving)   
     * [Naming Functions]()     
     * [Combinators and Function Decorators]()     
     * [Building Blocks]()     
