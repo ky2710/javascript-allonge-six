@@ -434,12 +434,12 @@ So now we have a value representing that function. Then we're going to take the 
 ```
 So we seem to get a new environment `{y: 2, ...}`. How is the expression `x` going to be evaluated in that function's environment? There is no `x` in its environment, it must come from somewhere else.
 
-A> This, by the way, is one of the great defining characteristics of JavaScript and languages in the same family: Whether they allow things like functions to nest inside each other, and if so, how they handle variables from "outside" of a function that are referenced inside a function. For example, here's the equivalent code in Ruby:
+> This, by the way, is one of the great defining characteristics of JavaScript and languages in the same family: Whether they allow things like functions to nest inside each other, and if so, how they handle variables from "outside" of a function that are referenced inside a function. For example, here's the equivalent code in Ruby:
 >
-> lambda { |x|
->   lambda { |y| x }
-> }[1][2]
->   #=> 1
+> lambda { |x|    
+>   lambda { |y| x }    
+> }[1][2]    
+>   #=> 1    
 >
 > Now let's enjoy a relaxed Allongé before we continue!
 
@@ -457,9 +457,7 @@ Now that we know that variables used in a function are either bound or free, we 
 Pure functions are easiest to understand. They always mean the same thing wherever you use them. Here are some pure functions we've already seen:
 ```javascript
     () => {}
-    
     (x) => x
-      
     (x) => (y) => x
 ```
 The first function doesn't have any variables, therefore doesn't have any free variables. The second doesn't have any free variables, because its only variable is bound. The third one is actually two functions, one inside the other. `(y) => ...` has a free variable, but the entire expression refers to `(x) => ...`, and it doesn't have a free variable: The only variable anywhere in its body is `x`, which is certainly bound within `(x) => ...`.
