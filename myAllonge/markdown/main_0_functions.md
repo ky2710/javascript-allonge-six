@@ -330,16 +330,16 @@ You won't be surprised to see how to write and apply a function to two arguments
 >
 > This loose definition is recursive, so we can intuit (or use our experience with other languages) that since a function can contain a return statement with an expression, we can write a function that returns a function, or an array that contains another array expression. Or a function that returns an array, an array of functions, a function that returns an array of functions, and so forth:
 >
-````js
-  () => () => {};
-  () => [ 1, 2, 3];
-  [1, [2, 3], 4];
-  () => [
-      () => 1,
-      () => 2,
-      () => 3
-    ];
-````
+>````js
+>  () => () => {};
+>  () => [ 1, 2, 3];
+>  [1, [2, 3], 4];
+>  () => [
+>      () => 1,
+>      () => 2,
+>      () => 3
+>    ];
+>````
 ### call by value
 
 Like most contemporary programming languages, JavaScript uses the "call by value" [evaluation strategy]. That means that when you write some code that appears to apply a function to an expression or expressions, JavaScript evaluates all of those expressions and applies the functions to the resulting value(s).
