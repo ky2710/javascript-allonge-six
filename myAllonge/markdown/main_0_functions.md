@@ -393,7 +393,7 @@ When we talk about environments, we'll use an [unsurprising syntax][json] for sh
 
 [json]: http://json.org/
 
-### call by sharing {#call-by-sharing}
+### call by sharing
 
 Earlier, we distinguished JavaScript's *value types* from its *reference types*. At that time, we looked at how JavaScript distinguishes objects that are identical from objects that are not. Now it is time to take another look at the distinction between value and reference types.
 
