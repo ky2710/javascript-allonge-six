@@ -1297,8 +1297,8 @@ Of course, you needn't use combinators to implement either of these ideas, you c
 
 Another basic building block is *partial application*. When a function takes multiple arguments, we "apply" the function to the arguments by evaluating it with all of the arguments, producing a value. But what if we only supply some of the arguments? In that case, we can't get the final value, but we can get a function that represents *part* of our application.
 
-Code is easier than words for this. The [Underscore] library provides a higher-order function called *map*.`[1]` It applies another function to each element of an array, like this:
->`[1] Modern JavaScript implementations provide a map method for arrays, but Underscore’s implementation also works with older browsers if you are working with that headache.
+Code is easier than words for this. The [Underscore](http://underscorejs.org) library provides a higher-order function called *map*.`[1]` It applies another function to each element of an array, like this:
+>`[1]` Modern JavaScript implementations provide a map method for arrays, but Underscore’s implementation also works with older browsers if you are working with that headache.
 ```javascript
     _.map([1, 2, 3], (n) => n * n)
       //=> [1, 4, 9]
@@ -1332,10 +1332,6 @@ We'll discuss `mapWith` again. The important thing to see is that partial applic
 We generalized composition with the `compose` combinator. Partial application also has a combinator, which we'll see in the [partial](#partial) recipe.
 
 [^bind]: Modern JavaScript provides a limited form of partial application through the `Function.prototype.bind` method. This will be discussed in greater length when we look at function contexts.
-
-[^headache]: Modern JavaScript implementations provide a map method for arrays, but Underscore's implementation also works with older browsers if you are working with that headache.
-
-[Underscore]: http://underscorejs.org
 
 ## Magic Names
 
