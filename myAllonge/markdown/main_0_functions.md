@@ -578,7 +578,7 @@ Let's test it:
 ```
 That works! We can bind anything we want in an expression by wrapping it in a function that is immediately invoked with the value we want to bind.`[1]`
 
->[1] JavaScript programmers regularly use the idea of writing an expression that denotes a function and then immediately applying it to arguments. Explaining the pattern, Ben Alman coined the term [Immediately Invoked Function Expression][iife] for it, often abbreviated "IIFE."
+>[1] JavaScript programmers regularly use the idea of writing an expression that denotes a function and then immediately applying it to arguments. Explaining the pattern, Ben Alman coined the term [Immediately Invoked Function Expression] for it, often abbreviated "IIFE."
 
 ### inside-out
 
