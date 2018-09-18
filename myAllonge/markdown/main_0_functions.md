@@ -297,7 +297,7 @@ Well. We've been very clever, but so far this all seems very abstract. Diffracti
 
 >:zzz: [The Argument Sketch](http://www.mindspring.com/~mfpatton/sketch.htm) from "Monty Python's Previous Record" and "Monty Python's Instant Record Collection"
 
-Up to now, we've looked at functions without arguments. We haven't even said what an argument *is*, only that our functions don't have any.
+[#fargs] Up to now, we've looked at functions without arguments. We haven't even said what an argument *is*, only that our functions don't have any.
 
 A> Most programmers are perfectly familiar with arguments (often called "parameters"). Secondary school mathematics discusses this. So you know what they are, and I know that you know what they are, but please be patient with the explanation!
 
