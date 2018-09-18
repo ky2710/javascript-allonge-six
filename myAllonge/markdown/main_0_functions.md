@@ -1187,7 +1187,7 @@ The parentheses make this an expression, not a function declaration.
 ## Combinators and Function Decorators
 ### higher-order functions
 
-As we've seen, JavaScript functions take values as arguments and return values. JavaScript functions are values, so JavaScript functions can take functions as arguments, return functions, or both. Generally speaking, a function that either takes functions as arguments, or returns a function, or both, is referred to as a "higher-order" function.
+As we've seen, JavaScript functions take values as arguments and return values. JavaScript functions are values, so JavaScript functions can take functions as arguments, return functions, or both. **Generally speaking, a function that either takes functions as arguments, or returns a function, or both, is referred to as a "higher-order" function.**
 
 Here's a very simple higher-order function that takes a function as an argument:
 ```javascript
@@ -1221,7 +1221,10 @@ If we were learning Combinatorial Logic, we'd start with the most basic combinat
 
 In this book, we will be using a looser definition of "combinator:" Higher-order pure functions that take only functions as arguments and return a function. We won't be strict about using only previously defined combinators in their construction.
 
-Let's start with a useful combinator: Most programmers call it *Compose*, although the logicians call it the B combinator or "Bluebird." Here is the typical[^bluebird] programming implementation:
+Let's start with a useful combinator: Most programmers call it *Compose*, although the logicians call it the B combinator or "Bluebird." Here is the typical`[1]` programming implementation:
+
+>`[1]` As we'll discuss later, this implementation of the B Combinator is correct in languages like Scheme, but for truly general-purpose use in JavaScript, it needs to correctly manage the [function context](#context).
+
 ```javascript
     const compose = (a, b) =>
       (c) => a(b(c))
@@ -1268,8 +1271,7 @@ Or we could write:
 ```
 `not` is a function decorator because it modifies a function while remaining strongly related to the original function's semantics. You'll see other function decorators in the recipes, like [once](#once) and [maybe](#maybe). Function decorators aren't strict about being pure functions, so there's more latitude for making decorators than combinators.
 
-[^bluebird]: As we'll discuss later, this implementation of the B Combinator is correct in languages like Scheme, but for truly general-purpose use in JavaScript, it needs to correctly manage the [function context](#context).
-## Building Blocks {#buildingblocks}
+## Building Blocks
 
 When you look at functions within functions in JavaScript, there's a bit of a "spaghetti code" look to it. The strength of JavaScript is that you can do anything. The weakness is that you will. There are ifs, fors, returns, everything thrown higgledy piggledy together. Although you needn't restrict yourself to a small number of simple patterns, it can be helpful to understand the patterns so that you can structure your code around some basic building blocks.
 
@@ -1339,7 +1341,8 @@ We generalized composition with the `compose` combinator. Partial application al
 [^headache]: Modern JavaScript implementations provide a map method for arrays, but Underscore's implementation also works with older browsers if you are working with that headache.
 
 [Underscore]: http://underscorejs.org
-## Magic Names {#magic-names}
+
+## Magic Names
 
 When a function is applied to arguments (or "called"), JavaScript binds the values of arguments to the function's argument names in an environment created for the function's execution. What we haven't discussed so far is that JavaScript also binds values to some "magic" names in addition to any you put in the argument list.`[1]`
 
@@ -1467,6 +1470,7 @@ Although this example is clearly unrealistic, there is a general design principl
 But sometimes, a function is a small-f function. It's a simple representation of an expression to be computed. In our example above, `row` is a Big-F function, but `(column) => column * arguments[0]` is a small-f function, it exists just to give `mapWith` something to apply.
 
 Having magic variables apply to Big-F functions but not to small-G functions makes it much easier to use small-F functions as syntax, treating them as expressions or blocks that can be passed to functions like `mapWith`.
+
 ## Summary
 
 > ### Functions
