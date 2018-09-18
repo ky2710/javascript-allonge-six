@@ -1,6 +1,4 @@
 # The first sip: Basic Functions
-
-![The perfect Café Allongé begins with the right beans, properly roasted. JavaScript Allongé begins with functions, properly dissected.](images/leaf-roaster.jpg)
 ## As Little As Possible About Functions, But No Less
 
 In JavaScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation. Let's start with the second simplest possible function.:zzz: In JavaScript, it looks like this:
