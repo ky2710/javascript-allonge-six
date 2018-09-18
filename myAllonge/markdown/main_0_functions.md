@@ -689,11 +689,11 @@ We can bind any expression. Functions are expressions, so we can bind helper fun
       return "The circumference is " + calc(d)
     }
 ```
-Notice `calc(d)`? This underscores what we've said: if we have an expression that evaluates to a function, we apply it with `()`. A name that's bound to a function is a valid expression evaluating to a function.[^namedfn]
+Notice `calc(d)`? This underscores what we've said: if we have an expression that evaluates to a function, we apply it with `()`. A name that's bound to a function is a valid expression evaluating to a function.`[1]`
 
-[^namedfn]: We're into the second chapter and we've finally named a function. Sheesh.
+>`[1]` We're into the second chapter and we've finally named a function. Sheesh.
 
-A> Amazing how such an important idea--naming functions--can be explained *en passant* in just a few words. That emphasizes one of the things JavaScript gets really, really right: Functions as "first class entities." Functions are values that can be bound to names like any other value, passed as arguments, returned from other functions, and so forth.
+> Amazing how such an important idea--naming functions--can be explained *en passant* in just a few words. That emphasizes one of the things JavaScript gets really, really right: Functions as "first class entities." Functions are values that can be bound to names like any other value, passed as arguments, returned from other functions, and so forth.
 
 We can bind more than one name-value pair by separating them with commas. For readability, most people put one binding per line:
 ```javascript
