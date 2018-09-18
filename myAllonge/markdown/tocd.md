@@ -29,6 +29,7 @@
    * Once   
    * Left-Variadic Functions   
    * Compose and Pipeline   
+   
 * [*Sub-1: Picking the Bean: Choice and Truthiness*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
@@ -47,6 +48,7 @@
    * Flip   
    * Object.assign   
    * Why?   
+   
 * [*Sub-2: A Warm Cup: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**Main-2: Stir the Allongé: Objects and State**](main_2_objects.md)   
    * Encapsulating State with Closures   
@@ -60,6 +62,7 @@
    * getWith   
    * pluckWith   
    * Deep Mapping   
+   
 * [*Sub-3: The Coffee Factory: “Object-Oriented Programming”*](sub_3_oop.md)   
 * [**Main-3: Served by the Pot: Collections**](main_3_collections.md)   
     * Iteration and Iterables   
@@ -68,6 +71,7 @@
     * Interlude: The Carpenter Interviews for a Job   
     * Interactive Generators   
     * Basic Operations on Iterables   
+    
 * [*Sub-4: A Coffeehouse: Symbols*](sub_4_symbols.md)   
 * [**Main-4: Life on the Plantation: Metaobjects**](main_4_metaobjects.md)   
    * Why Metaobjects?   
@@ -75,6 +79,7 @@
    * Later Binding    
    * Delegation via Prototypes   
    * Shared Prototypes   
+   
 * [*Sub-5: Decaffeinated: Impostors*](sub_5_impostors.md)   
 * [**Main-5: Finish the Cup: Constructors and Classes**](main_5_constructors.md)   
    * Constructors and new   
@@ -88,6 +93,7 @@
    * Send   
    * Invoke   
    * Fluent   
+   
 * [*Sub-6: Colourful Mugs: Symmetry, Colour, and Charm*](sub_6_colours.md)   
 * [**Main-6: Con Panna: Composing Class Behaviour**](main_6_classes.md)   
    * Extending Classes with Mixins   
@@ -95,6 +101,7 @@
    * Emulating Multiple Inheritance   
    * Preventing Property Conflicts   
    * Reducing Coupling   
+   
 * [**Main-7: More Decorators**](main_7_dedorators.md)   
    * Stateful Method Decorators   
    * Class Decorators beyond ES6/ECMAScript 2015   
@@ -105,4 +112,5 @@
    * Before Method Advice   
    * Provided and Unless   
    * Method Advice   
+   
 #### :black_medium_square:[ Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
