@@ -831,7 +831,7 @@ Yes. Binding values to names with `const` works just like binding values to name
 
 ### are consts also from a shadowy planet?
 
-We just saw that values bound with `const` use lexical scope, just like values bound with parameters. They are looked up in the environment where they are declared. And we know that functions create environments. Parameters are declared when we create functions, so it makes sense that parameters are bound to environments created when we invoke functions.
+We just saw that **values bound with `const` use lexical scope, just like values bound with parameters.** They are looked up in the environment where they are declared. And we know that functions create environments. Parameters are declared when we create functions, so it makes sense that parameters are bound to environments created when we invoke functions.
 
 But `const` statements can appear inside blocks, and we saw that blocks can appear inside of other blocks, including function bodies. So where are `const` variables bound? In the function environment? Or in an environment corresponding to the block?
 
@@ -897,13 +897,13 @@ Yes, names bound with `const` shadow enclosing bindings just like parameters. Bu
 Parameters are only bound when we invoke a function. That's why we made all these IIFEs. But `const` statements can appear inside blocks. What happens when we use a `const` inside of a block?
 
 We'll need a gratuitous block. We've seen `if` statements, what could be more gratuitous than:
-```javascript
+```js
     if (true) {
       // an immediately invoked block statement (IIBS)
     }
 ```    
 Let's try it:
-```javascript
+```js
     ((diameter) => {
       const PI = 3;
       
@@ -928,7 +928,7 @@ Let's try it:
 Ah! `const` statements don't just shadow values bound within the environments created by functions, they shadow values bound within environments created by blocks!
 
 This is enormously important. Consider the alternative: What if `const` could be declared inside of a block, but it always bound the name in the function's scope. In that case, we'd see things like this:
-```javascript
+```js
     ((diameter) => {
       const PI = 3.14159265;
       
@@ -940,7 +940,7 @@ This is enormously important. Consider the alternative: What if `const` could be
       //=> would return 6 if const had function scope
 ```      
 If `const` always bound its value to the name defined in the function's environment, placing a `const` statement inside of a block would merely rebind the existing name, overwriting its old contents. That would be super-confusing. And this code would "work:"
-```javascript
+```js
     ((diameter) => {
       if (true) {
         const PI = 3.14159265;
@@ -953,7 +953,7 @@ Again, confusing. Typically, we want to bind our names as close to where we need
 
 [plp]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
     
-### rebinding {#rebinding-peek}
+### rebinding
 
 By default, JavaScript permits us to *rebind* new values to names bound with a parameter. For example, we can write:
 ```javascript
