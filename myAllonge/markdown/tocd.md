@@ -29,7 +29,7 @@
    * Once   
    * Left-Variadic Functions   
    * Compose and Pipeline   
-----
+---
 * [*Sub-1: Picking the Bean: Choice and Truthiness*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
