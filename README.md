@@ -11,8 +11,6 @@ This is the markdown and image source for [JavaScript Allongé, the "Six" Editio
 [license]: http://creativecommons.org/licenses/by-sa/3.0/deed.en_US "Creative Commons Attribution-ShareAlike 3.0 Unported License"
 [jsos]: https://github.com/raganwald/javascript-allonge
 
-[top]: https://leanpub.com/javascript-allonge
-
 
 
 sdfasd
