@@ -1,12 +1,12 @@
-###### ----
-***[You Dont Konw JS]**[_detail](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/tocd.md#----) - **[Functional Light JS]**[_detail](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/tocd.md#----) - **[Understanding ES6]**[_detail](https://github.com/kiyounglee/understandinges6/blob/master/manuscript/tocd.md#----) - **[JS Allongé]**[_detail](https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/tocd.md#----)*
+<a name="top"></a>
+***[You Dont Konw JS]**[_detail](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/tocd.md#top) - **[Functional Light JS]**[_detail](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/tocd.md#top) - **[Understanding ES6]**[_detail](https://github.com/kiyounglee/understandinges6/blob/master/manuscript/tocd.md#top) - **[JS Allongé]**[_detail](https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/tocd.md#top)*
 
-[You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#----
-[Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#----
-[Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#----
-[JS Allongé]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#----
+[You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
+[Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
+[Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#top
+[JS Allongé]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
 
-## [JavaScript Allongé-6th](toc.md#----) *(detailed)*
+## [JavaScript Allongé-6th](toc.md#top) *(detailed)*
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
     * values are expressions     * values and identity  
