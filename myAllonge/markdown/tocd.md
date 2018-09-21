@@ -27,6 +27,7 @@
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
    * Partial Application -- Unary -- Tap -- Maybe   
    * Once -- Left-Variadic Functions -- Compose and Pipeline   
+---   
 * [*Sub-1: Choice and Truthiness - Picking the Bean*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
