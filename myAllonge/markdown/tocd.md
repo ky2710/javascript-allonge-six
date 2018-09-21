@@ -43,6 +43,7 @@
    * Making Data Out Of Functions   
 * [Recipe-1: Data](main_1r_Composing.md)   
    * mapWith -- Flip -- Object.assign -- Why?   
+---   
 * [*Sub-2: Basic Strings and Quasi-Literals* - A Warm Cup](sub_2_strings.md)   
 * [**Main-2: Objects and State** - Stir the Allongé](main_2_objects.md)   
    * Encapsulating State with Closures   
@@ -53,6 +54,7 @@
    * Summary   
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
    * Memoize -- getWith -- pluckWith -- Deep Mapping   
+---
 * [*Sub-3: “Object-Oriented Programming”* - The Coffee Factory](sub_3_oop.md)   
 * [**Main-3: Collections** - Served by the Pot](main_3_collections.md)   
     * Iteration and Iterables   
@@ -61,6 +63,7 @@
     * Interlude: The Carpenter Interviews for a Job   
     * Interactive Generators   
     * Basic Operations on Iterables   
+---
 * [*Sub-4: Symbols* - A Coffeehouse](sub_4_symbols.md)   
 * [**Main-4: Metaobjects** - Life on the Plantation](main_4_metaobjects.md)   
    * Why Metaobjects?   
@@ -68,7 +71,8 @@
    * Later Binding    
    * Delegation via Prototypes   
    * Shared Prototypes   
-  [*Sub-5: Impostors* - Decaffeinated](sub_5_impostors.md)   
+---
+* [*Sub-5: Impostors* - Decaffeinated](sub_5_impostors.md)   
 * [**Main-5: Constructors and Classes** - Finish the Cup](main_5_constructors.md)   
    * Constructors and new   
    * Why Classes in JavaScript?   
@@ -78,6 +82,7 @@
    * Summary   
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
    * Bound -- Send -- Invoke -- Fluent   
+---
 * [*Sub-6: Symmetry, Colour, and Charm* - Colourful Mugs](sub_6_colours.md)   
 * [**Main-6: Composing Class Behaviour** - Con Panna](main_6_classes.md)   
    * Extending Classes with Mixins   
@@ -85,6 +90,7 @@
    * Emulating Multiple Inheritance   
    * Preventing Property Conflicts   
    * Reducing Coupling   
+---
 * [**Main-7: More Decorators**](main_7_dedorators.md)   
    * Stateful Method Decorators   
    * Class Decorators beyond ES6/ECMAScript 2015   
