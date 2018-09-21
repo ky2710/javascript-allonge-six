@@ -25,13 +25,8 @@
     * this, aruments: [Magic Names](main_0_functions.md#magic-names)     
     * [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
-   * Partial Application   
-   * Unary   
-   * Tap   
-   * Maybe   
-   * Once   
-   * Left-Variadic Functions   
-   * Compose and Pipeline   
+   * Partial Application -- Unary -- Tap -- Maybe   
+   * Once -- Left-Variadic Functions -- Compose and Pipeline   
 * [*Sub-1: Choice and Truthiness - Picking the Bean*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
@@ -46,10 +41,7 @@
    * Functional Iterators   
    * Making Data Out Of Functions   
 * [Recipe-1: Data](main_1r_Composing.md)   
-   * mapWith   
-   * Flip   
-   * Object.assign   
-   * Why?   
+   * mapWith -- Flip -- Object.assign -- Why?   
 * [*Sub-2: Basic Strings and Quasi-Literals - A Warm Cup*](sub_2_strings.md)   
 * [**Main-2: Objects and State** - Stir the Allongé](main_2_objects.md)   
    * Encapsulating State with Closures   
@@ -59,10 +51,7 @@
    * Method Decorators   
    * Summary   
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
-   * Memoize   
-   * getWith   
-   * pluckWith   
-   * Deep Mapping   
+   * Memoize -- getWith -- pluckWith -- Deep Mapping   
 * [*Sub-3: “Object-Oriented Programming”* - The Coffee Factory](sub_3_oop.md)   
 * [**Main-3: Collections** - Served by the Pot](main_3_collections.md)   
     * Iteration and Iterables   
@@ -87,10 +76,7 @@
    * Why Not Classes?   
    * Summary   
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
-   * Bound   
-   * Send   
-   * Invoke   
-   * Fluent   
+   * Bound -- Send -- Invoke -- Fluent   
 * [*Sub-6: Symmetry, Colour, and Charm* - Colourful Mugs](sub_6_colours.md)   
 * [**Main-6: Composing Class Behaviour** - Con Panna](main_6_classes.md)   
    * Extending Classes with Mixins   
