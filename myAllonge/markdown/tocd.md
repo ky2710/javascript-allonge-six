@@ -11,7 +11,7 @@
 #### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
     * values are expressions     * values and identity  
 * [*Sub-0: Basic Numbers* - A Rich Aroma](sub_0_numbers.md)   
-* [**Main-0: Basic Functions - The first sip **](main_0_functions.md#the-first-sip-basic-functions)   
+* [**Main-0: Basic Functions - The first sip**](main_0_functions.md#the-first-sip-basic-functions)   
     * function: [As Little As Possible About Functions, But No Less](main_0_functions.md#as-little-as-possible-about-functions-but-no-less)   
     * argument and parameter: [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
     	* call by value -- variables and bindings -- call by sharing
