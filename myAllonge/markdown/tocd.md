@@ -10,18 +10,18 @@
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
     * values are expressions     * values and identity  
-* [*Sub-0: A Rich Aroma: Basic Numbers*](sub_0_numbers.md)   
-* [**Main-0: The first sip: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions)   
+* [*Sub-0: Basic Numbers* - A Rich Aroma](sub_0_numbers.md)   
+* [**Main-0: Basic Functions - The first sip **](main_0_functions.md#the-first-sip-basic-functions)   
     * function: [As Little As Possible About Functions, But No Less](main_0_functions.md#as-little-as-possible-about-functions-but-no-less)   
     * argument and parameter: [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
-         * call by value -- variables and bindings -- call by sharing
+    	* call by value -- variables and bindings -- call by sharing
     * [Closures and Scope](main_0_functions.md#closures-and-scope)   
     * const and lexical scope: [That Constant Coffee Craving](main_0_functions.md#that-constant-coffee-craving)   
     * [Naming Functions](main_0_functions.md#naming-functions)     
     * [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
-         * higher-order functions -- combinators -- a balanced statement about combinators -- function decorators
+        * higher-order functions -- combinators -- a balanced statement about combinators -- function decorators
     * [Building Blocks](main_0_functions.md#building-blocks)   
-         * composition -- partial application
+        * composition -- partial application
     * this, aruments: [Magic Names](main_0_functions.md#magic-names)     
     * [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
@@ -32,7 +32,7 @@
    * Once   
    * Left-Variadic Functions   
    * Compose and Pipeline   
-* [*Sub-1: Picking the Bean: Choice and Truthiness*](sub_1_choice.md)   
+* [*Sub-1: Choice and Truthiness - Picking the Bean*](sub_1_choice.md)   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
    * Self-Similarity   
@@ -50,8 +50,8 @@
    * Flip   
    * Object.assign   
    * Why?   
-* [*Sub-2: A Warm Cup: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
-* [**Main-2: Stir the Allongé: Objects and State**](main_2_objects.md)   
+* [*Sub-2: Basic Strings and Quasi-Literals - A Warm Cup*](sub_2_strings.md)   
+* [**Main-2: Objects and State** - Stir the Allongé](main_2_objects.md)   
    * Encapsulating State with Closures   
    * Composition and Extension   
    * This and That   
@@ -63,23 +63,23 @@
    * getWith   
    * pluckWith   
    * Deep Mapping   
-* [*Sub-3: The Coffee Factory: “Object-Oriented Programming”*](sub_3_oop.md)   
-* [**Main-3: Served by the Pot: Collections**](main_3_collections.md)   
+* [*Sub-3: “Object-Oriented Programming”* - The Coffee Factory](sub_3_oop.md)   
+* [**Main-3: Collections** - Served by the Pot](main_3_collections.md)   
     * Iteration and Iterables   
     * Generating Iterables   
     * Lazy and Eager Collections   
     * Interlude: The Carpenter Interviews for a Job   
     * Interactive Generators   
     * Basic Operations on Iterables   
-* [*Sub-4: A Coffeehouse: Symbols*](sub_4_symbols.md)   
-* [**Main-4: Life on the Plantation: Metaobjects**](main_4_metaobjects.md)   
+* [*Sub-4: Symbols* - A Coffeehouse](sub_4_symbols.md)   
+* [**Main-4: Metaobjects** - Life on the Plantation](main_4_metaobjects.md)   
    * Why Metaobjects?   
    * Mixins, Forwarding, and Delegation      
    * Later Binding    
    * Delegation via Prototypes   
    * Shared Prototypes   
-  [*Sub-5: Decaffeinated: Impostors*](sub_5_impostors.md)   
-* [**Main-5: Finish the Cup: Constructors and Classes**](main_5_constructors.md)   
+  [*Sub-5: Impostors* - Decaffeinated](sub_5_impostors.md)   
+* [**Main-5: Constructors and Classes** - Finish the Cup](main_5_constructors.md)   
    * Constructors and new   
    * Why Classes in JavaScript?   
    * Classes with class   
@@ -91,8 +91,8 @@
    * Send   
    * Invoke   
    * Fluent   
-* [*Sub-6: Colourful Mugs: Symmetry, Colour, and Charm*](sub_6_colours.md)   
-* [**Main-6: Con Panna: Composing Class Behaviour**](main_6_classes.md)   
+* [*Sub-6: Symmetry, Colour, and Charm* - Colourful Mugs](sub_6_colours.md)   
+* [**Main-6: Composing Class Behaviour** - Con Panna](main_6_classes.md)   
    * Extending Classes with Mixins   
    * Functional Mixins   
    * Emulating Multiple Inheritance   
