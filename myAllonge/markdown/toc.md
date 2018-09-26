@@ -1,10 +1,10 @@
 <a name="top"></a>
-***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[JS Allongé]***
+***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[Javascript Allongé-6th]***
 
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
 [Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#top
-[JS Allongé]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
+[Javascript Allongé-6th]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
 
 ## [JavaScript Allongé-6th](#javascript-allong%C3%A9-6th-detailed)
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Remarks](book_3_closing-time.md) / [Appendices](book_4_appendices.md) - Nov 3, 2017(513p) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)* 
