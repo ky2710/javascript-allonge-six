@@ -45,7 +45,8 @@
   *[Recipe-7: More Decorator](main_7r_dedorators.md)*   
   * After Method Advice -- Before Method Advice -- Provided and Unless -- Method Advice   
   
-  ## [JavaScript Allongé-6th](toc.md#top) *(detailed)*
+
+## [JavaScript Allongé-6th](toc.md#top) *(detailed)*
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
     * values are expressions     * values and identity  
