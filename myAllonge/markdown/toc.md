@@ -1,5 +1,6 @@
 <a name="top"></a>
-***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[JS Allongé]**
+***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[JS Allongé]***
+
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
 [Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#top
