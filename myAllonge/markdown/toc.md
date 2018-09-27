@@ -40,7 +40,7 @@
   * After Method Advice -- Before Method Advice -- Provided and Unless -- Method Advice   
   
 <a name="middle"></a>
-## [JavaScript Allongé-6th](#top) *(detailed)*
+## [JavaScript Allongé-6th](#top) *- detail*
 ***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[Javascript Allongé-6th]***      
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
