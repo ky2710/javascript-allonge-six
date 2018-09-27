@@ -45,8 +45,8 @@
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
     * values are expressions     * values and identity  
-* [*Sub-0: Basic Numbers* - A Rich Aroma](sub_0_numbers.md)   
-* [**Main-0: Basic Functions** - The first sip](main_0_functions.md#the-first-sip-basic-functions)   
+* [*Sub-0: Basic Numbers*](sub_0_numbers.md) - A Rich Aroma   
+* [**Main-0: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions) - The first sip   
     * function: [As Little As Possible About Functions, But No Less](main_0_functions.md#as-little-as-possible-about-functions-but-no-less)   
     * argument and parameter: [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
     	* call by value -- variables and bindings -- call by sharing
@@ -63,7 +63,7 @@
    * Partial Application -- Unary -- Tap -- Maybe   
    * Once -- Left-Variadic Functions -- Compose and Pipeline   
 ---   
-* [*Sub-1: Choice and Truthiness* - Picking the Bean](sub_1_choice.md)   
+* [*Sub-1: Choice and Truthiness*](sub_1_choice.md) - Picking the Bean   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
    * Arrays and Destructuring Arguments   
    * Self-Similarity   
@@ -79,8 +79,8 @@
 * [Recipe-1: Data](main_1r_Composing.md)   
    * mapWith -- Flip -- Object.assign -- Why?   
 ---   
-* [*Sub-2: Basic Strings and Quasi-Literals* - A Warm Cup](sub_2_strings.md)   
-* [**Main-2: Objects and State** - Stir the Allongé](main_2_objects.md)   
+* [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md) - A Warm Cup   
+* [**Main-2: Objects and State**](main_2_objects.md) - Stir the Allongé   
    * Encapsulating State with Closures   
    * Composition and Extension   
    * This and That   
@@ -90,8 +90,8 @@
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
    * Memoize -- getWith -- pluckWith -- Deep Mapping   
 ---
-* [*Sub-3: “Object-Oriented Programming”* - The Coffee Factory](sub_3_oop.md)   
-* [**Main-3: Collections** - Served by the Pot](main_3_collections.md)   
+* [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md) - The Coffee Factory   
+* [**Main-3: Collections**](main_3_collections.md) - Served by the Pot   
     * Iteration and Iterables   
     * Generating Iterables   
     * Lazy and Eager Collections   
@@ -99,16 +99,16 @@
     * Interactive Generators   
     * Basic Operations on Iterables   
 ---
-* [*Sub-4: Symbols* - A Coffeehouse](sub_4_symbols.md)   
-* [**Main-4: Metaobjects** - Life on the Plantation](main_4_metaobjects.md)   
+* [*Sub-4: Symbols*](sub_4_symbols.md) - A Coffeehouse   
+* [**Main-4: Metaobjects**](main_4_metaobjects.md) - Life on the Plantation   
    * Why Metaobjects?   
    * Mixins, Forwarding, and Delegation      
    * Later Binding    
    * Delegation via Prototypes   
    * Shared Prototypes   
 ---
-* [*Sub-5: Impostors* - Decaffeinated](sub_5_impostors.md)   
-* [**Main-5: Constructors and Classes** - Finish the Cup](main_5_constructors.md)   
+* [*Sub-5: Impostors*](sub_5_impostors.md) - Decaffeinated   
+* [**Main-5: Constructors and Classes**](main_5_constructors.md) - Finish the Cup   
    * Constructors and new   
    * Why Classes in JavaScript?   
    * Classes with class   
@@ -118,8 +118,8 @@
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
    * Bound -- Send -- Invoke -- Fluent   
 ---
-* [*Sub-6: Symmetry, Colour, and Charm* - Colourful Mugs](sub_6_colours.md)   
-* [**Main-6: Composing Class Behaviour** - Con Panna](main_6_classes.md)   
+* [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md) - Colourful Mugs   
+* [**Main-6: Composing Class Behaviour**](main_6_classes.md) - Con Panna   
    * Extending Classes with Mixins   
    * Functional Mixins   
    * Emulating Multiple Inheritance   
