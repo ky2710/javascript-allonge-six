@@ -922,7 +922,7 @@ For these and other reasons, almost all languages today make it possible to use 
 ### summary
 
 Although we showed how to use tail calls to map and fold over arrays with `[first, ...rest]`, in reality this is not how it ought to be done. But it is an extremely simple illustration of how recursion works when you have a self-similar means of constructing a data structure.
-## Plain Old JavaScript Objects {#pojos}
+## Plain Old JavaScript Objects
 
 Lists are not the only way to represent collections of things, but they are the "oldest" data structure in the history of high level languages, because they map very closely to the way the hardware is organized in a computer. Lists are obviously very handy for homogeneous collections of things, like a shopping list:
 ```js
@@ -1223,7 +1223,7 @@ mapWith((x) => x * x, OneTwoThree)
 Our `mapWith` function takes twice as long as a straight iteration, because it iterates over the entire list twice, once to map, and once to reverse the list. Likewise, it takes twice as much memory, because it constructs a reverse of the desired result before throwing it away.
 
 Mind you, this is still much, much faster than making partial copies of arrays. For a list of length *n*, we created *n* superfluous nodes and copied *n* superfluous values. Whereas our naïve array algorithm created 2*n* superfluous arrays and copied *n*^2^ superfluous values.
-## Mutation {#mutation}
+## Mutation
 
 ![Cupping Grinds](images/cupping.jpg)
 
@@ -1410,7 +1410,7 @@ const mapWith = (fn, node, head = null, tail = null) => {
 mapWith((x) => 1.0 / x, OneToFive)
   //=> {"first":1,"rest":{"first":0.5,"rest":{"first":0.3333333333333333,"rest":{"first":0.25,"rest":{"first":0.2,"rest":{}}}}}}
 ```
-## Reassignment {#reassignment}
+## Reassignment
 
 Like some imperative programming languages, JavaScript allows you to re-assign the value bound to parameters. We saw this earlier in [rebinding](#rebinding-peek):
 
@@ -1749,7 +1749,7 @@ This small error was a frequent cause of confusion, and in the days when there w
 Now we're creating a new inner parameter, `i` and binding it to the value of the outer `i`. This works, but `let` is so much simpler and cleaner that it was added to the language in the ECMAScript 2015 specification.
 
 In this book, we will use function declarations sparingly, and not use `var` at all. That does not mean that you should follow the exact same practice in your own code: The purpose of this book is to illustrate certain principles of programming. The purpose of your own code is to get things done. The two goals are often, but not always, aligned.
-## Copy on Write {#cow}
+## Copy on Write
 
 ![The Coffee Cow](images/coffee-cow.jpg)
 
@@ -2021,7 +2021,7 @@ teleportingTurtle(aList);
 Years later, I came across a discussion of this algorithm, [The Tale of the Teleporting Turtle](http://www.penzba.co.uk/Writings/TheTeleportingTurtle.html). It seems to be faster under certain circumstances, depending on the size of the loop and the relative costs of certain operations.
 
 What's interesting about these two algorithms is that they both *tangle* two separate concerns: How to traverse a data structure, and what to do with the elements that you encounter. In [Functional Iterators](#functional-iterators), we'll investigate one pattern for separating these concerns.
-## Functional Iterators {#functional-iterators}
+## Functional Iterators
 
 Let's consider a remarkably simple problem: Finding the sum of the elements of an array. In tail-recursive style, it looks like this:
 ```js
