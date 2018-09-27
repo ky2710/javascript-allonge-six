@@ -12,7 +12,7 @@ All of these actions involve going through the contents one by one. Acting on th
 
 ### a look back at functional iterators
 
-When discussing functions, we looked at the benefits of writing [Functional Iterators](#functional-iterators). We can do the same thing for objects. Here's a stack that has its own functional iterator method:
+When discussing functions, we looked at the benefits of writing [Functional Iterators](main_1_Composing.md#functional-iterators). We can do the same thing for objects. Here's a stack that has its own functional iterator method:
 ```js
 const Stack1 = () =>
   ({
