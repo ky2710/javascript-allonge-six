@@ -1,7 +1,6 @@
-# Served by the Pot: Collections {#collections}
+# Served by the Pot: Collections
 
-![Some different sized and coloured coffee pots by Antti Nurmesniemi, perhaps his most known design.](images/pots.jpg)
-## Iteration and Iterables {#iterables}
+## Iteration and Iterables
 
 ![Coffee Labels at the Saltspring Coffee Processing Facility](images/saltspring/coffee-labels.jpg)
 
@@ -465,7 +464,7 @@ Whether you work with the same iterator over and over, or get a fresh iterable e
 
 Right now, we're just looking at ordered collections. To reiterate (hah), an ordered collection represents a (possibly infinite) collection of elements that are in some order. Every time we get an iterator from an ordered collection, we start iterating from the beginning.
 
-### operations on ordered collections {#operations}
+### operations on ordered collections
 
 Let's define some operations on ordered collections. Here's `mapWith`, it takes an ordered collection, and returns another ordered collection representing a mapping over the original:[^mapWith]
 
@@ -698,10 +697,8 @@ Pair1.from(Squares)
 Iterators are a JavaScript feature that allow us to separate the concerns of how to iterate over a collection from what we want to do with the elements of a collection. *Iterable* ordered collections can be iterated over or gathered into another collection.
 
 Separating concerns with iterators speaks to JavaScript's fundamental nature: It's a language that *wants* to compose functionality out of small, singe-responsibility pieces, whether those pieces are functions or objects built out of functions.
-## Generating Iterables {#generating-iterables}
 
-![Banco do Café](images/banco.jpg)
-
+## Generating Iterables
 Iterables look cool, but then again, everything looks amazing when you’re given cherry-picked examples. What is there they don't do well?
 
 Let's consider how they work. Whether it's a simple functional iterator, or an iterable object with a `.next()` method, an iterator is something we call repeatedly until it tells us that it's done.
@@ -1571,6 +1568,7 @@ function * rest (iterable) {
 A generator is a function that is defined with `function *` and uses `yield` (or `yield *`) to generate values. Using a generator instead of writing an iterator object that has a `.next()` method allows us to write code that can be much simpler for cases like recursive iterations or state patterns. And we don't need to worry about wrapping our values in an object with `.done` and `.value` properties.
 
 This is especially useful for making iterables.
+
 ## Lazy and Eager Collections
 
 The operations on iterables are tremendously valuable, but let's reiterate why we care: In JavaScript, we build single-responsibility objects, and single-responsibility functions, and we compose these together to build more full-featured objects and algorithms.
@@ -1865,7 +1863,7 @@ Pair.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 //=> 220
 ~~~~~~~~
 
-### lazy collection operations {#lazy-iterables}
+### lazy collection operations
 
 "Laziness" is a very pejorative word when applied to people. But it can be an excellent strategy for efficiency in algorithms. Let's be precise: *Laziness* is the characteristic of not doing any work until you know you need the result of the work.
 
@@ -2152,7 +2150,7 @@ Pair.from([1, 2, 3, 4, 5]).map(x => x * 2)
             }
     }
 ~~~~~~~~
-## Interlude: The Carpenter Interviews for a Job {#drunken}
+## Interlude: The Carpenter Interviews for a Job
 
 "The Carpenter" was a JavaScript programmer, well-known for a meticulous attention to detail and love for hand-crafted, exquisitely joined code. The Carpenter normally worked through personal referrals, but from time to time a recruiter would slip through his screen. One such recruiter was Bob Plissken. Bob was well-known in the Python community, but his clients often needed experience with other languages.
 
@@ -2452,7 +2450,8 @@ const hasCycle = (orderedCollection) => {
 ~~~~~~~~
 
 The Carpenter stared at Kidu's solution. "I guess," he allowed, "It isn't always necessary to make a solution so awesome it would please the Ghosts of Mars."
-## Interactive Generators {#interactive-generators}
+
+## Interactive Generators
 
 We used generators to build iterators that maintain implicit state. We saw how to use them for recursive unfolds and state machines. But there are other times we want to build functions that maintain implicit state. Let's start by looking at a very simple example of a function that can be written statefully.
 
@@ -2878,6 +2877,7 @@ But the generator function allows us to maintain state implicitly. And sometimes
 We have looked at generators as ways of making iterators over static collections, where state is modelled implicitly in control flow. But as we see here, it's also possible to use a generator interactively, passing values in and receiving a value in return, just like an ordinary function.
 
 Again, the salient difference is that an "interactive" generator is stateful, and it embodies its state in its control flow.
+
 ## Basic Operations on Iterables
 
 Here are the operations we've defined on Iterables. As discussed, they preserve the collection semantics of the iterable they are given:
