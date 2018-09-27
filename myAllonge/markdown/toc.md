@@ -92,12 +92,12 @@
 ---
 * [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md) - The Coffee Factory   
 * [**Main-3: Collections**](main_3_collections.md) - Served by the Pot   
-    * [Iteration and Iterables]()   
-    * [Generating Iterables]()   
-    * [Lazy and Eager Collections]()   
-    * [Interlude: The Carpenter Interviews for a Job]()   
-    * [Interactive Generators]()   
-    * [Basic Operations on Iterables]()   
+    * [Iteration and Iterables](main_3_collections.md#iteration-and-iterables)   
+    * [Generating Iterables](main_3_collections.md#generating-iterables)   
+    * [Lazy and Eager Collections](main_3_collections.md#lazy-and-eager-collections)   
+    * [Interlude: The Carpenter Interviews for a Job](main_3_collections.md#interlude-the-carpenter-interviews-for-a-job)   
+    * [Interactive Generators](main_3_collections.md#interactive-generators)   
+    * [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
 ---
 * [*Sub-4: Symbols*](sub_4_symbols.md) - A Coffeehouse   
 * [**Main-4: Metaobjects**](main_4_metaobjects.md) - Life on the Plantation   
