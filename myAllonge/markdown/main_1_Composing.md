@@ -3,7 +3,7 @@
 > Recursion is the root of computation since it trades description for time.—Alan Perlis, [Epigrams in Programming](http://www.cs.yale.edu/homes/perlis-alan/quotes.html)
 ## Arrays and Destructuring Arguments
 
-While we have mentioned arrays briefly, we haven't had a close look at them. Arrays are JavaScript's "native" representation of lists. Strings are important because they represent writing. Lists are important because they represent ordered collections of things, and ordered collections are a fundamental abstraction for making sense of reality.
+While we have mentioned arrays briefly, we haven't had a close look at them. **Arrays are JavaScript's "native" representation of lists.** Strings are important because they represent writing. Lists are important because they represent ordered collections of things, and ordered collections are a fundamental abstraction for making sense of reality.
 
 ### array literals
 
