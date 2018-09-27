@@ -191,9 +191,9 @@ People have been writing iterators since JavaScript was first released in the la
 
 So, when a standard way to write iterators was added to the JavaScript language, it didn't make sense to use a method like `.iterator()` for it: That would conflict with existing code. Instead, the language encourages new code to be written with a different name for the method that a collection object uses to return its iterator.
 
-To ensure that the method would not conflict with any existing code, JavaScript provides a *symbol*. Symbols are unique constants that are guaranteed not to conflict with existing strings. Symbols are a longstanding technique in programming going back to Lisp, where the `GENSYM` function generated... You guessed it... Symbols.[^symbol]
+To ensure that the method would not conflict with any existing code, JavaScript provides a *symbol*. Symbols are unique constants that are guaranteed not to conflict with existing strings. Symbols are a longstanding technique in programming going back to Lisp, where the `GENSYM` function generated... You guessed it... Symbols.`1`
 
-[^symbol]: You can read more about JavaScript symbols in Axel Rauschmayer's [Symbols in ECMAScript 2015](http://www.2ality.com/2014/12/es6-symbols.html).
+>`1` You can read more about JavaScript symbols in Axel Rauschmayer's [Symbols in ECMAScript 2015](http://www.2ality.com/2014/12/es6-symbols.html).
 
 The expression `Symbol.iterator` evaluates to a special symbol representing the name of the method that objects should use if they return an iterator object.
 
@@ -424,9 +424,9 @@ Right now, we're just looking at ordered collections. To reiterate (hah), an ord
 
 ### operations on ordered collections
 
-Let's define some operations on ordered collections. Here's `mapWith`, it takes an ordered collection, and returns another ordered collection representing a mapping over the original:[^mapWith]
+Let's define some operations on ordered collections. Here's `mapWith`, it takes an ordered collection, and returns another ordered collection representing a mapping over the original:`1`
 
-[^mapWith]: Yes, we also used the name `mapWith` for working with ordinary collections elsewhere. If we were writing a library of functions, we would have to disambiguate the two kinds of mapping functions with special names, namespaces, or modules. But for the purposes of discussing ideas, we can use the same name twice in two different contexts. It's the same idea, after all.
+>`1` Yes, we also used the name `mapWith` for working with ordinary collections elsewhere. If we were writing a library of functions, we would have to disambiguate the two kinds of mapping functions with special names, namespaces, or modules. But for the purposes of discussing ideas, we can use the same name twice in two different contexts. It's the same idea, after all.
 ```js
 const mapWith = (fn, collection) =>
   ({
@@ -842,7 +842,8 @@ We can write an iterator, but use a generation style of programming. An iterator
 1. We declare the function using the `function *` syntax. Not a fat arrow. Not a plain `function`.
 2. We don't `return` values or output them to `console.log`. We "yield" values using the `yield` keyword.
 
-When we invoke the function, we get an iterator object back. Let's start with the degenerate example, the `empty iterator`:[^empty]
+When we invoke the function, we get an iterator object back. Let's start with the degenerate example, the `empty iterator`:`1`
+>`1` We wrote a *generator declaration*. We can also write `const empty = function * () {}` to bind an anonymous generator to the `empty` keyword, but we don't need to do that here.
 ```js
 function * empty () {};
 
@@ -850,8 +851,6 @@ empty().next()
   //=>
     {"done":true}
 ```
-[^empty]: We wrote a *generator declaration*. We can also write `const empty = function * () {}` to bind an anonymous generator to the `empty` keyword, but we don't need to do that here.
-
 When we invoke `empty`, we get an iterator with no elements. This makes sense, because `empty` never yields anything. We call its `.next()` method, but it's done immediately.
 
 Generator functions can take an argument. Let's use that to illustrate `yield`:
@@ -1222,9 +1221,9 @@ for (const i of TreeIterable([1, [2, [3, 4], 5]])) {
   4
   5
 ```
-We've gone with the full iterable here, a `TreeIterable(iterable)` returns an iterable that treats `iterable` as a tree. It works, but as we've just seen, a function that returns an iterable can often be written much more simply as a generator, rather than a function that returns an iterable object:[^but]
+We've gone with the full iterable here, a `TreeIterable(iterable)` returns an iterable that treats `iterable` as a tree. It works, but as we've just seen, a function that returns an iterable can often be written much more simply as a generator, rather than a function that returns an iterable object:`1`
 
-[^but]: There are more complex cases where you want an iterable object, because you want to maintain state in properties or declare helper methods for the generator function, and so forth. But if you can write it as a simple generator, write it as a simple generator.
+>`1` There are more complex cases where you want an iterable object, because you want to maintain state in properties or declare helper methods for the generator function, and so forth. But if you can write it as a simple generator, write it as a simple generator.
 ```js
 function * tree (iterable) {
   for (const e of iterable) {
