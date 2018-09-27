@@ -1,9 +1,6 @@
 # Served by the Pot: Collections
 
 ## Iteration and Iterables
-
-![Coffee Labels at the Saltspring Coffee Processing Facility](images/saltspring/coffee-labels.jpg)
-
 Many objects in JavaScript can model collections of things. A collection is like a box containing stuff. Sometimes you just want to move the box around. But sometimes you want to open it up and do things with its contents.
 
 Things like "put a label on every bag of coffee in this box," Or, "Open the box, take out the bags of decaf, and make a new box with just the decaf." Or, "go through the bags in this box, and take out the first one marked 'Espresso' that contains at least 454 grams of beans."
