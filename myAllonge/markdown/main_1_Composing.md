@@ -1223,10 +1223,8 @@ mapWith((x) => x * x, OneTwoThree)
 Our `mapWith` function takes twice as long as a straight iteration, because it iterates over the entire list twice, once to map, and once to reverse the list. Likewise, it takes twice as much memory, because it constructs a reverse of the desired result before throwing it away.
 
 Mind you, this is still much, much faster than making partial copies of arrays. For a list of length *n*, we created *n* superfluous nodes and copied *n* superfluous values. Whereas our naïve array algorithm created 2*n* superfluous arrays and copied *n*^2^ superfluous values.
+
 ## Mutation
-
-![Cupping Grinds](images/cupping.jpg)
-
 In JavaScript, almost every type of value can *mutate*. Their identities stay the same, but not their structure. Specifically, arrays and objects can mutate. Recall that you can access a value from within an array or an object using `[]`. You can reassign a value using `[] =`:
 
     const oneTwoThree = [1, 2, 3];
