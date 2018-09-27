@@ -13,9 +13,7 @@ All of these actions involve going through the contents one by one. Acting on th
 ### a look back at functional iterators
 
 When discussing functions, we looked at the benefits of writing [Functional Iterators](#functional-iterators). We can do the same thing for objects. Here's a stack that has its own functional iterator method:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Stack1 = () =>
   ({
     array:[],
@@ -63,8 +61,7 @@ iter().value
   //=> "you!"
 iter().value
   //=> "to"
-~~~~~~~~
-
+```
 The way we've written `.iterator` as a method, each object knows how to return an iterator for itself.
 
 A> The `.iterator()` method is defined with shorthand equivalent to `iterator: function iterator() { ... }`. Note that it uses the `function` keyword, so when we invoke it with `stack.iterator()`, JavaScript sets `this` to the value of `stack`. But what about the function `.iterator()` returns? It is defined with a fat arrow `() => { ... }`. What is the value of `this` within that function?
@@ -74,9 +71,7 @@ A>
 A> Therefore, the iterator function returned by the `.iterator()` method has `this` bound to the `stack` object, even though we call it with `iter()`.
 
 And here's a `sum` function implemented as a fold over a functional iterator:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const iteratorSum = (iterator) => {
   let eachIteration,
       sum = 0;
@@ -86,12 +81,9 @@ const iteratorSum = (iterator) => {
   }
   return sum
 }
-~~~~~~~~
-
+```
 We can use it with our stack:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const stack = Stack1();
 
 stack.push(1);
@@ -100,12 +92,9 @@ stack.push(3);
 
 iteratorSum(stack.iterator())
   //=> 6
-~~~~~~~~
-
+```
 We could save a step and write `collectionSum`, a function that folds over any object, provided that the object implements an `.iterator` method:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const collectionSum = (collection) => {
   const iterator = collection.iterator();
 
@@ -120,8 +109,7 @@ const collectionSum = (collection) => {
 
 collectionSum(stack)
   //=> 6
-~~~~~~~~
-
+```
 If we write a program with the presumption that "everything is an object," we can write maps, folds, and filters that work on objects. We just ask the object for an iterator, and work on the iterator. Our functions don't need to know anything about how an object implements iteration, and we get the benefit of lazily traversing our objects.
 
 This is a good thing.
@@ -135,9 +123,7 @@ In programs involving large collections of objects, it can be handy to implement
 Fortunately, an iterator object is almost as simple as an iterator function. Instead of having a function that you call to get the next element, you have an object with a `.next()` method.
 
 Like this:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Stack2 = () =>
   ({
     array: [],
@@ -196,8 +182,7 @@ const collectionSum = (collection) => {
 
 collectionSum(stack)
   //=> 2015
-~~~~~~~~
-
+```
 Now our `.iterator()` method is returning an iterator object. When working with objects, we do things the object way. But having started by building functional iterators, we understand what is happening underneath the object's scaffolding.
 
 ### iterables
@@ -213,9 +198,7 @@ To ensure that the method would not conflict with any existing code, JavaScript 
 The expression `Symbol.iterator` evaluates to a special symbol representing the name of the method that objects should use if they return an iterator object.
 
 Our stack does, so instead of binding the existing iterator method to the name `iterator`, we bind it to the `Symbol.iterator`. We'll do that using the `[` `]` syntax for using an expression as an object literal key:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Stack3 = () =>
   ({
     array: [],
@@ -274,14 +257,11 @@ const collectionSum = (collection) => {
 
 collectionSum(stack)
   //=> 2015
-~~~~~~~~
-
+```
 Using `[Symbol.iterator]` instead of `.iterator` seems like adding an extra moving part for nothing. Do we get anything in return?
 
 Indeed we do. Behold the `for...of` loop:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const iterableSum = (iterable) => {
   let sum = 0;
 
@@ -293,12 +273,9 @@ const iterableSum = (iterable) => {
 
 iterableSum(stack)
   //=> 2015
-~~~~~~~~
-
+```
 The `for...of` loop works directly with any object that is *iterable*, meaning it works with any object that has a `Symbol.iterator` method that returns an object iterator. Here's another linked list, this one is iterable:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const EMPTY = {
   isEmpty: () => true
 };
@@ -341,29 +318,22 @@ const someSquares = list(1, 4, 9, 16, 25);
 
 iterableSum(someSquares)
   //=> 55
-~~~~~~~~
-
+```
 As we can see, we can use `for...of` with linked lists just as easily as with stacks. And there's one more thing: You recall that the spread operator (`...`) can spread the elements of an array in an array literal or as parameters in a function invocation.
 
 Now is the time to note that we can spread any iterable. So we can spread the elements of an iterable into an array literal:
-
-{:lang="js"}
-~~~~~~~~
+```js
 ['some squares', ...someSquares]
   //=> ["some squares", 1, 4, 9, 16, 25]
-~~~~~~~~
-
+```
 And we can also spread the elements of an array literal into parameters:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const firstAndSecondElement = (first, second) =>
   ({first, second})
 
 firstAndSecondElement(...stack)
   //=> {"first":5,"second":10}
-~~~~~~~~
-
+```
 This can be extremely useful.
 
 One caveat of spreading iterables: JavaScript creates an array out of the elements of the iterable. That might be very wasteful for extremely large collections. For example, if we spread a large collection just to find an element in the collection, it might have been wiser to iterate over the element using its iterator directly.
@@ -373,9 +343,7 @@ And if we have an infinite collection, spreading is going to fail outright as we
 ### iterables out to infinity
 
 Iterables needn't represent finite collections:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Numbers = {
   [Symbol.iterator] () {
     let n = 0;
@@ -386,27 +354,21 @@ const Numbers = {
     }
   }
 }
-~~~~~~~~
-
+```
 There are useful things we can do with iterables representing an infinitely large collection. But let's point out what we can't do with them:
-
-{:lang="js"}
-~~~~~~~~
+```js
 ['all the numbers', ...Numbers]
   //=> infinite loop!
 
 firstAndSecondElement(...Numbers)
   //=> infinite loop!
-~~~~~~~~
-
+```
 Attempting to spread an infinite iterable into an array is always going to fail.
 
 ### ordered collections
 
 The iterables we're discussing represent *ordered collections*. One of the semantic properties of an ordered collection is that every time you iterate over it, you get its elements in order, from the beginning. For example:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const abc = ["a", "b", "c"];
 
 for (const i of abc) {
@@ -424,14 +386,11 @@ for (const i of abc) {
     a
     b
     c
-~~~~~~~~
-
+```
 This is accomplished with our own collections by returning a brand new iterator every time we call `[Symbol.iterator]`, and ensuring that our iterators start at the beginning and work forward.
 
 Iterables needn't represent ordered collections. We could make an infinite iterable representing random numbers:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const RandomNumbers = {
   [Symbol.iterator]: () =>
     ({
@@ -458,8 +417,7 @@ for (const i of RandomNumbers) {
     0.4956772483419627
     0.20259276474826038
     ...
-~~~~~~~~
-
+```
 Whether you work with the same iterator over and over, or get a fresh iterable every time, you are always going to get fresh random numbers. Therefore, `RandomNumbers` is not an ordered collection.
 
 Right now, we're just looking at ordered collections. To reiterate (hah), an ordered collection represents a (possibly infinite) collection of elements that are in some order. Every time we get an iterator from an ordered collection, we start iterating from the beginning.
@@ -469,9 +427,7 @@ Right now, we're just looking at ordered collections. To reiterate (hah), an ord
 Let's define some operations on ordered collections. Here's `mapWith`, it takes an ordered collection, and returns another ordered collection representing a mapping over the original:[^mapWith]
 
 [^mapWith]: Yes, we also used the name `mapWith` for working with ordinary collections elsewhere. If we were writing a library of functions, we would have to disambiguate the two kinds of mapping functions with special names, namespaces, or modules. But for the purposes of discussing ideas, we can use the same name twice in two different contexts. It's the same idea, after all.
-
-{:lang="js"}
-~~~~~~~~
+```js
 const mapWith = (fn, collection) =>
   ({
     [Symbol.iterator] () {
@@ -486,14 +442,11 @@ const mapWith = (fn, collection) =>
       }
     }
   });
-~~~~~~~~
-
+```
 This illustrates the general pattern of working with ordered collections: We make them *iterables*, meaning that they have a `[Symbol.iterator]` method, that returns an *iterator*. An iterator is also an object, but with a `.next()` method that is invoked repeatedly to obtain the elements in order.
 
 Many operations on ordered collections return another ordered collection. They do so by taking care to iterate over a result freshly every time we get an iterator for them. Consider this example for `mapWith`:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Evens = mapWith((x) => 2 * x, Numbers);
 
 for (const i of Evens) {
@@ -513,12 +466,9 @@ for (const i of Evens) {
     2
     4
     ...
-~~~~~~~~
-
+```
 `Numbers` is an ordered collection. We invoke `mapWith((x) => 2 * x, Numbers)` and get `Evens`. `Evens` works just as if we'd written this:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Evens =  {
   [Symbol.iterator] () {
     const iterator = Numbers[Symbol.iterator]();
@@ -532,16 +482,13 @@ const Evens =  {
     }
   }
 };
-~~~~~~~~
-
+```
 Every time we write `for (const i of Evens)`, JavaScript calls `Evens[Symbol.iterator]()`. That in turns means it executes `const iterator = Numbers[Symbol.iterator]();` every time we write `for (const i of Evens)`, and that means that `iterator` starts at the beginning of `Numbers`.
 
 So, `Evens` is also an ordered collection, because it starts at the beginning each time we get a fresh iterator over it. Thus, `mapWith` has the property of preserving the collection semantics of the iterable we give it. So we call it a *collection operation*.
 
 Mind you, we can also map non-collection iterables, like `RandomNumbers`:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const ZeroesToNines = mapWith((n) => Math.floor(10 * limit), RandomNumbers);
 
 for (const i of ZeroesToNines) {
@@ -561,14 +508,11 @@ for (const i of ZeroesToNines) {
     6
     1
     ...
-~~~~~~~~
-
+```
 `mapWith` can get a new iterator from `RandomNumbers` each time we iterate over `ZeroesToNines`, but if `RandomNumbers` doesn't behave like an ordered collection, that's not `mapWith`'s fault. `RandomNumbers` is a *stream*, not an ordered collection, and thus `mapWith` returns another iterable behaving like a stream.
 
 Here are two more operations on ordered collections, `filterWith` and `untilWith`:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const filterWith = (fn, iterable) =>
   ({
     [Symbol.iterator] () {
@@ -601,14 +545,11 @@ const untilWith = (fn, iterable) =>
       }
     }
   });
-~~~~~~~~
-
+```
 Like `mapWith`, they preserve the ordered collection semantics of whatever you give them.
 
 And here's a computation performed using operations on ordered collections: We'll create an ordered collection of square numbers that end in one and are less than 1,000:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Squares = mapWith((x) => x * x, Numbers);
 const EndWithOne = filterWith((x) => x % 10 === 1, Squares);
 const UpTo1000 = untilWith((x) => (x > 1000), EndWithOne);
@@ -620,14 +561,11 @@ const UpTo1000 = untilWith((x) => (x > 1000), EndWithOne);
 [...UpTo1000]
   //=>
     [1,81,121,361,441,841,961]
-~~~~~~~~
-
+```
 As we expect from an ordered collection, each time we iterate over `UpTo1000`, we begin at the beginning.
 
 For completeness, here are two more handy iterable functions. `first` returns the first element of an iterable (if it has one), and `rest` returns an iterable that iterates over all but the first element of an iterable. They are equivalent to destructuring arrays with `[first, ...rest]`:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const first = (iterable) =>
   iterable[Symbol.iterator]().next().value;
 
@@ -640,8 +578,7 @@ const rest = (iterable) =>
       return iterator;
     }
   });
-~~~~~~~~
-
+```
 like our other operations, `rest` preserves the ordered collection semantics of its argument.
 
 ### from
@@ -649,19 +586,14 @@ like our other operations, `rest` preserves the ordered collection semantics of 
 Having iterated over a collection, are we limited to `for..do` and/or gathering the elements in an array literal and/or gathering the elements into the parameters of a function? No, of course not, we can do anything we like with them.
 
 One useful thing is to write a `.from` function that gathers an iterable into a particular collection type. JavaScript's built-in `Array` class already has one:
-
-{:lang="js"}
-~~~~~~~~
+```js
 Array.from(UpTo1000)
   //=> [1,81,121,361,441,841,961]
-~~~~~~~~
-
+```
 We can do the same with our own collections. As you recall, functions are mutable objects. And we can assign properties to functions with a `.` or even `[` and `]`. And if we assign a function to a property, we've created a method.
 
 So let's do that:
-
-{:lang="js"}
-~~~~~~~~
+```js
 Stack3.from = function (iterable) {
   const stack = this();
 
@@ -677,12 +609,9 @@ Pair1.from = (iterable) =>
 
     return done ? EMPTY : Pair1(value, iterationToList(iteration));
   })(iterable[Symbol.iterator]())
-~~~~~~~~
-
+```
 Now we can go "end to end," If we want to map a linked list of numbers to a linked list of the squares of some numbers, we can do that:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const numberList = Pair1.from(untilWith((x) => x > 10, Numbers));
 
 Pair1.from(Squares)
@@ -690,8 +619,7 @@ Pair1.from(Squares)
         "rest":{"first":1,
                 "rest":{"first":4,
                         "rest":{ ...
-~~~~~~~~
-
+```
 ### summary
 
 Iterators are a JavaScript feature that allow us to separate the concerns of how to iterate over a collection from what we want to do with the elements of a collection. *Iterable* ordered collections can be iterated over or gathered into another collection.
@@ -704,9 +632,7 @@ Iterables look cool, but then again, everything looks amazing when you’re give
 Let's consider how they work. Whether it's a simple functional iterator, or an iterable object with a `.next()` method, an iterator is something we call repeatedly until it tells us that it's done.
 
 Iterators have to arrange its own state such that when you call them, they compute and return the next item. This seems blindingly obvious and simple. If, for example, you want numbers, you write:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Numbers = {
   [Symbol.iterator]: () => {
     let n = 0;
@@ -717,27 +643,21 @@ const Numbers = {
     }
   }
 };
-~~~~~~~~
-
+```
 The `Numbers` iterable returns an object that updates a mutable variable, `n`, to deliver number after number. How hard can this be?
 
 Well, we've written our iterator as a *server*. It waits until given a request, and then it returns exactly one item. Then it waits for the next request. There is no concept of pushing numbers out from the iterator, just waiting until a number is pulled out of the iterator by whatever code consumes numbers.
 
 Of course, when we have some code that makes a bunch of something, we don't usually write it like that. We usually just write something like:
-
-{:lang="js"}
-~~~~~~~~
+```js
 let n = 0;
 
 while (true) {
   console.log(n++)
 }
-~~~~~~~~
-
+```
 And magically, the numbers would pour forth. We would *generate* numbers. Let's put that beside the code for the iterator, minus the iterable scaffolding:
-
-{:lang="js"}
-~~~~~~~~
+```js
 // Iteration
 let n = 0;
 
@@ -750,8 +670,7 @@ let n = 0;
 while (true) {
   console.log(n++)
 }
-~~~~~~~~
-
+```
 They're of approximately equal complexity. So why bring up generation? Well, there are some collections that are much easier to generate than to iterate over. Let's look at one:
 
 ### recursive iterators
@@ -759,9 +678,7 @@ They're of approximately equal complexity. So why bring up generation? Well, the
 Iterators maintain state, that's what they do. Generators have to manage the exact same amount of state, but sometimes, it's much easier to manage that state in a generator. One of those cases is when we have to recursively enumerate something.
 
 For example, iterating over a tree. Given an array that might contain arrays, let's say we want to generate all the "leaf" elements, i.e. elements that are not, themselves, iterable.
-
-{:lang="js"}
-~~~~~~~~
+```js
 // Generation
 const isIterable = (something) =>
   !!something[Symbol.iterator];
@@ -784,12 +701,9 @@ generate([1, [2, [3, 4], 5]])
   3
   4
   5
-~~~~~~~~
-
+```
 Very simple. Now for the iteration version. We'll write a functional iterator to keep things simple, but it's easy to see the shape of the basic problem:
-
-{:lang="js"}
-~~~~~~~~
+```js
 // Iteration
 const isIterable = (something) =>
   !!something[Symbol.iterator];
@@ -827,8 +741,7 @@ while (n = i()) {
   3
   4
   5
-~~~~~~~~
-
+```
 If you peel off `isIterable` and ignore the way that the iteration version uses `[Symbol.iterator]` and `.next`, we're left with the fact that the generating version calls itself recursively, and the iteration version maintains an explicit stack. In essence, both the generation and iteration implementations have stacks, but the generation version's stack is *implicit*, while the iteration version's stack is *explicit*.
 
 A less kind way to put it is that the iteration version is greenspunning something built into our programming language: We're reinventing the use of a stack to manage recursion, because writing our code to respond to a function call makes us turn a simple recursive algorithm inside-out.
@@ -842,9 +755,7 @@ Some iterables can be modelled as state machines. Let's revisit the Fibonacci se
 - Every subsequent element of the fibonacci sequence is the sum of the previous two elements.
 
 Let's write a generator:
-
-{:lang="js"}
-~~~~~~~~
+```js
 // Generation
 const fibonacci = () => {
   let a, b;
@@ -875,16 +786,13 @@ fibonacci()
   89
   144
   ...
-~~~~~~~~
-
+```
 The thing to note here is that our `fibonacci` generator has three states: generating `0`, generating `1`, and generating everything after that. This isn't a good fit for an iterator, because iterators have one functional entry point and therefore, we'd have to represent our three states explicitly, perhaps using a [state pattern]:
 
 [state pattern]: https://en.wikipedia.org/wiki/State_pattern
 
 We'll keep it simple:
-
-{:lang="js"}
-~~~~~~~~
+```js
 // Iteration
 let a, b, state = 0;
 
@@ -920,8 +828,7 @@ while (true) {
   89
   144
   ...
-~~~~~~~~
-
+```
 Again, this is not particularly horrendous, but like the recursive example, we're explicitly greenspunning the natural linear state. In a generator, we write "do this, then  this, then this." In an iterator, we have to wrap that up and explicitly keep track of what step we're on.
 
 So we see the same thing: The generation version has state, but it's implicit in JavaScript's linear control flow. Whereas the iteration version must make that state explicit.
@@ -936,24 +843,19 @@ We can write an iterator, but use a generation style of programming. An iterator
 2. We don't `return` values or output them to `console.log`. We "yield" values using the `yield` keyword.
 
 When we invoke the function, we get an iterator object back. Let's start with the degenerate example, the `empty iterator`:[^empty]
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * empty () {};
 
 empty().next()
   //=>
     {"done":true}
-~~~~~~~~
-
+```
 [^empty]: We wrote a *generator declaration*. We can also write `const empty = function * () {}` to bind an anonymous generator to the `empty` keyword, but we don't need to do that here.
 
 When we invoke `empty`, we get an iterator with no elements. This makes sense, because `empty` never yields anything. We call its `.next()` method, but it's done immediately.
 
 Generator functions can take an argument. Let's use that to illustrate `yield`:
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * only (something) {
   yield something;
 };
@@ -961,12 +863,9 @@ function * only (something) {
 only("you").next()
   //=>
     {"done":false, value: "you"}
-~~~~~~~~
-
+```
 Invoking `only("you")` returns an iterator that we can call with `.next()`, and it yields `"you"`. Invoking `only` more than once gives us fresh iterators each time:
-
-{:lang="js"}
-~~~~~~~~
+```js
 only("you").next()
   //=>
     {"done":false, value: "you"}
@@ -974,12 +873,9 @@ only("you").next()
 only("the lonely").next()
   //=>
     {"done":false, value: "the lonely"}
-~~~~~~~~
-
+```
 We can invoke the same iterator twice:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const sixteen = only("sixteen");
 
 sixteen.next()
@@ -989,16 +885,13 @@ sixteen.next()
 sixteen.next()
   //=>
     {"done":true}
-~~~~~~~~
-
+```
 It yields the value of `something`, and then it's done.
 
 ### generators are coroutines
 
 Here's a generator that yields three numbers:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const oneTwoThree = function * () {
   yield 1;
   yield 2;
@@ -1034,8 +927,7 @@ iterator.next()
 iterator.next()
   //=>
     {"done":true}
-~~~~~~~~
-
+```
 This is where generators behave very, very differently from ordinary functions. What happens *semantically*?
 
 0. We call `oneTwoThree()` and get an iterator.
@@ -1066,9 +958,7 @@ This behaviour is not unique to JavaScript, generators are called [coroutines](h
 Instead of thinking of there being on execution context, we can imagine that there are two execution contexts. With an iterator, we can call them the *producer* and the *consumer*. The iterator is the producer, and the code that iterates over it is the consumer. When the consumer calls `.next()`, it "suspends" and the producer starts running. When the producer `yields` a value, the producer suspends and the consumer starts running, taking the value from the result of calling `.next()`.
 
 Of course, generators need not be implemented exactly as coroutines. For example, a "transpiler" might implement `oneTwoThree` as a state machine, a little like this (there is more to generators, but we'll see that later):
-
-{:lang="js"}
-~~~~~~~~
+```js
 const oneTwoThree = function () {
   let state = 'newborn';
 
@@ -1090,8 +980,7 @@ const oneTwoThree = function () {
     }
   }
 };
-~~~~~~~~
-
+```
 But no matter how JavaScript implements it, our mental model is that a generator function returns an iterator, and that when we call `.next()`, it runs until it returns, ends, or yields. If it yields, it suspends its own execution and the consuming code resumes execution, until `.next()` is called again, at which point the iterator resumes its own execution from the point where it yielded.
 
 ### generators and iterables
@@ -1101,8 +990,7 @@ Our generator function `oneTwoThree` is not an iterator. It's a function that re
 If we call our generator function more than once, we get new iterators. As we saw above, we called `oneTwoThree` three times, and each time we got an iterator that begins at `1` and counts to `3`. Recalling the way we wrote ordered collections, we could make a collection that uses a generator function:
 
  {:lang="js"}
- ~~~~~~~~
- const ThreeNumbers = {
+ ``` const ThreeNumbers = {
    [Symbol.iterator]: function * () {
      yield 1;
      yield 2;
@@ -1139,23 +1027,20 @@ If we call our generator function more than once, we get new iterators. As we sa
  iterator.next()
    //=>
      {"done":true}
- ~~~~~~~~
-
+ ```
  Now we can use it in a `for...of` loop, spread it into an array literal, or spread it into a function invocation, because we have written an iterable that uses a generator to return an iterator from its `[Symbol.iterator]` method.
 
  This pattern is encouraged, so much so that JavaScript provides a concise syntax for writing generator methods for objects:
 
  {:lang="js"}
- ~~~~~~~~
- const ThreeNumbers = {
+ ``` const ThreeNumbers = {
    *[Symbol.iterator] () {
      yield 1;
      yield 2;
      yield 3
    }
  }
- ~~~~~~~~
-
+ ```
  This object declares a `[Symbol.iterator]` function that makes it iterable. Because it's declared `*[Symbol.iterator]`, it's a generator instead of an iterator.
 
  So to summarize, `ThreeNumbers` is an object that we've made iterable, by way of writing a *generator* method for `[Symbol.iterator]`.
@@ -1163,9 +1048,7 @@ If we call our generator function more than once, we get new iterators. As we sa
 ### more generators
 
 Generators can produce infinite streams of values:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Numbers = {
   *[Symbol.iterator] () {
     let i = 0;
@@ -1192,12 +1075,9 @@ for (const i of Numbers) {
   9
   10
   ...
-~~~~~~~~
-
+```
 Our `OneTwoThree` example used implicit state to output the numbers in sequence. Recall that we wrote `Fibonacci` using explicit state:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Fibonacci = {
   [Symbol.iterator]: () => {
     let a = 0, b = 1, state = 0;
@@ -1238,12 +1118,9 @@ for (let n of Fibonacci) {
   89
   144
   ...
-~~~~~~~~
-
+```
 And here is the `Fibonacci` ordered collection, implemented with a generator method:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Fibonacci = {
   *[Symbol.iterator] () {
     let a, b;
@@ -1277,14 +1154,11 @@ for (const i of Fibonacci) {
   89
   144
   ...
-~~~~~~~~
-
+```
 We've writing a function that returns an iterator, but we used a generator to do it. And the generator's syntax allows us to use JavaScript's natural management of state instead of constantly rolling our own.
 
 Of course, we could just as easily write a generator function for Fibonacci numbers:
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * fibonacci () {
   let a, b;
 
@@ -1316,14 +1190,11 @@ for (const i of fibonacci()) {
   89
   144
   ...
-~~~~~~~~
-
+```
 ### yielding iterables
 
 Here's a first crack at a function that returns an iterable object for iterating over trees:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const isIterable = (something) =>
   !!something[Symbol.iterator];
 
@@ -1352,14 +1223,11 @@ for (const i of TreeIterable([1, [2, [3, 4], 5]])) {
   3
   4
   5
-~~~~~~~~
-
+```
 We've gone with the full iterable here, a `TreeIterable(iterable)` returns an iterable that treats `iterable` as a tree. It works, but as we've just seen, a function that returns an iterable can often be written much more simply as a generator, rather than a function that returns an iterable object:[^but]
 
 [^but]: There are more complex cases where you want an iterable object, because you want to maintain state in properties or declare helper methods for the generator function, and so forth. But if you can write it as a simple generator, write it as a simple generator.
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * tree (iterable) {
   for (const e of iterable) {
     if (isIterable(e)) {
@@ -1382,27 +1250,21 @@ for (const i of tree([1, [2, [3, 4], 5]])) {
   3
   4
   5
-~~~~~~~~
-
+```
 We take advantage of the `for...of` loop in a plain and direct way: For each element `e`, if it is iterable, treat it as a tree and iterate over it, yielding each of its elements. If `e` is not an iterable, yield `e`.
 
 JavaScript handles the recursion for us using its own execution stack. This is clearly simpler than trying to maintain our own stack and remembering whether we are shifting and unshifting, or pushing and popping.
 
 But while we're here, let's look at one bit of this code:
-
-{:lang="js"}
-~~~~~~~~
+```js
 for (const ee of tree(e)) {
   yield ee;
 }
-~~~~~~~~
-
+```
 These three lines say, in essence, "yield all the elements of `TreeIterable(e)`, in order." This comes up quite often when we have collections that are compounds, collections made from other collections.
 
 Consider this operation on iterables:
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * append (...iterables) {
   for (const iterable of iterables) {
     for (const element of iterable) {
@@ -1426,14 +1288,11 @@ for (const word of lyrics) {
     do
     re
     me
-~~~~~~~~
-
+```
 `append` iterates over a collection of iterables, one element at a time. Things like arrays can be easily catenated, but `append` iterates lazily, so there's no need to construct intermediary results.
 
 Tucked inside of it is the same three-line idiom for yielding each element of an iterable. There is an abbreviation for this, we can use `yield *` to yield all the elements of an iterable:
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * append (...iterables) {
   for (const iterable of iterables) {
     yield * iterable;
@@ -1455,12 +1314,9 @@ for (const word of lyrics) {
     do
     re
     me
-~~~~~~~~
-
+```
 `yield *` yields all of the elements of an iterable, in order. We can use it in `tree`, too:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const isIterable = (something) =>
   !!something[Symbol.iterator];
 
@@ -1485,16 +1341,13 @@ for (const i of tree([1, [2, [3, 4], 5]])) {
   3
   4
   5
-~~~~~~~~
-
+```
 `yield*` is handy when writing generator functions that operate on or create iterables.
 
 ### rewriting iterable operations
 
 Now that we know about iterables, we can rewrite our iterable operations as generators. Instead of:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const mapWith = (fn, iterable) =>
   ({
     [Symbol.iterator]: () => {
@@ -1509,25 +1362,19 @@ const mapWith = (fn, iterable) =>
       }
     }
   });
-~~~~~~~~
-
+```
 We can write:
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * mapWith (fn, iterable) {
   for (const element of iterable) {
     yield fn(element);
   }
 }
-~~~~~~~~
-
+```
 No need to explicitly construct an object that has a `[Symbol.iterator]` method. No need to return an object with a `.next()` method. No need to fool around with `{done}` or `{value}`, just `yield` values until we're done.
 
 We can do the same thing with our other operations like `filterWith` and `untilWith`. Here're our iterable methods rewritten as generators:
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * mapWith(fn, iterable) {
   for (const element of iterable) {
     yield fn(element);
@@ -1546,12 +1393,9 @@ function * untilWith (fn, iterable) {
     yield fn(element);
   }
 }
-~~~~~~~~
-
+```
 `first` works directly with iterators and remains unchanged, but  `rest` can be rewritten as a generator:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const first = (iterable) =>
   iterable[Symbol.iterator]().next().value;
 
@@ -1561,8 +1405,7 @@ function * rest (iterable) {
   iterator.next();
   yield * iterator;
 }
-~~~~~~~~
-
+```
 ### Summary
 
 A generator is a function that is defined with `function *` and uses `yield` (or `yield *`) to generate values. Using a generator instead of writing an iterator object that has a `.next()` method allows us to write code that can be much simpler for cases like recursive iterations or state patterns. And we don't need to worry about wrapping our values in an object with `.done` and `.value` properties.
@@ -1590,9 +1433,7 @@ Object-oriented collections should definitely have methods for mapping, reducing
 Composing an iterable with a `mapIterable` method cleaves the responsibility for knowing how to map from the fiddly bits of how a linked list differs from a stack. And if we want to create convenience methods, we can reuse common pieces.
 
 Here is `LazyCollection`, a mixin we can use with any ordered collection that is also an iterable:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const extend = function (consumer, ...providers) {
   for (let i = 0; i < providers.length; ++i) {
     const provider = providers[i];
@@ -1740,12 +1581,9 @@ const LazyCollection = {
     }, LazyCollection);
   }
 }
-~~~~~~~~
-
+```
 To use `LazyCollection`, we mix it into an any iterable object. For simplicity, we'll show how to mix it into `Numbers` and `Pair`. But it can also be mixed into prototypes (a/k/a "classes"), traits, or other OO constructs:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Numbers = Object.assign({
   [Symbol.iterator]: () => {
     let n = 0;
@@ -1861,16 +1699,13 @@ Pair.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
   .reduce((seed, element) => seed + element, 0)
 
 //=> 220
-~~~~~~~~
-
+```
 ### lazy collection operations
 
 "Laziness" is a very pejorative word when applied to people. But it can be an excellent strategy for efficiency in algorithms. Let's be precise: *Laziness* is the characteristic of not doing any work until you know you need the result of the work.
 
 Here's an example. Compare these two:
-
-{:lang="js"}
-~~~~~~~~
+```js
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   .map((x) => x * x)
   .filter((x) => x % 2 == 0)
@@ -1880,8 +1715,7 @@ Pair.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
   .map((x) => x * x)
   .filter((x) => x % 2 == 0)
   .reduce((seed, element) => seed + element, 0)
-~~~~~~~~
-
+```
 Both expressions evaluate to `220`. And the array is faster in practice, because it is a built-in data type that performs its work in the engine, while the linked list does its work in JavaScript.
 
 But it's still illustrative to dissect something important: Array's `.map` and `.filter` methods gather their results into new arrays. Thus, calling `.map.filter.reduce` produces two temporary arrays that are discarded when `.reduce` performs its final computation.
@@ -1889,25 +1723,20 @@ But it's still illustrative to dissect something important: Array's `.map` and `
 Whereas the `.map` and `.filter` methods on `Pair` work with iterators. They produce small iterable objects that refer back to the original iteration. This reduces the memory footprint. When working with very large collections and many operations, this can be important.
 
 The effect is even more pronounced when we use methods like `first`, `until`, or `take`:
-
-{:lang="js"}
-~~~~~~~~
+```js
 Stack.from([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9,
             10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
             20, 21, 22, 23, 24, 25, 26, 27, 28, 29])
   .map((x) => x * x)
   .filter((x) => x % 2 == 0)
   .first()
-~~~~~~~~
-
+```
 This expression begins with a stack containing 30 elements. The top two are `29` and `28`. It maps to the squares of all 30 numbers, but our code for mapping an iteration returns an iterable that can iterate over the squares of our numbers, not an array or stack of the squares. Same with `.filter`, we get an iterable that can iterate over the even squares, but not an actual stack or array.
 
 Finally, we take the first element of that filtered, squared iterable and now JavaScript actually iterates over the stack's elements, and it only needs to square two of those elements, `29` and `28`, to return the answer.
 
 We can confirm this:
-
-{:lang="js"}
-~~~~~~~~
+```js
 Stack.from([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9,
             10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
             20, 21, 22, 23, 24, 25, 26, 27, 28, 29])
@@ -1927,12 +1756,9 @@ Stack.from([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9,
   squaring 28
   filtering 784
   784
-~~~~~~~~
-
+```
 If we write the almost identical thing with an array, we get a different behaviour:
-
-{:lang="js"}
-~~~~~~~~
+```js
 [ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9,
  10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
  20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
@@ -1961,14 +1787,11 @@ If we write the almost identical thing with an array, we get a different behavio
   filtering 784
   filtering 841
   784
-~~~~~~~~
-
+```
 Arrays copy-on-read, so every time we perform a map or filter, we get a new array and perform all the computations. This might be expensive.
 
 You recall we briefly touched on the idea of infinite collections? Let's make iterable numbers. They *have* to be lazy, otherwise we couldn't write things like:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Numbers = Object.assign({
   [Symbol.iterator]: () => {
     let n = 0;
@@ -1987,16 +1810,13 @@ const firstCubeOver1234 =
     .first()
 
 //=> 1331
-~~~~~~~~
-
+```
 Balanced against their flexibility, our "lazy collections" use structure sharing. If we mutate a collection after taking an iterable, we might get an unexpected result. This is why "pure" functional languages like Haskell combine lazy semantics with immutable collections, and why even "impure" languages like Clojure emphasize the use of immutable collections.
 
 ### eager collections
 
 An *eager* collection, like an array, returns a collection of its own type from each of the methods. We can make an eager collection out of any collection that is *gatherable*, meaning it has a `.from` method:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const extend = function (consumer, ...providers) {
   for (let i = 0; i < providers.length; ++i) {
     const provider = providers[i];
@@ -2093,12 +1913,9 @@ const EagerCollection = (gatherable) =>
       );
     }
   });
-~~~~~~~~
-
+```
 Here is our `Pair` implementation. `Pair` is gatherable, because it implements `.from()`. We mix `EagerCollection(Pair)` into it, and this gives it all of our collection methods, which each method returning a new list of pairs:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const EMPTY = {
   isEmpty: () => true
 };
@@ -2149,8 +1966,7 @@ Pair.from([1, 2, 3, 4, 5]).map(x => x * 2)
                     }
             }
     }
-~~~~~~~~
-## Interlude: The Carpenter Interviews for a Job
+```## Interlude: The Carpenter Interviews for a Job
 
 "The Carpenter" was a JavaScript programmer, well-known for a meticulous attention to detail and love for hand-crafted, exquisitely joined code. The Carpenter normally worked through personal referrals, but from time to time a recruiter would slip through his screen. One such recruiter was Bob Plissken. Bob was well-known in the Python community, but his clients often needed experience with other languages.
 
@@ -2175,9 +1991,7 @@ Christine intoned the question, as if by rote:
 Christine interrupted. "To save time, we have written a template of the solution for you in ECMASCript 2015 notation. Fill in the blanks. Your code should not presume anything about the game-board's size or contents, only that it is given an arrow every time though the while loop. You may use [babeljs.io](http://babeljs.io), or [ES6Fiddle](http://www.es6fiddle.net) to check your work. "
 
 Christine quickly scribbled on the whiteboard:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const Game = (size = 8) => {
 
   // initialize the board
@@ -2213,8 +2027,7 @@ const Game = (size = 8) => {
   }
   // ???
 };
-~~~~~~~~
-
+```
 "What," Christine asked, "Do you write in place of the three `// ???` placeholders to determine whether the game halts?"
 
 ### the carpenter's solution
@@ -2226,9 +2039,7 @@ And just as companies often pick a problem that gives them broad latitude for di
 Bob had, in fact, warned The Carpenter that "Thing" liked to ask either or both of two questions: Determine how to detect a loop in a linked list, and determine whether the chequerboard game would halt. To save time, The Carpenter had prepared the same answer for both questions.
 
 The Carpenter coughed softly, then began. "To begin with, I'll transform a game into an iterable that generates arrows, using the 'Starman' notation for generators. I'll refactor a touch to make things clearer, for example I'll extract the board to make it easier to test:"
-
-{:lang="js"}
-~~~~~~~~
+```js
 const MOVE = {
   "←": ([x, y]) => [x - 1, y],
   "→": ([x, y]) => [x + 1, y],
@@ -2273,14 +2084,11 @@ const Game = ({board, position}) => {
     }
   });
 };
-~~~~~~~~
-
+```
 "Now that we have an iterable, we can transform the iterable of arrows into an iterable of positions." The Carpenter sketched quickly. "We want to take the arrows and convert them to positions. For that, we'll map the Game iterable to positions. A `statefulMap` is a lazy map that preserves state from iteration to iteration. That's what we need, because we need to know the current position to map each move to the next position."
 
 "This is a standard idiom we can obtain from libraries, we don't reinvent the wheel. I'll show it here for clarity:"
-
-{:lang="js"}
-~~~~~~~~
+```js
 const statefulMapWith = (fn, seed, iterable) =>
   ({
     *[Symbol.iterator] () {
@@ -2293,12 +2101,9 @@ const statefulMapWith = (fn, seed, iterable) =>
       }
     }
   });
-~~~~~~~~
-
+```
 "Armed with this, it's straightforward to map an iterable of directions to an iterable of strings representing positions:"
-
-{:lang="js"}
-~~~~~~~~
+```js
 const positionsOf = (game) =>
   statefulMapWith(
     (position, direction) => {
@@ -2308,8 +2113,7 @@ const positionsOf = (game) =>
     },
     [0, 0],
     game);
-~~~~~~~~
-
+```
 The Carpenter reflected. "Having turned our game loop into an iterable, we can now see that our problem of whether the game terminates is isomorphic to the problem of detecting whether the positions given ever repeat themselves: If the chequer ever returns to a position it has previously visited, it will cycle endlessly."
 
 "We could draw positions as nodes in a graph, connected by arcs representing the arrows. Detecting whether the game terminates is equivalent to detecting whether the graph contains a cycle."
@@ -2317,9 +2121,7 @@ The Carpenter reflected. "Having turned our game loop into an iterable, we can n
 ![The Tortoise and the Hare](images/tortoise-hare.jpg)
 
 "There's an old joke that a mathematician is someone who will take a five-minute problem, then spend an hour proving it is equivalent to another problem they have already solved. I approached this question in that spirit. Now that we have created an iterable of values that can be compared with `===`, I can show you this function:"
-
-{:lang="js"}
-~~~~~~~~
+```js
 const tortoiseAndHare = (iterable) => {
   const hare = iterable[Symbol.iterator]();
   let hareResult = (hare.next(), hare.next());
@@ -2346,16 +2148,13 @@ const tortoiseAndHare = (iterable) => {
   }
   return false;
 };
-~~~~~~~~
-
+```
 "A long time ago," The Carpenter explained, "Someone asked me a question in an interview. I have never forgotten the question, or the general form of the solution. The question was, *Given a linked list, detect whether it contains a cycle. Use constant space.*"
 
 "This is, of course, the most common solution, it is [Floyd's cycle-finding algorithm](https://en.wikipedia.org/wiki/Cycle_detection#Tortoise_and_hare), although there is some academic dispute as to whether Robert Floyd actually discovered it or was misattributed by Knuth."
 
 "Thus, the solution to the game problem is:"
-
-{:lang="js"}
-~~~~~~~~
+```js
 const terminates = (game) =>
   tortoiseAndHare(positionsOf(game))
 
@@ -2374,7 +2173,7 @@ terminates(Game({board: test, position: [0, 3]}))
   //=> false
 terminates(Game({board: test, position: [3, 3]}))
   //=> false
-~~~~~~~~
+```
 
 "This solution makes use of iterables and a single utility function, `statefulMapWith`. It also cleanly separates the mechanics of the game from the algorithm for detecting cycles in a graph."
 
@@ -2405,9 +2204,7 @@ A few drinks later, The Carpenter was telling his Thing story and an engineer na
 "The `hasCycle` function, a/k/a Tortoise and Hare, requires two separate iterators to do its job. Whereas the problem as stated involves a single stream of directions. You're essentially calling for the player to clone themselves and call out the directions in parallel."
 
 The Carpenter thought about this for a moment. "Kidu, you're right, that's a fantastic observation. I should have used a Teleporting Tortoise!"
-
-{:lang="js"}
-~~~~~~~~
+```js
 // implements Teleporting Tortoise
 // cycle detection algorithm.
 const hasCycle = (iterable) => {
@@ -2430,12 +2227,9 @@ const hasCycle = (iterable) => {
   }
   return false;
 };
-~~~~~~~~
-
+```
 Kidu shrugged. "You know, the requirement asked for a finite space algorithm, not a constant state algorithm. Doesn't it make sense to go with a faster finite space algorithm? There's no benefit to constant space if finite space is sufficient."
-
-{:lang="js"}
-~~~~~~~~
+```js
 const hasCycle = (orderedCollection) => {
   const visited = new Set();
 
@@ -2447,8 +2241,7 @@ const hasCycle = (orderedCollection) => {
   }
   return false;
 };
-~~~~~~~~
-
+```
 The Carpenter stared at Kidu's solution. "I guess," he allowed, "It isn't always necessary to make a solution so awesome it would please the Ghosts of Mars."
 
 ## Interactive Generators
@@ -2567,16 +2360,13 @@ Let's use an array. So this:
        |   |  
 
 Will be represented as:
-
-{:lang="js"}
-~~~~~~~~
+```js
 [
   'o', 'x', ' ',
   ' ', ' ', ' ',
   ' ', ' ', ' '
 ]
-~~~~~~~~
-
+```
 And this:
 
      o | x |   
@@ -2586,20 +2376,15 @@ And this:
      o |   |  
      
 Will be represented as:
-
-{:lang="js"}
-~~~~~~~~
+```js
 [
   'o', 'x', ' ',
   'x', ' ', ' ',
   'o', ' ', ' '
 ]
-~~~~~~~~
-
+```
 We can use a POJO to make a map from positions to moves. We'll use the `[]` notation for keys, it allows us to use any expression as a key, and JavaScript will convert it to a string. So if we write:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const moveLookupTable = {
   [[
     ' ', ' ', ' ',
@@ -2644,12 +2429,9 @@ const moveLookupTable = {
   
   // ...
 };
-~~~~~~~~
-
+```
 We get:
-
-{:lang="js"}
-~~~~~~~~
+```js
 {
   "o,x, , , , , , , ":6,
   "o,x,x, , , ,o, , ":3,
@@ -2659,40 +2441,31 @@ We get:
   "o,x, , , , ,o,x, ":3,
   "o,x, , , , ,o, ,x":3
 }
-~~~~~~~~
-
+```
 And if we want to look up what move to make, we can write:
-
-{:lang="js"}
-~~~~~~~~
+```js
 moveLookupTable[[
   'o', 'x', ' ',
   ' ', ' ', ' ',
   'o', 'x', ' '
 ]]
   //=> 3
-~~~~~~~~
-
+```
 And from there, a stateless function to play naughts-and-crosses is trivial:
-
-{:lang="js"}
-~~~~~~~~
+```js
 statelessNaughtsAndCrosses([
   'o', 'x', ' ',
   ' ', ' ', ' ',
   'o', 'x', ' '
 ])
   //=> 3
-~~~~~~~~
-
+```
 ### representing naughts and crosses as a stateful function
 
 Our `statelessNaughtsAndCrosses` function pushes the work of tracking the game's state onto us, the player. What if we want to exchange moves with the function? In that case, we need a stateful function. Our "API" will work like this: When we want a new game, we'll call a function that will return a game function, We'll call the game function repeatedly, passing our moves, and get the opponent's moves from it.
 
 Something like this:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const aNaughtsAndCrossesGame = statefulNaughtsAndCrosses();
 
 // our opponent makes the first move
@@ -2706,12 +2479,9 @@ aNaughtsAndCrossesGame(1)
 // then we move, and get its next move back
 aNaughtsAndCrossesGame(4)
   //=> 3
-~~~~~~~~
-
+```
 We can build this out of our `statelessNaughtsAndCrosses` function:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const statefulNaughtsAndCrosses = () => {
   const state = [
     ' ', ' ', ' ',
@@ -2745,8 +2515,7 @@ aNaughtsAndCrossesGame(1)
 // then we move, and get its next move back
 aNaughtsAndCrossesGame(4)
   //=> 3
-~~~~~~~~
-
+```
 Let's recap what we have: We have a stateful function, but we built it by wrapping a stateless function in a function that updates state based on the moves we provide. The state is encoded entirely in data.
 
 ### this seems familiar
@@ -2756,9 +2525,7 @@ When we looked at [generators](#generating-iterables), we saw that some iterator
 We've done almost the exact same thing here with our naughts and crosses game. A game like this is absolutely a state machine, and we've explicitly coded those states into the lookup table. Which leads us to wonder: Is there a way to encode those states *implicitly*, in JavaScript control flow?
 
 If we were in full control of the interaction, it would be easy to encode the game play as a decision tree instead of as a lookup table. For example, we could do this in a browser:
-
-{:lang="js"}
-~~~~~~~~
+```js
 function browserNaughtsAndCrosses () {
   const x1 = parseInt(prompt('o plays 0, where does x play?'));
   switch (x1) {
@@ -2795,8 +2562,7 @@ function browserNaughtsAndCrosses () {
     // ...
   }
 }
-~~~~~~~~
-
+```
 Naughts and crosses is simple enough that the lookup function seems substantially simpler, in part because linear code doesn't represent trees particularly well. But we can clearly see that if we wanted to, we could represent the state of the program implicitly in a decision tree.
 
 However, our solution inverts the control. We aren't calling our function with moves, it's calling us. With iterators, we wrote a generator function using `function *`, and then used `yield` to yield values while maintaining the implicit state of the generator's control flow.
@@ -2808,9 +2574,7 @@ Can we do the same thing here? At first glance, no. How do we get the player's m
 So far, we have called iterators (and generators) with `.next()`. But what if we pass a value to `.next()`? If we could do that, a generator function that played naughts and crosses would look like this:
 
 If it *was* possible, how would it work? 
-
-{:lang="js"}
-~~~~~~~~
+```js
 function* generatorNaughtsAndCrosses () {
   const x1 = yield 0;
   switch (x1) {
@@ -2849,12 +2613,9 @@ function* generatorNaughtsAndCrosses () {
 }
 
 const aNaughtsAndCrossesGame = generatorNaughtsAndCrosses();
-~~~~~~~~
-
+```
 We can then get the first move by calling `.next()`. Thereafter, we call `.next(...)` and pass in our moves (The very first call has to be `.next()` without any arguments, because the generator hasn't started yet. If we wanted to pass some state to the generator before it begins, we'd do that with parameters.):
-
-{:lang="js"}
-~~~~~~~~
+```js
 aNaughtsAndCrossesGame.next().value
   //=> 0
   
@@ -2866,8 +2627,7 @@ aNaughtsAndCrossesGame.next(3).value
   
 aNaughtsAndCrossesGame.next(7).value
   //=> 4  
-~~~~~~~~
-
+```
 Our generator function maintains state implicitly in its control flow, but returns an iterator that we call, it doesn't call us. It isn't a collection, it has no meaning if we try to spread it into parameters or as the subject of a `for...of` block.
 
 But the generator function allows us to maintain state implicitly. And sometimes, we want to use implicit state instead of explicitly storing state in our data.
@@ -2883,9 +2643,7 @@ Again, the salient difference is that an "interactive" generator is stateful, an
 Here are the operations we've defined on Iterables. As discussed, they preserve the collection semantics of the iterable they are given:
 
 ### operations that transform one iterable into another
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * mapWith(fn, iterable) {
   for (const element of iterable) {
     yield fn(element);
@@ -2932,12 +2690,9 @@ function * take (numberToTake, iterable) {
     if (!done) yield value;
   }
 }
-~~~~~~~~
-
+```
 ### operations that compose two or more iterables into an iterable
-
-{:lang="js"}
-~~~~~~~~
+```js
 function * zip (...iterables) {
   const iterators = iterables.map(i => i[Symbol.iterator]());
 
@@ -2963,19 +2718,13 @@ function * zipWith (zipper, ...iterables) {
     yield zipper(...values);
   }
 };
-~~~~~~~~
-
+```
 Note: `zip` is also the following special case of `zipWith`:
-
-{:lang="js"}
-~~~~~~~~
+```js
 const zip = callFirst(zipWith, (...values) => values);
-~~~~~~~~
-
+```
 ### operations that transform an iterable into a value
-
-{:lang="js"}
-~~~~~~~~
+```js
 const reduceWith = (fn, seed, iterable) => {
   let accumulator = seed;
 
@@ -2987,12 +2736,9 @@ const reduceWith = (fn, seed, iterable) => {
 
 const first = (iterable) =>
   iterable[Symbol.iterator]().next().value;
-~~~~~~~~
-
+```
 ### memoizing an iterable
-
-{:lang="js"}
-~~~~~~~~
+```js
 function memoize (generator) {
   const memos = {},
         iterators = {};
@@ -3022,4 +2768,4 @@ function memoize (generator) {
     }
   }
 }
-~~~~~~~~
+```
