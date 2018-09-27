@@ -988,9 +988,8 @@ But no matter how JavaScript implements it, our mental model is that a generator
 Our generator function `oneTwoThree` is not an iterator. It's a function that returns an iterator when we invoke it. We write the function to `yield` values instead of `return` a single value, and JavaScript takes care of turning this into an object with a `.next()` function we can call.
 
 If we call our generator function more than once, we get new iterators. As we saw above, we called `oneTwoThree` three times, and each time we got an iterator that begins at `1` and counts to `3`. Recalling the way we wrote ordered collections, we could make a collection that uses a generator function:
-
- {:lang="js"}
- ``` const ThreeNumbers = {
+ ```js 
+ const ThreeNumbers = {
    [Symbol.iterator]: function * () {
      yield 1;
      yield 2;
@@ -1031,9 +1030,8 @@ If we call our generator function more than once, we get new iterators. As we sa
  Now we can use it in a `for...of` loop, spread it into an array literal, or spread it into a function invocation, because we have written an iterable that uses a generator to return an iterator from its `[Symbol.iterator]` method.
 
  This pattern is encouraged, so much so that JavaScript provides a concise syntax for writing generator methods for objects:
-
- {:lang="js"}
- ``` const ThreeNumbers = {
+ ```js
+ const ThreeNumbers = {
    *[Symbol.iterator] () {
      yield 1;
      yield 2;
