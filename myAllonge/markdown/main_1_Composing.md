@@ -2382,10 +2382,8 @@ JavaScript would apply `fn` to every element. If `array` was very large, and `fn
 Please note that unlike most of the other functions discussed in this book, iterators are *stateful*. There are some important implications of stateful functions. One is that while functions like `take(...)` appear to create an entirely new iterator, in reality they return a decorated reference to the original iterator. So as you traverse the new decorator, you're changing the state of the original!
 
 For all intents and purposes, once you pass an iterator to a function, you can expect that you no longer "own" that iterator, and that its state either has changed or will change.
+
 ## Making Data Out Of Functions
-
-![Coffee served at the CERN particle accelerator](images/cern-coffee.jpg)
-
 In our code so far, we have used arrays and objects to represent the structure of data, and we have extensively used the ternary operator to write algorithms that terminate when we reach a base case.
 
 For example, this `length` function uses a functions to bind values to names, POJOs to structure nodes, and the ternary function to detect the base case, the empty list.
