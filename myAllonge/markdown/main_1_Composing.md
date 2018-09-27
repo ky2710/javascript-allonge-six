@@ -2093,7 +2093,7 @@ const sumFoldable = (folder) => folder((a, b) => a + b, 0);
 sumFoldable(foldTree([1, [4, [9, 16]], 25]))
   //=> 55
 ```
-We've found another way to express the principle of separating traversing a data structure from the operation we want to perform on that data structure, we've completely separated the knowledge of how to sum from the knowledge of how to fold an array or tree (or anything else, really).
+We've found another way to express *the principle of separating* **traversing a data structure** from **the operation we want to perform on that data structure,** [we've completely separated **the knowledge of how to sum** from **the knowledge of how to fold an array or tree** (or anything else, really).]()
 
 ### iterating
 
