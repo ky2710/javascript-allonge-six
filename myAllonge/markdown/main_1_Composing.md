@@ -810,10 +810,8 @@ const [first, second = "two"] = ["primus", "secundus"];
   //=> "primus . secundus"
 ```
 How very useful: defaults can be supplied for destructuring assignments, just like defaults for parameters.
-## Garbage, Garbage Everywhere
 
-![Garbage Day](images/garbage.jpg)
-    
+## Garbage, Garbage Everywhere
 We have now seen how to use [Tail Calls](#tail) to execute `mapWith` in constant space:
 ```js
 const mapWith = (fn, [first, ...rest], prepend = []) =>
