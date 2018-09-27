@@ -619,7 +619,7 @@ Pair1.from(Squares)
 ```
 ### summary
 
-Iterators are a JavaScript feature that allow us to separate the concerns of how to iterate over a collection from what we want to do with the elements of a collection. *Iterable* ordered collections can be iterated over or gathered into another collection.
+Iterators are a JavaScript feature that allow us to ***separate the concerns*** of **how to iterate over a collection** from **what we want to do with the elements of a collection**. *Iterable* ordered collections can be iterated over or gathered into another collection.
 
 Separating concerns with iterators speaks to JavaScript's fundamental nature: It's a language that *wants* to compose functionality out of small, singe-responsibility pieces, whether those pieces are functions or objects built out of functions.
 
