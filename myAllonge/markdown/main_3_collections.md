@@ -115,7 +115,7 @@ This is a good thing.
 
 Iteration for functions and objects has been around for many, many decades. For simple linear collections like arrays, linked lists, stacks, and queues, functional iterators are the simplest and easiest way to implement iterators.
 
-In programs involving large collections of objects, it can be handy to implement iterators as objects, rather than functions. The mechanics of iterating can then be factored using the same tools that are used to factor the mechanics of all other objects in the system.
+In programs involving large collections of objects, it can be handy to implement **iterators as objects, rather than functions.** The mechanics of iterating can then be factored using the same tools that are used to factor the mechanics of all other objects in the system.
 
 Fortunately, an iterator object is almost as simple as an iterator function. Instead of having a function that you call to get the next element, you have an object with a `.next()` method.
 
