@@ -800,7 +800,7 @@ const [first, second = "two"] = ["primus", "secundus"];
 How very useful: defaults can be supplied for destructuring assignments, just like defaults for parameters.
 
 ## Garbage, Garbage Everywhere
-We have now seen how to use [Tail Calls](#tail) to execute `mapWith` in constant space:
+We have now seen how to use [Tail Calls](#tail-calls-and-default-arguments) to execute `mapWith` in constant space:
 ```js
 const mapWith = (fn, [first, ...rest], prepend = []) =>
   first === undefined
@@ -891,7 +891,7 @@ Getting back to JavaScript now, when we write `[first, ...rest]` to gather or sp
 
 That being said, it is easy to understand and helps us grasp how literals and destructuring works, and how recursive algorithms ought to mirror the self-similarity of the data structures they manipulate. And so it is today that languages like JavaScript have arrays that are slow to split into the equivalent of a `car`/`cdr` pair, but instructional examples of recursive programs still have echoes of their Lisp origins.
 
-We'll look at linked lists again when we look at [Plain Old JavaScript Objects](#pojos).
+We'll look at linked lists again when we look at [Plain Old JavaScript Objects](#plain-old-javascript-objects).
 
 ### so why arrays
 
@@ -959,7 +959,7 @@ Objects use `[]` to access the values by name, using a string:
       //=> 14
 
 Values contained within an object work just like values contained within an array, we access them by reference to the original:
-
+```js
     const unique = () => [],
           x = unique(),
           y = unique(),
@@ -968,37 +968,37 @@ Values contained within an object work just like values contained within an arra
 
     o['a'] === x && o['b'] === y && o['c'] === z
       //=> true
-
+```
 Names needn't be alphanumeric strings. For anything else, enclose the label in quotes:
-
+```js
     { 'first name': 'reginald', 'last name': 'lewis' }['first name']
       //=> 'reginald'
-
+```
 If the name is an alphanumeric string conforming to the same rules as names of variables, there's a simplified syntax for accessing the values:
-
+```js
     const date = { year: 2012, month: 6, day: 14 };
 
     date['day'] === date.day
       //=> true
-
+```
 Expressions can be used for keys as well. The syntax is to enclose the key's expression in `[` and `]`:
-
+```js
     {
       ["p" + "i"]: 3.14159265
     }
       //=> {"pi":3.14159265}
-
+```
 All containers can contain any value, including functions or other containers, like a fat arrow function:
-
+```js
     const Mathematics = {
       abs: (a) => a < 0 ? -a : a
     };
 
     Mathematics.abs(-5)
       //=> 5
-
+```
 Or proper functions:
-
+```js
     const SecretDecoderRing = {
       encode: function (plaintext) {
         return plaintext
@@ -1017,9 +1017,9 @@ Or proper functions:
           .join('');
       }
     }
-
+```
 Or named function expressions:
-
+```js
     const SecretDecoderRing = {
       encode: function encode (plaintext) {
         return plaintext
@@ -1038,9 +1038,9 @@ Or named function expressions:
           .join('');
       }
     }
-
+```
 It is very common to associate named function expressions with keys in objects, and there is a "compact method syntax" for binding named function expressions to keywords:
-
+```js
     const SecretDecoderRing = {
       encode (plaintext) {
         return plaintext
@@ -1059,7 +1059,7 @@ It is very common to associate named function expressions with keys in objects, 
           .join('');
       }
     }
-
+```
 (There are some other technical differences between binding a named function expression and using compact method syntax, but they are not relevant here. We will generally prefer compact method syntax whenever we can.)
 
 ### destructuring objects
@@ -1151,7 +1151,7 @@ const length = (node, delayed = 0) =>
 length(OneTwoThree)
   //=> 3
 ```
-What about mapping? Well, let's start with the simplest possible thing, making a *copy* of a list. As we saw above, and discussed in [Garbage, Garbage Everywhere](#garbage), it is fast to iterate forward through a linked list. What isn't fast is naïvely copying a list:
+What about mapping? Well, let's start with the simplest possible thing, making a *copy* of a list. As we saw above, and discussed in [Garbage, Garbage Everywhere](#garbage-garbage-everywhere), it is fast to iterate forward through a linked list. What isn't fast is naïvely copying a list:
 ```js
 const slowcopy = (node) =>
   node === EMPTY
@@ -1211,60 +1211,60 @@ Mind you, this is still much, much faster than making partial copies of arrays. 
 
 ## Mutation
 In JavaScript, almost every type of value can *mutate*. Their identities stay the same, but not their structure. Specifically, arrays and objects can mutate. Recall that you can access a value from within an array or an object using `[]`. You can reassign a value using `[] =`:
-
+```js
     const oneTwoThree = [1, 2, 3];
     oneTwoThree[0] = 'one';
     oneTwoThree
       //=> [ 'one', 2, 3 ]
-
+```
 You can even add a value:
-
+```js
     const oneTwoThree = [1, 2, 3];
     oneTwoThree[3] = 'four';
     oneTwoThree
       //=> [ 1, 2, 3, 'four' ]
-
+```
 You can do the same thing with both syntaxes for accessing objects:
-
+```js
     const name = {firstName: 'Leonard', lastName: 'Braithwaite'};
     name.middleName = 'Austin'
     name
       //=> { firstName: 'Leonard',
       #     lastName: 'Braithwaite',
       #     middleName: 'Austin' }
-
+```
 We have established that JavaScript's semantics allow for two different bindings to refer to the same value. For example:
-
+```js
     const allHallowsEve = [2012, 10, 31]
     const halloween = allHallowsEve;  
-      
+```      
 Both `halloween` and `allHallowsEve` are bound to the same array value within the local environment. And also:
-
+```js
     const allHallowsEve = [2012, 10, 31];
     (function (halloween) {
       // ...
     })(allHallowsEve);
-
+```
 There are two nested environments, and each one binds a name to the exact same array value. In each of these examples, we have created two *aliases* for the same value. Before we could reassign things, the most important point about this is that the identities were the same, because they were the same value.
 
 This is vital. Consider what we already know about shadowing:
-
+```js
     const allHallowsEve = [2012, 10, 31];
     (function (halloween) {
       halloween = [2013, 10, 31];
     })(allHallowsEve);
     allHallowsEve
       //=> [2012, 10, 31]
-      
+```      
 The outer value of `allHallowsEve` was not changed because all we did was rebind the name `halloween` within the inner environment. However, what happens if we *mutate* the value in the inner environment?
-
+```js
     const allHallowsEve = [2012, 10, 31];
     (function (halloween) {
       halloween[0] = 2013;
     })(allHallowsEve);
     allHallowsEve
       //=> [2013, 10, 31]
-      
+```      
 This is different. We haven't rebound the inner name to a different variable, we've mutated the value that both bindings share. Now that we've finished with mutation and aliases, let's have a look at it.
       
 > JavaScript permits the reassignment of new values to existing bindings, as well as the reassignment and assignment of new values to elements of containers such as arrays and objects. Mutating existing objects has special implications when two bindings are aliases of the same value.
@@ -1277,7 +1277,7 @@ Mutation is a surprisingly complex subject. It is possible to compute anything w
 
 [Haskell]: https://en.wikipedia.org/wiki/Haskell_(programming_language)
 
-One pattern many people follow is to be liberal with mutation when constructing data, but conservative with mutation when consuming data. Let's recall linked lists from [Plain Old JavaScript Objects](#pojos). While we're executing the `mapWith` function, we're constructing a new linked list. By this pattern, we would be happy to use mutation to construct the list while running `mapWith`.
+One pattern many people follow is to be liberal with mutation when constructing data, but conservative with mutation when consuming data. Let's recall linked lists from [Plain Old JavaScript Objects](#plain-old-javascript-objects). While we're executing the `mapWith` function, we're constructing a new linked list. By this pattern, we would be happy to use mutation to construct the list while running `mapWith`.
 
 But after returning the new list, we then become conservative about mutation. This also makes sense: Linked lists often use structure sharing. For example:
 ```js
@@ -1391,7 +1391,8 @@ const mapWith = (fn, node, head = null, tail = null) => {
 }
 
 mapWith((x) => 1.0 / x, OneToFive)
-  //=> {"first":1,"rest":{"first":0.5,"rest":{"first":0.3333333333333333,"rest":{"first":0.25,"rest":{"first":0.2,"rest":{}}}}}}
+  //=> {"first":1,"rest":{"first":0.5
+  //    ,"rest":{"first":0.3333333333333333,"rest":{"first":0.25,"rest":{"first":0.2,"rest":{}}}}}}
 ```
 ## Reassignment
 
@@ -1416,7 +1417,7 @@ By default, JavaScript permits us to *rebind* new values to names bound with a p
       //=> true
 
 The line `n = n - 2;` *rebinds* a new value to the name `n`. We will discuss this at much greater length in [Reassignment](#reassignment), but long before we do, let's try a similar thing with a name bound using `const`. We've already bound `evenStevens` using `const`, let's try rebinding it:
-
+```js
     evenStevens = (n) => {
       if (n === 0) {
         return true;
@@ -1429,7 +1430,7 @@ The line `n = n - 2;` *rebinds* a new value to the name `n`. We will discuss thi
       }
     }
       //=> ERROR, evenStevens is read-only
-
+```
 JavaScript does not permit us to rebind a name that has been bound with `const`. We can *shadow* it by using `const` to declare a new binding with a new function or block scope, but we cannot rebind a name that was bound with `const` in an existing scope.
 
 Rebinding parameters is usually avoided, but what about rebinding names we declare within a function? What we want is a statement that works like `const`, but permits us to rebind variables. JavaScript has such a thing, it's called `let`:
@@ -1443,7 +1444,7 @@ age
 We took the time to carefully examine what happens with bindings in environments. Let's take the time to explore what happens with reassigning values to variables. The key is to understand that we are rebinding a different value to the same name in the same environment.
 
 So let's consider what happens with a shadowed variable:
-
+```js
     (() => {
       let age = 49;
 
@@ -1453,21 +1454,21 @@ So let's consider what happens with a shadowed variable:
       return age;
     })()
       //=> 49
-
+```
 Using `let` to bind `50` to age within the block does not change the binding of `age` in the outer environment because the binding of `age` in the block shadows the binding of `age` in the outer environment, just like `const`. We go from:
-
+```js
     {age: 49, '..': global-environment}
-
+```
 To:
-
+```js
     {age: 50, '..': {age: 49, '..': global-environment}}
-
+```
 Then back to:
-
+```js
     {age: 49, '..': global-environment}
-
+```
 However, if we don't shadow `age` with `let`, reassigning within the block changes the original:
-
+```js
     (() => {
       let age = 49;
 
@@ -1477,7 +1478,7 @@ However, if we don't shadow `age` with `let`, reassigning within the block chang
       return age;
     })()
       //=> 50
-
+```
 Like evaluating variable labels, when a binding is rebound, JavaScript searches for the binding in the current environment and then each ancestor in turn until it finds one. It then rebinds the name in that environment.
 
 ### mixing `let` and `const`
@@ -1485,7 +1486,7 @@ Like evaluating variable labels, when a binding is rebound, JavaScript searches 
 Some programmers dislike deliberately shadowing variables. The suggestion is that shadowing a variable is confusing code. If you buy that argument, the way that shadowing works in JavaScript exists to protect us from accidentally shadowing a variable when we move code around.
 
 If you dislike deliberately shadowing variables, you'll probably take an even more opprobrious view of mixing `const` and `let` semantics with a shadowed variable:
-
+```js
     (() => {
       let age = 49;
 
@@ -1496,9 +1497,9 @@ If you dislike deliberately shadowing variables, you'll probably take an even mo
       return age;
     })()
       //=> 51
-
+```
 Shadowing a `let` with a `const` does not change our ability to rebind the variable in its original scope. And:
-
+```js
     (() => {
       const age = 49;
 
@@ -1509,7 +1510,7 @@ Shadowing a `let` with a `const` does not change our ability to rebind the varia
       return age;
     })()
       //=> ERROR: age is read-only
-
+```
 Shadowing a `const` with a `let` does not permit it to be rebound in its original scope.
 
 ### `var`
@@ -1548,7 +1549,7 @@ const factorial2 = (n) => {
 factorial2(5)
   //=> 120
 ```
-But of course, it's not exactly like `let`. It's just different enough to present a source of confusion. First, `var` is not block scoped, it's function scoped, just like [function declarations](#function-declarations):
+But of course, it's not exactly like `let`. It's just different enough to present a source of confusion. First, `var` is not block scoped, it's function scoped, just like [function declarations]():
 ```js
 (() => {
   var age = 49;
@@ -1643,20 +1644,20 @@ In that way, `var` is a little like `const` and `let`, we should always declare 
 `const` and `let` are recent additions to JavaScript. For nearly twenty years, variables were declared with `var` (not counting parameters and function declarations, of course). However, its functional scope was a problem.
 
 We haven't looked at it yet, but JavaScript provides a `for` loop for your iterating pleasure and convenience. It looks a lot like the `for` loop in C. Here it is with `var`:
-
+```js
     var sum = 0;
     for (var i = 1; i <= 100; i++) {
       sum = sum + i
     }
     sum
       #=> 5050
-
+```
 Hopefully, you can think of a faster way to calculate this sum.`1` And perhaps you have noticed that `var i = 1` is tucked away instead of being at the top as we prefer. But is this ever a problem?
 
 >`1` There is a well known story about Karl Friedrich Gauss when he was in elementary school. His teacher got mad at the class and told them to add the numbers 1 to 100 and give him the answer by the end of the class. About 30 seconds later Gauss gave him the answer. The other kids were adding the numbers like this: `1 + 2 + 3 + . . . . + 99 + 100 = ?` But Gauss rearranged the numbers to add them like this: `(1 + 100) + (2 + 99) + (3 + 98) + . . . . + (50 + 51) = ?` If you notice every pair of numbers adds up to 101. There are 50 pairs of numbers, so the answer is 50*101 = 5050. Of course Gauss came up with the answer about 20 times faster than the other kids.
 
 Yes. Consider this variation:
-
+```js
     var introductions = [],
         names = ['Karl', 'Friedrich', 'Gauss'];
 
@@ -1667,9 +1668,9 @@ Yes. Consider this variation:
       //=> [ 'Hello, my name is Karl',
       //     'Hello, my name is Friedrich',
       //     'Hello, my name is Gauss' ]
-
+```
 So far, so good. Hey, remember that functions in JavaScript are values? Let's get fancy!
-
+```js
     var introductions = [],
         names = ['Karl', 'Friedrich', 'Gauss'];
 
@@ -1681,14 +1682,14 @@ So far, so good. Hey, remember that functions in JavaScript are values? Let's ge
       //=> [ [Function],
       //     [Function],
       //     [Function] ]
-
+```
 Again, so far, so good. Let's try one of our functions:
-
+```js
     introductions[1]('Raganwald')
       //=> 'Hello, Raganwald, my name is undefined'
-
+```
 What went wrong? Why didn't it give us 'Hello, Raganwald, my name is Friedrich'? The answer is that pesky `var i`. Remember that `i` is bound in the surrounding environment, so it's as if we wrote:
-
+```js
     var introductions = [],
         names = ['Karl', 'Friedrich', 'Gauss'],
         i = undefined;
@@ -1699,11 +1700,11 @@ What went wrong? Why didn't it give us 'Hello, Raganwald, my name is Friedrich'?
       }
     }
     introductions
-
+```
 Now, at the time we created each function, `i` had a sensible value, like `0`, `1`, or `2`. But at the time we *call* one of the functions, `i` has the value `3`, which is why the loop terminated. So when the function is called, JavaScript looks `i` up in its enclosing environment (its  closure, obviously), and gets the value `3`. That's not what we want at all.
 
 The error wouldn't exist at all if we'd used `let` in the first place
-
+```js
     let introductions = [],
         names = ['Karl', 'Friedrich', 'Gauss'];
 
@@ -1713,9 +1714,9 @@ The error wouldn't exist at all if we'd used `let` in the first place
     }
     introductions[1]('Raganwald')
       //=> 'Hello, Raganwald, my name is Friedrich'
-
+```
 This small error was a frequent cause of confusion, and in the days when there was no block-scoped `let`, programmers would need to know how to fake it, usually with an IIFE:
-
+```js
     var introductions = [],
         names = ['Karl', 'Friedrich', 'Gauss'];
 
@@ -1728,7 +1729,7 @@ This small error was a frequent cause of confusion, and in the days when there w
     }
     introductions[1]('Raganwald')
       //=> 'Hello, Raganwald, my name is Friedrich'
-
+```
 Now we're creating a new inner parameter, `i` and binding it to the value of the outer `i`. This works, but `let` is so much simpler and cleaner that it was added to the language in the ECMAScript 2015 specification.
 
 In this book, we will use function declarations sparingly, and not use `var` at all. That does not mean that you should follow the exact same practice in your own code: The purpose of this book is to illustrate certain principles of programming. The purpose of your own code is to get things done. The two goals are often, but not always, aligned.
@@ -2114,7 +2115,7 @@ const arraySum = (array) => {
 arraySum([1, 4, 9, 16, 25])
   //=> 55
 ```
-Notice that buried inside our loop, we have bound the names `done` and `value`. We can put those into a POJO (a [Plain Old JavaScript Object](#pojos)). It'll be a little awkward, but we'll be patient:
+Notice that buried inside our loop, we have bound the names `done` and `value`. We can put those into a POJO (a [Plain Old JavaScript Object](#plain-old-javascript-objects)). It'll be a little awkward, but we'll be patient:
 ```js
 const arraySum = (array) => {
   let iter,
