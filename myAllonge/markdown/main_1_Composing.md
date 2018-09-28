@@ -2259,7 +2259,7 @@ fib().value
 fib().value
   //=> 5
 ```
-A function that starts with a seed and expands it into a data structure is called an *unfold*. It's the opposite of a fold. It's possible to write a generic unfold mechanism, but let's pass on to what we can do with unfolded iterators.
+**A function that starts with a seed and expands it into a data structure is called an *unfold*. It's the opposite of a fold.** It's possible to write a generic unfold mechanism, but let's pass on to what we can do with unfolded iterators.
 
 For starters, we can `map` an iterator, just like we map a collection:
 ```js
