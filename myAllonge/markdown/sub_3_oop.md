@@ -39,6 +39,7 @@ C++ has classes, but they are not "first-class entities." You can't assign a cla
 Ruby has classes, and they're first-class entities. You can ask an object for its class, you can put a class in a variable, pass it to a method, or return it from a method, just like every other entity in the language. Classes in Ruby and Smalltalk even have their own class, they are instances of `Class`! `1` Instance behaviour is late-bound and open for extension.`2`
 
 >`1` If the class of a class is `Class`, what class is the class of `Class`? In Ruby, `Class.class == Class`. In Smalltalk, it is `MetaClass`, which opens up the possibility for changing the way classes behave in a deep way.
+
 >`2` Abuse of this feature by extending the behaviour of built-in classes is a controversial topic.
 
 ### constructors
