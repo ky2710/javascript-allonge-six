@@ -868,7 +868,6 @@ const node5 = [5,null],
       node1 = [1, node2];
     
 ```
-
 This is a [Linked List](https://en.wikipedia.org/wiki/Linked_list), it's just that those early Lispers used the names `car` and `cdr` after the hardware instructions, whereas today we use words like `data` and `reference`. But it works the same way: If we want the head of a list, we call `car` on it:
 ```js
 car(oneToFive)
@@ -943,19 +942,19 @@ In JavaScript, an object is a map from string keys to values.
 ### literal object syntax
 
 JavaScript has a literal syntax for creating objects. This object maps values to the keys `year`, `month`, and `day`:
-
+```js
     { year: 2012, month: 6, day: 14 }
-
+```
 Two objects created with separate evaluations have differing identities, just like arrays:
-
+```js
     { year: 2012, month: 6, day: 14 } === { year: 2012, month: 6, day: 14 }
       //=> false
-
+```
 Objects use `[]` to access the values by name, using a string:
-
+```js
     { year: 2012, month: 6, day: 14 }['day']
       //=> 14
-
+```
 Values contained within an object work just like values contained within an array, we access them by reference to the original:
 ```js
     const unique = () => [],
