@@ -1,6 +1,4 @@
-# Stir the Allongé: Objects and State {#mutable}
-
-![Life measured out by coffee spoons](images/coffee-spoons.jpg)
+# Stir the Allongé: Objects and State
 
 So far, we have discussed what many call "pure functional" programming, where every expression is necessarily [idempotent], because we have no way of changing state within a program using the tools we have examined.
 
@@ -9,7 +7,7 @@ We've also explored functions that rebind names within themselves as part of per
 [idempotent]: https://en.wikipedia.org/wiki/Idempotence
 
 It's time to change *everything*.
-## Encapsulating State with Closures {#encapsulation}
+## Encapsulating State with Closures
 
 > OOP to me means only messaging, local retention and protection and hiding of state-process, and extreme late-binding of all things.--[Alan Kay][oop]
 
@@ -43,7 +41,7 @@ The way to avoid this is to hide the array and index from other code and only ex
 
 Hiding information (or "state") is the design principle that allows us to limit the coupling between components of software.
 
-### how do we hide state using javascript? {#hiding-state}
+### how do we hide state using javascript?
 
 We've been introduced to JavaScript's objects, and it's fairly easy to see that objects can be used to model what other programming languages call (variously) records, structs, frames, or what-have-you. And given that their elements are mutable, they can clearly model state.
 
@@ -203,15 +201,15 @@ But there's an easier way :-)
 
 Now we can make stacks freely, and we've hidden their internal data elements. We have methods and encapsulation, and we've built them out of JavaScript's fundamental functions and objects. In [Constructors and Classes](#classes), we'll look at JavaScript's support for class-oriented programming and some of the idioms that functions bring to the party.
 
-A> ### is encapsulation "object-oriented?"
-A>
-A> We've built something with hidden internal state and "methods," all without needing special `def` or `private` keywords. Mind you, we haven't included all sorts of complicated mechanisms to support inheritance, mixins, and other opportunities for debating the nature of the One True Object-Oriented Style on the Internet.
-A>
-A> Then again, the key lesson experienced programmers repeat--although it often falls on deaf ears--is [Composition instead of Inheritance](http://www.c2.com/cgi/wiki?CompositionInsteadOfInheritance). So maybe we aren't missing much.
+> ### is encapsulation "object-oriented?"
+>
+> We've built something with hidden internal state and "methods," all without needing special `def` or `private` keywords. Mind you, we haven't included all sorts of complicated mechanisms to support inheritance, mixins, and other opportunities for debating the nature of the One True Object-Oriented Style on the Internet.
+>
+> Then again, the key lesson experienced programmers repeat--although it often falls on deaf ears--is [Composition instead of Inheritance](http://www.c2.com/cgi/wiki?CompositionInsteadOfInheritance). So maybe we aren't missing much.
 
 [^length]: Yes, there's another way to track the size of the array, but we don't need it to demonstrate encapsulation and hiding of state.
-## Composition and Extension {#composition}
 
+## Composition and Extension 
 ### composition
 
 A deeply fundamental practice is to build components out of smaller components. The choice of how to divide a component into smaller components is called *factoring*, after the operation in number theory [^refactoring].
@@ -307,7 +305,7 @@ model.get("Doctor")
 
 The techniques used for encapsulation work well with composition. In this case, we have a "model" that hides its attribute store as well as its implementation that is composed of an undo stack and redo stack.
 
-### extension {#extensible}
+### extension
 
 Another practice that many people consider fundamental is to *extend* an implementation. Meaning, they wish to define a new data structure in terms of adding new operations and semantics to an existing data structure.
 
@@ -420,8 +418,9 @@ Now we can extend a queue into a deque:
 
 Presto, we have reuse through extension, at the cost of encapsulation.
 
-T> Encapsulation and Extension exist in a natural state of tension. A program with elaborate encapsulation resists breakage but can also be difficult to refactor in other ways. Be mindful of when it's best to Compose and when it's best to Extend.
-## This and That {#this}
+> Encapsulation and Extension exist in a natural state of tension. A program with elaborate encapsulation resists breakage but can also be difficult to refactor in other ways. Be mindful of when it's best to Compose and when it's best to Extend.
+
+## This and That
 
 Let's take another look at [extensible objects](#extensible). Here's a Queue:
 
@@ -577,7 +576,7 @@ Presto, we now have a way to copy arrays. By getting rid of the closure and taki
 
 There is more to `this` than we've discussed here. We'll explore things in more detail later, in [What Context Applies When We Call a Function?](#context).
 
-T> Closures tightly couple functions to the environments where they are created limiting their flexibility. Using `this` alleviates the coupling. Copying objects is but one example of where that flexibility is needed.
+> Closures tightly couple functions to the environments where they are created limiting their flexibility. Using `this` alleviates the coupling. Copying objects is but one example of where that flexibility is needed.
 
 [^this]: JavaScript also does other things with `this` as well, but this is all we care about right now.
 ## What Context Applies When We Call a Function? {#context}
@@ -791,7 +790,8 @@ Both are `true` because we are accessing them with `aFourthObject.` Now we write
 When we call these functions without using `aFourthObject.`, only the contextualized version maintains the context of `aFourthObject`.
       
 We'll return to contextualizing methods later, in [Binding](#binding). But before we dive too deeply into special handling for methods, we need to spend a little more time looking at how functions and methods work.
-## Method Decorators {#method-decorators}
+
+## Method Decorators
 
 In [function decorators](#decorators), we learned that a decorator takes a function as an argument, returns a function, and there's a semantic relationship between the two. If a function is a verb, a decorator is an adverb.
 
@@ -871,12 +871,12 @@ And `this` is correctly set:
 Using `.call` or `.apply` and `arguments` is substantially slower than writing function decorators that don't set the context, so it might be right to sometimes write function decorators that aren't usable as method decorators. However, in practice you're far more likely to introduce a defect by failing to pass the context through a decorator than by introducing a performance pessimization, so the default choice should be to write all function decorators in such a way that they are "context agnostic."
 
 In some cases, there are other considerations to writing a method decorator. If the decorator introduces state of any kind (such as `once` and `memoize` do), this must be carefully managed for the case when several objects share the same method through the mechanism of the [prototype](#prototypes) or through sharing references to the same function.
-## Summary
 
-T> ### Objects, Mutation, and State
-T>
-T> * State can be encapsulated/hidden with closures.
-T> * Encapsulations can be aggregated with composition.
-T> * Encapsulation resists extension.
-T> * The automagic binding `this` facilitates sharing of functions.
-T> * Functions can be named and declared with a name.
+## Summary
+> ### Objects, Mutation, and State
+>
+> * State can be encapsulated/hidden with closures.
+> * Encapsulations can be aggregated with composition.
+> * Encapsulation resists extension.
+> * The automagic binding `this` facilitates sharing of functions.
+> * Functions can be named and declared with a name.
