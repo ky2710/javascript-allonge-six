@@ -93,6 +93,8 @@
 * [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md) - The Coffee Factory   
 * [**Main-3: Collections**](main_3_collections.md) - Served by the Pot   
     * [Iteration and Iterables](main_3_collections.md#iteration-and-iterables)   
+		* functional iterators -- iterator objects -- iterables 
+		* iterables out to infinity -- ordered collections -- operations on ordered collections -- from
     * [Generating Iterables](main_3_collections.md#generating-iterables)   
     * [Lazy and Eager Collections](main_3_collections.md#lazy-and-eager-collections)   
     * [Interlude: The Carpenter Interviews for a Job](main_3_collections.md#interlude-the-carpenter-interviews-for-a-job)   
