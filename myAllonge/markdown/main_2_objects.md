@@ -549,7 +549,9 @@ In other words, when we write:
     betterQueue.pushTail('JavaScript');
     betterQueue.pullHead()
 ```
-We expect that JavaScript will invoke the functions we've bound to `pushTail` and `pullHead`, and automatically bind `betterQueue` to the name `this` within them. And indeed it does: Every time you invoke a function that is a member of an object, JavaScript binds that object to the name `this` in the environment of the function just as if it was an argument.[^this]
+We expect that JavaScript will invoke the functions we've bound to `pushTail` and `pullHead`, and automatically bind `betterQueue` to the name `this` within them. And indeed it does: Every time you invoke a function that is a member of an object, JavaScript binds that object to the name `this` in the environment of the function just as if it was an argument.`1`
+
+>`1` JavaScript also does other things with `this` as well, but this is all we care about right now.
 
 Now, does this solve our original problem? Can we make copies of an object? Recall that the problem was that when we used a closure for private data, copying references to an object's functions meant that we were using functions that still referred to the original closure, and therefore shared the same private data.
 
@@ -572,8 +574,6 @@ Presto, we now have a way to copy arrays. By getting rid of the closure and taki
 There is more to `this` than we've discussed here. We'll explore things in more detail later, in [What Context Applies When We Call a Function?](#context).
 
 > Closures tightly couple functions to the environments where they are created limiting their flexibility. Using `this` alleviates the coupling. Copying objects is but one example of where that flexibility is needed.
-
-[^this]: JavaScript also does other things with `this` as well, but this is all we care about right now.
 
 ## What Context Applies When We Call a Function?
 
