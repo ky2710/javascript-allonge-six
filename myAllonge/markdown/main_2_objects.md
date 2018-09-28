@@ -575,7 +575,7 @@ There is more to `this` than we've discussed here. We'll explore things in more 
 
 [^this]: JavaScript also does other things with `this` as well, but this is all we care about right now.
 
-## What Context Applies When We Call a Function? {#context}
+## What Context Applies When We Call a Function?
 
 In [This and That](#this), we learned that when a function is denoted using the `function` keyword, and is called as an object method, the name `this` is bound in its environment to the object acting as a "receiver." For example:
 ```js
