@@ -74,7 +74,8 @@
    * [Reassignment](main_1_Composing.md#reassignment)   
    * [Copy on Write](main_1_Composing.md#copy-on-write)   
    * [Tortoises, Hares, and Teleporting Turtles](main_1_Composing.md#tortoises-hares-and-teleporting-turtles)   
-   * [Functional Iterators](main_1_Composing.md#functional-iterators)   
+   * [Functional Iterators](main_1_Composing.md#functional-iterators)
+   	* iterating -- unfolding and laziness -- bonus -- caveat
    * [Making Data Out Of Functions](main_1_Composing.md#making-data-out-of-functions)   
 * [Recipe-1: Data](main_1r_Composing.md)   
    * mapWith -- Flip -- Object.assign -- Why?   
