@@ -1900,11 +1900,8 @@ I think I told him that I was trying to figure out if I could adapt a hashing al
 I went home and pondered the problem. I wanted to solve it. Eventually, I came up with something and tried it (In Java!) on my home PC. I sent him an email sharing my result, to demonstrate my ability to follow through. I then forgot about it for a while. Some time later, I was told that the correct solution was:
 ```js
 const EMPTY = null;
-
 const isEmpty = (node) => node === EMPTY;
-
 const pair = (first, rest = EMPTY) => ({first, rest});
-
 const list = (...elements) => {
   const [first, ...rest] = elements;
   
@@ -2050,7 +2047,9 @@ const sumFoldable = (folder) => folder((a, b) => a + b, 0);
 sumFoldable(foldArray([1, 4, 9, 16, 25]))
   //=> 55
 ```
-What we've done is turn an array into a function that folds an array with `const foldArray = (array) => callRight(foldArrayWith, array);`. The `sumFoldable` function doesn't care what kind of data structure we have, as long as it's foldable.
+What we've done is turn an array into a function that folds an array with    
+`const foldArray = (array) => callRight(foldArrayWith, array);`.     
+The `sumFoldable` function doesn't care what kind of data structure we have, as long as it's foldable.
 
 Here it is summing a tree of numbers:
 ```js
@@ -2066,7 +2065,6 @@ const foldTreeWith = (fn, terminalValue, [first, ...rest]) =>
       : fn(first, foldTreeWith(fn, terminalValue, rest));
 
 const foldTree = (tree) => callRight(foldTreeWith, tree);
-
 const sumFoldable = (folder) => folder((a, b) => a + b, 0);
 
 sumFoldable(foldTree([1, [4, [9, 16]], 25]))
