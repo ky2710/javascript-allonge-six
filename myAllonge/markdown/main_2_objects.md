@@ -13,9 +13,9 @@ It's time to change *everything*.
 
 [oop]: http://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_en
 
-We're going to look at encapsulation using JavaScript's functions and objects. We're not going to call it object-oriented programming, mind you, because that would start a long debate. This is just plain encapsulation,[^encapsulation] with a dash of information-hiding.
+We're going to look at encapsulation using JavaScript's functions and objects. We're not going to call it object-oriented programming, mind you, because that would start a long debate. This is just plain encapsulation,`1` with a dash of information-hiding.
 
-[^encapsulation]: "A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data."--[Wikipedia]
+>`1`: "A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data."--[Wikipedia]
 
 [Wikipedia]: https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)
 
@@ -25,7 +25,7 @@ We're going to look at encapsulation using JavaScript's functions and objects. W
 
 > Written another way, information hiding is the ability to prevent certain aspects of a class or software component from being accessible to its clients, using either programming language features (like private variables) or an explicit exporting policy.
 
-> --[Wikipedia][ih]
+> [Wikipedia][ih]
 
 [ih]:https://en.wikipedia.org/wiki/Information_hiding "Information hiding"
 
@@ -212,9 +212,9 @@ Now we can make stacks freely, and we've hidden their internal data elements. We
 ## Composition and Extension 
 ### composition
 
-A deeply fundamental practice is to build components out of smaller components. The choice of how to divide a component into smaller components is called *factoring*, after the operation in number theory [^refactoring].
+A deeply fundamental practice is to build components out of smaller components. The choice of how to divide a component into smaller components is called *factoring*, after the operation in number theory `1`.
 
-[^refactoring]: And when you take an already factored component and rearrange things so that it is factored into a different set of subcomponents without altering its behaviour, you are *refactoring*.
+>`1` And when you take an already factored component and rearrange things so that it is factored into a different set of subcomponents without altering its behaviour, you are *refactoring*.
 
 The simplest and easiest way to build components out of smaller components in JavaScript is also the most obvious: Each component is a value, and the components can be put together into a single object or encapsulated with a closure.
 
@@ -342,11 +342,11 @@ Consider a [queue]:
     queue.pullHead()
       //=> "JavaScript"
 
-Now we wish to create a [deque] by adding `pullTail` and `pushHead` operations to our queue.[^wasa] Unfortunately, encapsulation prevents us from adding operations that interact with the hidden data structures.
+Now we wish to create a [deque] by adding `pullTail` and `pushHead` operations to our queue.`1` Unfortunately, encapsulation prevents us from adding operations that interact with the hidden data structures.
 
 [queue]: http://duckduckgo.com/Queue_(data_structure)
 [deque]: https://en.wikipedia.org/wiki/Double-ended_queue "Double-ended queue"
-[^wasa]: Before you start wondering whether a deque is-a queue, we said nothing about types and classes. This relationship is called was-a, or "implemented in terms of a."
+>`1` Before you start wondering whether a deque is-a queue, we said nothing about types and classes. This relationship is called was-a, or "implemented in terms of a."
 
 This isn't really surprising: The entire point of encapsulation is to create an opaque data structure that can only be manipulated through its public interface. The design goals of encapsulation and extension are always going to exist in tension.
 
@@ -478,7 +478,7 @@ If we've copied everything properly, we should get the exact same result when we
 
 What!? Even though we carefully made a copy of the array to prevent aliasing, it seems that our two queues behave like aliases of each other. The problem is that while we've carefully copied our array and other elements over, *the closures all share the same environment*, and therefore the functions in `copyOfQueue` all operate on the first queue's private data, not on the copies.
 
-A> This is a general issue with closures. Closures couple functions to environments, and that makes them very elegant in the small, and very handy for making opaque data structures. Alas, their strength in the small is their weakness in the large. When you're trying to make reusable components, this coupling is sometimes a hindrance.
+> This is a general issue with closures. Closures couple functions to environments, and that makes them very elegant in the small, and very handy for making opaque data structures. Alas, their strength in the small is their weakness in the large. When you're trying to make reusable components, this coupling is sometimes a hindrance.
 
 Let's take an impossibly optimistic flight of fancy:
 
@@ -579,6 +579,7 @@ There is more to `this` than we've discussed here. We'll explore things in more 
 > Closures tightly couple functions to the environments where they are created limiting their flexibility. Using `this` alleviates the coupling. Copying objects is but one example of where that flexibility is needed.
 
 [^this]: JavaScript also does other things with `this` as well, but this is all we care about right now.
+
 ## What Context Applies When We Call a Function? {#context}
 
 In [This and That](#this), we learned that when a function is denoted using the `function` keyword, and is called as an object method, the name `this` is bound in its environment to the object acting as a "receiver." For example:
@@ -596,9 +597,9 @@ We've constructed a method that returns whatever value is bound to `this` when i
 
 ### it's all about the way the function is called
 
-JavaScript programmers talk about functions having a "context" when being called. `this` is bound to the context.[^toobad] The important thing to understand is that the context for a function being called is set by the way the function is called, not the function itself.
+JavaScript programmers talk about functions having a "context" when being called. `this` is bound to the context.`1` The important thing to understand is that the context for a function being called is set by the way the function is called, not the function itself.
 
-[^toobad]: Too bad the language binds the context to the name `this` instead of the name `context`!
+>`1` Too bad the language binds the context to the name `this` instead of the name `context`!
 
 This is an important distinction. Consider closures: As we discussed in [Closures and Scope](#closures), a function's free variables are resolved by looking them up in their enclosing functions' environments. You can always determine the functions that define free variables by examining the source code of a JavaScript program, which is why this scheme is known as [Lexical Scope].
 
@@ -717,9 +718,9 @@ But now we thoroughly understand what `a.b()` really means: It's synonymous with
 
 ### arguments
 
-JavaScript has another automagic binding in every function's environment. `arguments` is a special object that behaves a little like an array.[^little]
+JavaScript has another automagic binding in every function's environment. `arguments` is a special object that behaves a little like an array.`1`
 
-[^little]: Just enough to be frustrating, to be perfectly candid!
+>`1` Just enough to be frustrating, to be perfectly candid!
 
 For example:
 
