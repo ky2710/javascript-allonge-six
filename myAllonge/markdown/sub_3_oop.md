@@ -36,11 +36,10 @@ So some "OO" languages have objects, but not classes.
 
 C++ has classes, but they are not "first-class entities." You can't assign a class to a variable or pass it to a function. You can, however, manipulate the constructors for classes, the functions that make new objects. But you can't manipulate those constructors to change the behaviour of objects that have already been constructed, instance behaviour is early-bound by default.
 
-Ruby has classes, and they're first-class entities. You can ask an object for its class, you can put a class in a variable, pass it to a method, or return it from a method, just like every other entity in the language. Classes in Ruby and Smalltalk even have their own class, they are instances of `Class`![^meta] Instance behaviour is late-bound and open for extension.[^mp]
+Ruby has classes, and they're first-class entities. You can ask an object for its class, you can put a class in a variable, pass it to a method, or return it from a method, just like every other entity in the language. Classes in Ruby and Smalltalk even have their own class, they are instances of `Class`! `1` Instance behaviour is late-bound and open for extension.`2`
 
-[^mp]: Abuse of this feature by extending the behaviour of built-in classes is a controversial topic.
-
-[^meta]: If the class of a class is `Class`, what class is the class of `Class`? In Ruby, `Class.class == Class`. In Smalltalk, it is `MetaClass`, which opens up the possibility for changing the way classes behave in a deep way.
+>`1` If the class of a class is `Class`, what class is the class of `Class`? In Ruby, `Class.class == Class`. In Smalltalk, it is `MetaClass`, which opens up the possibility for changing the way classes behave in a deep way.
+>`2` Abuse of this feature by extending the behaviour of built-in classes is a controversial topic.
 
 ### constructors
 
@@ -52,9 +51,9 @@ Prototypical languages like Self and NewtonScript eschew classes altogether, usi
 
 You can say to a builder, "make me a home just like that model home," and the builder makes you a home that has a lot in common with the model home. You then decorate your home with additional personalization. But the model home is, itself, a home. Although you may choose to keep it empty, you could in principle move a family into it. This is different than asking a builder to make you a home based on a blueprint. The blueprint may specify the features of the home, but it isn't a home. It could never be used as a home.
 
-Prototypes are like model homes, and classes are like blueprints. Classes are not like the objects they describe.[^wellactually]
+Prototypes are like model homes, and classes are like blueprints. Classes are not like the objects they describe.`1`
 
-[^wellactually]: Well, *actually*, the difference between prototypes and classes is like the difference between model homes and blueprints. But prototypes are not like model homes. In actual fact, the relationship between an object and its prototype is one of *delegation*. So if a model home had a kitchen, and you asked the builder to make you a home using the model as a prototype, you could customize your own kitchen. But if you didn't want to have your own custom kitchen, you would just use the model home's kitchen to do all your own cooking. The relationship between a model home and a house is sometimes described as [concatenative inheritance](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a), and JavaScript lets you do that too.
+>`1` Well, *actually*, the difference between prototypes and classes is like the difference between model homes and blueprints. But prototypes are not like model homes. In actual fact, the relationship between an object and its prototype is one of *delegation*. So if a model home had a kitchen, and you asked the builder to make you a home using the model as a prototype, you could customize your own kitchen. But if you didn't want to have your own custom kitchen, you would just use the model home's kitchen to do all your own cooking. The relationship between a model home and a house is sometimes described as [concatenative inheritance](https://medium.com/javascript-scene/common-misconceptions-about-inheritance-in-javascript-d5d9bab29b0a), and JavaScript lets you do that too.
 
 ### "object-oriented programming" can mean almost anything
 
