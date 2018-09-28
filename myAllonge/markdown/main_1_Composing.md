@@ -8,41 +8,41 @@ While we have mentioned arrays briefly, we haven't had a close look at them. **A
 ### array literals
 
 JavaScript has a literal syntax for creating an array: The `[` and `]` characters. We can create an empty array:
-
+```js
     []
       //=> []
-
+```
 We can create an array with one or more *elements* by placing them between the brackets and separating the items with commas. Whitespace is optional:
-
+```js
     [1]
       //=> [1]
 
     [2, 3, 4]
       //=> [2,3,4]
-
+```
 Any expression will work:
-
+```js
     [ 2,
       3,
       2 + 2
     ]
       //=> [2,3,4]
-
+```
 Including an expression denoting another array:
-
+```js
     [[[[[]]]]]
-
+```
 This is an array with one element that is an array with one element that is an array with one element that is an array with one element that is an empty array. Although that seems like something nobody would ever construct, many students have worked with almost the exact same thing when they explored various means of constructing arithmetic from Set Theory.
 
 Any expression will do, including names:
-
+```js
     const wrap = (something) => [something];
 
     wrap("lunch")
       //=> ["lunch"]
-
+```
 Array literals are expressions, and arrays are *reference types*. We can see that each time an array literal is evaluated, we get a new, distinct array, even if it contains the exact same elements:
-
+```js
     [] === []
       //=> false
 
@@ -53,11 +53,11 @@ Array literals are expressions, and arrays are *reference types*. We can see tha
 
     array_of_one() === array_of_one()
       //=> false
-
+```
 ### element references
 
 Array elements can be extracted using `[` and `]` as postfix operators. We pass an integer as an index of the element to extract:
-
+```js
     const oneTwoThree = ["one", "two", "three"];
     oneTwoThree[0]
       //=> 'one'
@@ -65,26 +65,24 @@ Array elements can be extracted using `[` and `]` as postfix operators. We pass 
       //=> 'two'
     oneTwoThree[2]
       //=> 'three'
-
+```
 As we can see, JavaScript Arrays are [zero-based].
 
 [zero-based]: https://en.wikipedia.org/wiki/Zero-based_numbering
 
 We know that every array is its own unique entity, with its own unique reference. What about the contents of an array? Does it store references to the things we give it? Or copies of some kind?
-
 ```js
     const x = [],
           a = [x];
     a[0] === x
         //=> true, arrays store references to the things you put in them.
 ```
-
 ### destructuring arrays
 
 There is another way to extract elements from arrays: *Destructuring*, a feature going back to Common Lisp, if not before. We saw how to construct an array literal using `[`, expressions, `,` and `]`. Here's an example of an array literal that uses a name:
-
+```js
     const wrap = (something) => [something];
-
+```
 Let's expand it to use a block and an extra name:
 ```js
     const wrap = (something) => {
@@ -145,29 +143,29 @@ Sometimes we need to extract arrays from arrays. Here is the most common pattern
 >`1` Kyle Simpson is the author of [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/README.md#you-dont-know-js-book-series), available
 
 Alas, the `...` notation does not provide a universal patten-matching capability. For example, we cannot write
-
+```js
     const [...butLast, last] = [1, 2, 3, 4, 5];
       //=> ERROR
 
     const [first, ..., last] = [1, 2, 3, 4, 5];
       //=> ERROR
-
+```
 Now, when we introduced destructuring, we saw that it is kind-of-sort-of the reverse of array literals. So if
-
+```js
     const wrapped = [something];
-
+```
 Then:
-
+```js
     const [unwrapped] = something;
-
+```
 What is the reverse of gathering? We know that:
-
+```js
     const [car, ...cdr] = [1, 2, 3, 4, 5];
-
+```
 What is the reverse? It would be:
-
+```js
     const cons = [car, ...cdr];
-
+```
 Let's try it:
 ```js
 const oneTwoThree = ["one", "two", "three"];
