@@ -1960,7 +1960,8 @@ Pair.from([1, 2, 3, 4, 5]).map(x => x * 2)
                     }
             }
     }
-```## Interlude: The Carpenter Interviews for a Job
+```
+## Interlude: The Carpenter Interviews for a Job
 
 "The Carpenter" was a JavaScript programmer, well-known for a meticulous attention to detail and love for hand-crafted, exquisitely joined code. The Carpenter normally worked through personal referrals, but from time to time a recruiter would slip through his screen. One such recruiter was Bob Plissken. Bob was well-known in the Python community, but his clients often needed experience with other languages.
 
