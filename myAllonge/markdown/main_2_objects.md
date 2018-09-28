@@ -143,8 +143,6 @@ Our stack does bundle functions with data, but it doesn't hide its state. "Forei
     stack.isEmpty()
       //=> true
 ```
-![Coffee DOES grow on trees](images/coffee-trees-1200.jpg)
-
 We don't want to repeat this code every time we want a stack, so let's make ourselves a "stack maker." The temptation is to wrap what we have above in a function:
 ```js
     const Stack = () =>
