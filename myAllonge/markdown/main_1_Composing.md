@@ -182,11 +182,11 @@ It works! We can use `...` to place the elements of an array inside another arra
 Some other languages have something called *pattern matching*, where you can write something like a destructuring assignment, and the language decides whether the "patterns" matches at all. If it does, assignments are made where appropriate.
 
 In such a language, if you wrote something like:
-
+```js
     const [what] = [];
-
+```
 That match would fail because the array doesn't have an element to assign to `what`. But this is not how JavaScript works. JavaScript tries its best to assign things, and if there isn't something that fits, JavaScript binds `undefined` to the name. Therefore:
-
+```js
     const [what] = [];
 
     what
@@ -196,9 +196,9 @@ That match would fail because the array doesn't have an element to assign to `wh
 
     who
       //=> undefined
-
+```
 And if there aren't any items to assign with `...`, JavaScript assigns an empty array:
-
+```js
     const [...they] = [];
 
     they
@@ -208,13 +208,13 @@ And if there aren't any items to assign with `...`, JavaScript assigns an empty 
 
     they
       //=> []
-
+```
 From its very inception, JavaScript has striven to avoid catastrophic errors. As a result, it often coerces values, passes `undefined` around, or does whatever it can to keep executing without failing. This often means that we must write our own code to detect failure conditions, as we cannot reply on the language to point out when we are doing semantically meaningless things.
 
 ### destructuring and return values
 
 Some languages support multiple return values: A function can return several things at once, like a value and an error code. This can easily be emulated in JavaScript with destructuring:
-
+```js
     const description = (nameAndOccupation) => {
       if (nameAndOccupation.length < 2) {
         return ["", "occupation missing"]
@@ -233,23 +233,23 @@ Some languages support multiple return values: A function can return several thi
 
     status
        //=> "ok"
-
+```
 ### destructuring parameters
 
 Consider the way we pass arguments to parameters:
-
+```js
     foo()
     bar("smaug")
     baz(1, 2, 3)
-
+```
 It is very much like an array literal. And consider how we bind values to parameter names:
-
+```js
     const foo = () => ...
     const bar = (name) => ...
     const baz = (a, b, c) => ...
-
+```
 It *looks* like destructuring. It acts like destructuring. There is only one difference: We have not tried gathering. Let's do that:
-
+```js
     const numbers = (...nums) => nums;
 
     numbers(1, 2, 3, 4, 5)
@@ -259,8 +259,7 @@ It *looks* like destructuring. It acts like destructuring. There is only one dif
 
     headAndTail(1, 2, 3, 4, 5)
       //=> [1,[2,3,4,5]]
-
-
+```
 Gathering works with parameters! This is very useful indeed, and we'll see more of it in a moment.`1`
 
 >`1` Gathering in parameters has a long history, and the usual terms are to call gathering "pattern matching" and to call a name that is bound to gathered values a "rest parameter." The term "rest" is perfectly compatible with gather: "Rest" is the noun, and "gather" is the verb. We *gather* the *rest* of the parameters.
@@ -268,7 +267,7 @@ Gathering works with parameters! This is very useful indeed, and we'll see more 
 ## Self-Similarity    
 > Recursion is the root of computation since it trades description for time.—Alan Perlis, [Epigrams in Programming](http://www.cs.yale.edu/homes/perlis-alan/quotes.html)
 
-In [Arrays and Destructuring Arguments](#arraysanddestructuring), we worked with the basic idea that putting an array together with a literal array expression was the reverse or opposite of taking it apart with a destructuring assignment.
+In [Arrays and Destructuring Arguments](#arrays-and-destructuring-arguments), we worked with the basic idea that putting an array together with a literal array expression was the reverse or opposite of taking it apart with a destructuring assignment.
 
 We saw that the basic idea that putting an array together with a literal array expression was the reverse or opposite of taking it apart with a destructuring assignment.
 
@@ -276,11 +275,11 @@ Let's be more specific. Some data structures, like lists, can obviously be seen 
 
 But we can also define a list by describing a rule for building lists. One of the simplest, and longest-standing in computer science, is to say that a list is:
 
-0. Empty, or;
+1. Empty, or;
 1. Consists of an element concatenated with a list .
 
 Let's convert our rules to array literals. The first rule is simple: `[]` is a list. How about the second rule? We can express that using a spread. Given an element `e` and a list `list`, `[e, ...list]` is a list. We can test this manually by building up a list:
-
+```js
     []
     //=> []
 
@@ -292,10 +291,9 @@ Let's convert our rules to array literals. The first rule is simple: `[]` is a l
 
     ["foo", ...["bar", "baz"]]
     //=> ["foo","bar","baz"]
-  
+ ``` 
 Thanks to the parallel between array literals + spreads with destructuring + rests, we can also use the same rules to decompose lists:
-
-    
+```js
     const [first, ...rest] = [];
     first
       //=> undefined
@@ -319,11 +317,9 @@ Thanks to the parallel between array literals + spreads with destructuring + res
       //=> "foo"
     rest
       //=> ["bar","baz"]
-    
-
+ ```
 For the purpose of this exploration, we will presume the following:`1`
-
-    
+```js
     const isEmpty = ([first, ...rest]) => first === undefined;
 
     isEmpty([])
@@ -334,32 +330,27 @@ For the purpose of this exploration, we will presume the following:`1`
 
     isEmpty([[]])
       //=> false
-    
-    
+``` 
 >`1` Well, actually, this does not work for arrays that contain `undefined` as a value, but we are not going to see that in our examples. A more robust implementation would be `(array) => array.length === 0`, but we are doing backflips to keep this within a very small and contrived playground.
     
 Armed with our definition of an empty list and with what we've already learned, we can build a great many functions that operate on arrays. We know that we can get the length of an array using its `.length`. But as an exercise, how would we write a `length` function using just what we have already?
 
 First, we pick what we call a *terminal case*. What is the length of an empty array? `0`. So let's start our function with the observation that if an array is empty, the length is `0`:
-
-    
+```js    
     const length = ([first, ...rest]) =>
       first === undefined
         ? 0
         : // ???
-    
-      
+``` 
 We need something for when the array isn't empty. If an array is not empty, and we break it into two pieces, `first` and `rest`, the length of our array is going to be `length(first) + length(rest)`. Well, the length of `first` is `1`, there's just one element at the front. But we don't know the length of `rest`. If only there was a function we could call... Like `length`!
-
-    
+```js   
     const length = ([first, ...rest]) =>
       first === undefined
         ? 0
         : 1 + length(rest);
-    
-    
+```  
 Let's try it!
-    
+```js    
     length([])
       //=> 0
   
@@ -368,8 +359,7 @@ Let's try it!
   
     length(["foo", "bar", "baz"])
       //=> 3
-    
-      
+```
 Our `length` function is *recursive*, it calls itself. This makes sense because our definition of a list is recursive, and if a list is self-similar, it is natural to create an algorithm that is also self-similar.
 
 ### linear recursion    
@@ -396,13 +386,13 @@ This simpler form of "divide and conquer" is called *linear recursion*. It's ver
 >`1` `flatten` is a very simple [unfold](https://en.wikipedia.org/wiki/Anamorphism), a function that takes a seed value and turns it into an array. Unfolds can be thought of a "path" through a data structure, and flattening a tree is equivalent to a depth-first traverse.
 
 We already know how to divide arrays into smaller pieces. How do we decide whether a smaller problem is solvable? We need a test for the terminal case. Happily, there is something along these lines provided for us:
-
+```js
     Array.isArray("foo")
       //=> false
       
     Array.isArray(["foo"])
       //=> true
-      
+```      
 The usual "terminal case" will be that flattening an empty array will produce an empty array. The next terminal case is that if an element isn't an array, we don't flatten it, and can put it together with the rest of our solution directly. Whereas if an element is an array, we'll flatten it and put it together with the rest of our solution.
 
 So our first cut at a `flatten` function will look like this:
@@ -518,7 +508,7 @@ And to return to our first example, our version of `length` can be written as a 
 Linear recursion is a basic building block of algorithms. Its basic form parallels the way linear data structures like lists are constructed: This helps make it understandable. Its specialized cases of mapping and folding are especially useful and can be used to build other functions. And finally, while folding is a special case of linear recursion, mapping is a special case of folding.
 
 ## Tail Calls (and Default Arguments)
-The `mapWith` and `foldWith` functions we wrote in [Self-Similarity](#linear-recursion) are useful for illustrating the basic principles behind using recursion to work with self-similar data structures, but they are not "production-ready" implementations. One of the reasons they are not production-ready is that they consume memory proportional to the size of the array being folded.
+The `mapWith` and `foldWith` functions we wrote in [Self-Similarity](#self-similarity) are useful for illustrating the basic principles behind using recursion to work with self-similar data structures, but they are not "production-ready" implementations. One of the reasons they are not production-ready is that they consume memory proportional to the size of the array being folded.
 
 Let's look at how. Here's our extremely simple `mapWith` function again:
 
