@@ -140,9 +140,9 @@ Sometimes we need to extract arrays from arrays. Here is the most common pattern
     cdr
       //=> [2, 3, 4, 5]
 ```
-[`car` and `cdr`](https://en.wikipedia.org/wiki/CAR_and_CDR) are archaic terms that go back to an implementation of Lisp running on the IBM 704 computer. Some other languages call them `first` and `butFirst`, or `head` and `tail`. We will use a common convention and call variables we gather `rest`, but refer to the `...` operation as a "gather," following Kyle Simpson's example.[^getify]
+[`car` and `cdr`](https://en.wikipedia.org/wiki/CAR_and_CDR) are archaic terms that go back to an implementation of Lisp running on the IBM 704 computer. Some other languages call them `first` and `butFirst`, or `head` and `tail`. We will use a common convention and call variables we gather `rest`, but refer to the `...` operation as a "gather," following Kyle Simpson's example.`1`
 
-[^getify]: Kyle Simpson is the author of [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/README.md#you-dont-know-js-book-series), available [here](http://search.oreilly.com/?q=you+don%27t+know+js+kyle+simpson)
+>`1` Kyle Simpson is the author of [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/master/README.md#you-dont-know-js-book-series), available
 
 Alas, the `...` notation does not provide a universal patten-matching capability. For example, we cannot write
 
@@ -261,11 +261,11 @@ It *looks* like destructuring. It acts like destructuring. There is only one dif
       //=> [1,[2,3,4,5]]
 
 
-Gathering works with parameters! This is very useful indeed, and we'll see more of it in a moment.[^rest]
+Gathering works with parameters! This is very useful indeed, and we'll see more of it in a moment.`1`
 
-[^rest]: Gathering in parameters has a long history, and the usual terms are to call gathering "pattern matching" and to call a name that is bound to gathered values a "rest parameter." The term "rest" is perfectly compatible with gather: "Rest" is the noun, and "gather" is the verb. We *gather* the *rest* of the parameters.
-## Self-Similarity
+>`1` Gathering in parameters has a long history, and the usual terms are to call gathering "pattern matching" and to call a name that is bound to gathered values a "rest parameter." The term "rest" is perfectly compatible with gather: "Rest" is the noun, and "gather" is the verb. We *gather* the *rest* of the parameters.
 
+## Self-Similarity    
 > Recursion is the root of computation since it trades description for time.—Alan Perlis, [Epigrams in Programming](http://www.cs.yale.edu/homes/perlis-alan/quotes.html)
 
 In [Arrays and Destructuring Arguments](#arraysanddestructuring), we worked with the basic idea that putting an array together with a literal array expression was the reverse or opposite of taking it apart with a destructuring assignment.
@@ -321,7 +321,7 @@ Thanks to the parallel between array literals + spreads with destructuring + res
       //=> ["bar","baz"]
     
 
-For the purpose of this exploration, we will presume the following:[^wellactually]
+For the purpose of this exploration, we will presume the following:`1`
 
     
     const isEmpty = ([first, ...rest]) => first === undefined;
@@ -336,7 +336,7 @@ For the purpose of this exploration, we will presume the following:[^wellactuall
       //=> false
     
     
-[^wellactually]: Well, actually, this does not work for arrays that contain `undefined` as a value, but we are not going to see that in our examples. A more robust implementation would be `(array) => array.length === 0`, but we are doing backflips to keep this within a very small and contrived playground.
+>`1` Well, actually, this does not work for arrays that contain `undefined` as a value, but we are not going to see that in our examples. A more robust implementation would be `(array) => array.length === 0`, but we are doing backflips to keep this within a very small and contrived playground.
     
 Armed with our definition of an empty list and with what we've already learned, we can build a great many functions that operate on arrays. We know that we can get the length of an array using its `.length`. But as an exercise, how would we write a `length` function using just what we have already?
 
@@ -372,7 +372,7 @@ Let's try it!
       
 Our `length` function is *recursive*, it calls itself. This makes sense because our definition of a list is recursive, and if a list is self-similar, it is natural to create an algorithm that is also self-similar.
 
-### linear recursion
+### linear recursion    
 
 "Recursion" sometimes seems like an elaborate party trick. There's even a joke about this:
 
@@ -384,16 +384,16 @@ Our `length` function is *recursive*, it calls itself. This makes sense because 
 
 There is more to recursive solutions that simply functions that invoke themselves. Recursive algorithms follow the "divide and conquer" strategy for solving a problem:
 
-0. Divide the problem into smaller problems
-0. If a smaller problem is solvable, solve the small problem
-0. If a smaller problem is not solvable, divide and conquer that problem
-0. When all small problems have been solved, compose the solutions into one big solution
+1. Divide the problem into smaller problems
+1. If a smaller problem is solvable, solve the small problem
+1. If a smaller problem is not solvable, divide and conquer that problem
+1. When all small problems have been solved, compose the solutions into one big solution
 
 The big elements of divide and conquer are a method for decomposing a problem into smaller problems, a test for the smallest possible problem, and a means of putting the pieces back together. Our solutions are a little simpler in that we don't really break a problem down into multiple pieces, we break a piece off the problem that may or may not be solvable, and solve that before sticking it onto a solution for the rest of the problem.
 
-This simpler form of "divide and conquer" is called *linear recursion*. It's very useful and simple to understand. Let's take another example. Sometimes we want to *flatten* an array, that is, an array of arrays needs to be turned into one array of elements that aren't arrays.[^unfold]
+This simpler form of "divide and conquer" is called *linear recursion*. It's very useful and simple to understand. Let's take another example. Sometimes we want to *flatten* an array, that is, an array of arrays needs to be turned into one array of elements that aren't arrays.`1`
 
-[^unfold]: `flatten` is a very simple [unfold](https://en.wikipedia.org/wiki/Anamorphism), a function that takes a seed value and turns it into an array. Unfolds can be thought of a "path" through a data structure, and flattening a tree is equivalent to a depth-first traverse.
+>`1` `flatten` is a very simple [unfold](https://en.wikipedia.org/wiki/Anamorphism), a function that takes a seed value and turns it into an array. Unfolds can be thought of a "path" through a data structure, and flattening a tree is equivalent to a depth-first traverse.
 
 We already know how to divide arrays into smaller pieces. How do we decide whether a smaller problem is solvable? We need a test for the terminal case. Happily, there is something along these lines provided for us:
 
@@ -451,7 +451,7 @@ Given the signature:
     const mapWith = (fn, array) => // ...
     
 We can write it out using a ternary operator. Even in this small function, we can identify the terminal condition, the piece being broken off, and recomposing the solution.
-
+```js
     const mapWith = (fn, [first, ...rest]) =>
       first === undefined
         ? []
@@ -462,57 +462,57 @@ We can write it out using a ternary operator. Even in this small function, we ca
       
     mapWith((x) => !!x, [null, true, 25, false, "foo"])
       //=> [false,true,true,false,true]
-
+```
 ### folding
 
 With the exception of the `length` example at the beginning, our examples so far all involve rebuilding a solution using spreads.  But they needn't. A function to compute the sum of the squares of a list of numbers might look like this:
-
+```js
     const sumSquares = ([first, ...rest]) => first === undefined
                                              ? 0
                                              : first * first + sumSquares(rest);
                                              
     sumSquares([1, 2, 3, 4, 5])
       //=> 55
-
+```
 There are two differences between `sumSquares` and our maps above:
 
-0. Given the terminal case of an empty list, we return a `0` instead of an empty list, and;
-0. We catenate the square of each element to the result of applying `sumSquares` to the rest of the elements.
+1. Given the terminal case of an empty list, we return a `0` instead of an empty list, and;
+1. We catenate the square of each element to the result of applying `sumSquares` to the rest of the elements.
 
 Let's rewrite `mapWith` so that we can use it to sum squares.
-
+```js
     const foldWith = (fn, terminalValue, [first, ...rest]) =>
       first === undefined
         ? terminalValue
         : fn(first, foldWith(fn, terminalValue, rest));
-                                                           
+```                                                           
 And now we supply a function that does slightly more than our mapping functions:
-
+```js
     foldWith((number, rest) => number * number + rest, 0, [1, 2, 3, 4, 5])
       //=> 55
-
+```    
 Our `foldWith` function is a generalization of our `mapWith` function. We can represent a map as a fold, we just need to supply the array rebuilding code:
-
+```js
     const squareAll = (array) => foldWith((first, rest) => [first * first, ...rest], [], array);
     
     squareAll([1, 2, 3, 4, 5])
       //=> [1,4,9,16,25]
-
+```    
 And if we like, we can write `mapWith` using `foldWith`:
-
+```js
     const mapWith = (fn, array) => foldWith((first, rest) => [fn(first), ...rest], [], array),
           squareAll = (array) => mapWith((x) => x * x, array);
     
     squareAll([1, 2, 3, 4, 5])
       //=> [1,4,9,16,25]
-          
+```              
 And to return to our first example, our version of `length` can be written as a fold:
-
+```js
     const length = (array) => foldWith((first, rest) => 1 + rest, 0, array);
     
     length([1, 2, 3, 4, 5])
       //=> 5
-          
+```              
 ### summary
 
 Linear recursion is a basic building block of algorithms. Its basic form parallels the way linear data structures like lists are constructed: This helps make it understandable. Its specialized cases of mapping and folding are especially useful and can be used to build other functions. And finally, while folding is a special case of linear recursion, mapping is a special case of folding.
@@ -692,13 +692,11 @@ Brilliant! We can map over large arrays without incurring all the memory and per
 
 ### factorials
 
-Introductions to recursion often mention calculating factorials:
-
+Introductions to recursion often mention calculating factorials:    
 > In mathematics, the factorial of a non-negative integer `n`, denoted by `n!`, is the product of all positive integers less than or equal to `n`. For example:
 ```js
 5! = 5  x  4  x  3  x  2  x  1 = 120.
 ```
-
 The naïve function for calcuating the factorial of a positive integer follows directly from the definition:
 ```js
 const factorial = (n) =>
@@ -713,9 +711,9 @@ factorial(5)
   //=> 120
 ```
 
-While this is mathematically elegant, it is computational [filigree].
+While this is mathematically elegant, it is computational `1`.
 
-[filigree]: https://en.wikipedia.org/wiki/Filigree
+>`1` https://en.wikipedia.org/wiki/Filigree
 
 Once again, it is not tail-recursive, it needs to save the stack with each invocation so that it can take the result returned and compute `n * factorial(n - 1)`. We can do the same conversion, pass in the work to be done:
 ```js
@@ -826,9 +824,9 @@ But when we try it on very large arrays, we discover that it is *still* very slo
 
 Every time we call `mapWith`, we're calling `[...prepend, fn(first)]`. To do that, we take the array in `prepend` and push `fn(first)` onto the end, creating a new array that will be passed to the next invocation of `mapWith`.
 
-Worse, the JavaScript Engine actually copies the elements from `prepend` into the new array one at a time. That is very laborious.[^cow]
+Worse, the JavaScript Engine actually copies the elements from `prepend` into the new array one at a time. That is very laborious.`1`
 
-[^cow]: It needn't always be so: Programmers have developed specialized data structures that make operations like this cheap, often by arranging for structures to share common elements by default, and only making copies when changes are made. But this is not how JavaScript's built-in arrays work.
+>`1` It needn't always be so: Programmers have developed specialized data structures that make operations like this cheap, often by arranging for structures to share common elements by default, and only making copies when changes are made. But this is not how JavaScript's built-in arrays work.
 
 The array we had in `prepend` is no longer used. In GC environments, it is marked as no longer being used, and eventually the garbage collector recycles the memory it is using. Lather, rinse, repeat: Ever time we call `mapWith`, we're creating a new array, copying all the elements from `prepend` into the new array, and then we no longer use `prepend`.
 
@@ -920,6 +918,7 @@ For these and other reasons, almost all languages today make it possible to use 
 ### summary
 
 Although we showed how to use tail calls to map and fold over arrays with `[first, ...rest]`, in reality this is not how it ought to be done. But it is an extremely simple illustration of how recursion works when you have a self-similar means of constructing a data structure.
+
 ## Plain Old JavaScript Objects
 
 Lists are not the only way to represent collections of things, but they are the "oldest" data structure in the history of high level languages, because they map very closely to the way the hardware is organized in a computer. Lists are obviously very handy for homogeneous collections of things, like a shopping list:
@@ -928,7 +927,8 @@ const remember = ["the milk", "the coffee beans", "the biscotti"];
 ```
 And they can be used to store heterogeneous things in various levels of structure:
 ```js
-const user = [["Reginald", "Braithwaite"],[ "author", ["JavaScript Allongé", "JavaScript Spessore", "CoffeeScript Ristretto"]]];
+const user = [["Reginald", "Braithwaite"],[ "author"
+    ,["JavaScript Allongé", "JavaScript Spessore", "CoffeeScript Ristretto"]]];
 ```
 Remembering that the name is the first item is error-prone, and being expected to look at `user[0][1]` and know that we are talking about a surname is unreasonable. So back when lists were the only things available, programmers would introduce constants to make things easier on themselves:
 ```js
@@ -939,7 +939,8 @@ const NAME = 0,
       TITLE = 0,
       RESPONSIBILITIES = 1;
 
-const user = [["Reginald", "Braithwaite"],[ "author", ["JavaScript Allongé", "JavaScript Spessore", "CoffeeScript Ristretto"]]];
+const user = [["Reginald", "Braithwaite"]
+        ,[ "author", ["JavaScript Allongé", "JavaScript Spessore", "CoffeeScript Ristretto"]]];
 ```
 Now they could write `user[NAME][LAST]` or `user[OCCUPATION][TITLE]` instead of `user[0][1]` or `user[1][0]`. Over time, this need to build heterogeneous data structures with access to members by name evolved into the [Dictionary] data type, a mapping from a unique set of objects to another set of objects.
 
@@ -1086,20 +1087,16 @@ const user = {
                                   ]
               }
 };
-
 user.name.last
   //=> "Braithwaite"
-
 user.occupation.title
   //=> "Author"
 ```
 And we can also write:
 ```js
 const {name: { first: given, last: surname}, occupation: { title: title } } = user;
-
 surname
   //=> "Braithwaite"
-
 title
   //=> "Author"
 ```
@@ -1527,9 +1524,9 @@ Shadowing a `const` with a `let` does not permit it to be rebound in its origina
 
 ### `var`
 
-JavaScript has one *more* way to bind a name to a value, `var`.[^namecount]
+JavaScript has one *more* way to bind a name to a value, `var`.`1`
 
-[^namecount]: How many have we seen so far? Well, parameters bind names. Function declarations bind names. Named function expressions bind names. `const` and `let` bind names. So that's five different ways so far. And there are more!
+>`1` How many have we seen so far? Well, parameters bind names. Function declarations bind names. Named function expressions bind names. `const` and `let` bind names. So that's five different ways so far. And there are more!
 
 `var` looks a lot like `let`:
 ```js
@@ -1664,9 +1661,9 @@ We haven't looked at it yet, but JavaScript provides a `for` loop for your itera
     sum
       #=> 5050
 
-Hopefully, you can think of a faster way to calculate this sum.[^gauss] And perhaps you have noticed that `var i = 1` is tucked away instead of being at the top as we prefer. But is this ever a problem?
+Hopefully, you can think of a faster way to calculate this sum.`1` And perhaps you have noticed that `var i = 1` is tucked away instead of being at the top as we prefer. But is this ever a problem?
 
-[^gauss]: There is a well known story about Karl Friedrich Gauss when he was in elementary school. His teacher got mad at the class and told them to add the numbers 1 to 100 and give him the answer by the end of the class. About 30 seconds later Gauss gave him the answer. The other kids were adding the numbers like this: `1 + 2 + 3 + . . . . + 99 + 100 = ?` But Gauss rearranged the numbers to add them like this: `(1 + 100) + (2 + 99) + (3 + 98) + . . . . + (50 + 51) = ?` If you notice every pair of numbers adds up to 101. There are 50 pairs of numbers, so the answer is 50*101 = 5050. Of course Gauss came up with the answer about 20 times faster than the other kids.
+>`1` There is a well known story about Karl Friedrich Gauss when he was in elementary school. His teacher got mad at the class and told them to add the numbers 1 to 100 and give him the answer by the end of the class. About 30 seconds later Gauss gave him the answer. The other kids were adding the numbers like this: `1 + 2 + 3 + . . . . + 99 + 100 = ?` But Gauss rearranged the numbers to add them like this: `(1 + 100) + (2 + 99) + (3 + 98) + . . . . + (50 + 51) = ?` If you notice every pair of numbers adds up to 101. There are 50 pairs of numbers, so the answer is 50*101 = 5050. Of course Gauss came up with the answer about 20 times faster than the other kids.
 
 Yes. Consider this variation:
 
@@ -2015,6 +2012,7 @@ teleportingTurtle(aList);
 Years later, I came across a discussion of this algorithm, [The Tale of the Teleporting Turtle](http://www.penzba.co.uk/Writings/TheTeleportingTurtle.html). It seems to be faster under certain circumstances, depending on the size of the loop and the relative costs of certain operations.
 
 What's interesting about these two algorithms is that they both *tangle* two separate concerns: How to traverse a data structure, and what to do with the elements that you encounter. In [Functional Iterators](#functional-iterators), we'll investigate one pattern for separating these concerns.
+
 ## Functional Iterators
 
 Let's consider a remarkably simple problem: Finding the sum of the elements of an array. In tail-recursive style, it looks like this:
@@ -2384,6 +2382,7 @@ Please note that unlike most of the other functions discussed in this book, iter
 For all intents and purposes, once you pass an iterator to a function, you can expect that you no longer "own" that iterator, and that its state either has changed or will change.
 
 ## Making Data Out Of Functions
+
 In our code so far, we have used arrays and objects to represent the structure of data, and we have extensively used the ternary operator to write algorithms that terminate when we reach a base case.
 
 For example, this `length` function uses a functions to bind values to names, POJOs to structure nodes, and the ternary function to detect the base case, the empty list.
