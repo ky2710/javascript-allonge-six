@@ -397,7 +397,7 @@ When we talk about environments, we'll use an [unsurprising syntax][json] for sh
 
 Earlier, we distinguished JavaScript's *value types* from its *reference types*. At that time, we looked at how JavaScript distinguishes objects that are identical from objects that are not. Now it is time to take another look at the distinction between value and reference types.
 
-There is a property that JavaScript strictly maintains: When a value--any value--is passed as an argument to a function, the value bound in the function's environment must be identical to the original.
+There is a property that JavaScript strictly maintains: **When a value--any value--is passed as an argument to a function, the value bound in the function's environment must be *identical to the original.***
 
 We said that JavaScript binds names to values, but we didn't say what it means to bind a name to a value. Now we can elaborate: When JavaScript binds a value-type to a name, it makes a copy of the value and places the copy in the environment. As you recall, value types like strings and numbers are identical to each other if they have the same content. So JavaScript can make as many copies of strings, numbers, or booleans as it wishes.
 
