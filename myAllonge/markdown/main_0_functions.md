@@ -451,8 +451,8 @@ The function `(y) => x` is interesting. It contains a *free variable*, `x`.`[1]`
 
 Now that we know that variables used in a function are either bound or free, we can bifurcate functions into those with free variables and those without:
 
-  * Functions containing no free variables are called *pure functions*.
-  * Functions containing one or more free variables are called *closures*.
+  * Functions containing no free variables are called **pure functions**.
+  * Functions containing one or more free variables are called **closures**.
   
 Pure functions are easiest to understand. They always mean the same thing wherever you use them. Here are some pure functions we've already seen:
 ```js
