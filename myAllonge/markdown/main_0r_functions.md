@@ -9,7 +9,8 @@ The recipes are written for practicality, and their implementation may introduce
 
 In [Building Blocks](#buildingblocks), we discussed partial application, but we didn't write a generalized recipe for it. This is such a common tool that many libraries provide some form of partial application. You'll find examples in [Lemonad](https://github.com/fogus/lemonad) from Michael Fogus, [Functional JavaScript](http://osteele.com/sources/javascript/functional/) from Oliver Steele and the terse but handy [node-ap](https://github.com/substack/node-ap) from James Halliday.
 
-These two recipes are for quickly and simply applying a single argument, either the leftmost or rightmost.[^inspired] If you want to bind more than one argument, or you want to leave a "hole" in the argument list, you will need to either use a [generalized partial recipe](#partial), or you will need to repeatedly apply arguments. They are [context](#context)-agnostic.
+These two recipes are for quickly and simply applying a single argument, either the leftmost or rightmost.`1` If you want to bind more than one argument, or you want to leave a "hole" in the argument list, you will need to either use a [generalized partial recipe](#partial), or you will need to repeatedly apply arguments. They are [context](#context)-agnostic.
+>`1` `callFirst` and `callLast` were inspired by Michael Fogus' [Lemonad](https://github.com/fogus/lemonad). Thanks! 
 ```js
     const callFirst = (fn, larg) =>
       function (...rest) {
@@ -46,7 +47,6 @@ We take it a step further, and can use gathering and spreading to allow for part
         (...remainingArgs) =>
           fn(...remainingArgs, ...args);
 ```
-[^inspired]: `callFirst` and `callLast` were inspired by Michael Fogus' [Lemonad](https://github.com/fogus/lemonad). Thanks!
 ## Unary
 
 "Unary" is a function decorator that modifies the number of arguments a function takes: Unary takes any function and turns it into a function taking exactly one argument.
@@ -247,11 +247,12 @@ Very simple! You pass it a function, and you get a function back. That function 
 It seems some people will only try blind dating once.
 
 (Note: There are some subtleties with decorators like `once` that involve the intersection of state with methods. We'll look at that again in [stateful method decorators](#stateful-method-decorators).)
+
 ## Left-Variadic Functions
 
-A *variadic function* is a function that is designed to accept a variable number of arguments.[^eng] In JavaScript, you can make a variadic function by gathering parameters. For example:
+A *variadic function* is a function that is designed to accept a variable number of arguments.`1` In JavaScript, you can make a variadic function by gathering parameters. For example:
 
-[^eng]: English is about as inconsistent as JavaScript: Functions with a fixed number of arguments can be unary, binary, ternary, and so forth. But can they be "variary?" No! They have to be "variadic."
+>`1` English is about as inconsistent as JavaScript: Functions with a fixed number of arguments can be unary, binary, ternary, and so forth. But can they be "variary?" No! They have to be "variadic."
 
 ```js
 const abccc = (a, b, ...c) => {
@@ -299,9 +300,9 @@ ECMAScript 2015 only permits gathering parameters from the *end* of the paramete
 
 ### a history lesson
 
-In "Ye Olde Days,"[^ye] JavaScript could not gather parameters, and we had to either do backflips with `arguments` and `.slice`, or we wrote ourselves a `variadic` decorator that could gather arguments into the last declared parameter. Here it is in all of its ECMAScript-5 glory:
+In "Ye Olde Days,"`1` JavaScript could not gather parameters, and we had to either do backflips with `arguments` and `.slice`, or we wrote ourselves a `variadic` decorator that could gather arguments into the last declared parameter. Here it is in all of its ECMAScript-5 glory:
 
-[^ye]: Another history lesson. "Ye" in "Ye Olde," was not actually spelled with a "Y" in days of old, it was spelled with a [thorn](https://en.wikipedia.org/wiki/Thorn_(letter)), and is pronounced "the." Another word, "Ye" in "Ye of little programming faith," is pronounced "ye," but it's a different word altogether.
+>`1` Another history lesson. "Ye" in "Ye Olde," was not actually spelled with a "Y" in days of old, it was spelled with a [thorn](https://en.wikipedia.org/wiki/Thorn_(letter)), and is pronounced "the." Another word, "Ye" in "Ye of little programming faith," is pronounced "ye," but it's a different word altogether.
 ```js
 var __slice = Array.prototype.slice;
 
