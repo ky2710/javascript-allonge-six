@@ -326,7 +326,7 @@ You won't be surprised to see how to write and apply a function to two arguments
 >
 > Expressions consist either of representations of values (like `3.14159265`, `true`, and `undefined`), operators that combine expressions (like `3 + 2`), some special forms like `[1, 2, 3]` for creating arrays out of expressions, or `function (`*arguments*`) {`*body-statements*`}` for creating functions.
 >
-> One of the important possible statements is a return statement. A return statement accepts any valid JavaScript expression.
+> **One of the important possible statements is a return statement. A return statement accepts any valid JavaScript expression.**
 >
 > This loose definition is recursive, so we can intuit (or use our experience with other languages) that since a function can contain a return statement with an expression, we can write a function that returns a function, or an array that contains another array expression. Or a function that returns an array, an array of functions, a function that returns an array of functions, and so forth:
 >
