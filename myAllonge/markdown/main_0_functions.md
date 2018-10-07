@@ -1447,20 +1447,20 @@ Having magic variables apply to Big-F functions but not to small-G functions mak
 
 ## Summary
 
-> ### Functions
->
-> * Functions are values that can be part of expressions, returned from other functions, and so forth.
-> * Functions are *reference values*.
-> * Functions are applied to arguments.
-> * The arguments are passed by sharing, which is also called "pass by value."
-> * Fat arrow functions have expressions or blocks as their bodies.
-> * `function` keyword functions always have blocks as their bodies.
-> * Function bodies have zero or more statements.
-> * Expression bodies evaluate to the value of the expression.
-> * Block bodies evaluate to whatever is returned with the `return` keyword, or to `undefined`.
-> * JavaScript uses `const` to bind values to names within block scope.
-> * JavaScript uses function declarations to bind functions to names within function scope. Function declarations are "hoisted."
-> * Function application creates a scope.
-> * Blocks also create scopes if `const` statements are within them.
-> * Scopes are nested and free variable references closed over.
-> * Variables can shadow variables in an enclosing scope.
+### Functions
+
+ * Functions are values that can be part of expressions, returned from other functions, and so forth.
+ * Functions are *reference values*.
+ * Functions are applied to arguments.
+ * The arguments are passed by sharing, which is also called "pass by value."
+ * Fat arrow functions have expressions or blocks as their bodies.
+ * `function` keyword functions always have blocks as their bodies.
+ * Function bodies have zero or more statements.
+ * Expression bodies evaluate to the value of the expression.
+ * Block bodies evaluate to whatever is returned with the `return` keyword, or to `undefined`.
+ * JavaScript uses `const` to bind values to names within block scope.
+ * JavaScript uses function declarations to bind functions to names within function scope. Function declarations are "hoisted."
+ * Function application creates a scope.
+ * Blocks also create scopes if `const` statements are within them.
+ * Scopes are nested and free variable references closed over.
+ * Variables can shadow variables in an enclosing scope.
