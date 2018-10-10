@@ -47,11 +47,11 @@
     * values are expressions     * values and identity  
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md) - A Rich Aroma   
 * [**Main-0: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions) - The first sip   
-    * function: [As Little As Possible About Functions, But No Less](main_0_functions.md#as-little-as-possible-about-functions-but-no-less)   
-    * Argument & Parameter: [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
+    * [function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
+    * [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
     	* call by value -- variables and bindings -- call by sharing
     * [Closures and Scope](main_0_functions.md#closures-and-scope)   
-    * [const and lexical scope](main_0_functions.md#that-constant-coffee-craving)(That Constant Coffee Craving)   
+    * [const and lexical scope](main_0_functions.md#that-constant-coffee-craving) - That Constant Coffee Craving   
     * [Naming Functions](main_0_functions.md#naming-functions)     
     * [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
         * higher-order functions -- combinators -- a balanced statement about combinators -- function decorators
