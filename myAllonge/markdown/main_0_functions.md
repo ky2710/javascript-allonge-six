@@ -342,7 +342,7 @@ You won't be surprised to see how to write and apply a function to two arguments
 >````
 ### call by value
 
-Like most contemporary programming languages, JavaScript uses the "call by value" [evaluation strategy]. **That means that when you write some code that appears to apply a function to an expression or expressions, JavaScript evaluates all of those expressions and applies the functions to the resulting value(s).**
+Like most contemporary programming languages, JavaScript uses the **"call by value"** [evaluation strategy]. That means that **when you write some code that appears to apply a function to *an expression(s)*, JavaScript evaluates all of those expressions and applies the functions to *the resulting value(s).***
 
 [evaluation strategy]: http://en.wikipedia.org/wiki/Evaluation_strategy
 
