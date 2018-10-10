@@ -17,7 +17,9 @@ We could write a function that behaves like the `.map` method if we wanted:
 const map = (list, fn) =>
   list.map(fn);
 ```
-This recipe isn't for `map`: It's for `mapWith`, a function that wraps around `map` and turns any other function into a mapper. `mapWith` is very simple:[^mapWith]
+This recipe isn't for `map`: It's for `mapWith`, a function that wraps around `map` and turns any other function into a mapper. `mapWith` is very simple:`1`
+
+>`1` If we were always `mapWith`-ing arrays, we could write `list.map(fn)`. However, there are some objects that have a `.length` property and `[]` accessors that can be mapWithted but do not have a `.map` method. `mapWith` works with those objects. This points to a larger issue around the question of whether containers really ought to implement methods like `.map`. In a language like JavaScript, we are free to define objects that know about their own implementations, such as exactly how `[]` and `.length` works and then to define standalone functions that do the rest.
 ```js
 const mapWith = (fn) => (list) => list.map(fn);
 ```
@@ -48,8 +50,6 @@ If we didn't use `mapWith`, we'd could have also used `callRight` with `map` to 
 Both patterns take us to the same destination: Composing functions out of common pieces, rather than building them entirely from scratch. `mapWith` is a very convenient abstraction for a very common pattern.
 
 *`mapWith` was suggested by [ludicast](http://github.com/ludicast)*
-
-[^mapWith]: If we were always `mapWith`-ing arrays, we could write `list.map(fn)`. However, there are some objects that have a `.length` property and `[]` accessors that can be mapWithted but do not have a `.map` method. `mapWith` works with those objects. This points to a larger issue around the question of whether containers really ought to implement methods like `.map`. In a language like JavaScript, we are free to define objects that know about their own implementations, such as exactly how `[]` and `.length` works and then to define standalone functions that do the rest.
 
 ## Flip
 
@@ -230,7 +230,10 @@ Into this:
     });
 ```    
 Assigning properties from one object to another (also called "cloning" or "shallow copying") is a basic building block that we will later use to implement more advanced paradigms like mixins.
-## Why?
+
+## Why? `1`
+
+>`1` https://en.wikipedia.org/wiki/Fixed-point_combinator#Example_in_JavaScript "Call-by-value fixed-point combinator in JavaScript"
 
 This is the [canonical Y Combinator][y]:
 ```js
@@ -267,5 +270,3 @@ One tip is to use JavaScript to name things. For example, you could start by wri
 What is this `something` and how does it work? Another friendly tip: Change some of the fat arrow functions inside of it into named function expressions to help you decipher stack traces.
 
 Work things out for yourself!
-
-[y]: https://en.wikipedia.org/wiki/Fixed-point_combinator#Example_in_JavaScript "Call-by-value fixed-point combinator in JavaScript"
