@@ -47,7 +47,7 @@
     * values are expressions     * values and identity  
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md) - A Rich Aroma   
 * [**Main-0: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions) - The first sip   
-    * [function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
+    * [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
     * [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
     	* call by value -- variables and bindings -- call by sharing
     * [Closures and Scope](main_0_functions.md#closures-and-scope)   
@@ -57,7 +57,7 @@
         * higher-order functions -- combinators -- a balanced statement about combinators -- function decorators
     * [Building Blocks](main_0_functions.md#building-blocks)   
         * composition -- partial application
-    * this, aruments: [Magic Names](main_0_functions.md#magic-names)     
+    * [Magic Names : this, aruments](main_0_functions.md#magic-names)     
     * [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
    * Partial Application -- Unary -- Tap -- Maybe   
