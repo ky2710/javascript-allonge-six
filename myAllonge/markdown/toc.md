@@ -51,7 +51,7 @@
     * Argument & Parameter: [Ah. I’d Like to Have an Argument, Please.](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs)   
     	* call by value -- variables and bindings -- call by sharing
     * [Closures and Scope](main_0_functions.md#closures-and-scope)   
-    * const and lexical scope: [That Constant Coffee Craving](main_0_functions.md#that-constant-coffee-craving)   
+    * [const and lexical scope](main_0_functions.md#that-constant-coffee-craving)(That Constant Coffee Craving)   
     * [Naming Functions](main_0_functions.md#naming-functions)     
     * [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
         * higher-order functions -- combinators -- a balanced statement about combinators -- function decorators
