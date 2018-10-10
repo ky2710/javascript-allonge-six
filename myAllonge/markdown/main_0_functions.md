@@ -389,7 +389,7 @@ How does the value get put in the environment? Well for arguments, that is very 
 1. The value of a variable when evaluated in an environment is the value bound to the variable's name in that environment, which is '2'
 1. And that's our result.
 
-When we talk about environments, we'll use an [unsurprising syntax][http://json.org/] for showing their bindings: `{x: 2, ...}`. meaning, that **the environment is a dictionary**, and that the value `2` is bound to the name `x`, and that there might be other stuff in that dictionary we aren't discussing right now.
+When we talk about environments, we'll use an [unsurprising syntax](http://json.org/) for showing their bindings: `{x: 2, ...}`. meaning, that **the environment is a dictionary**, and that the value `2` is bound to the name `x`, and that there might be other stuff in that dictionary we aren't discussing right now.
 
 ### call by sharing
 
