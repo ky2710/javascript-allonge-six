@@ -382,16 +382,14 @@ How does the value get put in the environment? Well for arguments, that is very 
 1. It then starts evaluating the expression, including evaluating sub-expressions
 1. One sub-expression, `(x) => x` evaluates to a function.
 1. Another, `2`, evaluates to the number 2.
-1. JavaScript now evaluates applying the function to the argument `2`. Here's where it gets interesting...
+1. JavaScript now evaluates applying the function to the argument `2`. **Here's where it gets interesting...**
 1. An environment is created.
 1. The value '2' is bound to the name 'x' in the environment.
 1. The expression 'x' (the right side of the function) is evaluated within the environment we just created.
 1. The value of a variable when evaluated in an environment is the value bound to the variable's name in that environment, which is '2'
 1. And that's our result.
 
-When we talk about environments, we'll use an [unsurprising syntax][json] for showing their bindings: `{x: 2, ...}`. meaning, that the environment is a dictionary, and that the value `2` is bound to the name `x`, and that there might be other stuff in that dictionary we aren't discussing right now.
-
-[json]: http://json.org/
+When we talk about environments, we'll use an [unsurprising syntax][http://json.org/] for showing their bindings: `{x: 2, ...}`. meaning, that **the environment is a dictionary**, and that the value `2` is bound to the name `x`, and that there might be other stuff in that dictionary we aren't discussing right now.
 
 ### call by sharing
 
