@@ -82,8 +82,7 @@
 * [**Main-2: Objects and State**](main_2_objects.md) - Stir the Allongé   
    * [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
    * [Composition and Extension](main_2_objects.md#composition-and-extension)
-   * [This and That](main_2_objects.md#this-and-that) -- [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function)
-   * [Method Decorators](main_2_objects.md#method-decorators)
+   * [This and That](main_2_objects.md#this-and-that) -- [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function) -- [Method Decorators](main_2_objects.md#method-decorators)
    * [Summary](main_2_objects.md#summary)
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
    * Memoize -- getWith -- pluckWith -- Deep Mapping   
