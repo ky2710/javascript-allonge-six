@@ -22,7 +22,7 @@ We're going to look at encapsulation using JavaScript's functions and objects. W
 ### what is hiding of state-process, and why does it matter?
 
 > In computer science, information hiding is the principle of segregation of the design decisions in a computer program that are most likely to change, thus protecting other parts of the program from extensive modification if the design decision is changed. The protection involves providing a stable interface which protects the remainder of the program from the implementation (the details that are most likely to change).
-
+>
 > Written another way, information hiding is the ability to prevent certain aspects of a class or software component from being accessible to its clients, using either programming language features (like private variables) or an explicit exporting policy. -- [Wikipedia][ih]
 
 [ih]:https://en.wikipedia.org/wiki/Information_hiding "Information hiding"
