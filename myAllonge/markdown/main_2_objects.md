@@ -867,10 +867,10 @@ Using `.call` or `.apply` and `arguments` is substantially slower than writing f
 In some cases, there are other considerations to writing a method decorator. If the decorator introduces state of any kind (such as `once` and `memoize` do), this must be carefully managed for the case when several objects share the same method through the mechanism of the [prototype](#prototypes) or through sharing references to the same function.
 
 ## Summary
-> ### Objects, Mutation, and State
->
-> * State can be encapsulated/hidden with closures.
-> * Encapsulations can be aggregated with composition.
-> * Encapsulation resists extension.
-> * The automagic binding `this` facilitates sharing of functions.
-> * Functions can be named and declared with a name.
+### Objects, Mutation, and State
+
+* State can be encapsulated/hidden with closures.
+* Encapsulations can be aggregated with composition.
+* Encapsulation resists extension.
+* The automagic binding `this` facilitates sharing of functions.
+* Functions can be named and declared with a name.
