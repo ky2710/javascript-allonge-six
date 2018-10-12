@@ -1293,7 +1293,8 @@ const OneToFive = { first: 1,
                             rest: EMPTY } } } } };
 
 OneToFive
-  //=> {"first":1,"rest":{"first":2,"rest":{"first":"three","rest":{"first":"four","rest":{"first":"five","rest":{}}}}}}
+  //=> {"first":1,"rest":{"first":2,"rest":{"first":"three",
+                "rest":{"first":"four","rest":{"first":"five","rest":{}}}}}}
                             
 const ThreeToFive = OneToFive.rest.rest;
 
@@ -1308,7 +1309,8 @@ ThreeToFive
   //=> {"first":"three","rest":{"first":"four","rest":{"first":"five","rest":{}}}}
 
 OneToFive
-  //=> {"first":1,"rest":{"first":2,"rest":{"first":"three","rest":{"first":"four","rest":{"first":"five","rest":{}}}}}}
+  //=> {"first":1,"rest":{"first":2,"rest":{"first":"three",
+                "rest":{"first":"four","rest":{"first":"five","rest":{}}}}}}
 ```
 Changes made to `ThreeToFive` affect `OneToFive`, because they share the same structure. When we wrote `ThreeToFive = OneToFive.rest.rest;`, we weren't making a brand new copy of `{"first":3,"rest":{"first":4,"rest":{"first":5,"rest":{}}}}`, we were getting a reference to the same chain of nodes.
 
