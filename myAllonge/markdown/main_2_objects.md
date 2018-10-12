@@ -15,7 +15,7 @@ It's time to change *everything*.
 
 We're going to look at encapsulation using JavaScript's functions and objects. We're not going to call it object-oriented programming, mind you, because that would start a long debate. This is just plain encapsulation,`1` with a dash of information-hiding.
 
->`1`: "A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data."--[Wikipedia]
+>`1` "A language construct that facilitates the bundling of data with the methods (or other functions) operating on that data."--[Wikipedia]
 
 [Wikipedia]: https://en.wikipedia.org/wiki/Encapsulation_(object-oriented_programming)
 
