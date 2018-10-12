@@ -43,7 +43,9 @@ Hiding information (or "state") is the design principle that allows us to limit 
 
 We've been introduced to JavaScript's objects, and it's fairly easy to see that objects can be used to model what other programming languages call (variously) records, structs, frames, or what-have-you. And given that their elements are mutable, they can clearly model state.
 
-Given an object that holds our state (an array and an index[^length]), we can easily implement our three operations as functions. Bundling the functions with the state does not require any special "magic" features. JavaScript objects can have elements of any type, including functions.
+Given an object that holds our state (an array and an index `1`), we can easily implement our three operations as functions. Bundling the functions with the state does not require any special "magic" features. JavaScript objects can have elements of any type, including functions.
+
+>`1` Yes, there's another way to track the size of the array, but we don't need it to demonstrate encapsulation and hiding of state.
 
 To make our stack work, we need a way for our functions to refer to our stack. We'll do that by making sure it has a name. We can do that with an IIFE:
 ```js
@@ -202,8 +204,6 @@ Now we can make stacks freely, and we've hidden their internal data elements. We
 > We've built something with hidden internal state and "methods," all without needing special `def` or `private` keywords. Mind you, we haven't included all sorts of complicated mechanisms to support inheritance, mixins, and other opportunities for debating the nature of the One True Object-Oriented Style on the Internet.
 >
 > Then again, the key lesson experienced programmers repeat--although it often falls on deaf ears--is [Composition instead of Inheritance](http://www.c2.com/cgi/wiki?CompositionInsteadOfInheritance). So maybe we aren't missing much.
-
-[^length]: Yes, there's another way to track the size of the array, but we don't need it to demonstrate encapsulation and hiding of state.
 
 ## Composition and Extension 
 ### composition
