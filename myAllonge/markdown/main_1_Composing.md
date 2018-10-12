@@ -1893,6 +1893,7 @@ This strategy of waiting to copy until you are writing is called copy-on-write, 
 Like all strategies, it makes a tradeoff: It's much cheaper than pessimistically copying structures when you make an infrequent number of small changes, but if you tend to make a lot of changes to some that you aren't sharing, it's more expensive.
 
 Looking at the code again, you see that the `copy` function doesn't copy on write: It follows the pattern that while constructing something, we own it and can be liberal with mutation. Once we're done with it and give it to someone else, we need to be conservative and use a strategy like copy-on-read or copy-on-write.
+
 ## Tortoises, Hares, and Teleporting Turtles
 
 A good long while ago (The First Age of Internet Startups), someone asked me one of those pet algorithm questions. It was, "Write an algorithm to detect a loop in a linked list, in constant space."
@@ -2078,7 +2079,7 @@ We've found another way to express *the principle of separating* **traversing a 
 
 ### iterating
 
-Folding is a universal operation, and with care we can accomplish any task with folds that could be accomplished with that stalwart of structured programming, the `for` loop. Nevertheless, there is some value in being able to express some algorithms as iteration.
+[**Folding is a universal operation, and with care we can accomplish any task with folds that could be accomplished with that stalwart of structured programming, the `for` loop.**](#aa) Nevertheless, there is some value in being able to express some algorithms as iteration.
 
 JavaScript has a particularly low-level version of `for` loop that mimics the semantics of the `C` language. Summing the elements of an array can be accomplished with:
 ```js
