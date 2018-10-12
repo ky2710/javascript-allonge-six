@@ -212,7 +212,7 @@ A deeply fundamental practice is to build components out of smaller components. 
 
 >`1` And when you take an already factored component and rearrange things so that it is factored into a different set of subcomponents without altering its behaviour, you are *refactoring*.
 
-The simplest and easiest way to build components out of smaller components in JavaScript is also the most obvious: **Each component is a value, and the components can be *put together into a single object* or *encapsulated with a closure.***
+The simplest and easiest way to build components out of smaller components in JavaScript is also the most obvious: **Each component is a value, and the components can be [put together into a single object or encapsulated with a closure.](#aa)**
 
 Here's an abstract "model" that supports undo and redo composed from a pair of stacks (see [Encapsulating State](#encapsulation)), and a Plain Old JavaScript Object:
 
