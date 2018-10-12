@@ -416,7 +416,7 @@ Presto, we have reuse through extension, at the cost of encapsulation.
 
 ## This and That
 
-Let's take another look at [extensible objects](#extensible). Here's a Queue:
+Let's take another look at [extensible objects](#extension). Here's a Queue:
 ```js
     const Queue = () => {
       const queue = {
