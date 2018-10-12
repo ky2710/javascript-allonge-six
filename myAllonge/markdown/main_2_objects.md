@@ -787,7 +787,7 @@ We'll return to contextualizing methods later, in [Binding](#binding). But befor
 
 ## Method Decorators
 
-In [function decorators](#decorators), we learned that a decorator takes a function as an argument, returns a function, and there's a semantic relationship between the two. If a function is a verb, a decorator is an adverb.
+In [function decorators](main_0_functions.md#function-decorators), we learned that a decorator takes a function as an argument, returns a function, and there's a semantic relationship between the two. If a function is a verb, a decorator is an adverb.
 
 Decorators can be used to decorate methods provided that they carefully preserve the function's context. For example, here is a naïve version of `maybe` for one argument:
 ```js
