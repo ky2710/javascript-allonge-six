@@ -85,7 +85,7 @@
 		* how do we hide state using javascript? -- method-ology -- hiding state
 	* [Composition and Extension](main_2_objects.md#composition-and-extension) <--> Chapter 7: Closure vs Object
 		* **Composition : A deeply fundamental practice is to build components out of smaller components**
-		* **Extension : Another practice that many people consider fundamental is to extend an implementation.**
+		* **Extension : Another practice is to extend an implementation.**
 	* [This and That](main_2_objects.md#this-and-that) -- [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function) -- [Method Decorators](main_2_objects.md#method-decorators)
    * [Summary](main_2_objects.md#summary)
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
