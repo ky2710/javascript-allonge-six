@@ -45,8 +45,7 @@
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
 #### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
     * values are expressions     * values and identity  
-* [*Sub-0: Basic Numbers*](sub_0_numbers.md) - A Rich Aroma   
-* [**Main-0: Basic Functions**](main_0_functions.md#the-first-sip-basic-functions) - The first sip   
+* [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
     * [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
     * [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
     	* call by value -- variables and bindings -- call by sharing
@@ -63,8 +62,7 @@
    * Partial Application -- Unary -- Tap -- Maybe   
    * Once -- Left-Variadic Functions -- Compose and Pipeline   
 ---   
-* [*Sub-1: Choice and Truthiness*](sub_1_choice.md) - Picking the Bean   
-* [**Main-1: Composing and Decomposing Data**](main_1_Composing.md)   
+* [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
    * [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
    * [Self-Similarity](main_1_Composing.md#self-similarity)
    * [Tail Calls (and Default Arguments)](main_1_Composing.md#tail-calls-and-default-arguments)   
