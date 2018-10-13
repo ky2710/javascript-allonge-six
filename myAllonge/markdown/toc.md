@@ -76,8 +76,7 @@
 * [Recipe-1: Data](main_1r_Composing.md)   
    * mapWith -- Flip -- Object.assign -- Why?   
 ---   
-* [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md) - A Warm Cup   
-* [**Main-2: Objects and State**](main_2_objects.md) - Stir the Allongé   
+* [**Main-2: Objects and State**](main_2_objects.md) / [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
 		* what is hiding of state-process, and why does it matter?
 		* how do we hide state using javascript? -- method-ology -- hiding state
@@ -89,8 +88,7 @@
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
    * Memoize -- getWith -- pluckWith -- Deep Mapping   
 ---
-* [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md) - The Coffee Factory   
-* [**Main-3: Collections**](main_3_collections.md) - Served by the Pot   
+* [**Main-3: Collections**](main_3_collections.md) / [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
     * [Iteration and Iterables](main_3_collections.md#iteration-and-iterables)   
 		* functional iterators -- iterator objects -- iterables -- iterables out to infinity
 		* ordered collections -- operations on ordered collections -- from -- Summary
@@ -102,16 +100,14 @@
     * [Interactive Generators](main_3_collections.md#interactive-generators)   
     * [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
 ---
-* [*Sub-4: Symbols*](sub_4_symbols.md) - A Coffeehouse   
-* [**Main-4: Metaobjects**](main_4_metaobjects.md) - Life on the Plantation   
+* [**Main-4: Metaobjects**](main_4_metaobjects.md) / [*Sub-4: Symbols*](sub_4_symbols.md)   
    * Why Metaobjects?   
    * Mixins, Forwarding, and Delegation      
    * Later Binding    
    * Delegation via Prototypes   
    * Shared Prototypes   
 ---
-* [*Sub-5: Impostors*](sub_5_impostors.md) - Decaffeinated   
-* [**Main-5: Constructors and Classes**](main_5_constructors.md) - Finish the Cup   
+* [**Main-5: Constructors and Classes**](main_5_constructors.md) / [*Sub-5: Impostors*](sub_5_impostors.md)   
    * Constructors and new   
    * Why Classes in JavaScript?   
    * Classes with class   
@@ -121,8 +117,7 @@
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
    * Bound -- Send -- Invoke -- Fluent   
 ---
-* [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md) - Colourful Mugs   
-* [**Main-6: Composing Class Behaviour**](main_6_classes.md) - Con Panna   
+* [**Main-6: Composing Class Behaviour**](main_6_classes.md) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)   
    * Extending Classes with Mixins   
    * Functional Mixins   
    * Emulating Multiple Inheritance   
