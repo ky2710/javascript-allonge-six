@@ -83,7 +83,7 @@
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
 		* what is hiding of state-process, and why does it matter?
 		* how do we hide state using javascript? -- method-ology -- hiding state
-	* [Composition and Extension](main_2_objects.md#composition-and-extension) --> :boom:Chapter 7: [Closure vs Object](https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/ch7.md/#chapter-7-closure-vs-object)
+	* [Composition and Extension](main_2_objects.md#composition-and-extension) --> :boom:[Chapter 7: Closure vs Object][det_2]
 		* **Composition : A deeply fundamental practice is to build components out of smaller components**
 		* **Extension : Another practice is to extend an implementation.**
 	* [This and That](main_2_objects.md#this-and-that) -- [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function) -- [Method Decorators](main_2_objects.md#method-decorators)
