@@ -92,7 +92,7 @@ To make our stack work, we need a way for our functions to refer to our stack. W
 
 In this text, we lurch from talking about "functions that belong to an object" to "methods." Other languages may separate methods from functions very strictly, but in JavaScript every method is a function, but not all functions are methods.
 
-The view taken in this book is that a function is a method of an object if it belongs to that object and interacts with that object in some way. So the functions implementing the operations on the stack are all absolutely methods of the stack.
+The view taken in this book is that **a function is a method of an object if it belongs to that object and interacts with that object in some way.** So the functions implementing the operations on the stack are all absolutely methods of the stack.
 
 But these two wouldn't be methods. Although they "belong" to an object, they don't interact with it:
 ```js
