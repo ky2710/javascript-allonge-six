@@ -48,7 +48,7 @@
 * [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
 	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
-    		* call by value -- variables and bindings -- call by sharing
+		* call by value -- variables and bindings -- call by sharing
 	* [Closures and Scope](main_0_functions.md#closures-and-scope)   
 	* [const and lexical scope](main_0_functions.md#that-constant-coffee-craving) - That Constant Coffee Craving   
 	* [Naming Functions](main_0_functions.md#naming-functions)     
@@ -57,7 +57,7 @@
 		* combinators -- a balanced statement about combinators
 		* function decorators
 	* [Building Blocks](main_0_functions.md#building-blocks)   
-        	* composition -- partial application
+		* composition -- partial application
 	* [Magic Names : this, aruments](main_0_functions.md#magic-names)     
 	* [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
