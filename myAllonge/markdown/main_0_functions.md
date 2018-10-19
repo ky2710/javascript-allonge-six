@@ -45,7 +45,7 @@ Right now, we only know about one such expression: `() => 0`, so let's use it. W
 
 [ALGOL]: https://en.wikipedia.org/wiki/ALGOL
 
-### functions that return values and evaluate expressions
+### functions that return (values and evaluate expressions)
 
 We've seen `() => 0`. We know that `(() => 0)()` returns `0`, and this is unsurprising. Likewise, the following all ought to be obvious:
 
