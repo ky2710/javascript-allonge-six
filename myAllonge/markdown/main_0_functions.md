@@ -1,7 +1,7 @@
 # The first sip: Basic Functions
 ## As Little As Possible About Functions, But No Less
 
-In JavaScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. Functions represent computations to be performed. Like numbers, strings, and arrays, they have a representation. Let's start with the second simplest possible function.`[1]` In JavaScript, it looks like this:
+In JavaScript, functions are values, but they are also much more than simple numbers, strings, or even complex data structures like trees or maps. **Functions represent computations to be performed.** Like numbers, strings, and arrays, they have a representation. Let's start with the second simplest possible function.`[1]` In JavaScript, it looks like this:
 
 >`[1]` The simplest possible function is `() => {}`, we'll see that later.
 ```js
