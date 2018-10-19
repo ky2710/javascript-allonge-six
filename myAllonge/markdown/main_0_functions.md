@@ -382,7 +382,7 @@ How does the value get put in the environment? Well for arguments, that is very 
 1. It then starts evaluating the expression, including evaluating sub-expressions
 1. One sub-expression, `(x) => x` evaluates to a function.
 1. Another, `2`, evaluates to the number 2.
-1. JavaScript now evaluates applying the function to the argument `2`. **Here's where it gets interesting...**
+1. JavaScript now **evaluates** applying the function to the argument `2`. **Here's where it gets interesting...**
 1. An environment is created.
 1. The value '2' is bound to the name 'x' in the environment.
 1. The expression 'x' (the right side of the function) is evaluated within the environment we just created.
