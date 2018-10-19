@@ -261,7 +261,7 @@ The return statement is the first statement we've seen, and it behaves different
     (() => return 0)()
       //=> ERROR
 ```
-Statements belong inside blocks and only inside blocks. Some languages simplify this by making everything an expression, but JavaScript maintains this distinction, so when learning JavaScript we also learn about statements like function declarations, for loops, if statements, and so forth. We'll see a few more of these later.
+**[Statements belong inside blocks and only inside blocks.](#aa)** Some languages simplify this by making everything an expression, but JavaScript maintains this distinction, so when learning JavaScript we also learn about statements like function declarations, for loops, if statements, and so forth. We'll see a few more of these later.
 
 ### functions that evaluate to functions
 
