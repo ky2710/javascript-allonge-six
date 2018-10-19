@@ -29,7 +29,7 @@ Like arrays, every time you evaluate an expression to produce a function, you ge
 
 ### applying functions
 
-Let's put functions to work. The way we use functions is **to *apply* them to zero or more values called *arguments*.** Just as `2 + 2` produces a value (in this case `4`), **applying a function to zero or more arguments *produces a value as well.***
+Let's put functions to work. The way we use functions is **to *apply* them to zero or more values called *arguments*.** Just as `2 + 2` produces a value (in this case `4`), **applying a function to zero or more arguments [*produces a value as well.*](#aa)**
 
 Here's how we apply a function to some values in JavaScript: Let's say that *fn_expr* is an expression that when evaluated, produces a function. Let's call the arguments *args*. Here's how to apply a function to some arguments:
 
