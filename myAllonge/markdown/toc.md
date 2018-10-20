@@ -57,7 +57,8 @@
 		* combinators -- a balanced statement about combinators
 		* function decorators
 	* [Building Blocks](main_0_functions.md#building-blocks)   
-		* composition -- partial application
+		* composition
+		* partial application
 	* [Magic Names : this, aruments](main_0_functions.md#magic-names)     
 	* [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
