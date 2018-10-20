@@ -422,7 +422,7 @@ With `leftGather`, we have to supply the length of the array we wish to use as t
 
 ## Compose and Pipeline
 
-Here is the B Combinator, or `compose` that we saw in [Combinators and Decorators](#combinators):
+Here is the B Combinator, or `compose` that we saw in [Combinators and Decorators](main_0_functions.md#combinators):
 ```js
     const compose = (a, b) =>
       (c) => a(b(c))
