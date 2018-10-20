@@ -59,7 +59,7 @@
 	* [Building Blocks](main_0_functions.md#building-blocks)   
 		* composition
 		* partial application
-	* [Magic Names](main_0_functions.md#magic-names) : this, aruments     
+	* [Magic Names](main_0_functions.md#magic-names) : this, arguments     
 	* [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
 	* Partial Application -- Unary -- Tap -- Maybe   
