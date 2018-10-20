@@ -1340,7 +1340,7 @@ When a function is applied to arguments (or "called"), JavaScript binds the valu
 
 There are two separate rules for these "magic" names, one for when you invoke a function using the `function` keyword, and another for functions defined with "fat arrows." We'll begin with how things work for functions defined with the `function` keyword.
 
-The first magic name is  `this`, and it is bound to something called the function's [context](main_2_objects.md#what-context-applies-when-we-call-a-function-context). We will explore `this` in more detail when we start discussing objects and classes. The second magic name is very interesting, it's called `arguments`, and the most interesting thing about it is that it contains a list of arguments passed to a function:
+The first magic name is  `this`, and it is bound to something called the function's [context](main_2_objects.md#what-context-applies-when-we-call-a-function). We will explore `this` in more detail when we start discussing objects and classes. The second magic name is very interesting, it's called `arguments`, and the most interesting thing about it is that it contains a list of arguments passed to a function:
 
 ```javascript
   const plus = function (a, b) {
