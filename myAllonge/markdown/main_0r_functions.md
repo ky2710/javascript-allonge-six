@@ -393,11 +393,10 @@ const [...butLast, last] = ['why', 'hello', 'there', 'little', 'droid'];
 ```
 We could use `leftVariadic` the hard way:
 ```js
-const [butLast, last] = leftVariadic((butLast, last) => [butLast, last])(...['why', 'hello', 'there', 'little', 'droid']);
-
+const [butLast, last] = leftVariadic((butLast, last) 
+        => [butLast, last])(...['why', 'hello', 'there', 'little', 'droid']);
 butLast
   //=> ['why', 'hello', 'there', 'little']
-
 last
   //=> 'droid'
 ```
