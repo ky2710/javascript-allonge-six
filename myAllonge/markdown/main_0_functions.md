@@ -1216,7 +1216,7 @@ If we were learning Combinatorial Logic, we'd start with the most basic combinat
 
 In this book, we will be using a looser definition of **"combinator:" Higher-order pure functions that take [only](#aa) functions as arguments and return a function.** We won't be strict about using only previously defined combinators in their construction.
 
-Let's start with a useful combinator: Most programmers call it *Compose*, although the logicians call it the B combinator or "Bluebird." Here is the typical`[1]` programming implementation:
+Let's start with a useful combinator: Most programmers call it **Compose**, although the logicians call it the **B combinator or "Bluebird."** Here is the typical`[1]` programming implementation:
 
 >`[1]` As we'll discuss later, this implementation of the B Combinator is correct in languages like Scheme, but for truly general-purpose use in JavaScript, it needs to correctly manage the function context.
 
