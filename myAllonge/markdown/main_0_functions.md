@@ -1185,7 +1185,8 @@ The parentheses make this an expression, not a function declaration.
 ## Combinators and Function Decorators
 ### higher-order functions
 
-As we've seen, **JavaScript functions take [values](#aa) as arguments and return [values](#aa)**. JavaScript functions are values, so JavaScript functions can take functions as arguments, return functions, or both. **Generally speaking, a function that either takes functions as arguments, or returns a function, or both, is referred to as a "higher-order" function.**
+As we've seen, **JavaScript functions take [values](#aa) as arguments and return [values](#aa). JavaScript functions are values, so JavaScript functions can take functions as arguments, return functions, or both.**    
+Generally speaking, **a function that either takes functions as arguments, or returns a function, or both, is referred to as a "higher-order" function.**
 
 Here's a very simple higher-order function that takes a function as an argument:
 ```javascript
@@ -1213,11 +1214,11 @@ The word "combinator" has a precise technical meaning in mathematics:
 
 If we were learning Combinatorial Logic, we'd start with the most basic combinators like `S`, `K`, and `I`, and work up from there to practical combinators. We'd learn that the fundamental combinators are named after birds following the example of Raymond Smullyan's famous book [To Mock a Mockingbird](http://www.amazon.com/gp/product/B00A1P096Y/ref=as_li_ss_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B00A1P096Y&linkCode=as2&tag=raganwald001-20).
 
-In this book, we will be using a looser definition of **"combinator:" Higher-order pure functions that take only functions as arguments and return a function.** We won't be strict about using only previously defined combinators in their construction.
+In this book, we will be using a looser definition of **"combinator:" Higher-order pure functions that take [only](#aa) functions as arguments and return a function.** We won't be strict about using only previously defined combinators in their construction.
 
 Let's start with a useful combinator: Most programmers call it *Compose*, although the logicians call it the B combinator or "Bluebird." Here is the typical`[1]` programming implementation:
 
->`[1]` As we'll discuss later, this implementation of the B Combinator is correct in languages like Scheme, but for truly general-purpose use in JavaScript, it needs to correctly manage the [function context](#context).
+>`[1]` As we'll discuss later, this implementation of the B Combinator is correct in languages like Scheme, but for truly general-purpose use in JavaScript, it needs to correctly manage the function context.
 
 ```javascript
     const compose = (a, b) =>
@@ -1245,7 +1246,7 @@ Code that uses a lot of combinators tends to name the verbs and adverbs (like `d
 
 ### function decorators
 
-**A *function decorator* is a higher-order function that takes one function as an argument, returns another function, and the returned function is a variation of the argument function.** Here's a ridiculously simple  decorator:`[1]`
+**A *function decorator* is a higher-order function that takes [one](#aa) function as an argument, returns another function, and the returned function is a variation of the argument function.** Here's a ridiculously simple  decorator:`[1]`
 >`[1]` We'll see later why an even more useful version would be written `(fn) => (...args) => !fn(...args)`
 ```javascript
     const not = (fn) => (x) => !fn(x)
