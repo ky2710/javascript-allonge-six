@@ -910,7 +910,7 @@ Although we showed how to use tail calls to map and fold over arrays with `[firs
 
 ## Plain Old JavaScript Objects
 
-Lists are not the only way to represent collections of things, but they are the "oldest" data structure in the history of high level languages, because they map very closely to the way the hardware is organized in a computer. Lists are obviously very handy for homogeneous collections of things, like a shopping list:
+Lists are not the only way to represent collections of things, but they are the "oldest" data structure in the history of high level languages, because they map very closely to the way the hardware is organized in a computer. **[Lists are obviously very handy for homogeneous collections of things](#aa),** like a shopping list:
 ```js
 const remember = ["the milk", "the coffee beans", "the biscotti"];
 ```
@@ -931,13 +931,13 @@ const NAME = 0,
 const user = [["Reginald", "Braithwaite"]
         ,[ "author", ["JavaScript Allongé", "JavaScript Spessore", "CoffeeScript Ristretto"]]];
 ```
-Now they could write `user[NAME][LAST]` or `user[OCCUPATION][TITLE]` instead of `user[0][1]` or `user[1][0]`. Over time, this need to build heterogeneous data structures with access to members by name evolved into the [Dictionary] data type, a mapping from a unique set of objects to another set of objects.
+Now they could write `user[NAME][LAST]` or `user[OCCUPATION][TITLE]` instead of `user[0][1]` or `user[1][0]`. Over time, [this need to build heterogeneous data structures with access to members by name evolved into the [Dictionary] data type, a mapping from a unique set of objects to another set of objects.](#aa)
 
 [Dictionary]: https://en.wikipedia.org/wiki/Associative_array
 
 Dictionaries store key-value pairs, so instead of binding `NAME` to `0` and then storing a name in an array at index `0`, we can bind a name directly to `name` in a dictionary, and we let JavaScript sort out whether the implementation is a list of key-value pairs, a hashed collection, a tree of some sort, or anything else.
 
-JavaScript has dictionaries, and it calls them "objects." The word "object" is loaded in programming circles, due to the widespread use of the term "object-oriented programming" that was coined by Alan Kay but has since come to mean many, many things to many different people.
+**JavaScript has dictionaries, and it calls them "objects."** The word "object" is loaded in programming circles, due to the widespread use of the term "object-oriented programming" that was coined by Alan Kay but has since come to mean many, many things to many different people.
 
 In JavaScript, an object is a map from string keys to values.
 
