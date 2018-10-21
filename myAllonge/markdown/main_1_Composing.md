@@ -931,7 +931,7 @@ const NAME = 0,
 const user = [["Reginald", "Braithwaite"]
         ,[ "author", ["JavaScript Allongé", "JavaScript Spessore", "CoffeeScript Ristretto"]]];
 ```
-Now they could write `user[NAME][LAST]` or `user[OCCUPATION][TITLE]` instead of `user[0][1]` or `user[1][0]`. Over time, [this need to build heterogeneous data structures with access to members by name evolved into the [Dictionary] data type, a mapping from a unique set of objects to another set of objects.](#aa)
+Now they could write `user[NAME][LAST]` or `user[OCCUPATION][TITLE]` instead of `user[0][1]` or `user[1][0]`. Over time, **this need to build heterogeneous data structures with access to members by name evolved into the [Dictionary] data type, a mapping from a unique set of objects to another set of objects.**
 
 [Dictionary]: https://en.wikipedia.org/wiki/Associative_array
 
@@ -1150,7 +1150,7 @@ const length = (node, delayed = 0) =>
 length(OneTwoThree)
   //=> 3
 ```
-What about mapping? Well, let's start with the simplest possible thing, making a *copy* of a list. As we saw above, and discussed in [Garbage, Garbage Everywhere](#garbage-garbage-everywhere), it is fast to iterate forward through a linked list. What isn't fast is naïvely copying a list:
+What about mapping? Well, let's start with the simplest possible thing, making a *copy* of a list. As we saw above, and discussed in [Garbage, Garbage Everywhere](main_1_Composing.md#garbage-garbage-everywhere), it is fast to iterate forward through a linked list. What isn't fast is naïvely copying a list:
 ```js
 const slowcopy = (node) =>
   node === EMPTY
