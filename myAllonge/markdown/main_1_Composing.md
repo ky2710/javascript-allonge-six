@@ -952,7 +952,7 @@ Two objects created with separate evaluations have differing identities, just li
     { year: 2012, month: 6, day: 14 } === { year: 2012, month: 6, day: 14 }
       //=> false
 ```
-Objects use `[]` to access the values by name, using a string:
+Objects use `[]` to access the values by name, using a **string**:
 ```js
     { year: 2012, month: 6, day: 14 }['day']
       //=> 14
