@@ -67,6 +67,8 @@
 ---   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
+		* array literals -- element references -- destructuring arrays -- gathering
+		* destructuring is not pattern matching -- destructuring and return values -- destructuring parameters
 	* [Self-Similarity](main_1_Composing.md#self-similarity) : List(Array)
 		* linear recursion -- mapping -- folding(Reduce)
 	* [Tail Calls (and Default Arguments)](main_1_Composing.md#tail-calls-and-default-arguments)   
