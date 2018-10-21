@@ -1,10 +1,10 @@
 # Finish the Cup: Constructors and Classes
 
-As discussed in [Encapsulating State](#encapsulation), JavaScript objects are very simple, yet the combination of objects, functions, and closures can create powerful data structures. We've also seen how to use [Metaobjects](#metaobjects) to separate behaviour from domain properties, and to share functionality amongst many different objects. And finally, we saw that one particular type of metaobject, a *prototype*, provides us with a robust model for delegation.
+As discussed in [Encapsulating State](main_2_objects.md#encapsulating-state-with-closures), JavaScript objects are very simple, yet the combination of objects, functions, and closures can create powerful data structures. We've also seen how to use [Metaobjects](main_4_metaobjects.md) to separate behaviour from domain properties, and to share functionality amongst many different objects. And finally, we saw that one particular type of metaobject, a *prototype*, provides us with a robust model for delegation.
 
 In this section, we will return to prototypes, and see how to use JavaScript's `class` keyword to write one style of "object-oriented" JavaScript.
 
-## Constructors and `new` {#new}
+## Constructors and `new`
 
 Let's strip a function down to the bare essentials:
 ```js
