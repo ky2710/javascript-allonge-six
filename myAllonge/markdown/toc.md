@@ -67,7 +67,10 @@
 ---   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
    * [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
-   * [Self-Similarity](main_1_Composing.md#self-similarity)
+   * [Self-Similarity](main_1_Composing.md#self-similarity) : List(Array)
+   	* linear recursion
+	* mapping
+	* folding(Reduce)
    * [Tail Calls (and Default Arguments)](main_1_Composing.md#tail-calls-and-default-arguments)   
    * [Garbage, Garbage Everywhere](main_1_Composing.md#garbage-garbage-everywhere)   
    * [Plain Old JavaScript Objects](main_1_Composing.md#plain-old-javascript-objects)   
