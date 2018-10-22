@@ -26,7 +26,7 @@ That is valuable whether we use those features in production or not. And that is
 
 ### the lightweight way
 
-When creating a new abstraction, (for example, [traits](#traits)), there are two ways to do it: The heavyweight way, and the lightweight way.
+When creating a new abstraction, (for example, [traits](main_7_dedorators.md#lightweight-traits)), there are two ways to do it: The heavyweight way, and the lightweight way.
 
 The lightweight way, as explained throughout this book, attempts to be as "JavaScript-y" as possible. For example, using functions for protocols and composing them. With the lightweight way, everything is still just a function, or just an object, or just a class with just a prototype. Lightweight code interoperates 100% with code from other libraries. Lightweight approaches can be incrementally added to an existing code base, refactoring a bit here and a bit there.
 
