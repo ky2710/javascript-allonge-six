@@ -43,8 +43,10 @@
 ## [JavaScript Allongé-6th](#top) *- detail*
 ***[You Dont Konw JS][det_1]** --- **[Functional Light JS][det_2]** --- **[Understanding ES6][det_3]** --- **[Javascript Allongé-6th][det_4]***      
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
-#### :black_medium_square:[ Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
-	* values are expressions     * values and identity  
+* [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md)        
+	* values are expressions
+	* values and identity  
+---
 * [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
 	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
@@ -141,7 +143,8 @@
 	* Before Method Advice   
 	* Provided and Unless   
 	* Method Advice   
-#### :black_medium_square:[ Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
+---
+* [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md)   
 
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
