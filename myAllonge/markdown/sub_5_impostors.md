@@ -34,13 +34,13 @@ So. Value types don't have methods or prototypes. And yet:
 ```
 Somehow, when we write `"Spence Olham".split(' ')`, the string `"Spence Olham"` isn't an object, it doesn't have methods, but it does a damn fine job of impersonating an object with a `String` prototype. How does `"Spence Olham"` impersonate an object?
 
-JavaScript pulls some legerdemain. When you do something that treats a value like an object, JavaScript checks to see whether the value actually is an object. If the value is actually a primitive,[^reminder] JavaScript temporarily makes an object that is a kinda-sorta copy of the primitive and that kinda-sorta copy has methods and you are temporarily fooled into thinking that `"Spence Olham"` has a `.split` method.
+JavaScript pulls some legerdemain. When you do something that treats a value like an object, JavaScript checks to see whether the value actually is an object. If the value is actually a primitive,`1` JavaScript temporarily makes an object that is a kinda-sorta copy of the primitive and that kinda-sorta copy has methods and you are temporarily fooled into thinking that `"Spence Olham"` has a `.split` method.
 
-[^reminder]: Recall that Strings, Numbers, Booleans and so forth are value types and primitives. We're calling them primitives here.
+>`1` Recall that Strings, Numbers, Booleans and so forth are value types and primitives. We're calling them primitives here.
 
-These kinda-sorta copies are called String *instances* as opposed to String *primitives*. And the instances have methods, while the primitives do not. How does JavaScript make an instance out of a primitive? With `new`, of course.[^later] Let's try it:
+These kinda-sorta copies are called String *instances* as opposed to String *primitives*. And the instances have methods, while the primitives do not. How does JavaScript make an instance out of a primitive? With `new`, of course.`1` Let's try it:
 
-[^later]: We'll read all about the `new` keyword in [Constructors and `new`](main_5_constructors.md#constructors-and-new).
+>`1` We'll read all about the `new` keyword in [Constructors and `new`](main_5_constructors.md#constructors-and-new).
 ```js
     new String("Spence Olham")
       //=> "Spence Olham"
