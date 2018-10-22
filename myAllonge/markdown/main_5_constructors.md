@@ -775,9 +775,7 @@ In JavaScript, prototype chains are vulnerable because changes to one prototype'
 In the next section we will look at a technique for [reducing coupling between classes](main_6_classes.md#reducing-coupling). And we will look at avoiding deep hierarchies with mixins.
 
 ## Summary
-
  ### Instances and Classes
-
 * The `new` keyword turns any function into a *constructor* for creating *instances*.
 * All functions have a `prototype` element.
 * Instances behave as if the elements of their constructor's prototype are their elements.
