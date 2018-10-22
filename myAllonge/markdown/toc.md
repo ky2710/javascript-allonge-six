@@ -110,11 +110,11 @@
 	* [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
 ---
 * [**Main-4: Metaobjects**](main_4_metaobjects.md) / [*Sub-4: Symbols*](sub_4_symbols.md)   
-	* [Why Metaobjects?]() 
-	* [Mixins, Forwarding, and Delegation]()       
-	* [Later Binding]()     
-	* [Delegation via Prototypes]()    
-	* [Shared Prototypes]()    
+	* [Why Metaobjects?](main_4_metaobjects.md#why-metaobjects) 
+	* [Mixins, Forwarding, and Delegation](main_4_metaobjects.md#mixins-forwarding-and-delegation)       
+	* [Later Binding](main_4_metaobjects.md#later-binding)     
+	* [Delegation via Prototypes](main_4_metaobjects.md#delegation-via-prototypes)    
+	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
 ---
 * [**Main-5: Constructors and Classes**](main_5_constructors.md) / [*Sub-5: Impostors*](sub_5_impostors.md)   
 	* [Constructors and new]()    
