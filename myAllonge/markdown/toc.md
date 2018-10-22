@@ -46,7 +46,6 @@
 >* [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md)        
 >	* values are expressions
 >	* values and identity  
----
 * [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
 	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
@@ -63,10 +62,9 @@
 		* partial application
 	* [Magic Names](main_0_functions.md#magic-names) : this, arguments     
 	* [Summary](main_0_functions.md#summary)     
-* [Recipe-0: Basic Functions](main_0r_functions.md)   
-	* Partial Application -- Unary -- Tap -- Maybe -- Once 
-	* Left-Variadic Functions -- Compose and Pipeline   
----   
+>* [Recipe-0: Basic Functions](main_0r_functions.md)   
+>	* Partial Application -- Unary -- Tap -- Maybe -- Once 
+>	* Left-Variadic Functions -- Compose and Pipeline   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
 		* array literals -- element references -- destructuring arrays -- gathering
