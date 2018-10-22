@@ -1,15 +1,7 @@
-# Life on the Plantation: Metaobjects {#metaobjects}
-
-![Krups Machines](images/shadowbecomeswhite.jpg)[^shadowbecomeswhite]
-
-[^shadowbecomeswhite]: [Krups Machines](http://www.flickr.com/photos/31383674@N00/10529091736) (c) 2010 Shadow Becomes White, [some rights reserved](http://creativecommons.org/licenses/by-nd/2.0/deed.en)
-
-{pagebreak}
+# Life on the Plantation: Metaobjects
 ## Why Metaobjects?
 
-I> In computer science, a metaobject is an object that manipulates, creates, describes, or implements other objects (including itself). The object that the metaobject is about is called the base object. Some information that a metaobject might store is the base object's type, interface, class, methods, attributes, parse tree, etc.
-I>
-I> --[Wikipedia](https://en.wikipedia.org/wiki/Metaobject)
+> In computer science, a metaobject is an object that manipulates, creates, describes, or implements other objects (including itself). The object that the metaobject is about is called the base object. Some information that a metaobject might store is the base object's type, interface, class, methods, attributes, parse tree, etc. --[Wikipedia](https://en.wikipedia.org/wiki/Metaobject)
 
 It is possible to write software using objects alone. When we need behaviour for an object, we can give it methods by binding functions to keys in the object:
 
@@ -33,7 +25,8 @@ This lack of separation has two drawbacks. First, it intermingles properties tha
 Metaobjects solve the lack-of-separation problem by separating the domain-specific properties of objects from their implementation-specific properties and the functions that represent their behaviour.
 
 The basic principle of the metaobject is that we separate the mechanics of behaviour from the domain properties of the base object. This has immediate engineering benefits, and it's also the foundation for designing programs with formal classes, expectations, and delegation.
-## Mixins, Forwarding, and Delegation {#mixins}
+
+## Mixins, Forwarding, and Delegation
 
 The simplest possible metaobject in JavaScript is a *mixin*. Consider our naïve object:
 
@@ -188,7 +181,7 @@ investor.netWorth()
   //=> 3000000
 ~~~~~~~~
 
-### forwarding {#forwarding}
+### forwarding
 
 Forwarding is a relationship between an object that receives a method invocation receiver and a provider object. They may be peers. The provider may be contained by the consumer. Or perhaps the provider is a metaobject.
 
@@ -250,7 +243,8 @@ Delegation and forwarding are both very similar. One metaphor that might help di
 In both cases, the other entity does the work when you receive the email.
 
 [fm]: https://javascriptweblog.wordpress.com/2011/05/31/a-fresh-look-at-javascript-mixins/
-## Later Binding {#later-binding}
+
+## Later Binding
 
 When comparing Mixins to Delegation, we noted that Mixins are early bound and Delegation is late bound. Let's be specific. Given:
 
@@ -370,7 +364,7 @@ investor.netWorth()
 
 The `delegateToOwn` delegation now delegates to `companyRetirementPlan`, because it is bound to the property name, not to the original object. This seems questionable for portfolios--what happens to the old portfolio when you assign a new one?--but has tremendous application for modeling classes of behaviour that change dynamically.
 
-### state machines {#state-machines}
+### state machines
 
 A very common use case for this delegation is when building [finite state machines][ssm]. As described in the book [Understanding the Four Rules of Simple Design][4r] by Corey Haines, you *could* implement [Conway's Game of Life][gol] using `if` statements. Hand waving furiously over other parts of the system, you might get:
 
@@ -465,7 +459,8 @@ Delegation to a property representing state takes advantage of late binding to b
 ### late bound forwarding
 
 The exact same technique can be used for forwarding to a property, and forwarding to a property can also be used for some kinds of state machines. Forwarding to a property has lower coupling than delegation, and is preferred where appropriate.
-## Delegation via Prototypes {#prototypes}
+
+## Delegation via Prototypes
 
 At this point, we're discussed separating behaviour from object properties using metaobjects while avoiding discussion of prototypes. This is deliberate, because what we have achieved is developing a vocabulary for describing what a prototype is.
 
@@ -652,6 +647,7 @@ lowry.hasOwnProperty('fullName');
 One of the goals of metaobjects is to separate domain properties (such as `firstName`) from behaviour (such as `.fullName()`). All of our metaobject techniques allow us to do that in our written code, but prototypes do this extremely effectively in the runtime structure of the objects themselves.
 
 This is extremely useful.
+
 ## Shared Prototypes
 
 We can create a very simple object and associate it with a prototype:
