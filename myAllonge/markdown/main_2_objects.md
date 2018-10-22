@@ -577,7 +577,7 @@ There is more to `this` than we've discussed here. We'll explore things in more 
 
 ## What Context Applies When We Call a Function?
 
-In [This and That](#this), we learned that when a function is denoted using the `function` keyword, and is called as an object method, the name `this` is bound in its environment to the object acting as a "receiver." For example:
+In [This and That](#aa), we learned that when a function is denoted using the `function` keyword, and is called as an object method, the name `this` is bound in its environment to the object acting as a "receiver." For example:
 ```js
     const someObject = {
       returnMyThis () {
@@ -596,7 +596,7 @@ JavaScript programmers talk about functions having a "context" when being called
 
 >`1` Too bad the language binds the context to the name `this` instead of the name `context`!
 
-This is an important distinction. Consider closures: As we discussed in [Closures and Scope](#closures), a function's free variables are resolved by looking them up in their enclosing functions' environments. You can always determine the functions that define free variables by examining the source code of a JavaScript program, which is why this scheme is known as [Lexical Scope].
+This is an important distinction. Consider closures: As we discussed in [Closures and Scope](main_0_functions.md#closures-and-scope), a function's free variables are resolved by looking them up in their enclosing functions' environments. You can always determine the functions that define free variables by examining the source code of a JavaScript program, which is why this scheme is known as [Lexical Scope].
 
 [Lexical Scope]: https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping
 
