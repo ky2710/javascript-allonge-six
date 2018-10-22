@@ -126,12 +126,12 @@
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
 	* Bound -- Send -- Invoke -- Fluent   
 ---
-* [**Main-6: Composing Class Behaviour**](main_6_classes.md) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)   
-	* [Extending Classes with Mixins]()    
-	* [Functional Mixins]()    
-	* [Emulating Multiple Inheritance]()    
-	* [Preventing Property Conflicts]()    
-	* [Reducing Coupling]()    
+* [**Main-6: Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)   
+	* [Extending Classes with Mixins](main_6_classes.md#extending-classes-with-mixins)    
+	* [Functional Mixins](main_6_classes.md#functional-mixins)    
+	* [Emulating Multiple Inheritance](main_6_classes.md#emulating-multiple-inheritance)    
+	* [Preventing Property Conflicts](main_6_classes.md#preventing-property-conflicts)    
+	* [Reducing Coupling](main_6_classes.md#reducing-coupling)    
 ---
 * [**Main-7: More Decorators**](main_7_dedorators.md)   
 	* [Stateful Method Decorators]()    
