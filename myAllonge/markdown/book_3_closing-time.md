@@ -22,8 +22,6 @@ By implementing simple versions of features like decorators, mixins, and traits,
 
 That is valuable whether we use those features in production or not. And that is valuable whether those features are added to JavaScript, or not.
 
-![Espresso, Empty](images/espresso-empty.jpg)
-
 ### the lightweight way
 
 When creating a new abstraction, (for example, [traits](main_7_dedorators.md#lightweight-traits)), there are two ways to do it: The heavyweight way, and the lightweight way.
