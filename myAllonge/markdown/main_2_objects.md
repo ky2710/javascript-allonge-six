@@ -412,7 +412,9 @@ Now we can extend a queue into a deque:
 ```
 Presto, we have reuse through extension, at the cost of encapsulation.
 
-> Encapsulation and Extension exist in a natural state of tension. A program with elaborate encapsulation resists breakage but can also be difficult to refactor in other ways. Be mindful of when it's best to Compose and when it's best to Extend.
+> Encapsulation and Extension exist in a natural state of tension.    
+> A program with elaborate encapsulation resists breakage but can also be difficult to refactor in other ways. 
+> Be mindful of when it's best to Compose and when it's best to Extend.
 
 ## This and That
 
