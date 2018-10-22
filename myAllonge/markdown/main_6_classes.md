@@ -11,7 +11,7 @@ Because "classes" use the exact same model of delegating behaviour to prototypes
 We can also share behaviour between classes in a more flexible way by mixing functionality into classes. This is the exact same thing as mixing functionality into prototypes, of course.
 
 Recall `Person`:
-
+```js
     class Person {
       constructor (first, last) {
         this.rename(first, last);
@@ -29,9 +29,9 @@ Recall `Person`:
     const misterRogers = new Person('Fred', 'Rogers');
     misterRogers.fullName()
       //=> Fred Rogers
-
+```
 We might be building some enterprisey thing and need `Manager` and `Worker`:
-
+```js
     class Manager extends Person {
       constructor (first, last) {
         super(first, last)
@@ -67,11 +67,11 @@ We might be building some enterprisey thing and need `Manager` and `Worker`:
         return this;
       }
     }
-
+```
 This works for our company, so well that we grow and develop the dreaded "Middle Manager," who both manages people and has a manager of their own. We could subclass `Manager` with `MiddleManager`, but how do `Worker` and `MiddleManager` share the functionality for having a manager?
 
 With a mixin, of course:
-
+```js
     const HasManager = {
       function setManager (manager) {
         this.removeManager();
@@ -118,7 +118,7 @@ With a mixin, of course:
       }
     }
     Object.assign(Worker.prototype, HasManager);
-    
+```    
 We can mix functionality into the prototypes of "classes" just as easily as we can mix functionality directly into objects, because prototypes *are* objects, and JavaScript builds its "classes" out of prototypes.
 
 Were classes "something else," like they are in other languages, we would gain many advantages that we do not enjoy in JavaScript, but we would also give up the flexibility of being able to use the same tools and techniques on prototypes that we do on objects.
@@ -136,8 +136,7 @@ First, a quick recap: In JavaScript, a "class" is implemented as a constructor f
 One way to share behaviour scattered across multiple classes, or to untangle behaviour by factoring it out of an overweight prototype, is to extend a prototype with a *mixin*.
 
 Here's a class of todo items:
-
-~~~~~~~~
+```js
 class Todo {
   constructor (name) {
     this.name = name || 'Untitled';
@@ -152,11 +151,9 @@ class Todo {
     return this;
   }
 }
-~~~~~~~~
-
+```
 And a "mixin" that is responsible for colour-coding:
-
-~~~~~~~~
+```js
 const Coloured = {
   setColourRGB ({r, g, b}) {
     this.colourCode = {r, g, b};
@@ -166,25 +163,21 @@ const Coloured = {
     return this.colourCode;
   }
 };
-~~~~~~~~
-
+```
 Mixing colour coding into our Todo prototype is straightforward:
-
-~~~~~~~~
+```js
 Object.assign(Todo.prototype, Coloured);
 
 new Todo('test')
   .setColourRGB({r: 1, g: 2, b: 3})
   //=> {"name":"test","done":false,"colourCode":{"r":1,"g":2,"b":3}}
-~~~~~~~~
-
+```
 So far, very easy and very simple. This is a *pattern*, a recipe for solving a certain problem using a particular organization of code.
 
 ### functional mixins
 
 The object mixin we have above works properly, but our little recipe had two distinct steps: Define the mixin and then extend the class prototype. Angus Croll pointed out that it's more elegant to define a mixin as a function rather than an object. He calls this a [functional mixin][fm]. Here's `Coloured` again, recast in functional form:
-
-~~~~~~~~
+```js
 const Coloured = (target) =>
   Object.assign(target, {
     setColourRGB ({r, g, b}) {
@@ -197,18 +190,14 @@ const Coloured = (target) =>
   });
 
 Coloured(Todo.prototype);
-~~~~~~~~
-
+```
 We can make ourselves a *factory function* that also names the pattern:
-
-~~~~~~~~
+```js
 const FunctionalMixin = (behaviour) =>
   target => Object.assign(target, behaviour);
-~~~~~~~~
-
+```
 This allows us to define functional mixins neatly:
-
-~~~~~~~~
+```js
 const Coloured = FunctionalMixin({
   setColourRGB ({r, g, b}) {
     this.colourCode = {r, g, b};
@@ -218,8 +207,7 @@ const Coloured = FunctionalMixin({
     return this.colourCode;
   }
 });
-~~~~~~~~
-
+```
 ### enumerability
 
 If we look at the way `class` defines prototypes, we find that the methods defined are not enumerable by default. This works around a common error where programmers iterate over the keys of an instance and fail to test for `.hasOwnProperty`.
@@ -227,8 +215,7 @@ If we look at the way `class` defines prototypes, we find that the methods defin
 Our object mixin pattern does not work this way, the methods defined in a mixin *are* enumerable by default, and if we carefully defined them to be non-enumerable, `Object.assign` wouldn't mix them into the target prototype, because `Object.assign` only assigns enumerable properties.
 
 And thus:
-
-~~~~~~~~
+```js
 Coloured(Todo.prototype)
 
 const urgent = new Todo("finish blog post");
@@ -241,13 +228,11 @@ for (let property in urgent) console.log(property);
     colourCode
     setColourRGB
     getColourRGB
-~~~~~~~~
-
+```
 As we can see, the `setColourRGB` and `getColourRGB` methods are enumerated, although the `do` and `undo` methods are not. This can be a problem with naïve code: we can't always rewrite all the *other* code to carefully use `.hasOwnProperty`.
 
 One benefit of functional mixins is that we can solve this problem and transparently make mixins behave like `class`:
-
-~~~~~~~~
+```js
 const FunctionalMixin = (behaviour) =>
   function (target) {
     for (let property of Reflect.ownKeys(behaviour))
@@ -258,8 +243,7 @@ const FunctionalMixin = (behaviour) =>
         })
     return target;
   }
-~~~~~~~~
-
+```
 Writing this out as a pattern would be tedious and error-prone. Encapsulating the behaviour into a function is a small win.
 
 ### mixin responsibilities
@@ -267,8 +251,7 @@ Writing this out as a pattern would be tedious and error-prone. Encapsulating th
 Like classes, mixins are metaobjects: They define behaviour for instances. In addition to defining behaviour in the form of methods, classes are also responsible for initializing instances. But sometimes, classes and metaobjects handle additional responsibilities.
 
 For example, sometimes a particular concept is associated with some well-known constants. When using a class, can be handy to namespace such values in the class itself:
-
-~~~~~~~~
+```js
 class Todo {
   constructor (name) {
     this.name = name || Todo.DEFAULT_NAME;
@@ -288,13 +271,11 @@ Todo.DEFAULT_NAME = 'Untitled';
 
 // If we are sticklers for read-only constants, we could write:
 // Object.defineProperty(Todo, 'DEFAULT_NAME', {value: 'Untitled'});
-~~~~~~~~
-
+```
 We can't really do the same thing with simple mixins, because all of the properties in a simple mixin end up being mixed into the prototype of instances we create by default. For example, let's say we want to define `Coloured.RED`, `Coloured.GREEN`, and `Coloured.BLUE`. But we don't want any specific coloured instance to define `RED`, `GREEN`, or `BLUE`.
 
 Again, we can solve this problem by building a functional mixin. Our `FunctionalMixin` factory function will accept an optional dictionary of read-only mixin properties:
-
-~~~~~~~~
+```js
 function FunctionalMixin (behaviour, sharedBehaviour = {}) {
   const instanceKeys = Reflect.ownKeys(behaviour);
   const sharedKeys = Reflect.ownKeys(sharedBehaviour);
@@ -315,11 +296,9 @@ function FunctionalMixin (behaviour, sharedBehaviour = {}) {
     });
   return mixin;
 }
-~~~~~~~~
-
+```
 And now we can write:
-
-~~~~~~~~
+```js
 const Coloured = FunctionalMixin({
   setColourRGB ({r, g, b}) {
     this.colourCode = {r, g, b};
@@ -341,39 +320,33 @@ urgent.setColourRGB(Coloured.RED);
 
 urgent.getColourRGB()
   //=> {"r":255,"g":0,"b":0}
-~~~~~~~~
-
+```
 ### mixin methods
 
 Such properties need not be values. Sometimes, classes have methods. And likewise, sometimes it makes sense for a mixin to have its own methods. One example concerns `instanceof`.
 
 In earlier versions of ECMAScript, `instanceof` is an operator that checks to see whether the prototype of an instance matches the prototype of a constructor function. It works just fine with "classes," but it does not work "out of the box" with mixins:
-
-~~~~~~~~
+```js
 urgent instanceof Todo
   //=> true
 
 urgent instanceof Coloured
   //=> false
-~~~~~~~~
-
+```
 To handle this and some other issues where programmers are creating their own notion of dynamic types, or managing prototypes directly with `Object.create` and `Object.setPrototypeOf`, ECMAScript 2015 provides a way to override the built-in `instanceof` behaviour: An object can define a method associated with a well-known symbol, `Symbol.hasInstance`.
 
 We can test this quickly:[^but]
 
 [^but]: This may **not** work with various transpilers and other incomplete ECMAScript 2015 implementations. Check the documentation. For example, you must enable the "high compliancy" mode in [BabelJS](http://babeljs.io). This is off by default to provide the highest possible performance for code bases that do not need to use features like this.
-
-~~~~~~~~
+```js
 Coloured[Symbol.hasInstance] = (instance) => true
 urgent instanceof Coloured
   //=> true
 {} instanceof Coloured
   //=> true
-~~~~~~~~
-
+```
 Of course, that is not semantically correct. But using this technique, we can write:
-
-~~~~~~~~
+```js
 function FunctionalMixin (behaviour, sharedBehaviour = {}) {
   const instanceKeys = Reflect.ownKeys(behaviour);
   const sharedKeys = Reflect.ownKeys(sharedBehaviour);
@@ -402,8 +375,7 @@ urgent instanceof Coloured
   //=> true
 {} instanceof Coloured
   //=> false
-~~~~~~~~
-
+```
 Do you need to implement `instanceof`? Quite possibly not. "Rolling your own polymorphism" is usually a last resort. But it can be handy for writing test cases, and a few daring framework developers might be working on multiple dispatch and pattern-matching for functions.
 
 ### summary
@@ -424,8 +396,7 @@ As a general rule, it's best to have things behave as similarly as possible in t
 If you want to mix behaviour into a class, mixins do the job very nicely. But sometimes, people want more. They want **multiple inheritance**. Meaning, what they really want is to create a new class that inherits from both `Todo` *and* from `Coloured`.
 
 If JavaScript had multiple inheritance, we could accomplish this by extending a class with more than one superclass:
-
-~~~~~~~~
+```js
 class Todo {
   constructor (name) {
     this.name = name || 'Untitled';
@@ -492,8 +463,7 @@ class TimeSensitiveTodo extends Todo, Coloured {
     return `<span style="color: #${rgb.r}${rgb.g}${rgb.b};">${super.toHTML()}</span>`;
   }
 }
-~~~~~~~~
-
+```
 This hypothetical `TimeSensitiveTodo` extends both `Todo` and `Coloured`, and it overrides `toHTML` from `Todo` as well as overriding `getColourRGB` from `Coloured`.
 
 ### subclass factories
@@ -501,8 +471,7 @@ This hypothetical `TimeSensitiveTodo` extends both `Todo` and `Coloured`, and it
 However, JavaScript does not have "true" multiple inheritance, and therefore this code does not work. But we can simulate multiple inheritance for cases like this. The way it works is to step back and ask ourselves, "What would we do if we didn't have mixins or multiple inheritance?"
 
 The answer is, we'd force a square multiple inheritance peg into a round single inheritance hole, like this:
-
-~~~~~~~~
+```js
 class Todo {
   // ...
 }
@@ -514,15 +483,13 @@ class ColouredTodo extends Todo {
 class TimeSensitiveTodo extends ColouredTodo {
   // ...
 }
-~~~~~~~~
-
+```
 By making `ColouredTodo` extend `Todo`, `TimeSensitiveTodo` can extend `ColouredTodo` and override methods from both. This is exactly what most programmers do, and we know that it is an anti-pattern, as it leads to duplicated class behaviour and deep class hierarchies.
 
 But.
 
 What if, instead of manually creating this hierarchy, we use our simple mixins to do the work for us? We can take advantage of the fact that [classes are expressions](http://raganwald.com/2015/06/04/classes-are-expressions.html), like this:
-
-~~~~~~~~
+```js
 let Coloured = FunctionalMixin({
   setColourRGB ({r, g, b}) {
     this.colourCode = {r, g, b};
@@ -535,11 +502,9 @@ let Coloured = FunctionalMixin({
 });
 
 let ColouredTodo = Coloured(class extends Todo {});
-~~~~~~~~
-
+```
 Thus, we have a `ColouredTodo` that we can extend and override, but we also have our `Coloured` behaviour in a mixin we can use anywhere we like without duplicating its functionality in our code. The full solution looks like this:
-
-~~~~~~~~
+```js
 class Todo {
   constructor (name) {
     this.name = name || 'Untitled';
@@ -613,25 +578,21 @@ let task = new TimeSensitiveTodo('Finish JavaScript Allongé', Date.now() + oneD
 
 task.toHTML()
   //=> <span style="color: #FFFF00;">Finish JavaScript Allongé</span>
-~~~~~~~~
-
+```
 The key snippet is `let ColouredTodo = Coloured(class extends Todo {});`, it turns behaviour into a subclass that can be extended and overridden.
 
 ### subclass factories
 
 We can turn this pattern into a function:
-
-~~~~~~~~
+```js
 const SubclassFactory = (behaviour) => {
   let mixBehaviourInto = FunctionalMixin(behaviour);
 
   return (superclazz) => mixBehaviourInto(class extends superclazz {});
 }
-~~~~~~~~
-
+```
 Using `SubclassFactory`, we wrap the class we want to extend, instead of the class we are declaring. Like this:
-
-~~~~~~~~
+```js
 const SubclassFactory = (behaviour) => {
   let mixBehaviourInto = FunctionalMixin(behaviour);
 
@@ -676,8 +637,7 @@ class TimeSensitiveTodo extends ColouredAsWellAs(ToDo) {
     return `<span style="color: #${rgb.r}${rgb.g}${rgb.b};">${super.toHTML()}</span>`;
   }
 }
-~~~~~~~~
-
+```
 The syntax of `class TimeSensitiveTodo extends ColouredAsWellAs(ToDo)` says exactly what we mean: We are extending our `Coloured` behaviour as well as extending `ToDo`.[^fagnani]
 
 [^fagnani]: Justin Fagnani named this pattern "subclass factory" in his essay ["Real" Mixins with JavaScript Classes](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/). It's well worth a read, and his implementation touches on other matters such as optimizing performance on modern JavaScript engines.
@@ -689,8 +649,7 @@ When mixing behaviour onto classes, (and equally, when chaining prototypes, or e
 [or]: https://en.wikipedia.org/wiki/Open_recursion#Open_recursion
 
 When chaining prototypes or extending classes, this does not typically result in two functions accidentally using the same property for two different purposes. For example, if we write:
-
-~~~~~~~~
+```js
 class Person {
   constructor (first, last) {
     this.rename(first, last);
@@ -714,21 +673,17 @@ class Bibliophile extends Person {
     return this._books || (this._books = []);
   }
 }
-~~~~~~~~
-
+```
 And later we wanted to write:
-
-~~~~~~~~
+```js
 class Author extends Bibliophile {
   // ...
 }
-~~~~~~~~
-
+```
 It is very unlikely that we would attempt to use the same `._books` property to refer to both the books an author writes and the books a bibliophile collects. For some odd reason, our ontology has it that all authors are also bibliophiles, so it's natural that we would inspect the `Bibliophile` superclass when designing `Author`, and all of our tests for `Author` would be performed on objects that are instances of `Bibliophile`, by definition.
 
 However, this is not the case for mixins. If we wrote:
-
-~~~~~~~~
+```js
 const IsBibliophile = {
   addToCollection (name) {
     this.collection().push(name);
@@ -738,11 +693,9 @@ const IsBibliophile = {
     return this._books || (this._books = []);
   }
 };
-~~~~~~~~
-
+```
 And a colleague wrote:
-
-~~~~~~~~
+```js
 const IsAuthor = {
   addBook (name) {
     this.books().push(name);
@@ -752,11 +705,9 @@ const IsAuthor = {
     return this._books || (this._books = []);
   }
 };
-~~~~~~~~
-
+```
 This code could easily work for months or years. `IsAuthor` could be tested independently of `Bibliophile`, and both would appear to behave correctly. Until the fateful day someone wrote something like:
-
-~~~~~~~~
+```js
 class BookLovingAuthor extends Person {
 }
 
@@ -767,15 +718,13 @@ new BookLovingAuthor('Isaac', 'Asimov')
   .addToCollection('The Mysterious Affair at Styles')
   .collection()
     //=> ["I Robot","The Mysterious Affair at Styles"]
-~~~~~~~~
-
+```
 And bam! We have a property conflict: The books Isaac Asimov has written and collects have become intermingled, because the two mixins refer to the same property.
 
 ### decoupling mixins with symbols
 
 The simplest way to avoid these property conflicts is to use symbols for property names:
-
-~~~~~~~~
+```js
 class Person {
   constructor (first, last) {
     this.rename(first, last);
@@ -830,8 +779,7 @@ new BookLovingAuthor('Isaac', 'Asimov')
     //=> ["The Mysterious Affair at Styles"]
   .books().
     //=> ["I Robot"]
-~~~~~~~~
-
+```
 Using symbols for property keys eliminates property conflicts between mixins.
 
 ## Reducing Coupling 
@@ -849,8 +797,7 @@ Note that making properties private is not an ideological issue: It's not a ques
 We have seen that using symbols as property keys prevents mixins from accidentally sharing the same property name for different purposes. They can also help prevent programmers from *deliberately* using the same property name for different purposes.
 
 Here's why we care about that. Consider:
-
-~~~~~~~~
+```js
 class Person {
   constructor (first, last) {
     this.rename(first, last);
@@ -887,24 +834,20 @@ const bezos = new Bibliophile('jeff', 'bezos')
 bezos
   .hasInCollection("The Everything Store: Jeff Bezos and the Age of Amazon")
     //=> true
-~~~~~~~~
-
+```
 Note that `._books` is an array. Now consider:
-
-~~~~~~~~
+```js
 class BookGlutten extends Bibliophile {
   buyInBulk (...names) {
     this.books().push(...names);
     return this;
   }
 }
-~~~~~~~~
-
+```
 Book gluttons can buy books in bulk, ordinary bibliophiles cannot. So far, so good. But we have a very naïve implementation of book collections: an array is a linear data structure, the performance of `hasInCollection` is order `n`. The moment we have a bibliophile with a really large collection, the operation becomes excruciatingly slow.
 
 Simplifying greatly, what if we refactor `Bibliophile` to use a `Set`?
-
-~~~~~~~~
+```js
 class Bibliophile extends Person {
   constructor (first, last) {
     super(first, last);
@@ -918,13 +861,11 @@ class Bibliophile extends Person {
     return this._books.has(name);
   }
 }
-~~~~~~~~
-
+```
 Much faster, but we just broke our `BookGlutten` subclass. This is a very small and contrived example, but the phenomenon is very real, and the larger the class hierarchy, the more it occurs. The author of our `BookGlutton` subclass coupled `BookGlutton` to an implementation detail of `Bibliophile`. That's a "feature" of open recursion, but it is far wiser to prevent this from happening.
 
 Naturally, we can use the same technique to prevent deliberate coupling of subclasses that we used to prevent accidental property conflicts: Symbols.
-
-~~~~~~~~
+```js
 const Bibliophile = (function () {
   const books = Symbol("books");
   
@@ -942,11 +883,9 @@ const Bibliophile = (function () {
     }
   }
 })();
-~~~~~~~~
-
+```
 Now anyone subclassing `Bibliophile` is strongly discouraged from directly accessing the "books" property:
-
-~~~~~~~~
+```js
 class BookGlutten extends Bibliophile {
   buyInBulk (...names) {
     for (let name of names) {
@@ -955,6 +894,5 @@ class BookGlutten extends Bibliophile {
     return this;
   }
 }
-~~~~~~~~
-
+```
 Problem solved.
