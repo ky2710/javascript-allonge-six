@@ -1,7 +1,5 @@
 # Closing Time at the Coffeeshop: Final Remarks
 
-![The Future of Coffee is Black](images/future-of-coffee.jpg)
-
 We began this book with the most basic of basic ideas in programming: What is a value? What is a reference to a value? What is a function? What is applying or invoking a function with values?
 
 We then looked at one of the "big ideas" that JavaScript shares with other powerful languages: The idea that functions are values, and thus that you can invoke a function with another function as an argument, and you can return a function from a function.
@@ -46,4 +44,3 @@ Whereas lightweight tools are simple things, composed together in simple ways. I
 
 These are all fundamental ideas that apply everywhere, even if we don't end up applying them to build a feature like traits. Lightweight thinking is portable and future-proof.
 
-![The End](images/the-end.jpg)
