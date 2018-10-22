@@ -818,7 +818,7 @@ Using mixins, we have created prototypes that model combining labor/management w
 
 ### caveat programmer
 
-Whether we're using prototype chains or mixins, we're introducing coupling. As discussed in [Mixins, Forwarding, and Delegation](#mixins), prototypes that are brought into proximity with each other (by placing them anywhere in the same chain, or by mixing them into the same object) become deeply coupled because they both have complete access to an object's private internal state through `this`.
+Whether we're using prototype chains or mixins, we're introducing coupling. As discussed in [Mixins, Forwarding, and Delegation](#mixins-forwarding-and-delegation), prototypes that are brought into proximity with each other (by placing them anywhere in the same chain, or by mixing them into the same object) become deeply coupled because they both have complete access to an object's private internal state through `this`.
 
 To reduce this coupling, we have to find a way to insulate prototypes from each other. Techniques like forwarding, while straightforward to use directly on an object or through a singleton prototype, require special handling when used in a shared prototype.
 
