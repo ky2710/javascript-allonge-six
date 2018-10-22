@@ -110,34 +110,34 @@
 	* [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
 ---
 * [**Main-4: Metaobjects**](main_4_metaobjects.md) / [*Sub-4: Symbols*](sub_4_symbols.md)   
-	* Why Metaobjects?   
-	* Mixins, Forwarding, and Delegation      
-	* Later Binding    
-	* Delegation via Prototypes   
-	* Shared Prototypes   
+	* [Why Metaobjects?]() 
+	* [Mixins, Forwarding, and Delegation]()       
+	* [Later Binding]()     
+	* [Delegation via Prototypes]()    
+	* [Shared Prototypes]()    
 ---
 * [**Main-5: Constructors and Classes**](main_5_constructors.md) / [*Sub-5: Impostors*](sub_5_impostors.md)   
-	* Constructors and new   
-	* Why Classes in JavaScript?   
-	* Classes with class   
-	* Object Methods   
-	* Why Not Classes?   
-	* Summary   
+	* [Constructors and new]()    
+	* [Why Classes in JavaScript?]()    
+	* [Classes with class]()    
+	* [Object Methods]()    
+	* [Why Not Classes?]()    
+	* [Summary]()    
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
 	* Bound -- Send -- Invoke -- Fluent   
 ---
 * [**Main-6: Composing Class Behaviour**](main_6_classes.md) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)   
-	* Extending Classes with Mixins   
-	* Functional Mixins   
-	* Emulating Multiple Inheritance   
-	* Preventing Property Conflicts   
-	* Reducing Coupling   
+	* [Extending Classes with Mixins]()    
+	* [Functional Mixins]()    
+	* [Emulating Multiple Inheritance]()    
+	* [Preventing Property Conflicts]()    
+	* [Reducing Coupling]()    
 ---
 * [**Main-7: More Decorators**](main_7_dedorators.md)   
-	* Stateful Method Decorators   
-	* Class Decorators beyond ES6/ECMAScript 2015   
-	* Method Decorators beyond ES6/ECMAScript 2015   
-	* Lightweight Traits   
+	* [Stateful Method Decorators]()    
+	* [Class Decorators beyond ES6/ECMAScript 2015]()    
+	* [Method Decorators beyond ES6/ECMAScript 2015]()    
+	* [Lightweight Traits]()    
 * [Recipe-7: More Decorator](main_7r_dedorators.md)   
 	* After Method Advice   
 	* Before Method Advice   
