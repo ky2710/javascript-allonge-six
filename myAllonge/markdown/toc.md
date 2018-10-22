@@ -144,7 +144,7 @@
 	* Provided and Unless   
 	* Method Advice   
 ---
-* [Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md)   
+* [Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
