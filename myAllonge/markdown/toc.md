@@ -133,11 +133,11 @@
 	* [Preventing Property Conflicts](main_6_classes.md#preventing-property-conflicts)    
 	* [Reducing Coupling](main_6_classes.md#reducing-coupling)    
 ---
-* [**Main-7: More Decorators**](main_7_dedorators.md)   
-	* [Stateful Method Decorators]()    
-	* [Class Decorators beyond ES6/ECMAScript 2015]()    
-	* [Method Decorators beyond ES6/ECMAScript 2015]()    
-	* [Lightweight Traits]()    
+* [**Main-7: More Decorators**](main_7_dedorators.md#more-decorators)   
+	* [Stateful Method Decorators](main_7_dedorators.md#stateful-method-decorators)    
+	* [Class Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#class-decorators-beyond-es6ecmascript-2015)    
+	* [Method Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#method-decorators-beyond-es6ecmascript-2015)    
+	* [Lightweight Traits](main_7_dedorators.md#lightweight-traits)    
 * [Recipe-7: More Decorator](main_7r_dedorators.md)   
 	* After Method Advice   
 	* Before Method Advice   
