@@ -772,7 +772,7 @@ In JavaScript, prototype chains are vulnerable because changes to one prototype'
 
 [ch]: https://en.wikipedia.org/wiki/Class_hierarchy
 
-In the next section we will look at a technique for [reducing coupling between classes](#reducing coupling). And we will look at avoiding deep hierarchies with mixins.
+In the next section we will look at a technique for [reducing coupling between classes](main_6_classes.md#reducing-coupling). And we will look at avoiding deep hierarchies with mixins.
 
 ## Summary
 
