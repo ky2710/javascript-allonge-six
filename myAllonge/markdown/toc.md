@@ -117,12 +117,12 @@
 	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
 ---
 * [**Main-5: Constructors and Classes**](main_5_constructors.md) / [*Sub-5: Impostors*](sub_5_impostors.md)   
-	* [Constructors and new]()    
-	* [Why Classes in JavaScript?]()    
-	* [Classes with class]()    
-	* [Object Methods]()    
-	* [Why Not Classes?]()    
-	* [Summary]()    
+	* [Constructors and new](main_5_constructors.md#constructors-and-new)    
+	* [Why Classes in JavaScript?](main_5_constructors.md#why-classes-in-javascript)    
+	* [Classes with class](main_5_constructors.md#classes-with-class)    
+	* [Object Methods](main_5_constructors.md#object-methods)    
+	* [Why Not Classes?](main_5_constructors.md#why-not-classes)    
+	* [Summary](main_5_constructors.md#summary) 
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
 	* Bound -- Send -- Invoke -- Fluent   
 ---
