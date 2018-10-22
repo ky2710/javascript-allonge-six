@@ -1,9 +1,8 @@
-# Con Panna: Composing Class Behaviour {#class-mixins}
-
-![Espresso Con Panna mixes sweet whipping cream into the strong coffee](images/con-panna.jpg)
+# Con Panna: Composing Class Behaviour
 
 Because prototypes are just objects, and because "classes" actually use prototypes under the hood, we can use all of the techniques we've learned about working with objects, when working with prototypes.
-## Extending Classes with Mixins {#classes-and-mixins}
+
+## Extending Classes with Mixins
 
 We've seen that a "class" is simply a constructor function that is associated with a prototype, and that the `class` keyword is a declarative way to write our own constructor functions and prototypes. When we use the `new` keyword, we are invoking a mechanism that creates a new object that delegates to a prototype, just like `Object.create`, and then the constructor function takes over and performs any initialization we desire.
 
@@ -123,7 +122,8 @@ With a mixin, of course:
 We can mix functionality into the prototypes of "classes" just as easily as we can mix functionality directly into objects, because prototypes *are* objects, and JavaScript builds its "classes" out of prototypes.
 
 Were classes "something else," like they are in other languages, we would gain many advantages that we do not enjoy in JavaScript, but we would also give up the flexibility of being able to use the same tools and techniques on prototypes that we do on objects.
-## Functional Mixins {#functional-mixins}
+
+## Functional Mixins
 
 In [Extending Classes with Mixins](#classes-and-mixins), we saw that you can emulate "mixins" using `Object.assign` on classes. We'll revisit this subject now and spend more time looking at mixing functionality into classes.
 
@@ -418,7 +418,8 @@ As a general rule, it's best to have things behave as similarly as possible in t
 
 [fm]: https://javascriptweblog.wordpress.com/2011/05/31/a-fresh-look-at-javascript-mixins/ "A fresh look at JavaScript Mixins"
 [Flight]: http://flightjs.github.io/
-## Emulating Multiple Inheritance {#mi}
+
+## Emulating Multiple Inheritance
 
 If you want to mix behaviour into a class, mixins do the job very nicely. But sometimes, people want more. They want **multiple inheritance**. Meaning, what they really want is to create a new class that inherits from both `Todo` *and* from `Coloured`.
 
@@ -680,6 +681,7 @@ class TimeSensitiveTodo extends ColouredAsWellAs(ToDo) {
 The syntax of `class TimeSensitiveTodo extends ColouredAsWellAs(ToDo)` says exactly what we mean: We are extending our `Coloured` behaviour as well as extending `ToDo`.[^fagnani]
 
 [^fagnani]: Justin Fagnani named this pattern "subclass factory" in his essay ["Real" Mixins with JavaScript Classes](http://justinfagnani.com/2015/12/21/real-mixins-with-javascript-classes/). It's well worth a read, and his implementation touches on other matters such as optimizing performance on modern JavaScript engines.
+
 ## Preventing Property Conflicts
 
 When mixing behaviour onto classes, (and equally, when chaining prototypes, or extending classes in a hierarchy), we are engaging in [open recursion][or]. The methods in each mixin (or prototype in a chain) all have the same context, and therefore refer to the same properties.
@@ -831,6 +833,7 @@ new BookLovingAuthor('Isaac', 'Asimov')
 ~~~~~~~~
 
 Using symbols for property keys eliminates property conflicts between mixins.
+
 ## Reducing Coupling 
 
 When classes are built in a hierarchy, or mixins are distributed across a code base, coupling arises over time. Typically, as a code base evolves, each iteration of programmer uses whatever methods or properties have been made available by the accumulated efforts of previous iterations.
