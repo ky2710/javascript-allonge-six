@@ -125,7 +125,7 @@
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
 	* Bound -- Send -- Invoke -- Fluent   
 ---
-* [**Main-6: Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)   
+* [**Main-6: Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm)   
 	* [Extending Classes with Mixins](main_6_classes.md#extending-classes-with-mixins)    
 	* [Functional Mixins](main_6_classes.md#functional-mixins)    
 	* [Emulating Multiple Inheritance](main_6_classes.md#emulating-multiple-inheritance)    
