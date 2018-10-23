@@ -43,7 +43,7 @@
 ## [JavaScript Allongé-6th](#top) *- detail*
 ***[You Dont Konw JS][det_1]** --- **[Functional Light JS][det_2]** --- **[Understanding ES6][det_3]** --- **[Javascript Allongé-6th][det_4]***      
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
-* [Prelude: Values and Expressions over Coffee](book_2_prelude.md)        
+* [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md)        
 	* values are expressions -- values and identity  
 ---
 * [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
@@ -140,7 +140,7 @@
 * [Recipe-7: More Decorator](main_7r_dedorators.md)   
 	* [After Method Advice](main_7r_dedorators.md#after-method-advice) -- [Before Method Advice](main_7r_dedorators.md#before-method-advice) -- [Provided and Unless](main_7r_dedorators.md#provided-and-unless) -- [Method Advice](main_7r_dedorators.md#method-advice)      
 ---
-* [Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
+* [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015
 	* the lightweight way    
 	
