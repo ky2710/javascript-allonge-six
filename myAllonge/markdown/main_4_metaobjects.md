@@ -167,7 +167,7 @@ Forwarding is a relationship between an object that receives a method invocation
 
 When forwarding, the provider object has its own state. There is no special binding of function contexts, instead the consumer object has its own methods that forward to the provider and return the result. Our `forward` function above handles all of that, iterating over the provider's properties and making forwarding methods in the consumer.
 
-The key idea is that when forwarding, the provider object handles each method *in its own context*. And because there is a forwarding method in the consumer object and a handling method in the provider, the two can be varied independently. Each forwarding function invokes the method in the provider *by name*. So we can do this:
+[The key idea is that when forwarding, the provider object handles each method **in its own context**](#aa). And because there is a forwarding method in the consumer object and a handling method in the provider, the two can be varied independently. Each forwarding function invokes the method in the provider *by name*. So we can do this:
 ```js
 portfolio.netWorth = function () {
   return "I'm actually bankrupt!";
@@ -175,7 +175,7 @@ portfolio.netWorth = function () {
 ```
 We're overwriting the method in the `portfolio` object, but not the forwarding function. So now, our `investor` object will forward invocations of `netWorth` to the new function, not the original.
 
-We say that mixing in is "early bound," while forwarding is "late bound:" We'll look up the method when it's invoked.
+We say that **mixing in is "early bound," while forwarding is "late bound:"** We'll look up the method when it's invoked.
 
 ### shared forwarding
 
