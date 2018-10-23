@@ -255,7 +255,9 @@ counter.value(42);
 ```
 We again are most likely invoking `Incrementor.value`, but now we are determining this *at the time `counter.value(42)` is evaluated*. We bound the target of the delegation, `Incrementor`, to `counter`, but we are going to look the actual property of `Incrementor.value` up when it is invoked. This is late binding, and it is useful in that we can make some changes to `Incrementor` after the delegation has been set up, perhaps to add some logging.
 
-It is very nice not to have to do things like this in a very specific order: When things have to be done in a specific order, they are *coupled in time*. Late binding is a decoupling technique.
+[It is very nice not to have to do things like this in a very specific order:](#aa)    
+**When things have to be done in a specific order, they are *coupled in time*.    
+Late binding is a decoupling technique.**
 
 ### but wait, there's more
 
