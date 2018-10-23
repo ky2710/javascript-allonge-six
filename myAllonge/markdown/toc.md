@@ -138,15 +138,16 @@
 	* [Class Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#class-decorators-beyond-es6ecmascript-2015)    
 	* [Method Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#method-decorators-beyond-es6ecmascript-2015)    
 	* [Lightweight Traits](main_7_dedorators.md#lightweight-traits)    
-> [Recipe-7: More Decorator](main_7r_dedorators.md)   
->	* After Method Advice   
->	* Before Method Advice   
->	* Provided and Unless   
->	* Method Advice   
+* [Recipe-7: More Decorator](main_7r_dedorators.md)   
+	* After Method Advice   
+	* Before Method Advice   
+	* Provided and Unless   
+	* Method Advice   
 ---
 * [Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015
-	* the lightweight way
+	* the lightweight way    
+	
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
 [Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#top
