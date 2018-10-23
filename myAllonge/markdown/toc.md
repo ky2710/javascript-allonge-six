@@ -138,10 +138,7 @@
 	* [Method Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#method-decorators-beyond-es6ecmascript-2015)    
 	* [Lightweight Traits](main_7_dedorators.md#lightweight-traits)    
 * [Recipe-7: More Decorator](main_7r_dedorators.md)   
-	* [After Method Advice](main_7r_dedorators.md#after-method-advice)   
-	* [Before Method Advice](main_7r_dedorators.md#before-method-advice)   
-	* [Provided and Unless](main_7r_dedorators.md#provided-and-unless)   
-	* [Method Advice](main_7r_dedorators.md#method-advice)      
+	* [After Method Advice](main_7r_dedorators.md#after-method-advice) -- [Before Method Advice](main_7r_dedorators.md#before-method-advice) -- [Provided and Unless](main_7r_dedorators.md#provided-and-unless) -- [Method Advice](main_7r_dedorators.md#method-advice)      
 ---
 * [Final Remarks: Closing Time at the Coffeeshop](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015
