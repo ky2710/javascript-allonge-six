@@ -199,13 +199,13 @@ JavaScript programmers have been using constructors for a very long time. Long e
 1. There are too many "moving parts." Why is it necessary to define a constructor function, then manipulate its `prototype` property in a separate step?
 2. Why is chaining prototypes so complicated?
 
-Experienced JavaScript programmers generally responded by moving in either of two directions: Some programmers noticed that working directly with prototypes was simpler than doing everything with constructors, and gravitated towards using `Object.create` directly, using the techniques we've discussed in the section on [Metaobjects](#metaobjects).
+Experienced JavaScript programmers generally responded by moving in either of two directions: :one:Some programmers noticed that working directly with prototypes was simpler than doing everything with constructors, and gravitated towards using `Object.create` directly, using the techniques we've discussed in the section on [Metaobjects](#metaobjects).
 
 This approach is more flexible and powerful than using constructors, however it often seems *unfamiliar* to people who have been taught that objects should always be associated with a hierarchy of classes.
 
 ### abstractioneering
 
-Other experienced JavaScript programmers embraced classes, but paved over the awkwardness of constructors and prototypes by building their own class abstractions. For example:
+:two:Other experienced JavaScript programmers embraced classes, but paved over the awkwardness of constructors and prototypes by building their own class abstractions. For example:
 ```js
     const clazz = (...args) => {
       let superclazz, properties, constructor;
