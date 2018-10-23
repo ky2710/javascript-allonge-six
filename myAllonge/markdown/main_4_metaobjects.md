@@ -274,7 +274,7 @@ function delegateToOwn (receiver, propertyName, ...methods) {
   return receiver;
 };
 ```
-This function sets things up so that an object can delegate to one of its own properties, instead of an arbitrary object. It's quite common for an object to forward methods to one of its own properties. In this manner, objects can be constructed using *composition*. 
+This function sets things up so that an object can **delegate to one of its own properties, instead of an arbitrary object.** It's quite common for an object to forward methods to one of its own properties. In this manner, objects can be constructed using *composition*. 
 
 Let's take another look at the investor example. Here's the `portfolio` we used before. modified to use the receiver's context like a mixin:
 ```js
