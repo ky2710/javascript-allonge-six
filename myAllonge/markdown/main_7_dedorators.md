@@ -2,7 +2,7 @@
 (*this bonus chapter is a work-in-progress*)
 ## Stateful Method Decorators
 
-As noted in [Method Decorators](main_2_objects.md#method-decorators), and again in [Symmetry, Colour, and Charm](sub_6_colours.md), simple function decorators work and work well for ordinary functions. But in JavaScript, functions can be invoked in different ways, and some of those ways are slightly incompatible with each other.
+As noted in [Method Decorators](main_2_objects.md#method-decorators), and again in [Symmetry, Colour, and Charm](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm), simple function decorators work and work well for ordinary functions. But in JavaScript, functions can be invoked in different ways, and some of those ways are slightly incompatible with each other.
 
 Of great interest to us are *methods* in JavaScript, functions that are used to define the behaviour of instances. When a function is invoked as a method, the name `this` is bound to the instance, and most methods rely on that binding to work properly.
 
