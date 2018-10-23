@@ -116,7 +116,7 @@
 	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
 ---
 * [**Main-5: Constructors and Classes**](main_5_constructors.md) / [*Sub-5: Impostors*](sub_5_impostors.md)   
-	* [Constructors and new](main_5_constructors.md#constructors-and-new)    
+	* [Constructors and `new`](main_5_constructors.md#constructors-and-new)    
 	* [Why Classes in JavaScript?](main_5_constructors.md#why-classes-in-javascript)    
 	* [Classes with class](main_5_constructors.md#classes-with-class)    
 	* [Object Methods](main_5_constructors.md#object-methods)    
