@@ -108,7 +108,7 @@
 	* [Interactive Generators](main_3_collections.md#interactive-generators)   
 	* [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
 ---
-* [**Main-4: Metaobjects**](main_4_metaobjects.md) / [*Sub-4: Symbols*](sub_4_symbols.md)   
+* [**Main-4: Metaobjects**](main_4_metaobjects.md#life-on-the-plantation-metaobjects) / [*Sub-4: Symbols*](sub_4_symbols.md)   
 	* [Why Metaobjects?](main_4_metaobjects.md#why-metaobjects) 
 	* [Mixins, Forwarding, and Delegation](main_4_metaobjects.md#mixins-forwarding-and-delegation)       
 	* [Later Binding](main_4_metaobjects.md#later-binding)     
