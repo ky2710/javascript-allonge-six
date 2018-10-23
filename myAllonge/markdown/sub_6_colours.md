@@ -36,13 +36,13 @@ If we write `const square = (x) => x * x` in blue code, but elsewhere we write `
 
 If functions worked like that, decorators would be very messy. We'd have to make colour-coded decorators, like a blue `maybe` and a yellow `maybe`. We'd have to carefully track which functions have which colours, much as in gendered languages like French, you need to know the gender of all inanimate objects so that you can use the correct gendered grammar when talking about them.
 
-This sounds bad, and for programming tools, it is.[^french] The general principle is: *Have fewer kinds of similar things, but allow the things you do have to combine in flexible ways*. You can't just remove things, you have to also make it very easy to combine things. Functions as first-class-entities are a good example of this, because they allow you to combine functions in flexible ways.
+This sounds bad, and for programming tools, it is.`1` The general principle is: *Have fewer kinds of similar things, but allow the things you do have to combine in flexible ways*. You can't just remove things, you have to also make it very easy to combine things. Functions as first-class-entities are a good example of this, because they allow you to combine functions in flexible ways.
 
-Coloured functions would be an example of how not to do it, because you'd be making it harder to combine functions by balkanizing them.[^colours]
+>`1` Bad for programming languages, of course. French is a lovely human language.
 
-[^colours]: Bob Nystrom introduced this excellent metaphor in [What colour is your function?](http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
+Coloured functions would be an example of how not to do it, because you'd be making it harder to combine functions by balkanizing them.`1`
 
-[^french]: Bad for programming languages, of course. French is a lovely human language.
+>`1` Bob Nystrom introduced this excellent metaphor in [What colour is your function?](http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
 
 Functions don't have colours in JavaScript. But there are things that have this kind of asymmetry that make things just as awkward. For example, methods in JavaScript are functions. But, when you invoke them, you have to get `this` set up correctly. You have to either:
 
