@@ -24,7 +24,7 @@ This lack of separation has two drawbacks. First, it intermingles properties tha
 
 Metaobjects solve the lack-of-separation problem by separating the domain-specific properties of objects from their implementation-specific properties and the functions that represent their behaviour.
 
-The basic principle of the metaobject is that we separate the mechanics of behaviour from the domain properties of the base object. This has immediate engineering benefits, and it's also the foundation for designing programs with formal classes, expectations, and delegation.
+**The basic principle of the metaobject is that we separate the mechanics of behaviour from the domain properties of the base object.** This has immediate engineering benefits, and it's also the foundation for designing programs with formal classes, expectations, and delegation.
 
 ## Mixins, Forwarding, and Delegation
 
