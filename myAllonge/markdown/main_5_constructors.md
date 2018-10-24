@@ -717,9 +717,7 @@ Instances of constructors can have object methods as well. Typically, object met
 
 ## Why Not Classes?
 
-Classes are popular, and if classes map neatly to the way we wish to model something, we should use them.
-
-That being said, there are some caveats to understand.
+Classes are popular, and if classes map neatly to the way we wish to model something, we should use them. That being said, there are some caveats to understand.
 
 ### the `class` keyword is a minimal notation
 
