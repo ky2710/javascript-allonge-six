@@ -115,7 +115,7 @@
 	* [Delegation via Prototypes](main_4_metaobjects.md#delegation-via-prototypes)    
 	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
 ---
-* [**Main-5: Constructors and Classes**](main_5_constructors.md) / [*Sub-5: Impostors*](sub_5_impostors.md)   
+* [**Main-5: Constructors and Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes) / [*Sub-5: Impostors*](sub_5_impostors.md)   
 	* [Constructors and `new`](main_5_constructors.md#constructors-and-new)    
 	* [Why Classes in JavaScript?](main_5_constructors.md#why-classes-in-javascript)    
 	* [Classes with class](main_5_constructors.md#classes-with-class)    
