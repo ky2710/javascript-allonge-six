@@ -55,8 +55,8 @@
 	* [Naming Functions](main_0_functions.md#naming-functions)     
 	* [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
 		* higher-order functions    
-		* combinators -- a balanced statement about combinators
-		* function decorators
+		* [combinators](main_0_functions.md#combinators) -- a balanced statement about combinators
+		* [function decorators](main_0_functions.md#function-decorators)
 	* [Building Blocks](main_0_functions.md#building-blocks)   
 		* composition
 		* partial application
