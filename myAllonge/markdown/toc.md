@@ -117,8 +117,7 @@
 	* [After Method Advice](main_7r_dedorators.md#after-method-advice) -- [Before Method Advice](main_7r_dedorators.md#before-method-advice) -- [Provided and Unless](main_7r_dedorators.md#provided-and-unless) -- [Method Advice](main_7r_dedorators.md#method-advice)      
 ---
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
-	* javascript beyond es6/ecmascript 2015
-	* the lightweight way    
+	* javascript beyond es6/ecmascript 2015 -- the lightweight way    
 	
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
