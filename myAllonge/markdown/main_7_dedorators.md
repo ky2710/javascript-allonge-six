@@ -157,9 +157,9 @@ const once = (fn) => {
   }
 }
 ```
-However, we're adding more accidental complexity to handle the fact that function invocation is <span style="color: blue;">blue</span>, and method invocation is <span style="color: #999900;">khaki</span>.`1`
+However, we're adding more accidental complexity to handle the fact that function invocation is <span style="color: blue;">blue</span>, and method invocation is khaki.`1`
 
->`1` See the aforelinked [The Symmetry of JavaScript Functions](/2015/03/12/symmetry.html)
+>`1` See the aforelinked [The Symmetry of JavaScript Functions](http://raganwald.com/2015/03/12/symmetry.html)
 
 In the end, we can either write specialized decorators designed specifically for methods, or tolerate the additional complexity of trying to handle method invocation and function invocation in the same decorator.
 
