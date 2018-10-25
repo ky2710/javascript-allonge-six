@@ -53,7 +53,7 @@
 	* [Closures and Scope](main_0_functions.md#closures-and-scope)   
 	* [const and lexical scope](main_0_functions.md#that-constant-coffee-craving) - That Constant Coffee Craving   
 	* [Naming Functions](main_0_functions.md#naming-functions)     
-	* [Combinators and Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
+	* [Combinators & Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
 		* higher-order functions    
 		* [combinators](main_0_functions.md#combinators) -- a balanced statement about combinators
 		* [function decorators](main_0_functions.md#function-decorators)
