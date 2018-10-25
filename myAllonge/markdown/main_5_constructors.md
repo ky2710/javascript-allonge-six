@@ -6,7 +6,7 @@ In this section, we will return to prototypes, and see how to use JavaScript's `
 
 ## Constructors and `new`
 
-> This is an important but subtle distinction: there's really no such thing as "constructor functions", but rather **construction calls of functions.** : [YDK-JS : `new` Binding](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md#new-binding)
+> This is an important but subtle distinction: there's really no such thing as "constructor functions", but rather **construction calls of functions.** -- [YDK-JS : `new` Binding](https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md#new-binding)
 
 Let's strip a function down to the bare essentials:
 ```js
