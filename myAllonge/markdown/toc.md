@@ -4,7 +4,7 @@
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Remarks](book_3_closing-time.md) / [Appendices](book_4_appendices.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)* 
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md)   
 * [**Main-0: Basic Functions**](main_0_functions.md)
-* [Recipe-0: Basic Functions](main_0r_functions.md)*   
+	* [Recipe-0: Basic Functions](main_0r_functions.md)*   
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)   
 	* Arrays and Destructuring Arguments -- Self-Similarity -- Tail Calls (and Default Arguments)
 	* Garbage, Garbage Everywhere -- Plain Old JavaScript Objects -- Mutation -- Reassignment -- Copy on Write   
