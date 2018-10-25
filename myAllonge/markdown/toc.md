@@ -42,7 +42,7 @@
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
 	* Partial Application -- Unary -- Tap -- Maybe -- Once -- Left-Variadic Functions -- Compose and Pipeline   
 ---
-* [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
+* [**Main-1: Composing & Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
 		* array literals -- element references -- destructuring arrays -- gathering
 		* destructuring is not pattern matching -- destructuring and return values -- destructuring parameters
@@ -60,7 +60,7 @@
 * [Recipe-1: Data](main_1r_Composing.md)   
 	* mapWith -- Flip -- Object.assign -- Why?   
 ---   
-* [**Main-2: Objects and State**](main_2_objects.md) / [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
+* [**Main-2: Objects & State**](main_2_objects.md) / [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
 		* what is hiding of state-process, and why does it matter?
 		* how do we hide state using javascript? -- method-ology -- hiding state
@@ -91,7 +91,7 @@
 	* [Delegation via Prototypes](main_4_metaobjects.md#delegation-via-prototypes)    
 	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
 ---
-* [**Main-5: Constructors and Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes) / [*Sub-5: Impostors*](sub_5_impostors.md)   
+* [**Main-5: Constructors & Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes) / [*Sub-5: Impostors*](sub_5_impostors.md)   
 	* [Constructors and `new`](main_5_constructors.md#constructors-and-new)    
 	* [Why Classes in JavaScript?](main_5_constructors.md#why-classes-in-javascript)    
 	* [Classes with class](main_5_constructors.md#classes-with-class)    
