@@ -642,9 +642,9 @@ In JavaScript, "classes" and "class expressions" are values just like any other 
 
 ## Object Methods
 
-An ***instance method*** is a function defined in the constructor's prototype. Every instance acquires this behaviour unless otherwise "overridden." Instance methods usually have some interaction with the instance, such as references to `this` or to other methods that interact with the instance. A ***constructor method*** is a function belonging to the constructor itself.
+An ***instance method*** is [a function](#aa) defined in the constructor's prototype. Every instance acquires this behaviour unless otherwise "overridden." Instance methods usually have some interaction with the instance, such as references to `this` or to other methods that interact with the instance. A ***constructor method*** is [a function](#aa) belonging to the constructor itself.
 
-There is a third kind of method, one that any object (obviously including all instances) can have. An ***object method*** is a function defined in the object itself. Like instance methods, object methods usually have some interaction with the object, such as references to `this` or to other methods that interact with the object.
+There is a third kind of method, one that any object (obviously including all instances) can have. An ***object method*** is [a function](#aa) defined in the object itself. Like instance methods, object methods usually have some interaction with the object, such as references to `this` or to other methods that interact with the object.
 
 Object methods are really easy to create with Plain Old JavaScript Objects, because they're the only kind of method you can use. Recall from [This and That](#this):
 ```js
