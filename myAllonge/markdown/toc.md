@@ -40,8 +40,7 @@
 	* [Magic Names](main_0_functions.md#magic-names) : this, arguments     
 	* [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
-	* Partial Application -- Unary -- Tap -- Maybe -- Once 
-	* Left-Variadic Functions -- Compose and Pipeline   
+	* Partial Application -- Unary -- Tap -- Maybe -- Once -- Left-Variadic Functions -- Compose and Pipeline   
 ---
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
