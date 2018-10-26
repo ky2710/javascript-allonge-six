@@ -35,7 +35,7 @@
 	* [Combinators & Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
 		* higher-order functions    
 		* [combinators](main_0_functions.md#combinators) -- a balanced statement about combinators
-		* [function decorators](main_0_functions.md#function-decorators) :: [Method Decorators](main_2_objects.md#method-decorators) → [Symmetry, Colour, and Charm](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm) → [More Decorators](main_7_dedorators.md#more-decorators)
+		* [function decorators](main_0_functions.md#function-decorators) : : [Method Decorators](main_2_objects.md#method-decorators) → [Symmetry, Colour, and Charm](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm) → [More Decorators](main_7_dedorators.md#more-decorators)
 	* [Building Blocks](main_0_functions.md#building-blocks)   
 		* composition
 		* partial application
