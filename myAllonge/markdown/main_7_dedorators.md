@@ -1,4 +1,6 @@
 # More Decorators
+[function decorators](main_0_functions.md#function-decorators) → [Method Decorators](main_2_objects.md#method-decorators) → [Symmetry, Colour, and Charm](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm) → [More Decorators](main_7_dedorators.md#more-decorators)
+
 (*this bonus chapter is a work-in-progress*)
 ## Stateful Method Decorators
 
