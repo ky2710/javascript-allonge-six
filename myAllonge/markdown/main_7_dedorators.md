@@ -163,7 +163,7 @@ However, we're adding more accidental complexity to handle the fact that functio
 
 >`1` See the aforelinked [The Symmetry of JavaScript Functions](http://raganwald.com/2015/03/12/symmetry.html)
 
-In the end, we can either write specialized decorators designed specifically for methods, or tolerate the additional complexity of trying to handle method invocation and function invocation in the same decorator.
+In the end, we can either **write specialized decorators designed specifically for methods,** or **tolerate the additional complexity of trying to handle method invocation and function invocation in the same decorator.**
 
 ## Class Decorators beyond ES6/ECMAScript 2015
 
