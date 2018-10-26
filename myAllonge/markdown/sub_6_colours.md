@@ -222,7 +222,7 @@ const CircleRequiringFiniteRadius = requiresFinite(Circle);
 const round3 = new CircleRequiringFiniteRadius(3);
   //=> Cannot call a class as a function
 ```
-Some experienced developers dislike `new` because of this problem: It introduces one more kind of function that doesn't compose neatly with other functions using our existing decorators and combinators.
+[Some experienced developers dislike `new` because of this problem: It introduces one more kind of function that doesn't compose neatly with other functions using our existing decorators and combinators.](#aa)
 
 We could eliminate "red" functions by using prototypes and `Object.create` instead of using the `class` and `new` keywords. A "factory function" is a function that makes new objects. So instead of writing a `Circle` class, we would write a `CirclePrototype` and a `CircleFactory` function:
 ```js
