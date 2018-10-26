@@ -22,9 +22,9 @@ const compose = (a, b) =>
 compose(x => x + 1, y => y * y)(10)
   //=> 101
 ```
-The power arising from functions-as-first-class-entities is that we have a very flexible way to make functions out of functions, using functions. We are not "multiplying our entities unnecessarily." On the surface, decorators and combinators are made possible by the fact that **we can pass functions to functions, and return functions that invoke our original functions.**
+**The power arising from functions-as-first-class-entities is that we have a very flexible way to make functions out of functions, using functions.** We are not "multiplying our entities unnecessarily." On the surface, decorators and combinators are made possible by the fact that **we can pass functions to functions, and return functions that invoke our original functions.**
 
-But there's something else: **The fact that all functions are called in the exact same way.** We write `foo(bar)` and know that we will evaluate `bar`, and pass the resulting value to the function we get by evaluating `foo`. This allows us to write decorators and combinators that work with any function.
+But there's something else: **[The fact that all functions are called in the exact same way. ?????](#aa)** We write `foo(bar)` and know that we will evaluate `bar`, and pass the resulting value to the function we get by evaluating `foo`. This allows us to write decorators and combinators that work with any function.
 
 Or does it?
 
