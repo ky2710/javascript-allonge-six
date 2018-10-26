@@ -2,6 +2,7 @@
 ## [JavaScript Allongé-6th](#middle)
 ***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[Javascript Allongé-6th]***      
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Remarks](book_3_closing-time.md) / [Appendices](book_4_appendices.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)* 
+* [**Prelude: Values and Expressions over Coffee**]
 * [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 	* [Recipe-0: Basic Functions](main_0r_functions.md)  
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md) 	
@@ -15,6 +16,7 @@
 * [**Main-6: Composing Class Behaviour**](main_6_classes.md) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)
 * [**Main-7: More Decorators**](main_7_dedorators.md)   
 	* [Recipe-7: More Decorator](main_7r_dedorators.md)   
+* [**Final Remarks: Closing Time at the Coffeeshop**]
 
 <a name="middle"></a>
 ## [JavaScript Allongé-6th](#top) *- detail*
