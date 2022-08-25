@@ -29,7 +29,7 @@
 
 <a name="middle"></a>
 ## [JavaScript Allongé-6th](#top) *- detail*
---- 
+
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)        
 	* values are expressions -- values and identity  
 ---
