@@ -34,7 +34,8 @@
 	* [Naming Functions](main_0_functions.md#naming-functions)     
 	* [Combinators & Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
 		* higher-order functions    
-		* combinators -- a balanced statement about combinators
+		* combinators 
+		* a balanced statement about combinators
 		* function decorators : : Method Decorators → Symmetry, Colour, and Charm → More Decorators
 	* [Building Blocks](main_0_functions.md#building-blocks)   
 		* composition
