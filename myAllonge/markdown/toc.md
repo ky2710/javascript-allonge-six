@@ -28,8 +28,7 @@
 
 <a name="middle"></a>
 ## [JavaScript Allongé-6th](#top) *- detail*
-***[You Dont Konw JS][det_1]** --- **[Functional Light JS][det_2]** --- **[Understanding ES6][det_3]** --- **[Javascript Allongé-6th][det_4]***      
-*[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)*    
+ 
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)        
 	* values are expressions -- values and identity  
 ---
