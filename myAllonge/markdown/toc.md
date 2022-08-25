@@ -25,7 +25,8 @@
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)        
 	* values are expressions -- values and identity  
 ---
-* [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
+* [**Main-0: Basic Functions**](main_0_functions.md) 
+* [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
 	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
 		* call by value -- variables and bindings -- call by sharing
