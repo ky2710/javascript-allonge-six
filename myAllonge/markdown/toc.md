@@ -3,7 +3,8 @@
 ***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[Javascript Allongé-6th]***      
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Remarks](book_3_closing-time.md) / [Appendices](book_4_appendices.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)* 
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)
-* [**Main-0: Basic Functions**](main_0_functions.md) / [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
+* [**Main-0: Basic Functions**](main_0_functions.md)
+	* [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 	* [Recipe-0: Basic Functions](main_0r_functions.md)  
 * [**Main-1: Composing and Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md) 	
 	* [Recipe-1: Data](main_1r_Composing.md) 
@@ -64,7 +65,8 @@
 * [Recipe-1: Data](main_1r_Composing.md)   
 	* mapWith -- Flip -- Object.assign -- Why?   
 ---   
-* [**Main-2: Objects & State**](main_2_objects.md) / [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
+* [**Main-2: Objects & State**](main_2_objects.md)
+* [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
 		* what is hiding of state-process, and why does it matter?
 		* how do we hide state using javascript? -- method-ology -- hiding state
@@ -76,7 +78,8 @@
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
    * Memoize -- getWith -- pluckWith -- Deep Mapping   
 ---
-* [**Main-3: Collections**](main_3_collections.md) / [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
+* [**Main-3: Collections**](main_3_collections.md)
+* [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
 	* [Iteration and Iterables](main_3_collections.md#iteration-and-iterables)   
 		* functional iterators -- iterator objects -- iterables -- iterables out to infinity
 		* ordered collections -- operations on ordered collections -- from -- Summary
@@ -88,14 +91,16 @@
 	* [Interactive Generators](main_3_collections.md#interactive-generators)   
 	* [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
 ---
-* [**Main-4: Metaobjects**](main_4_metaobjects.md#life-on-the-plantation-metaobjects) / [*Sub-4: Symbols*](sub_4_symbols.md)   
+* [**Main-4: Metaobjects**](main_4_metaobjects.md#life-on-the-plantation-metaobjects)
+* [*Sub-4: Symbols*](sub_4_symbols.md)   
 	* [Why Metaobjects?](main_4_metaobjects.md#why-metaobjects) 
 	* [Mixins, Forwarding, and Delegation](main_4_metaobjects.md#mixins-forwarding-and-delegation)       
 	* [Later Binding](main_4_metaobjects.md#later-binding)     
 	* [Delegation via Prototypes](main_4_metaobjects.md#delegation-via-prototypes)    
 	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
 ---
-* [**Main-5: Constructors & Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes) / [*Sub-5: Impostors*](sub_5_impostors.md)   
+* [**Main-5: Constructors & Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes)
+* [*Sub-5: Impostors*](sub_5_impostors.md)   
 	* [Constructors and `new`](main_5_constructors.md#constructors-and-new)    
 	* [Why Classes in JavaScript?](main_5_constructors.md#why-classes-in-javascript)    
 	* [Classes with class](main_5_constructors.md#classes-with-class)    
@@ -105,7 +110,8 @@
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
 	* Bound -- Send -- Invoke -- Fluent   
 ---
-* [**Main-6: Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm)   
+* [**Main-6: Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour)
+* [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm)   
 	* [Extending Classes with Mixins](main_6_classes.md#extending-classes-with-mixins)    
 	* [Functional Mixins](main_6_classes.md#functional-mixins)    
 	* [Emulating Multiple Inheritance](main_6_classes.md#emulating-multiple-inheritance)    
