@@ -54,7 +54,8 @@
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
 	* Partial Application -- Unary -- Tap -- Maybe -- Once -- Left-Variadic Functions -- Compose and Pipeline   
 ---
-* [**Main-1: Composing & Decomposing Data**](main_1_Composing.md) / [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
+* [**Main-1: Composing & Decomposing Data**](main_1_Composing.md)
+* [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
 		* array literals -- element references -- destructuring arrays -- gathering
 		* destructuring is not pattern matching -- destructuring and return values -- destructuring parameters
