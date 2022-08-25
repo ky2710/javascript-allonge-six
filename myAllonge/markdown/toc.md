@@ -2,6 +2,7 @@
 ## [JavaScript Allongé-6th](#middle)
 ***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[Javascript Allongé-6th]***      
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Remarks](book_3_closing-time.md) / [Appendices](book_4_appendices.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)* 
+
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)
 * [**Main-0: Basic Functions**](main_0_functions.md)
 	* [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
@@ -12,11 +13,15 @@
 * [**Main-2: Objects and State**](main_2_objects.md)
 	* [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)	
 	* [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
-* [**Main-3: Collections**](main_3_collections.md) / [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
-* [**Main-4: Metaobjects**](main_4_metaobjects.md) / [*Sub-4: Symbols*](sub_4_symbols.md) 
-* [**Main-5: Constructors and Classes**](main_5_constructors.md) / [*Sub-5: Impostors*](sub_5_impostors.md) 
+* [**Main-3: Collections**](main_3_collections.md)
+	* [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
+* [**Main-4: Metaobjects**](main_4_metaobjects.md)
+	* [*Sub-4: Symbols*](sub_4_symbols.md) 
+* [**Main-5: Constructors and Classes**](main_5_constructors.md)
+	* [*Sub-5: Impostors*](sub_5_impostors.md) 
 	* [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
-* [**Main-6: Composing Class Behaviour**](main_6_classes.md) / [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)
+* [**Main-6: Composing Class Behaviour**](main_6_classes.md)
+	* [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md)
 * [**Main-7: More Decorators**](main_7_dedorators.md)   
 	* [Recipe-7: More Decorator](main_7r_dedorators.md)   
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)
