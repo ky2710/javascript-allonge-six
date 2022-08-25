@@ -33,7 +33,7 @@
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)        
 	* values are expressions -- values and identity  
 ---
-* [**Main-0: Basic Functions**](main_0_functions.md) 
+* [**0: Basic Functions**](main_0_functions.md) 
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
 	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
@@ -54,7 +54,7 @@
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
 	* Partial Application -- Unary -- Tap -- Maybe -- Once -- Left-Variadic Functions -- Compose and Pipeline   
 ---
-* [**Main-1: Composing & Decomposing Data**](main_1_Composing.md)
+* [**1: Composing & Decomposing Data**](main_1_Composing.md)
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
 		* array literals -- element references -- destructuring arrays -- gathering
@@ -73,7 +73,7 @@
 * [Recipe-1: Data](main_1r_Composing.md)   
 	* mapWith -- Flip -- Object.assign -- Why?   
 ---   
-* [**Main-2: Objects & State**](main_2_objects.md)
+* [**2: Objects & State**](main_2_objects.md)
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
 		* what is hiding of state-process, and why does it matter?
@@ -86,7 +86,7 @@
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
    * Memoize -- getWith -- pluckWith -- Deep Mapping   
 ---
-* [**Main-3: Collections**](main_3_collections.md)
+* [**3: Collections**](main_3_collections.md)
 * [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
 	* [Iteration and Iterables](main_3_collections.md#iteration-and-iterables)   
 		* functional iterators -- iterator objects -- iterables -- iterables out to infinity
@@ -99,7 +99,7 @@
 	* [Interactive Generators](main_3_collections.md#interactive-generators)   
 	* [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
 ---
-* [**Main-4: Metaobjects**](main_4_metaobjects.md#life-on-the-plantation-metaobjects)
+* [**4: Metaobjects**](main_4_metaobjects.md#life-on-the-plantation-metaobjects)
 * [*Sub-4: Symbols*](sub_4_symbols.md)   
 	* [Why Metaobjects?](main_4_metaobjects.md#why-metaobjects) 
 	* [Mixins, Forwarding, and Delegation](main_4_metaobjects.md#mixins-forwarding-and-delegation)       
@@ -107,7 +107,7 @@
 	* [Delegation via Prototypes](main_4_metaobjects.md#delegation-via-prototypes)    
 	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
 ---
-* [**Main-5: Constructors & Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes)
+* [**5: Constructors & Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes)
 * [*Sub-5: Impostors*](sub_5_impostors.md)   
 	* [Constructors and `new`](main_5_constructors.md#constructors-and-new)    
 	* [Why Classes in JavaScript?](main_5_constructors.md#why-classes-in-javascript)    
@@ -118,7 +118,7 @@
 * [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
 	* Bound -- Send -- Invoke -- Fluent   
 ---
-* [**Main-6: Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour)
+* [**6: Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour)
 * [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm)   
 	* [Extending Classes with Mixins](main_6_classes.md#extending-classes-with-mixins)    
 	* [Functional Mixins](main_6_classes.md#functional-mixins)    
@@ -126,7 +126,7 @@
 	* [Preventing Property Conflicts](main_6_classes.md#preventing-property-conflicts)    
 	* [Reducing Coupling](main_6_classes.md#reducing-coupling)    
 ---
-* [**Main-7: More Decorators**](main_7_dedorators.md#more-decorators)   
+* [**7: More Decorators**](main_7_dedorators.md#more-decorators)   
 	* [Stateful Method Decorators](main_7_dedorators.md#stateful-method-decorators)    
 	* [Class Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#class-decorators-beyond-es6ecmascript-2015)    
 	* [Method Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#method-decorators-beyond-es6ecmascript-2015)    
