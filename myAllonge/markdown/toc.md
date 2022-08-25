@@ -36,7 +36,7 @@
 		* higher-order functions    
 		* combinators 
 		* a balanced statement about combinators
-		* function decorators : : Method Decorators → Symmetry, Colour, and Charm → More Decorators
+		* function decorators
 	* [Building Blocks](main_0_functions.md#building-blocks)   
 		* composition
 		* partial application
