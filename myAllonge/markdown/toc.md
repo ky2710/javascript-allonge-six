@@ -140,7 +140,7 @@
 	
 [You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
 [Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
-[Understanding ES6]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#top
+[Understanding ES6]: https://github.com/ky27100/understandinges6/blob/f8b111eabe145b67e1dae9a3eb2270726e26686b/manuscript/toc.md
 [Javascript Allongé-6th]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
 
 [det_1]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#middle
