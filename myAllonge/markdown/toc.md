@@ -83,7 +83,8 @@
 		* **Extension : Another practice is to extend an implementation.**
 	* [This and That](main_2_objects.md#this-and-that) 
 	* [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function)
-	* [Method Decorators](main_2_objects.md#method-decorators) -- [Summary](main_2_objects.md#summary)
+	* [Method Decorators](main_2_objects.md#method-decorators)
+	* [Summary](main_2_objects.md#summary)
 * [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
    * Memoize -- getWith -- pluckWith -- Deep Mapping   
 ---
