@@ -138,12 +138,12 @@
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015 -- the lightweight way    
 	
-[You Dont Konw JS]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#top
-[Functional Light JS]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#top
-[Understanding ES6]: https://github.com/ky27100/understandinges6/blob/f8b111eabe145b67e1dae9a3eb2270726e26686b/manuscript/toc.md
-[Javascript Allongé-6th]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
+[You Dont Konw JS]: https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md
+[Functional Light JS]: https://github.com/ky27100/Functional-Light-JS/blob/master/manuscript/toc.md#top
+[Understanding ES6]: https://github.com/ky27100/understandinges6/blob/master/manuscript/toc.md#top
+[Javascript Allongé-6th]: https://github.com/ky27100/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
 
-[det_1]: https://github.com/kiyounglee/You-Dont-Know-JS/blob/master/toc.md#middle
+[det_1]: https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md
 [det_2]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#middle
 [det_3]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#middle
 [det_4]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#middle
