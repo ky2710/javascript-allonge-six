@@ -1,8 +1,3 @@
-<style>
-a { color : red;}		
-</style>
-	
-
 <a name="top"></a>
 ## [JavaScript Allongé-6th](#middle)
 ***[You Dont Konw JS]** --- **[Functional Light JS]** --- **[Understanding ES6]** --- **[Javascript Allongé-6th]***      
