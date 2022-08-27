@@ -50,18 +50,13 @@
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 * [**1 : Composing & Decomposing Data**](main_1_Composing.md)
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
-		* array literals -- element references -- destructuring arrays -- gathering
-		* destructuring is not pattern matching -- destructuring and return values -- destructuring parameters
 	* [Self-Similarity](main_1_Composing.md#self-similarity) : List(Array)
-		* linear recursion -- mapping -- folding(Reduce)
 	* [Tail Calls (and Default Arguments)](main_1_Composing.md#tail-calls-and-default-arguments)   
 	* [Garbage, Garbage Everywhere](main_1_Composing.md#garbage-garbage-everywhere)   
 	* [Plain Old JavaScript Objects](main_1_Composing.md#plain-old-javascript-objects) 
-		* literal object syntax -- destructuring objects -- revisiting linked lists
 	* [Mutation](main_1_Composing.md#mutation) -- [Reassignment](main_1_Composing.md#reassignment) -- [Copy on Write(Copy on Read)](main_1_Composing.md#copy-on-write)   
 	* [Tortoises, Hares, and Teleporting Turtles](main_1_Composing.md#tortoises-hares-and-teleporting-turtles)   
 	* [Functional Iterators](main_1_Composing.md#functional-iterators)
-		* iterating -- unfolding and laziness -- bonus -- caveat
 	* [Making Data Out Of Functions](main_1_Composing.md#making-data-out-of-functions)   
 * [Recipe-1: Data](main_1r_Composing.md)   
 	* mapWith -- Flip -- Object.assign -- Why?   
