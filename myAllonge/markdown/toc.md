@@ -38,7 +38,7 @@
 	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) : As Little As Possible About Functions, But No Less
 	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) : Ah. I’d Like to Have an Argument, Please.   
 	* [Closures and Scope](main_0_functions.md#closures-and-scope)   
-	* [const and lexical scope](main_0_functions.md#that-constant-coffee-craving) - That Constant Coffee Craving   
+	* [const and lexical scope](main_0_functions.md#that-constant-coffee-craving) : That Constant Coffee Craving   
 	* [Naming Functions](main_0_functions.md#naming-functions)     
 	* [Combinators & Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
 	* [Building Blocks](main_0_functions.md#building-blocks) : Compositon, Partial application   
