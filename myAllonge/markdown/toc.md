@@ -66,7 +66,7 @@
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**2 : Objects & State**](main_2_objects.md)
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
-	* [Composition and Extension](main_2_objects.md#composition-and-extension)
+	* :boom:[Composition and Extension](main_2_objects.md#composition-and-extension)
 	* [This and That](main_2_objects.md#this-and-that) 
 	* [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function)
 	* [Method Decorators](main_2_objects.md#method-decorators)
