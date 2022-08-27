@@ -35,20 +35,13 @@
 ---
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 * [**0 : Basic Functions**](main_0_functions.md) 
-	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) - As Little As Possible About Functions, But No Less
-	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) - Ah. I’d Like to Have an Argument, Please.   
-		* call by value -- variables and bindings -- call by sharing
+	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) : As Little As Possible About Functions, But No Less
+	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) : Ah. I’d Like to Have an Argument, Please.   
 	* [Closures and Scope](main_0_functions.md#closures-and-scope)   
 	* [const and lexical scope](main_0_functions.md#that-constant-coffee-craving) - That Constant Coffee Craving   
 	* [Naming Functions](main_0_functions.md#naming-functions)     
 	* [Combinators & Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
-		* higher-order functions    
-		* combinators 
-		* a balanced statement about combinators
-		* function decorators
-	* [Building Blocks](main_0_functions.md#building-blocks)   
-		* composition
-		* partial application
+	* [Building Blocks](main_0_functions.md#building-blocks) : Compositon, Partial application   
 	* [Magic Names](main_0_functions.md#magic-names) : this, arguments     
 	* [Summary](main_0_functions.md#summary)     
 * [Recipe-0: Basic Functions](main_0r_functions.md)   
