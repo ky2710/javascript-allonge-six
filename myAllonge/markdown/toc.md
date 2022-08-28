@@ -53,7 +53,8 @@
 	* [Magic Names](main_0_functions.md#magic-names) : this, arguments     
 	* [Summary](main_0_functions.md#summary)
 	* [Recipe-0: Basic Functions](main_0r_functions.md)
-		* Partial Application / Unary / Tap / Maybe / Once / Left-Variadic Functions / Compose and Pipeline
+		* Partial Application / Unary / Tap / Maybe / Once 
+		* Left-Variadic Functions / Compose and Pipeline
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 * [**1 : Composing & Decomposing Data**](main_1_Composing.md)
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
@@ -68,7 +69,7 @@
 	* [Functional Iterators](main_1_Composing.md#functional-iterators)
 	* [Making Data Out Of Functions](main_1_Composing.md#making-data-out-of-functions)   
 	* [Recipe-1: Data](main_1r_Composing.md)   
-		* mapWith -- Flip -- Object.assign -- Why?     
+		* mapWith / Flip / Object.assign / Why?     
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**2 : Objects & State**](main_2_objects.md)
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
