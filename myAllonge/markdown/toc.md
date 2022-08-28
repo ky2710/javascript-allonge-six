@@ -53,8 +53,8 @@
 	* [Building Blocks](main_0_functions.md#building-blocks) : Compositon, Partial application   
 	* [Magic Names](main_0_functions.md#magic-names) : this, arguments     
 	* [Summary](main_0_functions.md#summary)
-* [Recipe-0: Basic Functions](main_0r_functions.md)
-	* Partial Application / Unary / Tap / Maybe / Once / Left-Variadic Functions / Compose and Pipeline
+	* [Recipe-0: Basic Functions](main_0r_functions.md)
+		* Partial Application / Unary / Tap / Maybe / Once / Left-Variadic Functions / Compose and Pipeline
 
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 * [**1 : Composing & Decomposing Data**](main_1_Composing.md)
