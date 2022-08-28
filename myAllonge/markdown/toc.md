@@ -1,6 +1,13 @@
 <a name="top"></a>
+***[YDK JS]** -- **[YDK JS Yet]** -- **[Functional Light JS]** -- **[Understanding ES6]** -- **[JS Allongé-6th]***   
+
+[YDK JS]: https://github.com/ky27100/You-Dont-Know-JS/tree/1st-ed/toc.md#top
+[YDK JS Yet]: https://github.com/ky27100/You-Dont-Know-JS/blob/2nd-ed/toc.md#top
+[Functional Light JS]: https://github.com/ky27100/Functional-Light-JS/blob/master/manuscript/toc.md#top
+[Understanding ES6]: https://github.com/ky27100/understandinges6/blob/master/manuscript/toc.md#top
+[JS Allongé-6th]: https://github.com/ky27100/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
+
 ## [JavaScript Allongé-6th](#middle)
-***[YDK JS]** -- **[YDK JS Yet]** -- **[Functional Light JS]** -- **[Understanding ES6]** -- **[JS Allongé-6th]***     
 *[Prefaces](book_1_preface.md) / [Prelude](book_2_prelude.md) / [Remarks](book_3_closing-time.md) / [Appendices](book_4_appendices.md) / [Leanpub](https://leanpub.com/javascriptallongesix/read#leanpub-auto-about-javascript-allong) - Nov 3, 2017(513p) - [By Reg Braithwaite](https://github.com/raganwald)* 
 
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)
@@ -125,13 +132,3 @@
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015 -- the lightweight way    
 	
-[YDK JS]: https://github.com/ky27100/You-Dont-Know-JS/tree/1st-ed/toc.md#top
-[YDK JS Yet]: https://github.com/ky27100/You-Dont-Know-JS/blob/2nd-ed/toc.md#top
-[Functional Light JS]: https://github.com/ky27100/Functional-Light-JS/blob/master/manuscript/toc.md#top
-[Understanding ES6]: https://github.com/ky27100/understandinges6/blob/master/manuscript/toc.md#top
-[JS Allongé-6th]: https://github.com/ky27100/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#top
-
-[det_1]: https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md
-[det_2]: https://github.com/kiyounglee/Functional-Light-JS/blob/master/manuscript/toc.md#middle
-[det_3]: https://github.com/kiyounglee/understandinges6/blob/master/manuscript/toc.md#middle
-[det_4]: https://github.com/kiyounglee/javascript-allonge-six/blob/master/myAllonge/markdown/toc.md#middle
