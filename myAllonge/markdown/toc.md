@@ -69,8 +69,8 @@
 	* [Tortoises, Hares, and Teleporting Turtles](main_1_Composing.md#tortoises-hares-and-teleporting-turtles)   
 	* [Functional Iterators](main_1_Composing.md#functional-iterators)
 	* [Making Data Out Of Functions](main_1_Composing.md#making-data-out-of-functions)   
-* [Recipe-1: Data](main_1r_Composing.md)   
-	* mapWith -- Flip -- Object.assign -- Why?   
+	* [Recipe-1: Data](main_1r_Composing.md)   
+		* mapWith -- Flip -- Object.assign -- Why?   
   
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**2 : Objects & State**](main_2_objects.md)
@@ -80,8 +80,8 @@
 	* [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function)
 	* [Method Decorators](main_2_objects.md#method-decorators)
 	* [Summary](main_2_objects.md#summary)
-* [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
-   * Memoize -- getWith -- pluckWith -- Deep Mapping   
+	* [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
+		* Memoize -- getWith -- pluckWith -- Deep Mapping   
 
 * [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
 * [**3 : Collections**](main_3_collections.md)
@@ -112,8 +112,8 @@
 	* [Object Methods](main_5_constructors.md#object-methods)    
 	* [Why Not Classes?](main_5_constructors.md#why-not-classes)    
 	* [Summary](main_5_constructors.md#summary) 
-* [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
-	* Bound -- Send -- Invoke -- Fluent   
+	* [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
+		* Bound -- Send -- Invoke -- Fluent   
 
 * [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm)   
 * [**6 : Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour)
@@ -128,8 +128,8 @@
 	* [Class Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#class-decorators-beyond-es6ecmascript-2015)    
 	* [Method Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#method-decorators-beyond-es6ecmascript-2015)    
 	* [Lightweight Traits](main_7_dedorators.md#lightweight-traits)    
-* [Recipe-7: More Decorator](main_7r_dedorators.md)   
-	* After Method Advice -- Before Method Advice -- Provided and Unless -- Method Advice      
+	* [Recipe-7: More Decorator](main_7r_dedorators.md)   
+		* After Method Advice -- Before Method Advice -- Provided and Unless -- Method Advice      
 
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015 -- the lightweight way    
