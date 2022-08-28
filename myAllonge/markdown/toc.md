@@ -40,18 +40,19 @@
 ## [JavaScript Allongé-6th](#top) *- detail*
 
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)        
-	* values are expressions -- values and identity  
+	* values are expressions 
+	* values and identity  
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 * [**0 : Basic Functions**](main_0_functions.md)
-	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) : As Little As Possible About Functions, But No Less
-	* [Argument & Parameter](main_0_functions.md#ah-id-like-to-have-an-argument-pleasezzz-fargs) : Ah. I’d Like to Have an Argument, Please.   
-	* [Closures and Scope](main_0_functions.md#closures-and-scope)   
-	* [const and lexical scope](main_0_functions.md#that-constant-coffee-craving) : That Constant Coffee Craving   
-	* [Naming Functions](main_0_functions.md#naming-functions)     
-	* [Combinators & Function Decorators](main_0_functions.md#combinators-and-function-decorators)  
-	* [Building Blocks](main_0_functions.md#building-blocks) : Compositon, Partial application   
-	* [Magic Names](main_0_functions.md#magic-names) : this, arguments     
-	* [Summary](main_0_functions.md#summary)
+	* Function basic : As Little As Possible About Functions, But No Less
+	* Argument & Parameter : Ah. I’d Like to Have an Argument, Please.   
+	* Closures and Scope   
+	* const and lexical scope : That Constant Coffee Craving   
+	* Naming Functions     
+	* Combinators & Function Decorators  
+	* Building Blocks : Compositon, Partial application   
+	* Magic Names : this, arguments     
+	* Summary
 	* [Recipe-0: Basic Functions](main_0r_functions.md)
 		* Partial Application / Unary / Tap / Maybe / Once 
 		* Left-Variadic Functions / Compose and Pipeline
