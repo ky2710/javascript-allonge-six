@@ -58,72 +58,68 @@
 		* Left-Variadic Functions / Compose and Pipeline
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 * [**1 : Composing & Decomposing Data**](main_1_Composing.md)
-	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
-	* [Self-Similarity](main_1_Composing.md#self-similarity) : List(Array)
-	* [Tail Calls (and Default Arguments)](main_1_Composing.md#tail-calls-and-default-arguments)   
-	* [Garbage, Garbage Everywhere](main_1_Composing.md#garbage-garbage-everywhere)   
-	* [Plain Old JavaScript Objects](main_1_Composing.md#plain-old-javascript-objects) 
-	* [Mutation](main_1_Composing.md#mutation)
-	* [Reassignment](main_1_Composing.md#reassignment)
-	* [Copy on Write(Copy on Read)](main_1_Composing.md#copy-on-write)   
-	* [Tortoises, Hares, and Teleporting Turtles](main_1_Composing.md#tortoises-hares-and-teleporting-turtles)   
-	* [Functional Iterators](main_1_Composing.md#functional-iterators)
-	* [Making Data Out Of Functions](main_1_Composing.md#making-data-out-of-functions)   
+	* Arrays and Destructuring Arguments
+	* Self-Similarity : List(Array)
+	* Tail Calls (and Default Arguments)   
+	* Garbage, Garbage Everywhere   
+	* Plain Old JavaScript Objects 
+	* Mutation
+	* Reassignment
+	* Copy on Write(Copy on Read)   
+	* Tortoises, Hares, and Teleporting Turtles   
+	* Functional Iterators
+	* Making Data Out Of Functions   
 	* [Recipe-1: Data](main_1r_Composing.md)   
 		* mapWith / Flip / Object.assign / Why?     
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**2 : Objects & State**](main_2_objects.md)
-	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
-	* :boom:[Composition and Extension](main_2_objects.md#composition-and-extension)
-	* [This and That](main_2_objects.md#this-and-that) 
-	* [What Context Applies When We Call a Function?](main_2_objects.md#what-context-applies-when-we-call-a-function)
-	* [Method Decorators](main_2_objects.md#method-decorators)
-	* [Summary](main_2_objects.md#summary)
+	* Encapsulating State with Closures
+	* :boom:Composition and Extension
+	* This and That 
+	* What Context Applies When We Call a Function?
+	* Method Decorators
+	* Summary
 	* [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
 		* Memoize -- getWith -- pluckWith -- Deep Mapping   
 * [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
 * [**3 : Collections**](main_3_collections.md)
-	* [Iteration and Iterables](main_3_collections.md#iteration-and-iterables)   
-		* functional iterators -- iterator objects -- iterables -- iterables out to infinity
-		* ordered collections -- operations on ordered collections -- from -- Summary
-	* [Generating Iterables](main_3_collections.md#generating-iterables)   
-		* recursive iterators -- state machines -- javascript's generators -- generators are coroutines
-		* generators and iterables -- more generators -- yielding iterables -- rewriting iterable operations -- Summary
-	* [Lazy and Eager Collections](main_3_collections.md#lazy-and-eager-collections)   
-	* [Interlude: The Carpenter Interviews for a Job](main_3_collections.md#interlude-the-carpenter-interviews-for-a-job)   
-	* [Interactive Generators](main_3_collections.md#interactive-generators)   
-	* [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
+	* Iteration and Iterables   
+	* Generating Iterables   
+	* Lazy and Eager Collections   
+	* Interlude: The Carpenter Interviews for a Job   
+	* Interactive Generators   
+	* Basic Operations on Iterables   
 * [*Sub-4: Symbols*](sub_4_symbols.md)   
 * [**4 : Metaobjects**](main_4_metaobjects.md#life-on-the-plantation-metaobjects)
-	* [Why Metaobjects?](main_4_metaobjects.md#why-metaobjects) 
-	* [Mixins, Forwarding, and Delegation](main_4_metaobjects.md#mixins-forwarding-and-delegation)       
-	* [Later Binding](main_4_metaobjects.md#later-binding)     
-	* [Delegation via Prototypes](main_4_metaobjects.md#delegation-via-prototypes)    
-	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
+	* Why Metaobjects? 
+	* Mixins, Forwarding, and Delegation       
+	* Later Binding     
+	* Delegation via Prototypes    
+	* Shared Prototypes    
 * [*Sub-5: Impostors*](sub_5_impostors.md)   
 * [**5 : Constructors & Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes)
-	* [Constructors and `new`](main_5_constructors.md#constructors-and-new)    
-	* [Why Classes in JavaScript?](main_5_constructors.md#why-classes-in-javascript)    
-	* [Classes with class](main_5_constructors.md#classes-with-class)    
-	* [Object Methods](main_5_constructors.md#object-methods)    
-	* [Why Not Classes?](main_5_constructors.md#why-not-classes)    
-	* [Summary](main_5_constructors.md#summary) 
+	* Constructors and `new`    
+	* Why Classes in JavaScript?    
+	* Classes with class    
+	* Object Methods    
+	* Why Not Classes?    
+	* Summary 
 	* [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
-		* Bound -- Send -- Invoke -- Fluent   
+		* Bound / Send / Invoke / Fluent   
 * [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm)   
 * [**6 : Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour)
-	* [Extending Classes with Mixins](main_6_classes.md#extending-classes-with-mixins)    
-	* [Functional Mixins](main_6_classes.md#functional-mixins)    
-	* [Emulating Multiple Inheritance](main_6_classes.md#emulating-multiple-inheritance)    
-	* [Preventing Property Conflicts](main_6_classes.md#preventing-property-conflicts)    
-	* [Reducing Coupling](main_6_classes.md#reducing-coupling)    
+	* Extending Classes with Mixins    
+	* Functional Mixins    
+	* Emulating Multiple Inheritance   
+	* Preventing Property Conflicts    
+	* Reducing Coupling    
 * [**7 : More Decorators**](main_7_dedorators.md#more-decorators)   
-	* [Stateful Method Decorators](main_7_dedorators.md#stateful-method-decorators)    
-	* [Class Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#class-decorators-beyond-es6ecmascript-2015)    
-	* [Method Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#method-decorators-beyond-es6ecmascript-2015)    
-	* [Lightweight Traits](main_7_dedorators.md#lightweight-traits)    
+	* Stateful Method Decorators    
+	* Class Decorators beyond ES6/ECMAScript 2015    
+	* Method Decorators beyond ES6/ECMAScript 2015    
+	* Lightweight Traits    
 	* [Recipe-7: More Decorator](main_7r_dedorators.md)   
-		* After Method Advice -- Before Method Advice -- Provided and Unless -- Method Advice      
+		* After Method Advice / Before Method Advice / Provided and Unless / Method Advice      
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015 -- the lightweight way    
 
