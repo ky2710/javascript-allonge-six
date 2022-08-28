@@ -35,6 +35,8 @@
 
 ---
 <a name="middle"></a>
+***[YDK JS]** -- **[YDK JS Yet]** -- **[Functional Light JS]** -- **[Understanding ES6]** -- **[JS Allongé-6th]***   
+
 ## [JavaScript Allongé-6th](#top) *- detail*
 
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)        
