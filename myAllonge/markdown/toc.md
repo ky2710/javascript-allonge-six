@@ -41,7 +41,6 @@
 
 * [**Prelude: Values and Expressions over Coffee**](book_2_prelude.md#prelude-values-and-expressions-over-coffee)        
 	* values are expressions -- values and identity  
-
 * [*Sub-0: Basic Numbers*](sub_0_numbers.md) 
 * [**0 : Basic Functions**](main_0_functions.md)
 	* [Function basic](main_0_functions.md#as-little-as-possible-about-functions-but-no-less) : As Little As Possible About Functions, But No Less
@@ -55,7 +54,6 @@
 	* [Summary](main_0_functions.md#summary)
 	* [Recipe-0: Basic Functions](main_0r_functions.md)
 		* Partial Application / Unary / Tap / Maybe / Once / Left-Variadic Functions / Compose and Pipeline
-
 * [*Sub-1: Choice and Truthiness*](sub_1_choice.md)  
 * [**1 : Composing & Decomposing Data**](main_1_Composing.md)
 	* [Arrays and Destructuring Arguments](main_1_Composing.md#arrays-and-destructuring-arguments)
