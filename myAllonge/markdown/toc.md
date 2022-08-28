@@ -122,4 +122,3 @@
 		* After Method Advice / Before Method Advice / Provided and Unless / Method Advice      
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015 -- the lightweight way    
-
