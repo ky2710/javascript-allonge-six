@@ -68,8 +68,7 @@
 	* [Functional Iterators](main_1_Composing.md#functional-iterators)
 	* [Making Data Out Of Functions](main_1_Composing.md#making-data-out-of-functions)   
 	* [Recipe-1: Data](main_1r_Composing.md)   
-		* mapWith -- Flip -- Object.assign -- Why?   
-  
+		* mapWith -- Flip -- Object.assign -- Why?     
 * [*Sub-2: Basic Strings and Quasi-Literals*](sub_2_strings.md)   
 * [**2 : Objects & State**](main_2_objects.md)
 	* [Encapsulating State with Closures](main_2_objects.md#encapsulating-state-with-closures)
@@ -80,7 +79,6 @@
 	* [Summary](main_2_objects.md#summary)
 	* [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
 		* Memoize -- getWith -- pluckWith -- Deep Mapping   
-
 * [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
 * [**3 : Collections**](main_3_collections.md)
 	* [Iteration and Iterables](main_3_collections.md#iteration-and-iterables)   
@@ -93,7 +91,6 @@
 	* [Interlude: The Carpenter Interviews for a Job](main_3_collections.md#interlude-the-carpenter-interviews-for-a-job)   
 	* [Interactive Generators](main_3_collections.md#interactive-generators)   
 	* [Basic Operations on Iterables](main_3_collections.md#basic-operations-on-iterables)   
-
 * [*Sub-4: Symbols*](sub_4_symbols.md)   
 * [**4 : Metaobjects**](main_4_metaobjects.md#life-on-the-plantation-metaobjects)
 	* [Why Metaobjects?](main_4_metaobjects.md#why-metaobjects) 
@@ -101,7 +98,6 @@
 	* [Later Binding](main_4_metaobjects.md#later-binding)     
 	* [Delegation via Prototypes](main_4_metaobjects.md#delegation-via-prototypes)    
 	* [Shared Prototypes](main_4_metaobjects.md#shared-prototypes)    
-
 * [*Sub-5: Impostors*](sub_5_impostors.md)   
 * [**5 : Constructors & Classes**](main_5_constructors.md#finish-the-cup-constructors-and-classes)
 	* [Constructors and `new`](main_5_constructors.md#constructors-and-new)    
@@ -112,7 +108,6 @@
 	* [Summary](main_5_constructors.md#summary) 
 	* [Recipe-5: Constructors and Classes](main_5r_constructors.md)   
 		* Bound -- Send -- Invoke -- Fluent   
-
 * [*Sub-6: Symmetry, Colour, and Charm*](sub_6_colours.md#colourful-mugs-symmetry-colour-and-charm)   
 * [**6 : Composing Class Behaviour**](main_6_classes.md#con-panna-composing-class-behaviour)
 	* [Extending Classes with Mixins](main_6_classes.md#extending-classes-with-mixins)    
@@ -120,7 +115,6 @@
 	* [Emulating Multiple Inheritance](main_6_classes.md#emulating-multiple-inheritance)    
 	* [Preventing Property Conflicts](main_6_classes.md#preventing-property-conflicts)    
 	* [Reducing Coupling](main_6_classes.md#reducing-coupling)    
-
 * [**7 : More Decorators**](main_7_dedorators.md#more-decorators)   
 	* [Stateful Method Decorators](main_7_dedorators.md#stateful-method-decorators)    
 	* [Class Decorators beyond ES6/ECMAScript 2015](main_7_dedorators.md#class-decorators-beyond-es6ecmascript-2015)    
@@ -128,7 +122,6 @@
 	* [Lightweight Traits](main_7_dedorators.md#lightweight-traits)    
 	* [Recipe-7: More Decorator](main_7r_dedorators.md)   
 		* After Method Advice -- Before Method Advice -- Provided and Unless -- Method Advice      
-
 * [**Final Remarks: Closing Time at the Coffeeshop**](book_3_closing-time.md#closing-time-at-the-coffeeshop-final-remarks)   
 	* javascript beyond es6/ecmascript 2015 -- the lightweight way    
 	
