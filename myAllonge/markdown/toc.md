@@ -1,7 +1,7 @@
 <a name="top"></a>
 ***[YDK JS]** -- **[YDK JS Yet]** -- **[Functional Light JS]** -- **[Understanding ES6]** -- **[JS Allongé-6th]***   
 
-[YDK JS]: https://github.com/ky27100/You-Dont-Know-JS/tree/1st-ed/toc.md#top
+[YDK JS]: https://github.com/ky27100/You-Dont-Know-JS/blob/1st-ed/toc.md#top
 [YDK JS Yet]: https://github.com/ky27100/You-Dont-Know-JS/blob/2nd-ed/toc.md#top
 [Functional Light JS]: https://github.com/ky27100/Functional-Light-JS/blob/master/manuscript/toc.md#top
 [Understanding ES6]: https://github.com/ky27100/understandinges6/blob/master/manuscript/toc.md#top
