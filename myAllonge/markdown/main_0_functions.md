@@ -1185,7 +1185,7 @@ The parentheses make this an expression, not a function declaration.
 ## Combinators and Function Decorators
 ### higher-order functions
 
-As we've seen, **JavaScript functions take [values](#aa) as arguments and return [values](#aa). JavaScript functions are values, so JavaScript functions can take functions as arguments, return functions, or both.**    
+As we've seen, JavaScript functions take **values** as arguments and return **values**. JavaScript functions are **values**, so JavaScript functions can take functions as arguments, return functions, or both.**    
 Generally speaking, **a function that either takes functions as arguments, or returns a function, or both, is referred to as a "higher-order" function.**
 
 Here's a very simple higher-order function that takes a function as an argument:
