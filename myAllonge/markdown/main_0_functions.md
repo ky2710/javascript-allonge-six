@@ -1328,7 +1328,7 @@ We'll discuss `mapWith` again. The important thing to see is that partial applic
     safeSquareAll([1, null, 2, 3])
       //=> [1, null, 4, 9]
 ```
-We generalized composition with the `compose` combinator. Partial application also has a combinator, which we'll see in the [partial](#partial) recipe.
+We generalized composition with the `compose` combinator. Partial application also has a combinator, which we'll see in the [partial](main_0r_functions.md#partial-application) recipe.
 
 ## Magic Names
 
