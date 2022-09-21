@@ -8,7 +8,7 @@ The recipes are written for practicality, and their implementation may introduce
 
 ## Partial Application
 
-In [Building Blocks](main_0_functions.md#building-blocks), we discussed partial application, but we didn't write a generalized recipe for it. This is such a common tool that many libraries provide some form of partial application. You'll find examples in [Lemonad](https://github.com/fogus/lemonad) from Michael Fogus, [Functional JavaScript]([http://osteele.com/sources/javascript/functional/](https://github.com/osteele/functional-javascript)) from Oliver Steele and the terse but handy [node-ap](https://github.com/substack/node-ap) from James Halliday.
+In [Building Blocks](main_0_functions.md#building-blocks), we discussed partial application, but we didn't write a generalized recipe for it. This is such a common tool that many libraries provide some form of partial application. You'll find examples in [Lemonad](https://github.com/fogus/lemonad) from Michael Fogus, [Functional JavaScript](https://github.com/osteele/functional-javascript) from Oliver Steele and the terse but handy [node-ap](https://github.com/substack/node-ap) from James Halliday.
 
 These two recipes are for quickly and simply applying a single argument, either the leftmost or rightmost.`1` If you want to bind more than one argument, or you want to leave a "hole" in the argument list, you will need to either use a [generalized partial recipe](#partial), or you will need to repeatedly apply arguments. They are [context](main_2_objects.md#what-context-applies-when-we-call-a-function)-agnostic.
 >`1` `callFirst` and `callLast` were inspired by Michael Fogus' [Lemonad](https://github.com/fogus/lemonad). Thanks! 
