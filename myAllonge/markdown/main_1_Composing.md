@@ -453,7 +453,7 @@ We can write it out using a ternary operator. Even in this small function, we ca
     mapWith((x) => !!x, [null, true, 25, false, "foo"])
       //=> [false,true,true,false,true]
 ```
-### folding
+### folding(=reduce)
 
 With the exception of the `length` example at the beginning, our examples so far all involve rebuilding a solution using spreads.  But they needn't. A function to compute the sum of the squares of a list of numbers might look like this:
 ```js
