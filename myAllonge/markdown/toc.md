@@ -80,7 +80,7 @@
 	* Method Decorators
 	* Summary
 	* [Recipe-2: Objects, Mutations, and State](main_2r_objects.md)   
-		* Memoize -- getWith -- pluckWith -- Deep Mapping   
+		* Memoize / getWith / pluckWith / Deep Mapping   
 * [*Sub-3: “Object-Oriented Programming”*](sub_3_oop.md)  
 * [**3 : Collections**](main_3_collections.md)
 	* Iteration and Iterables   
